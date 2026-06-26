@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-06-24
+最終更新: 2026-06-26
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫。
 
@@ -114,6 +114,54 @@ https://github.com/openai/whisper
 状態:
 
 * 導入推奨
+
+⸻
+
+## 🧠 AIオーケストレーター・マルチエージェント
+
+### OpenFugu
+
+https://github.com/trotsky1997/OpenFugu
+
+概要:
+
+* Sakana AI の Fugu アーキテクチャを参考にしたオープンソース実装
+* 複数の LLM を協調させ、ルーティングや統合を行うオーケストレーター研究プロジェクト
+
+用途:
+
+* ローカル LLM の協調
+* AI エージェント研究
+* MoE・ルーティング実験
+
+状態:
+
+* 研究対象（優先度：★★★★☆）
+
+⸻
+
+### AI-Safeter / FUGU
+
+https://github.com/AI-Safeter/FUGU
+
+概要:
+
+* Sakana Fugu の基盤研究で用いられる TRINITY 関連の最適化アルゴリズム（Sep-CMA-ES）の研究用実装
+* LLM 本体ではなく、オーケストレーションの最適化手法に焦点を当てる
+
+用途:
+
+* AI ルーティング研究
+* エージェント最適化
+* Fugu 内部理解
+
+状態:
+
+* 研究対象（優先度：★★★☆☆）
+
+メモ:
+
+* Fugu / OpenFugu / MiMo-Code / Headroom などは「AIを管理するAI（オーケストレーター）」として整理候補
 
 ⸻
 
@@ -373,6 +421,8 @@ https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
 * Apple Container
 * Headroom
 * Susono Model
+* OpenFugu
+* AI-Safeter / FUGU
 
 ⸻
 
