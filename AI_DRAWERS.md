@@ -17,7 +17,7 @@
 ```markdown
 ### Name
 
-URL:
+URL:（なければ `未設定`）
 
 概要:
 
@@ -48,7 +48,10 @@ URL:
 - 将来導入
 - 将来候補
 - 研究対象
+- 必要時利用
+- 保留
 - 調査保留
+- 内容確認待ち
 - 開発アイデア
 
 優先度の例:
@@ -858,6 +861,20 @@ URL:
 
 - Firecrawl
 - Humation Swift
+
+### 必要時利用
+
+- yt-dlp
+
+### 保留
+
+- Reactive Resume
+
+### 調査保留・内容確認待ち
+
+- tomari-guruguru
+- reviewable-html-workbench
+- k16shikano gist
 
 ### 研究対象
 
