@@ -18,6 +18,7 @@
 
 ## Next Actions
 
+- 関連ファイルを探すときは `AI_INDEX.md` を参照する。
 - 新規 Project は `TEMPLATES/PROJECT_TEMPLATE.md` から作る。
 - 新規 Note は `TEMPLATES/NOTE_TEMPLATE.md` から作る。
 - 公開に適さない情報はこのリポジトリに書かない。

@@ -29,3 +29,9 @@
 
 - `NOTES/AI.md`
 - `AI_DRAWERS.md`
+
+## Related Drawers
+
+- Whisper
+- Humation
+- OpenFugu

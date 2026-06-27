@@ -26,6 +26,8 @@ ai-shared-memory/
 ├─ README.md
 ├─ AGENTS.md
 ├─ CURRENT.md
+├─ AI_INDEX.md
+├─ CHANGELOG.md
 ├─ INBOX.md
 ├─ AI_DRAWERS.md
 ├─ PROJECTS/
@@ -50,13 +52,16 @@ AI は原則として次の順で読む。
 
 1. [CURRENT.md](CURRENT.md) - 現在の焦点、待ち、次の行動
 2. [AGENTS.md](AGENTS.md) - AI 向け運用ルール
-3. 作業対象ファイル - `AI_DRAWERS.md` / `PROJECTS/*.md` / `NOTES/*.md`
-4. [INBOX.md](INBOX.md) - 未整理の新規リンクやアイデア
+3. [AI_INDEX.md](AI_INDEX.md) - 関連ファイル索引
+4. 作業対象ファイル - `AI_DRAWERS.md` / `PROJECTS/*.md` / `NOTES/*.md`
+5. [INBOX.md](INBOX.md) - 未整理の新規リンクやアイデア
 
 ## ファイルの役割
 
 - [CURRENT.md](CURRENT.md): AI が最初に読む現在地。
 - [AGENTS.md](AGENTS.md): 複数 AI 向けの編集・運用ルール。
+- [AI_INDEX.md](AI_INDEX.md): プロジェクト、ノート、技術項目の索引。
+- [CHANGELOG.md](CHANGELOG.md): 構成変更・運用ルール変更の履歴。
 - [INBOX.md](INBOX.md): 整理前のリンク、アイデア、調査候補。
 - [AI_DRAWERS.md](AI_DRAWERS.md): OSS・AI・開発ツールの技術レーダー。
 - [PROJECTS](PROJECTS): プロジェクトごとの目的、状態、次の作業。
