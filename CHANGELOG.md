@@ -14,3 +14,4 @@
 - `PROJECTS/` を共通テンプレート構造へ更新。
 - `NOTES/AI.md` / `NOTES/HomeLab.md` / `NOTES/Solar.md` / `NOTES/Vehicles.md` を追加。
 - `SolarPower.md` / `VehiclePlan.md` は後方互換用ファイルとして残置。
+- `AI_DRAWERS.md` に `Reference Sites` カテゴリを追加し、VTuber体験場を参考資料として登録。

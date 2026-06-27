@@ -51,12 +51,14 @@ AI が関連ファイルを素早く見つけるための索引です。
 - AppFlowy → `AI_DRAWERS.md`
 - Terrain Diffusion → `AI_DRAWERS.md`
 - InfiniteDiffusion → `AI_DRAWERS.md`
+- VTuber体験場 → `AI_DRAWERS.md`
 - Amazon セール検知システム → `AI_DRAWERS.md`
 
 ## Topic Routing
 
 - 新しい GitHub リンク → `INBOX.md` または `AI_DRAWERS.md`
 - 新しい OSS / AI 技術 → `AI_DRAWERS.md`
+- 何度も参照する技術サイト・学習サイト → `AI_DRAWERS.md` の `Reference Sites`
 - 新しい個人開発案 → `AI_DRAWERS.md` の `Ideas` または `PROJECTS/`
 - プロジェクト固有の情報 → `PROJECTS/`
 - 横断的な技術メモ → `NOTES/`

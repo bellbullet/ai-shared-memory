@@ -39,6 +39,7 @@ URL:（なければ `未設定`）
 - Creative
 - Self Host
 - Research
+- Reference Sites
 - Ideas
 
 状態の例:
@@ -785,6 +786,48 @@ https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
 
 ⸻
 
+## Reference Sites
+
+### VTuber体験場
+
+URL:
+https://fugi-himitsukichi.net/vtuber_taikenjou/
+
+概要:
+
+- VTuber制作・配信に関する知識やツールを体系的にまとめた個人運営の情報サイト。
+- Live2D、3D、配信環境、機材、ソフトなどを幅広く扱う。
+
+用途:
+
+- AIRI の UI 検討
+- VTuber 制作学習
+- Live2D 調査
+- 配信環境構築
+- AI コンパニオンの音声・表情連動や見せ方の参考
+
+関連:
+
+- Humation
+- OpenCut
+- Whisper
+- AIRI
+
+状態:
+
+- 参考資料
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- AI コンパニオンを VTuber のように自然に見せるための、キャラクター表現・配信ソフト構成・Live2D 運用の参考候補。
+- 関連論文: https://arxiv.org/abs/2503.00842
+
+⸻
+
 ## Ideas
 
 ### Amazon セール検知システム
@@ -875,6 +918,10 @@ URL:
 - tomari-guruguru
 - reviewable-html-workbench
 - k16shikano gist
+
+### 参考資料
+
+- VTuber体験場
 
 ### 研究対象
 
