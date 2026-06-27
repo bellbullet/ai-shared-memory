@@ -273,6 +273,35 @@ https://github.com/apple/container
 
 ⸻
 
+## 🛒 API・EC・自動化
+
+### Amazon Creators API SDK
+
+https://github.com/mrmishmash/amazon_creators_api
+
+概要:
+
+* Amazon Creators API を利用するための非公式 SDK
+* 旧 PA-API の後継 API を利用し、商品情報・価格・画像などを取得できる
+
+用途:
+
+* セール監視
+* 商品検索
+* 価格履歴取得
+* アフィリエイト支援
+
+前提:
+
+* Amazon Creators API 利用資格が必要
+* 過去30日以内に一定数以上の発送実績など利用条件あり
+
+状態:
+
+* ★★★★☆（研究対象）
+
+⸻
+
 ## 🏠 セルフホスト・ホームラボ
 
 ### Homepage
@@ -435,6 +464,40 @@ https://huggingface.co/collections/puwaer/susono-model
 
 ⸻
 
+## 💡 個人開発アイデア
+
+### Amazon セール検知システム
+
+概要:
+
+* Amazon の欲しい物リストや指定カテゴリを定期巡回し、価格下落・ポイント還元・タイムセールを自動検知するダッシュボード
+
+機能案:
+
+* お気に入り商品の監視
+* 値下げ通知
+* ポイント還元率表示
+* Keepa 連携
+* Discord 通知
+* LINE 通知
+* メール通知
+* 価格推移グラフ
+* カテゴリ別フィルター
+
+利用技術:
+
+* Amazon Creators API
+* Codex
+* Python
+* Next.js
+* SQLite / PostgreSQL
+
+状態:
+
+* ★★★★★（開発アイデア）
+
+⸻
+
 ## 🧪 実験・調査保留
 
 ### tomari-guruguru
@@ -505,6 +568,11 @@ https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
 * Susono Model
 * OpenFugu
 * AI-Safeter / FUGU
+* Amazon Creators API SDK
+
+### 開発アイデア
+
+* Amazon セール検知システム
 
 ⸻
 
