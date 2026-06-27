@@ -1,24 +1,23 @@
 # CURRENT
 
-最終更新: 2026-06-24
+最終更新: 2026-06-27
 
-複数の AI が最初に読む、現在地の要約です。
+このファイルは AI が最初に読む現在地です。
 
-## 現在の運用
+## Current Focus
 
-- OSS・AI 技術候補は [AI_DRAWERS.md](AI_DRAWERS.md) に集約する。
-- 個別プロジェクトは [PROJECTS](PROJECTS) で管理する。
-- 継続調査テーマは [NOTES](NOTES) で管理する。
-- 公開に適さない詳細は記録しない。
+- このリポジトリを GitHub型 AI Shared Memory / LLM Wiki / 軽量 Second Brain として運用する。
+- 公開可能な OSS、AI 技術、設計思想、プロジェクト概要、技術メモを整理する。
+- 新規リンクや未整理アイデアはまず `INBOX.md` または `AI_DRAWERS.md` に入れる。
 
-## 現在の優先事項
+## Waiting
 
-1. 技術レーダーの継続更新
-2. プロジェクトごとの概要と次の行動の整理
-3. AI 間で矛盾しない、短く検証可能な記録の維持
+- 各プロジェクトの公開可能な Goal / Status / Stack / Next Tasks の追記。
+- NOTES のテーマ別整理。
+- AI_DRAWERS のカテゴリと優先度の継続整理。
 
-## 次の更新候補
+## Next Actions
 
-- 各プロジェクトの公開可能な概要を記入する。
-- 各ノートの目的と判断基準を記入する。
-- 状態表記と優先順位の語彙を統一する。
+- 新規 Project は `TEMPLATES/PROJECT_TEMPLATE.md` から作る。
+- 新規 Note は `TEMPLATES/NOTE_TEMPLATE.md` から作る。
+- 公開に適さない情報はこのリポジトリに書かない。

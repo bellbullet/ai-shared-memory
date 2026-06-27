@@ -2,597 +2,831 @@
 
 最終更新: 2026-06-27
 
-このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫。
+このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫です。
+
+## 目的
+
+- OSS、AI 技術、開発ツール、研究対象、個人開発アイデアを分類する。
+- 新しい GitHub リンクや公開論文を、複数 AI が再利用できる形で残す。
+- 導入候補、研究対象、アイデアを混同しない。
+
+## 追加ルール
+
+新規項目は原則として次の形にする。
+
+```markdown
+### Name
+
+URL:
+
+概要:
+
+用途:
+
+状態:
+
+優先度:
+```
+
+分類が曖昧な場合は `INBOX.md` に一時保存する。
+
+推奨カテゴリ:
+
+- AI
+- Agent
+- LLM
+- Development
+- Creative
+- Self Host
+- Research
+- Ideas
+
+状態の例:
+
+- 導入推奨
+- 次に試す
+- 将来導入
+- 将来候補
+- 研究対象
+- 調査保留
+- 開発アイデア
+
+優先度の例:
+
+- ★★★★★
+- ★★★★☆
+- ★★★☆☆
+- 未設定
 
 ⸻
 
-## 運用ルール
-
-### 新規追加
-
-以下の形式で追加依頼する。
-
-```text
-引き出し追加
-https://github.com/xxxx/yyyy
-```
-
-または
-
-```text
-引き出し追加 [AI]
-https://github.com/xxxx/yyyy
-```
-
-### 整理依頼
-
-`引き出し整理`
-
-を実行すると
-
-* 重複削除
-* カテゴリ再分類
-* 優先度更新
-* 導入済み整理
-
-を行う。
-
-⸻
-
-## 🤖 AI・エージェント
+## AI
 
 ### DESIGN.md
 
+URL:
 https://github.com/google-labs-code/design.md
 
-用途:
+概要:
 
-* AI向けデザインルール共有
-* UI設計標準化
-
-状態:
-
-* 研究対象
-
-⸻
-
-### MiMo-Code
-
-https://github.com/XiaomiMiMo/MiMo-Code
+- AI 向けにデザインルールを共有するためのドキュメント運用候補。
 
 用途:
 
-* Xiaomi製AIコーディングエージェント
-* Claude Code比較研究
+- AI 向けデザインルール共有
+- UI 設計標準化
 
 状態:
 
-* 研究対象
+- 研究対象
 
-⸻
+優先度:
 
-### Headroom
-
-https://github.com/chopratejas/headroom
-
-用途:
-
-* 長期記憶
-* コンテキスト管理
-
-状態:
-
-* 研究対象
+- 未設定
 
 ⸻
 
 ### Firecrawl
 
+URL:
 https://github.com/firecrawl/firecrawl
+
+概要:
+
+- AI / RAG 向けの Web データ収集基盤候補。
 
 用途:
 
-* AI向けWebデータ収集
-* RAG構築
+- AI 向け Web データ収集
+- RAG 構築
 
 状態:
 
-* 将来候補
+- 将来候補
+
+優先度:
+
+- 未設定
 
 ⸻
 
 ### Whisper
 
+URL:
 https://github.com/openai/whisper
+
+概要:
+
+- OpenAI の音声認識モデル。
 
 用途:
 
-* 音声認識
-* 字幕生成
-* 文字起こし
+- 音声認識
+- 字幕生成
+- 文字起こし
 
 状態:
 
-* 導入推奨
+- 導入推奨
+
+優先度:
+
+- 未設定
 
 ⸻
 
-## 🧠 AIオーケストレーター・マルチエージェント
+## Agent
+
+### MiMo-Code
+
+URL:
+https://github.com/XiaomiMiMo/MiMo-Code
+
+概要:
+
+- Xiaomi 製 AI コーディングエージェント。
+
+用途:
+
+- AI コーディングエージェント研究
+- Claude Code 比較研究
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- 未設定
+
+⸻
+
+### Headroom
+
+URL:
+https://github.com/chopratejas/headroom
+
+概要:
+
+- 長期記憶とコンテキスト管理の研究候補。
+
+用途:
+
+- 長期記憶
+- コンテキスト管理
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- 未設定
+
+⸻
 
 ### OpenFugu
 
+URL:
 https://github.com/trotsky1997/OpenFugu
 
 概要:
 
-* Sakana AI の Fugu アーキテクチャを参考にしたオープンソース実装
-* 複数の LLM を協調させ、ルーティングや統合を行うオーケストレーター研究プロジェクト
+- Sakana AI の Fugu アーキテクチャを参考にしたオープンソース実装。
+- 複数の LLM を協調させ、ルーティングや統合を行うオーケストレーター研究プロジェクト。
 
 用途:
 
-* ローカル LLM の協調
-* AI エージェント研究
-* MoE・ルーティング実験
+- ローカル LLM の協調
+- AI エージェント研究
+- MoE・ルーティング実験
 
 状態:
 
-* 研究対象（優先度：★★★★☆）
+- 研究対象
+
+優先度:
+
+- ★★★★☆
 
 ⸻
 
 ### AI-Safeter / FUGU
 
+URL:
 https://github.com/AI-Safeter/FUGU
 
 概要:
 
-* Sakana Fugu の基盤研究で用いられる TRINITY 関連の最適化アルゴリズム（Sep-CMA-ES）の研究用実装
-* LLM 本体ではなく、オーケストレーションの最適化手法に焦点を当てる
+- Sakana Fugu の基盤研究で用いられる TRINITY 関連の最適化アルゴリズム（Sep-CMA-ES）の研究用実装。
+- LLM 本体ではなく、オーケストレーションの最適化手法に焦点を当てる。
 
 用途:
 
-* AI ルーティング研究
-* エージェント最適化
-* Fugu 内部理解
+- AI ルーティング研究
+- エージェント最適化
+- Fugu 内部理解
 
 状態:
 
-* 研究対象（優先度：★★★☆☆）
+- 研究対象
+
+優先度:
+
+- ★★★☆☆
 
 メモ:
 
-* Fugu / OpenFugu / MiMo-Code / Headroom などは「AIを管理するAI（オーケストレーター）」として整理候補
+- Fugu / OpenFugu / MiMo-Code / Headroom などは「AIを管理するAI（オーケストレーター）」として整理候補。
 
 ⸻
 
-## 🌍 AI・生成AI / ゲーム開発・プロシージャル生成
+## LLM
 
-### Terrain Diffusion
+### Susono Model
 
-https://github.com/xandergos/terrain-diffusion
+URL:
+https://huggingface.co/collections/puwaer/susono-model
 
 概要:
 
-* 世界初の学習済みプロシージャル地形生成器
-* InfiniteDiffusion の仕組みを利用し、無限に拡張可能な地形を決定論的（deterministic）に生成する
-
-特徴:
-
-* 学習済み AI による無限ワールド生成
-* シードだけで世界を完全再現
-* ランダムアクセス対応
-* テレポートが O(1)
-* ステートレス設計
-* マルチプレイヤー対応しやすい
-* 永続ストレージ不要
-* VRAM 約 1.5GB
-* RTX 3090 Ti 1枚で高速生成
+- 日本語向けモデル集。
 
 用途:
 
-* Minecraft Mod
-* オープンワールドゲーム
-* シミュレーション
-* AI ワールド生成研究
-
-関連リンク:
-
-* Project: https://xandergos.github.io/terrain-diffusion/
-* Paper: https://arxiv.org/abs/2512.08309
-* Minecraft Mod: https://modrinth.com/mod/terrain-diffusion
-
-キーワード:
-
-* Diffusion
-* Procedural Generation
-* Infinite World
-* Minecraft
-* Game AI
-* World Generation
+- 日本語向けモデル調査
+- ローカル LLM 研究
 
 状態:
 
-* ★★★★★（最優先研究対象）
+- 研究対象
+
+優先度:
+
+- 未設定
 
 ⸻
 
-### InfiniteDiffusion
-
-概要:
-
-* 従来の Autoregressive 方式では難しかった「無限世界」を、決定論・ランダムアクセス・ステートレス設計で実現する拡散モデル技術
-* 「Perlin Noise のようなプロシージャル生成」と「Diffusion Model」を融合した新しい方向性
-
-技術ポイント:
-
-* Training-free
-* Random Access
-* Deterministic
-* Distributed Friendly
-* Multiplayer Friendly
-* Seed Only Sharing
-
-関連リンク:
-
-* Paper: https://arxiv.org/abs/2512.08309
-
-状態:
-
-* ★★★★★（最優先研究対象）
-
-⸻
-
-## 🛠 開発環境
+## Development
 
 ### Greenlight
 
+URL:
 https://github.com/RevylAI/greenlight
+
+概要:
+
+- App Store 審査チェックの研究候補。
 
 用途:
 
-* App Store審査チェック
+- App Store 審査チェック
 
 状態:
 
-* 研究対象
+- 研究対象
+
+優先度:
+
+- 未設定
 
 ⸻
 
 ### Apple Container
 
+URL:
 https://github.com/apple/container
+
+概要:
+
+- Apple 公式コンテナ環境。
 
 用途:
 
-* Apple公式コンテナ環境
-* Docker代替候補
+- Apple 公式コンテナ環境
+- Docker 代替候補
 
 状態:
 
-* 研究対象
+- 研究対象
+
+優先度:
+
+- 未設定
 
 ⸻
 
-## 🛒 API・EC・自動化
-
 ### Amazon Creators API SDK
 
+URL:
 https://github.com/mrmishmash/amazon_creators_api
 
 概要:
 
-* Amazon Creators API を利用するための非公式 SDK
-* 旧 PA-API の後継 API を利用し、商品情報・価格・画像などを取得できる
+- Amazon Creators API を利用するための非公式 SDK。
+- 旧 PA-API の後継 API を利用し、商品情報・価格・画像などを取得できる。
 
 用途:
 
-* セール監視
-* 商品検索
-* 価格履歴取得
-* アフィリエイト支援
+- セール監視
+- 商品検索
+- 価格履歴取得
+- アフィリエイト支援
 
 前提:
 
-* Amazon Creators API 利用資格が必要
-* 過去30日以内に一定数以上の発送実績など利用条件あり
+- Amazon Creators API 利用資格が必要
+- 過去30日以内に一定数以上の発送実績など利用条件あり
 
 状態:
 
-* ★★★★☆（研究対象）
+- 研究対象
+
+優先度:
+
+- ★★★★☆
 
 ⸻
 
-## 🎭 UI・アバター・キャラクターシステム
-
-### Humation
-
-https://github.com/humation-labs/humation
-
-概要:
-
-* AI 生成ではなく、手描きイラストパーツを組み合わせて決定論的（deterministic）な「かわいいアバター」を生成するオープンソースエンジン
-* ローカル動作で API 不要
-* SVG ベースのため軽量で再現性が高い
-
-特徴:
-
-* 手描きイラスト
-* SVG レンダリング
-* シードによる再現
-* API 不要
-* ローカル完結
-* AI 画像生成不要
-
-用途:
-
-* プロフィールアイコン
-* AI エージェント
-* ゲームキャラクター
-* コミュニティサービス
-
-状態:
-
-* ★★★★☆（研究対象）
-
-メモ:
-
-* AIRI などの AI アプリで、AI 画像生成を使わず軽量・高速・一貫したアバターを表示したい場合の有力候補
-
-⸻
-
-## 🍎 iOS・SwiftUI
-
-### Humation Swift
-
-https://github.com/humation-labs/humation-swift
-
-概要:
-
-* Humation を Swift で利用するための SDK
-* iOS・macOS など Apple プラットフォームへ簡単に組み込める
-
-用途:
-
-* iPhone アプリ
-* macOS アプリ
-* visionOS
-* SwiftUI
-
-状態:
-
-* ★★★☆☆（将来候補）
-
-⸻
-
-## 🏠 セルフホスト・ホームラボ
-
-### Homepage
-
-https://github.com/gethomepage/homepage
-
-用途:
-
-* 統合ダッシュボード
-* サービス監視
-
-状態:
-
-* 次に試す
-
-⸻
-
-### Immich
-
-https://github.com/immich-app/immich
-
-用途:
-
-* Google Photos代替
-* AI顔認識
-* 自動バックアップ
-
-状態:
-
-* 将来導入
-
-⸻
-
-### n8n
-
-https://github.com/n8n-io/n8n
-
-用途:
-
-* ワークフロー自動化
-* AI連携
-
-状態:
-
-* 次に試す
-
-⸻
-
-### LocalSend
-
-https://github.com/localsend/localsend
-
-用途:
-
-* AirDrop代替
-* Windows/iPhone/Android間転送
-
-状態:
-
-* 導入推奨
-
-⸻
-
-## 📄 仕事・事務
-
-### Stirling PDF
-
-https://github.com/Stirling-Tools/Stirling-PDF
-
-用途:
-
-* PDF編集
-* OCR
-* 結合
-* 分割
-
-状態:
-
-* 導入推奨
-
-⸻
-
-### AppFlowy
-
-https://github.com/AppFlowy-IO/AppFlowy
-
-用途:
-
-* Notion代替
-* ローカル管理
-
-状態:
-
-* 将来導入
-
-⸻
-
-### Reactive Resume
-
-https://github.com/AmruthPillai/Reactive-Resume
-
-用途:
-
-* 履歴書作成
-* ポートフォリオ補助
-
-状態:
-
-* 保留
-
-⸻
-
-## 🎬 クリエイティブ
+## Creative
 
 ### OpenCut
 
+URL:
 https://github.com/OpenCut-app/OpenCut
+
+概要:
+
+- OSS 動画編集ツール。
 
 用途:
 
-* OSS動画編集
-* CapCut代替候補
+- OSS 動画編集
+- CapCut 代替候補
 
 状態:
 
-* 次に試す
+- 次に試す
+
+優先度:
+
+- 未設定
 
 ⸻
 
 ### yt-dlp
 
+URL:
 https://github.com/yt-dlp/yt-dlp
-
-用途:
-
-* 動画取得
-* 音声抽出
-* Whisper連携
-
-状態:
-
-* 必要時利用
-
-⸻
-
-## 🇯🇵 日本語AI・ローカルLLM
-
-### Susono Model
-
-https://huggingface.co/collections/puwaer/susono-model
-
-用途:
-
-* 日本語向けモデル集
-* ローカルLLM研究
-
-状態:
-
-* 研究対象
-
-⸻
-
-## 💡 個人開発アイデア
-
-### Amazon セール検知システム
 
 概要:
 
-* Amazon の欲しい物リストや指定カテゴリを定期巡回し、価格下落・ポイント還元・タイムセールを自動検知するダッシュボード
+- 動画取得と音声抽出の定番ツール。
 
-機能案:
+用途:
 
-* お気に入り商品の監視
-* 値下げ通知
-* ポイント還元率表示
-* Keepa 連携
-* Discord 通知
-* LINE 通知
-* メール通知
-* 価格推移グラフ
-* カテゴリ別フィルター
-
-利用技術:
-
-* Amazon Creators API
-* Codex
-* Python
-* Next.js
-* SQLite / PostgreSQL
+- 動画取得
+- 音声抽出
+- Whisper 連携
 
 状態:
 
-* ★★★★★（開発アイデア）
+- 必要時利用
+
+優先度:
+
+- 未設定
 
 ⸻
 
-## 🧪 実験・調査保留
+### Humation
 
-### tomari-guruguru
+URL:
+https://github.com/humation-labs/humation
 
-https://github.com/rotejin/tomari-guruguru
+概要:
+
+- AI 生成ではなく、手描きイラストパーツを組み合わせて決定論的（deterministic）な「かわいいアバター」を生成するオープンソースエンジン。
+- ローカル動作で API 不要。
+- SVG ベースのため軽量で再現性が高い。
+
+用途:
+
+- プロフィールアイコン
+- AI エージェント
+- ゲームキャラクター
+- コミュニティサービス
 
 状態:
 
-* 調査保留
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- AIRI などの AI アプリで、AI 画像生成を使わず軽量・高速・一貫したアバターを表示したい場合の有力候補。
+
+⸻
+
+### Humation Swift
+
+URL:
+https://github.com/humation-labs/humation-swift
+
+概要:
+
+- Humation を Swift で利用するための SDK。
+- iOS・macOS など Apple プラットフォームへ簡単に組み込める。
+
+用途:
+
+- iPhone アプリ
+- macOS アプリ
+- visionOS
+- SwiftUI
+
+状態:
+
+- 将来候補
+
+優先度:
+
+- ★★★☆☆
+
+⸻
+
+### Reactive Resume
+
+URL:
+https://github.com/AmruthPillai/Reactive-Resume
+
+概要:
+
+- 履歴書作成・ポートフォリオ補助ツール。
+
+用途:
+
+- 履歴書作成
+- ポートフォリオ補助
+
+状態:
+
+- 保留
+
+優先度:
+
+- 未設定
+
+⸻
+
+## Self Host
+
+### Homepage
+
+URL:
+https://github.com/gethomepage/homepage
+
+概要:
+
+- ホームラボ向け統合ダッシュボード。
+
+用途:
+
+- 統合ダッシュボード
+- サービス監視
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- 未設定
+
+⸻
+
+### Immich
+
+URL:
+https://github.com/immich-app/immich
+
+概要:
+
+- Google Photos 代替候補。
+
+用途:
+
+- Google Photos 代替
+- AI 顔認識
+- 自動バックアップ
+
+状態:
+
+- 将来導入
+
+優先度:
+
+- 未設定
+
+⸻
+
+### n8n
+
+URL:
+https://github.com/n8n-io/n8n
+
+概要:
+
+- ワークフロー自動化ツール。
+
+用途:
+
+- ワークフロー自動化
+- AI 連携
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- 未設定
+
+⸻
+
+### LocalSend
+
+URL:
+https://github.com/localsend/localsend
+
+概要:
+
+- ローカルネットワーク向けファイル転送ツール。
+
+用途:
+
+- AirDrop 代替
+- Windows / iPhone / Android 間転送
+
+状態:
+
+- 導入推奨
+
+優先度:
+
+- 未設定
+
+⸻
+
+### Stirling PDF
+
+URL:
+https://github.com/Stirling-Tools/Stirling-PDF
+
+概要:
+
+- セルフホスト可能な PDF 編集ツール。
+
+用途:
+
+- PDF 編集
+- OCR
+- 結合
+- 分割
+
+状態:
+
+- 導入推奨
+
+優先度:
+
+- 未設定
+
+⸻
+
+### AppFlowy
+
+URL:
+https://github.com/AppFlowy-IO/AppFlowy
+
+概要:
+
+- Notion 代替候補。
+
+用途:
+
+- Notion 代替
+- ローカル管理
+
+状態:
+
+- 将来導入
+
+優先度:
+
+- 未設定
+
+⸻
+
+## Research
+
+### Terrain Diffusion
+
+URL:
+https://github.com/xandergos/terrain-diffusion
+
+概要:
+
+- 世界初の学習済みプロシージャル地形生成器。
+- InfiniteDiffusion の仕組みを利用し、無限に拡張可能な地形を決定論的（deterministic）に生成する。
+
+用途:
+
+- Minecraft Mod
+- オープンワールドゲーム
+- シミュレーション
+- AI ワールド生成研究
+
+特徴:
+
+- 学習済み AI による無限ワールド生成
+- シードだけで世界を完全再現
+- ランダムアクセス対応
+- テレポートが O(1)
+- ステートレス設計
+- マルチプレイヤー対応しやすい
+- 永続ストレージ不要
+- VRAM 約 1.5GB
+- RTX 3090 Ti 1枚で高速生成
+
+関連リンク:
+
+- Project: https://xandergos.github.io/terrain-diffusion/
+- Paper: https://arxiv.org/abs/2512.08309
+- Minecraft Mod: https://modrinth.com/mod/terrain-diffusion
+
+状態:
+
+- 最優先研究対象
+
+優先度:
+
+- ★★★★★
+
+⸻
+
+### InfiniteDiffusion
+
+URL:
+https://arxiv.org/abs/2512.08309
+
+概要:
+
+- 従来の Autoregressive 方式では難しかった「無限世界」を、決定論・ランダムアクセス・ステートレス設計で実現する拡散モデル技術。
+- 「Perlin Noise のようなプロシージャル生成」と「Diffusion Model」を融合した方向性。
+
+用途:
+
+- 無限世界生成研究
+- プロシージャル生成研究
+- 生成AIとゲーム開発の接続
+
+技術ポイント:
+
+- Training-free
+- Random Access
+- Deterministic
+- Distributed Friendly
+- Multiplayer Friendly
+- Seed Only Sharing
+
+状態:
+
+- 最優先研究対象
+
+優先度:
+
+- ★★★★★
+
+⸻
+
+### tomari-guruguru
+
+URL:
+https://github.com/rotejin/tomari-guruguru
+
+概要:
+
+- 内容確認待ちの調査候補。
+
+用途:
+
+- 未整理
+
+状態:
+
+- 調査保留
+
+優先度:
+
+- 未設定
 
 ⸻
 
 ### reviewable-html-workbench
 
+URL:
 https://github.com/u-ichi/reviewable-html-workbench
+
+概要:
+
+- HTML レビュー支援候補。
 
 用途:
 
-* HTMLレビュー支援
+- HTML レビュー支援
 
 状態:
 
-* 調査保留
+- 調査保留
+
+優先度:
+
+- 未設定
 
 ⸻
 
 ### k16shikano gist
 
+URL:
 https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
+
+概要:
+
+- 内容確認待ちの gist。
+
+用途:
+
+- 未整理
 
 状態:
 
-* 内容確認待ち
+- 内容確認待ち
+
+優先度:
+
+- 未設定
+
+⸻
+
+## Ideas
+
+### Amazon セール検知システム
+
+URL:
+未設定
+
+概要:
+
+- Amazon の欲しい物リストや指定カテゴリを定期巡回し、価格下落・ポイント還元・タイムセールを自動検知するダッシュボード案。
+
+用途:
+
+- セール監視
+- 値下げ通知
+- ポイント還元率表示
+- 価格推移可視化
+
+機能案:
+
+- お気に入り商品の監視
+- 値下げ通知
+- ポイント還元率表示
+- Keepa 連携
+- Discord 通知
+- LINE 通知
+- メール通知
+- 価格推移グラフ
+- カテゴリ別フィルター
+
+利用技術:
+
+- Amazon Creators API
+- Codex
+- Python
+- Next.js
+- SQLite / PostgreSQL
+
+状態:
+
+- 開発アイデア
+
+優先度:
+
+- ★★★★★
 
 ⸻
 
@@ -600,52 +834,57 @@ https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
 
 ### 最優先研究対象
 
-* Terrain Diffusion
-* InfiniteDiffusion
+- Terrain Diffusion
+- InfiniteDiffusion
 
 ### 導入推奨
 
-* LocalSend
-* Whisper
-* Stirling PDF
+- LocalSend
+- Whisper
+- Stirling PDF
 
 ### 次に試す
 
-* Homepage
-* n8n
-* OpenCut
+- Homepage
+- n8n
+- OpenCut
 
 ### 将来導入
 
-* Immich
-* AppFlowy
-* Humation Swift
+- Immich
+- AppFlowy
+
+### 将来候補
+
+- Firecrawl
+- Humation Swift
 
 ### 研究対象
 
-* DESIGN.md
-* Greenlight
-* MiMo-Code
-* Apple Container
-* Headroom
-* Susono Model
-* OpenFugu
-* AI-Safeter / FUGU
-* Amazon Creators API SDK
-* Humation
+- DESIGN.md
+- Greenlight
+- MiMo-Code
+- Apple Container
+- Headroom
+- Susono Model
+- OpenFugu
+- AI-Safeter / FUGU
+- Amazon Creators API SDK
+- Humation
 
 ### 開発アイデア
 
-* Amazon セール検知システム
+- Amazon セール検知システム
 
 ⸻
 
 ## AIへの指示
 
-このファイルを読んだAIは以下を理解すること。
+このファイルを読んだ AI は以下を理解すること。
 
-* ユーザーは新しいOSSやAI技術を継続収集している
-* 導入済み候補と研究対象を区別する
-* 新しいGitHubリンクが提示された場合は適切なカテゴリへ分類する
-* 類似ツールがあれば比較候補として提案する
-* 重複ツールは整理対象として指摘する
+- ユーザーは新しい OSS や AI 技術を継続収集している。
+- 導入候補、研究対象、開発アイデアを区別する。
+- 新しい GitHub リンクが提示された場合は適切なカテゴリへ分類する。
+- 類似ツールがあれば比較候補として提案する。
+- 重複ツールは整理対象として指摘する。
+- 不確かな分類は `INBOX.md` に置く。

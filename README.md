@@ -1,38 +1,93 @@
 # ai-shared-memory
 
-ChatGPT・Codex・Claude・Gemini など、複数の AI と共有するための公開ナレッジベースです。
+GitHub型 AI Shared Memory / LLM Wiki / 軽量 Second Brain。
+
+このリポジトリは Obsidian そのものではありません。Obsidian 的な Second Brain の考え方を取り入れつつ、ChatGPT・Codex・Claude・Gemini など複数の AI が共通で参照できる、公開前提の外部記憶として運用します。
+
+## 目的
+
+- 複数 AI が最初に読む共有知識ベースを作る。
+- OSS、GitHub、AI 技術、設計思想、学習内容、公開論文、プロジェクト概要を整理する。
+- 一時的なメモを `INBOX.md` に置き、整理後に `AI_DRAWERS.md` / `PROJECTS/` / `NOTES/` へ移す。
+- 公開してよい情報だけを長期保存する。
+
+## これは何ではないか
+
+- Obsidian vault そのものではない。
+- 個人情報・認証情報・契約情報を保存する場所ではない。
+- ローカル端末の詳細ログや秘密メモの置き場ではない。
+
+Private 情報が必要な場合は、別の private repository またはローカル専用メモで管理する。
 
 ## 構成
 
 ```text
 ai-shared-memory/
 ├─ README.md
+├─ AGENTS.md
 ├─ CURRENT.md
+├─ INBOX.md
 ├─ AI_DRAWERS.md
 ├─ PROJECTS/
 │  ├─ AIRI.md
 │  ├─ GameFreezeSentinel.md
 │  └─ XImageBot.md
-└─ NOTES/
-   ├─ SolarPower.md
-   └─ VehiclePlan.md
+├─ NOTES/
+│  ├─ AI.md
+│  ├─ HomeLab.md
+│  ├─ Solar.md
+│  ├─ SolarPower.md
+│  ├─ Vehicles.md
+│  └─ VehiclePlan.md
+└─ TEMPLATES/
+   ├─ PROJECT_TEMPLATE.md
+   └─ NOTE_TEMPLATE.md
 ```
+
+## 読む順番
+
+AI は原則として次の順で読む。
+
+1. [CURRENT.md](CURRENT.md) - 現在の焦点、待ち、次の行動
+2. [AGENTS.md](AGENTS.md) - AI 向け運用ルール
+3. 作業対象ファイル - `AI_DRAWERS.md` / `PROJECTS/*.md` / `NOTES/*.md`
+4. [INBOX.md](INBOX.md) - 未整理の新規リンクやアイデア
 
 ## ファイルの役割
 
-- [CURRENT.md](CURRENT.md): 現在の関心・進行中テーマ・次の行動
-- [AI_DRAWERS.md](AI_DRAWERS.md): OSS・AI 技術レーダー
-- [PROJECTS](PROJECTS): プロジェクトごとの目的、状態、次の行動
-- [NOTES](NOTES): 継続的に更新するテーマ別メモ
+- [CURRENT.md](CURRENT.md): AI が最初に読む現在地。
+- [AGENTS.md](AGENTS.md): 複数 AI 向けの編集・運用ルール。
+- [INBOX.md](INBOX.md): 整理前のリンク、アイデア、調査候補。
+- [AI_DRAWERS.md](AI_DRAWERS.md): OSS・AI・開発ツールの技術レーダー。
+- [PROJECTS](PROJECTS): プロジェクトごとの目的、状態、次の作業。
+- [NOTES](NOTES): プロジェクトから独立した技術メモ。
+- [TEMPLATES](TEMPLATES): 新規 Project / Note の雛形。
 
-## AI への基本指示
+## 保存してよい情報
 
-1. 作業前に `CURRENT.md` と対象ファイルを読む。
-2. 確認済みの事実と、提案・推測を明確に分ける。
-3. 個人情報、認証情報、非公開 URL、秘密鍵、トークンを追加しない。
-4. 新しい OSS は `AI_DRAWERS.md` の適切なカテゴリへ追加する。
-5. プロジェクト固有情報は対応する `PROJECTS/*.md` に記録する。
-6. 公開に適さない情報はこのリポジトリへ書かない。
+- OSS
+- GitHub リポジトリ
+- 技術メモ
+- AI 知識
+- 設計思想
+- アーキテクチャ
+- 学習内容
+- 公開論文
+- プロジェクト概要
+
+## 保存しない情報
+
+- API キー
+- Token
+- Cookie
+- Webhook
+- 契約内容
+- 見積金額
+- 住所
+- 電話番号
+- ローカルパス
+- 個人情報
+- 認証情報
 
 ## 更新用プロンプト
 
@@ -45,6 +100,20 @@ https://github.com/xxxx/yyyy
 引き出し整理
 ```
 
-## 公開方針
+```text
+PROJECTS に追加
+<project name>
+```
 
-このリポジトリは公開情報のみを扱います。端末固有のパス、ログ、個人情報、契約・購入情報などは、公開して問題ない内容へ要約してから記録します。
+```text
+NOTES に追加
+<topic>
+```
+
+## 運用方針
+
+- Public Knowledge のみ保存する。
+- 事実、推測、アイデアを混ぜない。
+- 出典がある場合は URL を残す。
+- 不確かな情報は `INBOX.md` に置き、整理後に移動する。
+- 既存ファイルの意味を壊さず、後方互換性を保つ。
