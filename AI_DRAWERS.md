@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-06-26
+最終更新: 2026-06-27
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫。
 
@@ -162,6 +162,83 @@ https://github.com/AI-Safeter/FUGU
 メモ:
 
 * Fugu / OpenFugu / MiMo-Code / Headroom などは「AIを管理するAI（オーケストレーター）」として整理候補
+
+⸻
+
+## 🌍 AI・生成AI / ゲーム開発・プロシージャル生成
+
+### Terrain Diffusion
+
+https://github.com/xandergos/terrain-diffusion
+
+概要:
+
+* 世界初の学習済みプロシージャル地形生成器
+* InfiniteDiffusion の仕組みを利用し、無限に拡張可能な地形を決定論的（deterministic）に生成する
+
+特徴:
+
+* 学習済み AI による無限ワールド生成
+* シードだけで世界を完全再現
+* ランダムアクセス対応
+* テレポートが O(1)
+* ステートレス設計
+* マルチプレイヤー対応しやすい
+* 永続ストレージ不要
+* VRAM 約 1.5GB
+* RTX 3090 Ti 1枚で高速生成
+
+用途:
+
+* Minecraft Mod
+* オープンワールドゲーム
+* シミュレーション
+* AI ワールド生成研究
+
+関連リンク:
+
+* Project: https://xandergos.github.io/terrain-diffusion/
+* Paper: https://arxiv.org/abs/2512.08309
+* Minecraft Mod: https://modrinth.com/mod/terrain-diffusion
+
+キーワード:
+
+* Diffusion
+* Procedural Generation
+* Infinite World
+* Minecraft
+* Game AI
+* World Generation
+
+状態:
+
+* ★★★★★（最優先研究対象）
+
+⸻
+
+### InfiniteDiffusion
+
+概要:
+
+* 従来の Autoregressive 方式では難しかった「無限世界」を、決定論・ランダムアクセス・ステートレス設計で実現する拡散モデル技術
+* 「Perlin Noise のようなプロシージャル生成」と「Diffusion Model」を融合した新しい方向性
+
+技術ポイント:
+
+* Training-free
+* Random Access
+* Deterministic
+* Distributed Friendly
+* Multiplayer Friendly
+* Seed Only Sharing
+
+関連リンク:
+
+* Paper: https://arxiv.org/abs/2512.08309
+
+状態:
+
+* ★★★★★（最優先研究対象）
 
 ⸻
 
@@ -395,6 +472,11 @@ https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
 ⸻
 
 ## 優先順位
+
+### 最優先研究対象
+
+* Terrain Diffusion
+* InfiniteDiffusion
 
 ### 導入推奨
 
