@@ -302,6 +302,68 @@ https://github.com/mrmishmash/amazon_creators_api
 
 ⸻
 
+## 🎭 UI・アバター・キャラクターシステム
+
+### Humation
+
+https://github.com/humation-labs/humation
+
+概要:
+
+* AI 生成ではなく、手描きイラストパーツを組み合わせて決定論的（deterministic）な「かわいいアバター」を生成するオープンソースエンジン
+* ローカル動作で API 不要
+* SVG ベースのため軽量で再現性が高い
+
+特徴:
+
+* 手描きイラスト
+* SVG レンダリング
+* シードによる再現
+* API 不要
+* ローカル完結
+* AI 画像生成不要
+
+用途:
+
+* プロフィールアイコン
+* AI エージェント
+* ゲームキャラクター
+* コミュニティサービス
+
+状態:
+
+* ★★★★☆（研究対象）
+
+メモ:
+
+* AIRI などの AI アプリで、AI 画像生成を使わず軽量・高速・一貫したアバターを表示したい場合の有力候補
+
+⸻
+
+## 🍎 iOS・SwiftUI
+
+### Humation Swift
+
+https://github.com/humation-labs/humation-swift
+
+概要:
+
+* Humation を Swift で利用するための SDK
+* iOS・macOS など Apple プラットフォームへ簡単に組み込める
+
+用途:
+
+* iPhone アプリ
+* macOS アプリ
+* visionOS
+* SwiftUI
+
+状態:
+
+* ★★★☆☆（将来候補）
+
+⸻
+
 ## 🏠 セルフホスト・ホームラボ
 
 ### Homepage
@@ -557,6 +619,7 @@ https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
 
 * Immich
 * AppFlowy
+* Humation Swift
 
 ### 研究対象
 
@@ -569,6 +632,7 @@ https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
 * OpenFugu
 * AI-Safeter / FUGU
 * Amazon Creators API SDK
+* Humation
 
 ### 開発アイデア
 
