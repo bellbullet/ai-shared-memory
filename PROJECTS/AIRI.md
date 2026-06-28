@@ -34,6 +34,7 @@
 
 - open-genai
 - CuPy
+- SciRS2
 - PyTorch
 - Whisper
 - Humation

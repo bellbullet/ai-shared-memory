@@ -37,6 +37,7 @@ URL:（なければ `未設定`）
 - LLM
 - Development
 - GPU / HPC
+- Scientific Computing / Rust AI
 - Creative
 - Self Host
 - Research
@@ -432,6 +433,51 @@ https://github.com/cupy/cupy
 
 - AIRI、Whisper 周辺処理、画像処理、Embedding 後のクラスタリングや類似検索など、大量配列処理の高速化候補。
 - Radeon / ROCm 環境では、対象 OS・ROCm バージョン・CuPy wheel の対応状況を導入前に確認する。
+
+⸻
+
+## Scientific Computing / Rust AI
+
+### SciRS2
+
+URL:
+https://github.com/cool-japan/scirs
+
+概要:
+
+- Scientific Computing and AI in Rust。
+- Rust 製の NumPy / SciPy / scikit-learn 互換を目指す大規模科学計算基盤。
+- Python ラッパーではなく、Rust ネイティブで科学計算・機械学習・信号処理・画像処理などを扱う方向性。
+
+用途:
+
+- Rust AI
+- 数値計算
+- 機械学習
+- 信号処理
+- HPC
+
+関連:
+
+- CuPy
+- PyTorch
+- Burn
+- Candle
+- Ollama
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- CuPy は Python / GPU アクセラレーション寄り、SciRS2 は Rust ネイティブ科学計算基盤寄り。
+- Rust 製 AI スタックを育てる場合の中核候補。
+- 関連候補: Burn、Candle、OxiLLaMa、OxiCUDA。
 
 ⸻
 
@@ -1015,6 +1061,7 @@ URL:
 - Headroom
 - open-genai
 - CuPy
+- SciRS2
 - Susono Model
 - OpenFugu
 - AI-Safeter / FUGU

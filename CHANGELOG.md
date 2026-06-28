@@ -24,3 +24,6 @@
 - `AI_DRAWERS.md` に `GPU / HPC` カテゴリを追加し、`CuPy` を登録。
 - `AI_INDEX.md` に `CuPy` の索引を追加。
 - `PROJECTS/AIRI.md` の関連技術に `CuPy` / `PyTorch` を追加。
+- `AI_DRAWERS.md` に `Scientific Computing / Rust AI` カテゴリを追加し、`SciRS2` を登録。
+- `AI_INDEX.md` に `SciRS2` の索引を追加。
+- `PROJECTS/AIRI.md` の関連技術に `SciRS2` を追加。

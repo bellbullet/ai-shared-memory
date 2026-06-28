@@ -40,6 +40,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Apple Container → `AI_DRAWERS.md`
 - Amazon Creators API SDK → `AI_DRAWERS.md`
 - CuPy → `AI_DRAWERS.md`
+- SciRS2 → `AI_DRAWERS.md`
 - OpenCut → `AI_DRAWERS.md`
 - yt-dlp → `AI_DRAWERS.md`
 - Humation → `AI_DRAWERS.md`
@@ -61,6 +62,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - 新しい GitHub リンク → `INBOX.md` または `AI_DRAWERS.md`
 - 新しい OSS / AI 技術 → `AI_DRAWERS.md`
 - GPU 高速化・HPC 技術 → `AI_DRAWERS.md` の `GPU / HPC`
+- Rust 科学計算・Rust AI 技術 → `AI_DRAWERS.md` の `Scientific Computing / Rust AI`
 - 何度も参照する技術サイト・学習サイト → `AI_DRAWERS.md` の `Reference Sites`
 - 新しい個人開発案 → `AI_DRAWERS.md` の `Ideas` または `PROJECTS/`
 - プロジェクト固有の情報 → `PROJECTS/`
