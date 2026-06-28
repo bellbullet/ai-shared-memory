@@ -36,6 +36,7 @@ URL:（なければ `未設定`）
 - Agent
 - LLM
 - Development
+- GPU / HPC
 - Creative
 - Self Host
 - Research
@@ -386,6 +387,51 @@ https://github.com/mrmishmash/amazon_creators_api
 優先度:
 
 - ★★★★☆
+
+⸻
+
+## GPU / HPC
+
+### CuPy
+
+URL:
+https://github.com/cupy/cupy
+
+概要:
+
+- NumPy / SciPy 互換の GPU 数値計算ライブラリ。
+- CPU 向け NumPy コードを GPU へ移行しやすく、`numpy` を `cupy` に置き換える感覚で扱えるケースがある。
+- NVIDIA CUDA と AMD ROCm に対応するが、AMD ROCm の対応状況は環境ごとの事前確認が必要。
+
+用途:
+
+- GPU 数値計算
+- 行列演算高速化
+- AI 前処理
+- 科学技術計算
+- 画像処理
+
+関連:
+
+- NumPy
+- SciPy
+- PyTorch
+- RAPIDS
+- AIRI
+- Whisper
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- AIRI、Whisper 周辺処理、画像処理、Embedding 後のクラスタリングや類似検索など、大量配列処理の高速化候補。
+- Radeon / ROCm 環境では、対象 OS・ROCm バージョン・CuPy wheel の対応状況を導入前に確認する。
 
 ⸻
 
@@ -968,6 +1014,7 @@ URL:
 - Apple Container
 - Headroom
 - open-genai
+- CuPy
 - Susono Model
 - OpenFugu
 - AI-Safeter / FUGU

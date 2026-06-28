@@ -21,3 +21,6 @@
 - `AI_DRAWERS.md` に `open-genai` を追加。
 - `AI_INDEX.md` に `open-genai` の索引を追加。
 - `PROJECTS/AIRI.md` の関連技術に `open-genai` を追加。
+- `AI_DRAWERS.md` に `GPU / HPC` カテゴリを追加し、`CuPy` を登録。
+- `AI_INDEX.md` に `CuPy` の索引を追加。
+- `PROJECTS/AIRI.md` の関連技術に `CuPy` / `PyTorch` を追加。

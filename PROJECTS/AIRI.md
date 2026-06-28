@@ -33,6 +33,8 @@
 ## Related Technologies
 
 - open-genai
+- CuPy
+- PyTorch
 - Whisper
 - Humation
 - OpenFugu
