@@ -189,6 +189,43 @@ https://github.com/chopratejas/headroom
 
 ⸻
 
+### open-genai
+
+URL:
+https://github.com/hirokawaguchi/open-genai
+
+概要:
+
+- デジタル庁のガバメント AI「源内（GENAI）」を OpenAI 互換 API やローカル LLM で利用するための非公式プロジェクト。
+- 既定は Ollama の OpenAI 互換 API を使い、vLLM / LM Studio / OpenAI など任意の互換サーバへ切り替え可能。
+- RAG、文字起こし、画像生成、チーム単位ナレッジなどをローカル環境で扱う構成の研究候補。
+
+用途:
+
+- OpenAI 互換 API
+- ローカル LLM
+- Ollama 連携
+- AI 基盤研究
+- 源内 OSS 研究
+
+関連:
+
+- デジタル庁 源内 OSS
+- Ollama
+- OpenFugu
+- Headroom
+- AIRI
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+⸻
+
 ### OpenFugu
 
 URL:
@@ -930,6 +967,7 @@ URL:
 - MiMo-Code
 - Apple Container
 - Headroom
+- open-genai
 - Susono Model
 - OpenFugu
 - AI-Safeter / FUGU

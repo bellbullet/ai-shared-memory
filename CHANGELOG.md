@@ -15,3 +15,9 @@
 - `NOTES/AI.md` / `NOTES/HomeLab.md` / `NOTES/Solar.md` / `NOTES/Vehicles.md` を追加。
 - `SolarPower.md` / `VehiclePlan.md` は後方互換用ファイルとして残置。
 - `AI_DRAWERS.md` に `Reference Sites` カテゴリを追加し、VTuber体験場を参考資料として登録。
+
+## 2026-06-28
+
+- `AI_DRAWERS.md` に `open-genai` を追加。
+- `AI_INDEX.md` に `open-genai` の索引を追加。
+- `PROJECTS/AIRI.md` の関連技術に `open-genai` を追加。

@@ -30,8 +30,9 @@
 - `NOTES/AI.md`
 - `AI_DRAWERS.md`
 
-## Related Drawers
+## Related Technologies
 
+- open-genai
 - Whisper
 - Humation
 - OpenFugu

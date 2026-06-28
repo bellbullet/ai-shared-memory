@@ -32,6 +32,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Whisper → `AI_DRAWERS.md`
 - MiMo-Code → `AI_DRAWERS.md`
 - Headroom → `AI_DRAWERS.md`
+- open-genai → `AI_DRAWERS.md`
 - OpenFugu → `AI_DRAWERS.md`
 - AI-Safeter / FUGU → `AI_DRAWERS.md`
 - Susono Model → `AI_DRAWERS.md`
