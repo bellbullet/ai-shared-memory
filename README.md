@@ -28,6 +28,7 @@ ai-shared-memory/
 ├─ CURRENT.md
 ├─ AI_INDEX.md
 ├─ CHANGELOG.md
+├─ LESSONS_LEARNED.md
 ├─ INBOX.md
 ├─ AI_DRAWERS.md
 ├─ PROJECTS/
@@ -62,6 +63,7 @@ AI は原則として次の順で読む。
 - [AGENTS.md](AGENTS.md): 複数 AI 向けの編集・運用ルール。
 - [AI_INDEX.md](AI_INDEX.md): プロジェクト、ノート、技術項目の索引。
 - [CHANGELOG.md](CHANGELOG.md): 構成変更・運用ルール変更の履歴。
+- [LESSONS_LEARNED.md](LESSONS_LEARNED.md): AI運用で得た再利用可能な教訓。
 - [INBOX.md](INBOX.md): 整理前のリンク、アイデア、調査候補。
 - [AI_DRAWERS.md](AI_DRAWERS.md): OSS・AI・開発ツールの技術レーダー。
 - [PROJECTS](PROJECTS): プロジェクトごとの目的、状態、次の作業。

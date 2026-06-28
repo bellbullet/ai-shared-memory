@@ -8,6 +8,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - AI rules: `AGENTS.md`
 - Unsorted items: `INBOX.md`
 - Change history: `CHANGELOG.md`
+- Lessons learned: `LESSONS_LEARNED.md`
 - Technical radar: `AI_DRAWERS.md`
 
 ## Projects
@@ -55,6 +56,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Terrain Diffusion → `AI_DRAWERS.md`
 - InfiniteDiffusion → `AI_DRAWERS.md`
 - VTuber体験場 → `AI_DRAWERS.md`
+- Claude Code運用ミス7選 → `AI_DRAWERS.md`
 - Amazon セール検知システム → `AI_DRAWERS.md`
 
 ## Topic Routing
@@ -67,4 +69,5 @@ AI が関連ファイルを素早く見つけるための索引です。
 - 新しい個人開発案 → `AI_DRAWERS.md` の `Ideas` または `PROJECTS/`
 - プロジェクト固有の情報 → `PROJECTS/`
 - 横断的な技術メモ → `NOTES/`
+- AI運用の教訓 → `LESSONS_LEARNED.md`
 - ルール変更・構成変更 → `CHANGELOG.md`

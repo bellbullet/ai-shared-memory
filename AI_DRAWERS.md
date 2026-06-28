@@ -957,6 +957,34 @@ https://fugi-himitsukichi.net/vtuber_taikenjou/
 
 ⸻
 
+### Claude Code運用ミス7選
+
+URL:
+https://qiita.com/tehito/items/356e5f1dba112a075be1
+
+概要:
+
+- Claude Code を効率よく使うための運用記事。
+- 巨大な `CLAUDE.md`、全部盛り MCP、長時間同一セッション、実装途中の compact などを避けるべき運用ミスとして整理している。
+- 長期文脈は会話ではなくファイルに永続化し、作業単位ごとに計画・分割する考え方の参考。
+
+用途:
+
+- Codex / Claude Code 運用改善
+- `AGENTS.md` 改善
+- `LESSONS_LEARNED.md` 改善
+- AI 作業分割ルールの参考
+
+状態:
+
+- 参考資料
+
+優先度:
+
+- ★★★★☆
+
+⸻
+
 ## Ideas
 
 ### Amazon セール検知システム
@@ -1051,6 +1079,7 @@ URL:
 ### 参考資料
 
 - VTuber体験場
+- Claude Code運用ミス7選
 
 ### 研究対象
 
