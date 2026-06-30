@@ -1,14 +1,99 @@
 # LESSONS_LEARNED
 
-AI Shared Memory を運用する中で得た、複数 AI 向けの再利用可能な教訓を記録します。
+運用で起きた問題、原因、対策を残すファイル。
 
-## Claude / Codex 運用
+公開可能な情報だけを書く。秘密情報、認証情報、個人情報、端末固有ログは記録しない。
 
-- 長期文脈は会話ではなくファイルへ永続化する。
-- 大きな作業は `PLAN.md` に分解してから進める。
-- タスクが変わったらセッションを分ける。
-- 実装途中の compact / 圧縮は避け、作業の区切りで行う。
+## 2026-06-27
 
-## Related References
+### Long-running AI sessions drift unless context is externalized
+
+Problem:
+
+- Long conversations can accumulate stale assumptions, hidden context, and unfinished implementation state.
+- If a session is compacted during active implementation, the next AI may continue with partial or distorted context.
+- Large tasks become hard to resume when the plan exists only in chat.
+
+Cause:
+
+- Long-term context was treated as conversation state instead of durable project state.
+- Big work was not always split into explicit, resumable steps.
+
+Countermeasure:
+
+- Keep long-term context in files such as `CURRENT.md`, `PROJECTS/`, `NOTES/`, `AI_DRAWERS.md`, and project docs.
+- For large tasks, create or update `PLAN.md` before implementation when a durable step list would help.
+- Split sessions when the task meaningfully changes.
+- Avoid compacting during active implementation; compact or hand off at a natural boundary.
+
+Scope:
+
+- AI coding operations across Codex, Claude Code, ChatGPT, Gemini, and similar agents.
+
+Related References:
 
 - Claude Code運用ミス7選: https://qiita.com/tehito/items/356e5f1dba112a075be1
+
+### PowerShell が user home から始まり、project root を誤認しやすい
+
+Problem:
+
+- PowerShell が `C:\Users\keiya` から始まることがある。
+- AI が現在ディレクトリを推測すると、project root ではない場所で `pip install -e .` や pytest を実行しようとする。
+
+Cause:
+
+- shell prompt と実際の project root を分けて確認していなかった。
+
+Countermeasure:
+
+- `Working Directory Policy` を追加した。
+- PowerShell コマンド提示時は必ず先に `cd <project path>` を示す。
+- 作業開始時に Working Directory / Git Root / Runtime / `.venv` を確認する。
+- `C:\Users\keiya` を project root として扱わない。
+
+Scope:
+
+- All projects under `D:\Codex`.
+
+### Moved workspace can leave stale `.venv` and Git assumptions
+
+Problem:
+
+- Project move from old workspace paths can leave stale `.venv` interpreter references.
+- Empty or missing `.git` can create confusion about Git root.
+
+Cause:
+
+- Workspace path changed, but runtime and Git assumptions were reused.
+
+Countermeasure:
+
+- Use `D:\Codex` as workspace root.
+- Re-detect Git root from the target project directory.
+- Recreate `.venv` only after showing the exact target path.
+- Do not run `git init` or reconnect remote automatically.
+
+Scope:
+
+- Python projects and moved project folders.
+
+### Project-specific details drift if stored in workspace README
+
+Problem:
+
+- Runtime versions, pytest results, and Git status change per project.
+- Putting those details in workspace-level README creates maintenance churn.
+
+Cause:
+
+- Stable workspace rules and changing project metadata were mixed.
+
+Countermeasure:
+
+- Keep `README_WORKSPACE.md` and `WORKSPACE.md` focused on stable rules.
+- Put project-specific runtime, Git, test, and deploy notes under `PROJECTS/`.
+
+Scope:
+
+- ai-shared-memory and workspace documentation.
