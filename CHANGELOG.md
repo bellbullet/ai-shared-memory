@@ -2,6 +2,62 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-01
+
+- `CHATGPT_PROJECT_SOURCE.md` を追加し、ChatGPT Projects の情報源に貼るための ai-shared-memory 要約を作成。
+- `CHATGPT_PROJECT_INSTRUCTIONS.md` を追加し、ChatGPT Projects の指示欄に貼る短い運用ルールを作成。
+- `WORKSPACE.md` と `CURRENT.md` の読み順を現行構成に合わせて更新。
+- `README.md` と `AI_INDEX.md` に ChatGPT Projects 用ファイルへの導線を追加。
+
+## 2026-06-30
+
+- `AI_DRAWERS.md` に Google OKF を Knowledge Management / LLM Wiki / Metadata の研究対象として追加。
+- `OKF.md` を追加し、Open Knowledge Format の採用候補、メリット、リスク、v1.1 以降の小規模試験導入案を整理。
+- `README.md` と `AI_INDEX.md` に `OKF.md` への導線を追加。
+- `NOTES/AI_Workspace_Ideas.md` を追加し、AI を仕事の入口に置く設計思想、repo を原本にする運用、人間が判断に集中する workflow を整理。
+- `OUTPUTS/README.md` を追加し、Markdown 原本から生成した PDF / pptx / xlsx / 画像などの成果物置き場を定義。
+- `STATUS.md` に Today's Decisions / Pending Decisions / Blocked / Waiting AI / Waiting Human を追加。
+- `DECISIONS.md` に Decision Record Format を追加。
+- `README.md` と `AI_INDEX.md` に `NOTES/AI_Workspace_Ideas.md` と `OUTPUTS/` への導線を追加。
+- `AI_DRAWERS.md` に PPT Master を Development Workflow / Creative / Document Automation の `次に試す` 項目として追加。
+- `AI_DRAWERS.md` の `横断グループ` に Document Automation を追加。
+- `AI_INDEX.md` と `OUTPUTS/README.md` に PPT Master への導線を追加。
+- `SKILLS/` を追加し、PowerShell / Python / Git / Research / Security の作業種別ルールを分離。
+- `PROJECT_START.md` と `AGENTS.md` に Skill Routing を追加し、`AGENTS.md` を薄く保つ方針を明文化。
+- `NOTES/AI_Coding_Patterns.md` を追加し、AGENTS.md と Skills の責務分離、file-based context、Reuse Before Build、release gate の設計パターンを整理。
+- `README.md` と `AI_INDEX.md` に `SKILLS/` と `NOTES/AI_Coding_Patterns.md` への導線を追加。
+
+## 2026-06-29
+
+- `AI_DRAWERS.md` に Ponytail を AI Coding / Development Workflow の導入検討項目として追加。
+- `AGENTS.md` と `PROJECT_START.md` に Minimal Implementation Policy を追加し、標準ライブラリ、既存依存、既存コード、共有知識を確認してから新規実装するルールを明文化。
+- `AI_DRAWERS.md` の `横断グループ` に AI Coding Operations を追加。
+- `AI_INDEX.md` に Ponytail、Minimal Implementation Policy、AI にコードを書かせすぎない運用への導線を追加。
+- `AI_DRAWERS.md` に deepsec を AI Coding / Security の導入検討項目として追加。
+- `SECURITY_REVIEW.md` を追加し、tests / AI-assisted security review / manual review / commit のリリース前チェック手順を定義。
+- `AGENTS.md` と `PROJECT_START.md` に Security Review Policy を追加。
+- `README.md`、`REVIEW.md`、`AI_INDEX.md` に `SECURITY_REVIEW.md` への導線を追加。
+
+## 2026-06-28
+
+- `AI_DRAWERS.md` に引き出し早見表を追加し、カテゴリの役割を明確化。
+- `AI_DRAWERS.md` の `Agent` カテゴリを `Agent / Orchestration` として整理。
+- `AI_DRAWERS.md` に `横断グループ` を追加し、AIRI、Creative Pipeline、Amazon Sale Monitoring、Infinite World Generation の関連項目を逆引き可能にした。
+- `AI_INDEX.md` に `AI_DRAWERS.md` の横断グループへの導線を追加。
+- `AI_DRAWERS.md` に `open-genai` を追加。
+- `AI_INDEX.md` に `open-genai` の索引を追加。
+- `PROJECTS/AIRI.md` の関連技術に `open-genai` を追加。
+- `AI_DRAWERS.md` に `GPU / HPC` カテゴリを追加し、`CuPy` を登録。
+- `AI_INDEX.md` に `CuPy` の索引を追加。
+- `PROJECTS/AIRI.md` の関連技術に `CuPy` / `PyTorch` を追加。
+- `AI_DRAWERS.md` に `Scientific Computing / Rust AI` カテゴリを追加し、`SciRS2` を登録。
+- `AI_INDEX.md` に `SciRS2` の索引を追加。
+- `PROJECTS/AIRI.md` の関連技術に `SciRS2` を追加。
+- `AI_DRAWERS.md` の `Reference Sites` に Claude Code 運用記事を追加。
+- `LESSONS_LEARNED.md` に長期文脈のファイル永続化、`PLAN.md`、セッション分割、compact 境界の教訓を追加。
+- `PROJECT_START.md` と `AGENTS.md` に Task Planning / Session Boundaries ルールを追加。
+- `AI_INDEX.md` に AI coding operations、`PLAN.md`、compact / session boundary の導線を追加。
+
 ## 2026-06-27
 
 - `AGENTS.md` を追加し、複数 AI 向けの共通運用ルールを定義。
@@ -15,18 +71,18 @@
 - `NOTES/AI.md` / `NOTES/HomeLab.md` / `NOTES/Solar.md` / `NOTES/Vehicles.md` を追加。
 - `SolarPower.md` / `VehiclePlan.md` は後方互換用ファイルとして残置。
 - `AI_DRAWERS.md` に `Reference Sites` カテゴリを追加し、VTuber体験場を参考資料として登録。
-
-## 2026-06-28
-
-- `AI_DRAWERS.md` に `open-genai` を追加。
-- `AI_INDEX.md` に `open-genai` の索引を追加。
-- `PROJECTS/AIRI.md` の関連技術に `open-genai` を追加。
-- `AI_DRAWERS.md` に `GPU / HPC` カテゴリを追加し、`CuPy` を登録。
-- `AI_INDEX.md` に `CuPy` の索引を追加。
-- `PROJECTS/AIRI.md` の関連技術に `CuPy` / `PyTorch` を追加。
-- `AI_DRAWERS.md` に `Scientific Computing / Rust AI` カテゴリを追加し、`SciRS2` を登録。
-- `AI_INDEX.md` に `SciRS2` の索引を追加。
-- `PROJECTS/AIRI.md` の関連技術に `SciRS2` を追加。
-- `AI_DRAWERS.md` の `Reference Sites` に `Claude Code運用ミス7選` を追加。
-- `LESSONS_LEARNED.md` を追加し、Claude / Codex 運用の注意点を記録。
-- `AGENTS.md` に大きな作業の `PLAN.md` 分解、セッション分割、compact タイミングのルールを追加。
+- `WORKSPACE.md` を追加し、ワークスペース地図と作業開始時の読み順を分離。
+- `AGENTS.md` の読み順を `WORKSPACE.md` → `AGENTS.md` → `CURRENT.md` に更新。
+- `README.md` の構成図と読み順を `WORKSPACE.md` 起点に更新。
+- `CURRENT.md` を新しい読み順に合わせて更新。
+- `PROJECTS/` に local Codex projects の公開可能な runtime / Git / test metadata を分離。
+- `AGENTS.md` に Knowledge Scan と Reuse Before Build の行動ルールを追加。
+- `PROJECT_START.md` を追加し、作業開始時の入口を一本化。
+- `LESSONS_LEARNED.md` を追加し、運用で学んだ問題、原因、対策を記録する場所を追加。
+- `AI_INDEX.md` に Quick Lookup を追加し、キーワードから関連ファイルへ逆引きできるように更新。
+- `REVIEW.md` を追加し、monthly review と project / knowledge review のチェック項目を定義。
+- `STATUS.md` を追加し、workspace 全体の active projects / research areas / operating state を一覧化。
+- `AI_PROFILES.md` を追加し、ChatGPT / Codex / Claude / Gemini の役割分担目安を整理。
+- `DECISIONS.md` を追加し、重要な設計判断と採用理由を記録する場所を追加。
+- GitHub link / OSS / paper / tool を `INBOX.md` または `AI_DRAWERS.md` に分類する運用ルールを強化。
+- `AGENTS.md` に Update Suggestions を追加し、AI が関連ファイル更新候補を提案できるようにした。
