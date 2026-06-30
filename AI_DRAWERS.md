@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-06-27
+最終更新: 2026-06-30
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫です。
 
@@ -9,6 +9,18 @@
 - OSS、AI 技術、開発ツール、研究対象、個人開発アイデアを分類する。
 - 新しい GitHub リンクや公開論文を、複数 AI が再利用できる形で残す。
 - 導入候補、研究対象、アイデアを混同しない。
+
+## 引き出し早見表
+
+- `AI`: AI 利用基盤、RAG、音声認識、AI 向けドキュメント。
+- `Agent / Orchestration`: AI エージェント、長期記憶、LLM ルーティング、複数 AI 協調。
+- `LLM`: モデル本体、モデルコレクション、ローカル LLM 調査。
+- `Development`: 開発支援、SDK、コンテナ、審査、API。
+- `Creative`: 動画、音声、アバター、メディア制作。
+- `Self Host`: 自宅サーバー、セルフホスト、ローカルサービス。
+- `Research`: 論文、実験的技術、内容確認待ちの調査対象。
+- `Reference Sites`: 何度も参照する学習サイト、技術サイト。
+- `Ideas`: 個人開発案、まだプロジェクト化していない構想。
 
 ## 追加ルール
 
@@ -33,7 +45,7 @@ URL:（なければ `未設定`）
 推奨カテゴリ:
 
 - AI
-- Agent
+- Agent / Orchestration
 - LLM
 - Development
 - GPU / HPC
@@ -47,6 +59,7 @@ URL:（なければ `未設定`）
 状態の例:
 
 - 導入推奨
+- 導入検討
 - 次に試す
 - 将来導入
 - 将来候補
@@ -116,6 +129,57 @@ https://github.com/firecrawl/firecrawl
 
 ⸻
 
+### Google OKF
+
+URL:
+https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing
+
+参考:
+https://zenn.dev/knowledgesense/articles/14a874a9f423bb
+
+分類:
+
+- Knowledge Management
+- LLM Wiki
+- Metadata
+
+概要:
+
+- Google Cloud が提案した、AI が読みやすいナレッジ管理のための Open Knowledge Format。
+- Markdown ファイルに YAML frontmatter を付け、知識の type、title、description、resource、tags、timestamp などを機械的に扱いやすくする。
+- v0.1 段階のため、現時点では全体採用ではなく研究対象として監視する。
+
+用途:
+
+- AI Shared Memory
+- Metadata
+- LLM Wiki
+- Knowledge Base
+- RAG / agent context
+
+関連:
+
+- `OKF.md`
+- `PROJECT_START.md`
+- `CURRENT.md`
+- `STATUS.md`
+- `AI_INDEX.md`
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- まだ採用決定ではない。`DECISIONS.md` には入れず、`OKF.md` で採用候補として監視する。
+- v1.1 以降で `CURRENT.md`、`PROJECT_START.md`、`STATUS.md` など数ファイルだけに YAML frontmatter を試験導入するか検討する。
+
+⸻
+
 ### Whisper
 
 URL:
@@ -141,7 +205,14 @@ https://github.com/openai/whisper
 
 ⸻
 
-## Agent
+## Agent / Orchestration
+
+AI エージェント、長期記憶、複数 LLM 協調、ルーティング、オーケストレーター系をまとめる。
+
+関連グループ:
+
+- MiMo-Code / Headroom / OpenFugu / AI-Safeter FUGU は「AIを管理するAI」の研究候補。
+- OpenFugu は実装・統合寄り、AI-Safeter FUGU は最適化手法寄り、Headroom は記憶・コンテキスト管理寄り。
 
 ### MiMo-Code
 
@@ -280,7 +351,7 @@ https://github.com/AI-Safeter/FUGU
 
 メモ:
 
-- Fugu / OpenFugu / MiMo-Code / Headroom などは「AIを管理するAI（オーケストレーター）」として整理候補。
+- `Agent / Orchestration` グループ内で OpenFugu と対で確認する。
 
 ⸻
 
@@ -332,6 +403,148 @@ https://github.com/RevylAI/greenlight
 優先度:
 
 - 未設定
+
+⸻
+
+### Ponytail
+
+URL:
+https://github.com/DietrichGebert/ponytail
+
+分類:
+
+- AI Coding
+- Development Workflow
+
+概要:
+
+- AI コーディングエージェントに「必要以上にコードを書かない」という設計思想を与えるスキル。
+- 既存コード、標準ライブラリ、ネイティブ機能、導入済み依存で足りるかを先に確認し、最後に最小限の実装へ進む。
+
+用途:
+
+- Reuse Before Build
+- シンプル設計
+- 不要な抽象化防止
+- コード削減
+- レビュー
+
+関連:
+
+- ai-shared-memory
+- `AGENTS.md`
+- `PROJECT_START.md`
+- OpenFugu
+- Headroom
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- そのまま導入するより、まず `AGENTS.md` と `PROJECT_START.md` の基本ルールへ思想を取り込む。
+- 信頼境界、データ損失対策、セキュリティ、アクセシビリティは削減対象にしない。
+
+⸻
+
+### deepsec
+
+URL:
+https://github.com/vercel-labs/deepsec
+
+分類:
+
+- AI Coding
+- Security
+
+概要:
+
+- Codex / Claude などの AI エージェントを利用してコードベースをセキュリティレビューするための AI ハーネス。
+- 通常の SAST だけでは見つけにくい、文脈依存の認証、認可、入力検証、権限、データフローの問題を AI に調査させる。
+
+用途:
+
+- AI Security Review
+- Vulnerability Scan
+- Pull Request Review
+- Secure Coding
+- Release Gate
+
+関連:
+
+- Codex
+- Claude
+- Semgrep
+- CodeQL
+- `SECURITY_REVIEW.md`
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- 全作業で毎回実行するのではなく、公開 GitHub、大きい PR、認証・Webhook・コマンド実行・ファイル処理・アップロード処理、リリース前の節目で検討する。
+- AI 調査は時間とコストがかかるため、pytest や通常レビューの代替ではなく、重要変更の追加チェックとして扱う。
+
+⸻
+
+### PPT Master
+
+URL:
+https://github.com/hugohe3/ppt-master
+
+分類:
+
+- Development Workflow
+- Creative
+- Document Automation
+
+概要:
+
+- PDF、DOCX、Markdown、URL などの素材から、AI エージェント経由で編集可能な PowerPoint（`.pptx`）を生成するローカルワークフロー / スキル。
+- 画像貼り付け型ではなく、PowerPoint 上で編集できるネイティブ要素、図形、テキスト、チャートとして出力することを重視する。
+- Claude Code、Cursor、VS Code + Copilot、Codex CLI などの AI IDE / CLI エージェント内で使うハーネスとして位置付けられている。
+
+用途:
+
+- Markdown / PDF から PPTX 生成
+- 技術メモの資料化
+- 提案資料作成
+- レポートのスライド化
+- Codex / Claude Code / Cursor 連携
+- `OUTPUTS/` への成果物生成
+
+関連:
+
+- Codex
+- Claude Code
+- AI Shared Memory
+- `OUTPUTS/README.md`
+- Stirling PDF
+- OpenCut
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 一発で完成資料を作る魔法ではなく、編集可能な叩き台を作って PowerPoint で直すための道具として扱う。
+- 出力品質はモデル、入力素材、テンプレート、利用者の PowerPoint 編集ワークフローに依存する。
 
 ⸻
 
@@ -962,15 +1175,20 @@ https://fugi-himitsukichi.net/vtuber_taikenjou/
 URL:
 https://qiita.com/tehito/items/356e5f1dba112a075be1
 
+分類:
+
+- Reference Sites / AI Coding Operations
+
 概要:
 
 - Claude Code を効率よく使うための運用記事。
-- 巨大な `CLAUDE.md`、全部盛り MCP、長時間同一セッション、実装途中の compact などを避けるべき運用ミスとして整理している。
+- 巨大な `CLAUDE.md`、全部盛り MCP、長時間同一セッション、実装途中 compact などを避けるべき運用ミスとして整理している。
 - 長期文脈は会話ではなくファイルに永続化し、作業単位ごとに計画・分割する考え方の参考。
 
 用途:
 
 - Codex / Claude Code 運用改善
+- `PROJECT_START.md` 改善
 - `AGENTS.md` 改善
 - `LESSONS_LEARNED.md` 改善
 - AI 作業分割ルールの参考
@@ -982,6 +1200,13 @@ https://qiita.com/tehito/items/356e5f1dba112a075be1
 優先度:
 
 - ★★★★☆
+
+メモ:
+
+- 長期文脈は会話ではなくファイルへ永続化する。
+- 大きな作業は `PLAN.md` に分解してから進める。
+- タスクが変わったらセッションを分ける。
+- 実装途中の compact / 圧縮は避け、区切りで行う。
 
 ⸻
 
@@ -1033,6 +1258,93 @@ URL:
 
 ⸻
 
+## 横断グループ
+
+### AI Companion / AIRI
+
+- Whisper
+- Humation
+- Humation Swift
+- VTuber体験場
+- OpenCut
+
+用途:
+
+- AI コンパニオン、音声認識、表情・アバター表現、配信・動画導線。
+
+### Agent / Orchestration
+
+- MiMo-Code
+- Headroom
+- OpenFugu
+- AI-Safeter / FUGU
+
+用途:
+
+- 複数 AI 協調、AI エージェント、長期記憶、ルーティング最適化。
+
+### AI Coding Operations
+
+- Ponytail
+- deepsec
+- Claude Code運用ミス7選
+
+用途:
+
+- AI コーディング運用改善、最小実装、長期文脈管理、作業分割、セキュリティレビュー。
+
+### Document Automation
+
+- PPT Master
+- OUTPUTS
+- Stirling PDF
+
+用途:
+
+- Markdown / PDF / DOCX から編集可能な成果物を生成し、repo 内の原本と人間向け出力を分離する。
+
+### Knowledge Management
+
+- Google OKF
+- AI_INDEX
+- PROJECT_START
+- CURRENT
+- STATUS
+
+用途:
+
+- AI が読みやすい共有知識ベース、メタデータ、LLM Wiki、ナレッジ検索。
+
+### Creative Pipeline
+
+- OpenCut
+- yt-dlp
+- Whisper
+
+用途:
+
+- 動画取得、音声抽出、文字起こし、動画編集。
+
+### Amazon Sale Monitoring
+
+- Amazon Creators API SDK
+- Amazon セール検知システム
+
+用途:
+
+- 商品情報取得、価格監視、セール通知、アフィリエイト支援。
+
+### Infinite World Generation
+
+- Terrain Diffusion
+- InfiniteDiffusion
+
+用途:
+
+- 無限ワールド生成、プロシージャル生成、Minecraft Mod、ゲーム開発研究。
+
+⸻
+
 ## 優先順位
 
 ### 最優先研究対象
@@ -1046,11 +1358,17 @@ URL:
 - Whisper
 - Stirling PDF
 
+### 導入検討
+
+- Ponytail
+- deepsec
+
 ### 次に試す
 
 - Homepage
 - n8n
 - OpenCut
+- PPT Master
 
 ### 将来導入
 
@@ -1084,6 +1402,7 @@ URL:
 ### 研究対象
 
 - DESIGN.md
+- Google OKF
 - Greenlight
 - MiMo-Code
 - Apple Container
@@ -1110,6 +1429,7 @@ URL:
 - ユーザーは新しい OSS や AI 技術を継続収集している。
 - 導入候補、研究対象、開発アイデアを区別する。
 - 新しい GitHub リンクが提示された場合は適切なカテゴリへ分類する。
+- 単体カテゴリだけでなく `横断グループ` も確認する。
 - 類似ツールがあれば比較候補として提案する。
 - 重複ツールは整理対象として指摘する。
 - 不確かな分類は `INBOX.md` に置く。

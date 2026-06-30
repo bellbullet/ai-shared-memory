@@ -4,26 +4,46 @@
 
 ## Goal
 
-- 公開可能な範囲で、ゲーム監視・フリーズ検知に関するプロジェクト概要と次の作業を整理する。
+- Windows 11 上でゲーム中のフリーズ、異常終了、予兆調査を支援する診断ツール。
+- HWiNFO センサー、Windows event log、SQLite、Markdown report、task tray wrapper を組み合わせる。
 
 ## Status
 
-- 情報整理待ち
+- Python project。
+- Local workspace では `.venv` 再作成と pytest 成功を確認済み。
+- Git 管理は推奨。ただし local workspace では `.git` 未検出。
 
 ## Stack
 
-- 未整理
+- Python `>=3.14`
+- `matplotlib`
+- `Pillow`
+- `pystray`
+- SQLite
+- pytest
 
 ## AI Instructions
 
+- 作業開始時に Working Directory / Git Root / Python / `.venv` を確認する。
+- `.venv` を activate した後は `py -3.14` ではなく、その環境の `python` を使う。
 - 診断結果と推測を分けて記録する。
-- 個人情報を含むログ、端末固有情報、ローカルパスを貼り付けない。
-- 公開可能な設計判断だけを残す。
+- 個人情報、端末固有ログ、ローカルパス、認証情報は公開メモリに貼らない。
+- runtime data、logs、reports、diagnostics は Git 管理対象にしない。
+
+## Test / Verification
+
+- `python -m pytest`
+- 2026-06-27 時点の確認: 20 tests passed。
+
+## Git Notes
+
+- Source、tests、docs は Git 管理推奨。
+- `.git` がない場合は、勝手に `git init` せず、既存 remote の有無と復旧方針をユーザーに確認する。
 
 ## Next Tasks
 
-- 公開可能な目的、現在地、関連技術を追記する。
-- 技術メモが増えた場合は `NOTES/AI.md` または別ノートへ分離する。
+- Git 管理する場合は repository 方針を確認する。
+- tray / monitor / report の変更時は README の起動手順も同時に更新する。
 
 ## Related Notes
 
