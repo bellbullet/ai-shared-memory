@@ -116,6 +116,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Ponytail → `AI_DRAWERS.md`, `AGENTS.md`, `PROJECT_START.md`
 - deepsec → `AI_DRAWERS.md`, `SECURITY_REVIEW.md`
 - Oracle / steipete/oracle → `AI_DRAWERS.md`, `CHATGPT_PROJECT_SOURCE.md`, `AI_INDEX.md`
+- The Hitchhiker's Guide to Agentic AI → `AI_DRAWERS.md`
+- Agentic AI guide → `AI_DRAWERS.md`
+- MCP / A2A / agent evaluation → `AI_DRAWERS.md`
 - Memory Consolidation / Dream Review → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`, `REVIEW.md`
 - Anthropic Dreams → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
 - dream-skill → `AI_DRAWERS.md`
@@ -226,6 +229,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - 設計判断・採用理由 → `DECISIONS.md`
 - 何度も参照する技術サイト・学習サイト → `AI_DRAWERS.md` の `Reference Sites`
 - AI coding operations / Claude Code 運用 → `AI_DRAWERS.md`, `LESSONS_LEARNED.md`
+- Agentic AI / RAG / Memory / MCP / A2A → `AI_DRAWERS.md`
+- agent evaluation / observability / safety → `AI_DRAWERS.md`
 - Claude Code skills / agent-skills → `AI_DRAWERS.md`, `SKILLS/README.md`
 - second opinion / multi-model review / oracle → `AI_DRAWERS.md`
 - ChatGPT Project Sources automation → `AI_DRAWERS.md`, `CHATGPT_PROJECT_SOURCE.md`

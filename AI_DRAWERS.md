@@ -1727,6 +1727,60 @@ https://qiita.com/tehito/items/356e5f1dba112a075be1
 
 ⸻
 
+### The Hitchhiker's Guide to Agentic AI
+
+URL:
+
+- https://arxiv.org/abs/2606.24937
+- https://arxiv.org/pdf/2606.24937
+
+分類:
+
+- Reference Sites
+- Agent / Orchestration
+- Knowledge Management
+- AI Coding Operations
+- Research
+
+概要:
+
+- Haggai Roitman による Agentic AI の大型リファレンス。
+- arXiv:2606.24937v1、2026-06-22 submitted、PDF は 603 pages、Version 1.2.2。
+- LLM 基礎、GPU / 分散学習、RLHF / DPO / GRPO、reasoning、評価、RAG、memory、MCP、A2A、multi-agent、agent UI、production deployment までを扱う。
+- Agentic AI を、観測、推論、tool use、外部 action、反復、human oversight を含む production system として整理している。
+
+用途:
+
+- AI Workspace 設計
+- agent orchestration 研究
+- RAG / memory / MCP / A2A の体系理解
+- ai-shared-memory の設計改善
+- agent evaluation / safety / observability の参考
+
+関連:
+
+- OpenFugu
+- Headroom
+- agency-agents
+- Oracle
+- Memory Consolidation / Dream Review
+- `NOTES/AI_Coding_Patterns.md`
+
+状態:
+
+- 参考資料
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- 全文通読より、Part V Agentic AI、quick reference、failure modes、future directions を優先確認する。
+- multimodal や domain-specific deployment は主対象外として扱う。
+
+⸻
+
 ### Memory Consolidation / Dream Review
 
 URL:
@@ -1848,6 +1902,7 @@ URL:
 - OpenFugu
 - AI-Safeter / FUGU
 - agency-agents
+- The Hitchhiker's Guide to Agentic AI
 
 用途:
 
@@ -1862,10 +1917,11 @@ URL:
 - Oracle
 - Claude Code運用ミス7選
 - Memory Consolidation / Dream Review
+- The Hitchhiker's Guide to Agentic AI
 
 用途:
 
-- AI コーディング運用改善、専門エージェント役割設計、multi-model review、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
+- AI コーディング運用改善、専門エージェント役割設計、multi-model review、agentic system reference、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
 
 ### Document Automation
 
@@ -1885,6 +1941,7 @@ URL:
 - CURRENT
 - STATUS
 - Memory Consolidation / Dream Review
+- The Hitchhiker's Guide to Agentic AI
 
 用途:
 
@@ -2009,6 +2066,7 @@ URL:
 - VTuber体験場
 - Claude Code運用ミス7選
 - Memory Consolidation / Dream Review
+- The Hitchhiker's Guide to Agentic AI
 
 ### 研究対象
 

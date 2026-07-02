@@ -4,6 +4,8 @@
 
 ## 2026-07-02
 
+- `AI_DRAWERS.md` に The Hitchhiker's Guide to Agentic AI を Agentic AI / RAG / Memory / MCP / A2A / agent evaluation の大型参照資料として追加。
+- `AI_INDEX.md` に Agentic AI guide、MCP、A2A、agent evaluation、observability、safety の導線を追加。
 - `AI_DRAWERS.md` に `puppetlabs/puppet` を Infrastructure as Code / Configuration Management / HomeLab の研究対象として追加。
 - `AI_INDEX.md` に Puppet、Configuration Management、Infrastructure as Code、HomeLab configuration management の導線を追加。
 - `AI_DRAWERS.md` に `steipete/oracle` を multi-model review / MCP / ChatGPT Project Sources 支援の調査候補として追加。
