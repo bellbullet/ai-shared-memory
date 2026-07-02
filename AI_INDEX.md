@@ -194,6 +194,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Stirling PDF → `AI_DRAWERS.md`
 - AppFlowy → `AI_DRAWERS.md`
 - Nango → `AI_DRAWERS.md`
+- Puppet → `AI_DRAWERS.md`, `NOTES/HomeLab.md`
+- Configuration Management / IaC / Infrastructure as Code → `AI_DRAWERS.md`, `NOTES/HomeLab.md`, `PROJECTS/OciMinecraftJavaServer.md`
 
 ### Finance / Investigation
 
@@ -229,6 +231,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - ChatGPT Project Sources automation → `AI_DRAWERS.md`, `CHATGPT_PROJECT_SOURCE.md`
 - AI Workspace integrations / API Integration → `AI_DRAWERS.md`, `NOTES/AI_Workspace_Ideas.md`
 - AI video / voice generation → `AI_DRAWERS.md`
+- HomeLab configuration management / Puppet / Ansible → `AI_DRAWERS.md`, `NOTES/HomeLab.md`
 - specialist agents / AI agent personas → `AI_DRAWERS.md`, `AI_PROFILES.md`, `SKILLS/README.md`
 - memory dream / memory consolidation / 記憶整理 → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`, `REVIEW.md`
 - AI にコードを書かせすぎない運用 → `AGENTS.md`, `PROJECT_START.md`, `AI_DRAWERS.md`

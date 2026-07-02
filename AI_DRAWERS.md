@@ -816,6 +816,55 @@ https://github.com/reconurge/flowsint
 
 ⸻
 
+### Puppet
+
+URL:
+https://github.com/puppetlabs/puppet
+
+分類:
+
+- Development
+- Infrastructure as Code
+- Configuration Management
+- HomeLab
+
+概要:
+
+- Linux / Unix / Windows の構成管理をコード化する老舗 OSS。
+- ユーザー、パッケージ、サービス、設定ファイルなどの状態を宣言的に定義し、自動管理する。
+- 個人 HomeLab では Ansible より重めだが、構成管理、DevOps、大規模運用の学習対象として有用。
+
+用途:
+
+- HomeLab 構成管理研究
+- サーバー初期設定の再現性向上
+- Terraform / Ansible / Docker Compose との比較
+- `OciMinecraftJavaServer` などインフラ系 project の運用設計参考
+
+関連:
+
+- HomeLab
+- Terraform
+- Ansible
+- Docker Compose
+- `PROJECTS/OciMinecraftJavaServer.md`
+- `NOTES/HomeLab.md`
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★☆☆
+
+メモ:
+
+- すぐ導入より、Ansible / Terraform / Docker Compose との役割比較として扱う。
+- manifest に secret、token、private path、実アカウント情報を含めない。
+
+⸻
+
 ### PPT Master
 
 URL:
