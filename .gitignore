@@ -1,5 +1,6 @@
 .agents/
 .codex/
+.oci/
 
 # OS and editor files
 .DS_Store
