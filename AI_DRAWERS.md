@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-06-30
+最終更新: 2026-07-02
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫です。
 
@@ -403,6 +403,80 @@ https://github.com/msitarzewski/agency-agents
 
 ⸻
 
+### TradingAgents
+
+URL:
+https://github.com/TauricResearch/TradingAgents
+
+分類:
+
+- Agent / Orchestration
+- Finance
+- Multi-Agent
+
+概要:
+
+- Multi-Agents LLM Financial Trading Framework。
+- 複数の LLM agent を使い、金融市場分析、投資判断、取引判断の研究を行うためのフレームワーク。
+
+用途:
+
+- multi-agent workflow 研究
+- 金融分析 agent の設計参考
+- decision log / analyst / trader / risk manager などの役割分担研究
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 実取引導入ではなく、multi-agent 設計と金融分析 workflow の研究対象として扱う。
+- API key、取引口座、投資判断ログなどは公開メモリに記載しない。
+
+⸻
+
+### Agentic Inbox
+
+URL:
+https://github.com/cloudflare/agentic-inbox
+
+分類:
+
+- Agent / Orchestration
+- Email
+- Self Host
+
+概要:
+
+- Cloudflare Workers 上で動く、AI agent 付きの self-hosted email client。
+- メールを AI workspace の入口に置く設計の参考候補。
+
+用途:
+
+- AI inbox / email assistant 研究
+- Cloudflare Workers agent app 研究
+- AI Workspace の通知・メール入口設計
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 実メール内容、アカウント情報、認証情報は公開メモリに記載しない。
+- `NOTES/AI_Workspace_Ideas.md` の「AI を入口に置く」設計思想と接続できる。
+
+⸻
+
 ## LLM
 
 ### Susono Model
@@ -543,6 +617,202 @@ https://github.com/vercel-labs/deepsec
 
 - 全作業で毎回実行するのではなく、公開 GitHub、大きい PR、認証・Webhook・コマンド実行・ファイル処理・アップロード処理、リリース前の節目で検討する。
 - AI 調査は時間とコストがかかるため、pytest や通常レビューの代替ではなく、重要変更の追加チェックとして扱う。
+
+⸻
+
+### Nango
+
+URL:
+https://github.com/NangoHQ/nango
+
+分類:
+
+- Development
+- API Integration
+- AI Tooling
+
+概要:
+
+- AI を使って product integrations を構築するためのオープンソース API integration platform。
+- SaaS / API 連携、OAuth、外部サービス統合を扱う基盤候補。
+
+用途:
+
+- 外部サービス連携
+- API integration 基盤
+- AI Workspace の Slack / GitHub / Calendar / Email 連携研究
+- webhook / OAuth まわりの設計参考
+
+状態:
+
+- 将来候補
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 導入時は OAuth token、API key、webhook secret、接続先設定を公開メモリに記録しない。
+- AIRI や AI Workspace が複数外部サービスを扱う段階で再評価する。
+
+⸻
+
+### anthropics/skills
+
+URL:
+https://github.com/anthropics/skills
+
+分類:
+
+- AI Coding Operations
+- Skills
+- Prompt Engineering
+
+概要:
+
+- Anthropic の Agent Skills 公開リポジトリ。
+- Claude Code / agent workflow 向け skill の構成や配布形式を確認するための参照枠。
+
+用途:
+
+- `SKILLS/` 設計の参考
+- task-specific rules の分離方法確認
+- Claude Code / Codex skill 運用比較
+
+状態:
+
+- 保留
+
+優先度:
+
+- ★★★☆☆
+
+メモ:
+
+- ai-shared-memory ではすでに `SKILLS/` 思想を取り込んでいるため、今すぐ導入ではなく参照枠として扱う。
+
+⸻
+
+### Oracle
+
+URL:
+https://github.com/steipete/oracle
+
+分類:
+
+- AI Coding Operations
+- Development Workflow
+- MCP
+- Multi-model Review
+
+概要:
+
+- prompt と関連ファイルを bundle し、GPT / Gemini / Claude など別 AI へ文脈つきで相談できる CLI / MCP ツール。
+- API 実行、browser automation、手動コピペ用の render/copy、multi-model panel、ChatGPT Project Sources 追加支援に対応する。
+- Codex skill と MCP server としても使える設計。
+
+用途:
+
+- Codex / Claude Code / Cursor 作業中のセカンドオピニオン
+- bug investigation、architecture review、release readiness audit
+- `ai-shared-memory` や project docs を明示的に bundle して別 AI へ相談する
+- ChatGPT Project Sources 管理の補助
+
+関連:
+
+- Codex
+- Claude Code
+- Cursor
+- MCP
+- ChatGPT Projects
+- `CHATGPT_PROJECT_SOURCE.md`
+- `AI_INDEX.md`
+
+状態:
+
+- 調査候補
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- まずは `--render --copy` の手動 bundle 用途から試す。
+- API key、browser cookie、browser automation、remote token、Project Sources 操作は秘密情報と権限に注意する。
+- browser automation は便利だが、安定性と権限境界を確認してから使う。
+
+⸻
+
+### Fincept Terminal
+
+URL:
+https://github.com/Fincept-Corporation/FinceptTerminal
+
+分類:
+
+- Development
+- Finance
+- Analytics
+
+概要:
+
+- オープンソースの金融分析 terminal / finance application。
+- market analytics、investment research、economic data tools を扱う。
+
+用途:
+
+- 金融分析 UI / terminal 研究
+- TradingAgents など金融 agent の比較候補
+
+状態:
+
+- 保留
+
+優先度:
+
+- ★★☆☆☆
+
+メモ:
+
+- AI Workspace 本体からは距離があるため、金融分析や投資研究を本格化する場合に再評価する。
+
+⸻
+
+### Flowsint
+
+URL:
+https://github.com/reconurge/flowsint
+
+分類:
+
+- Development
+- OSINT
+- Security
+
+概要:
+
+- cybersecurity analysts / investigators 向けの graph-based investigation platform。
+- visual、flexible、extensible な調査グラフを扱う。
+
+用途:
+
+- OSINT 調査
+- セキュリティ調査 workflow
+- graph-based investigation UI 研究
+
+状態:
+
+- 保留
+
+優先度:
+
+- ★★☆☆☆
+
+メモ:
+
+- OSINT 用途は扱う情報の公開可否が重要。実調査データや個人情報は公開メモリに残さない。
 
 ⸻
 
@@ -852,6 +1122,118 @@ https://github.com/humation-labs/humation-swift
 
 ⸻
 
+### HyperFrames
+
+URL:
+https://github.com/heygen-com/hyperframes
+
+分類:
+
+- Creative
+- Video
+- Agent Tooling
+
+概要:
+
+- HeyGen のオープンソース動画生成エンジン。
+- HTML を書いて video を render する、agent 向け動画生成 workflow の研究候補。
+
+用途:
+
+- AI video generation
+- HTML to video
+- agent-driven creative workflow
+- OpenCut / PPT Master / OUTPUTS との比較
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 実運用より先に、生成品質、依存関係、ローカル実行性、ライセンス境界を確認する。
+
+⸻
+
+### VoxCPM
+
+URL:
+https://github.com/OpenBMB/VoxCPM
+
+分類:
+
+- Creative
+- Voice
+- TTS
+
+概要:
+
+- multilingual speech generation、creative voice design、voice cloning を扱う TTS / voice model 系プロジェクト。
+- AIRI や AI companion の音声表現候補。
+
+用途:
+
+- TTS
+- voice cloning research
+- AI companion voice
+- AIRI / avatar workflow
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 声の権利、同意、なりすまし、公開利用の境界を必ず確認する。
+- 実在人物の声を無断で模倣する用途には使わない。
+
+⸻
+
+### MoneyPrinterTurbo
+
+URL:
+https://github.com/harry0703/MoneyPrinterTurbo
+
+分類:
+
+- Creative
+- Video
+- Automation
+
+概要:
+
+- AI LLM を使って短動画を一括生成するツール。
+- short video automation の参考候補。
+
+用途:
+
+- short video generation
+- creative automation
+- OpenCut / HyperFrames との比較
+
+状態:
+
+- 保留
+
+優先度:
+
+- ★★☆☆☆
+
+メモ:
+
+- 品質、著作権、素材ライセンス、量産運用のリスク確認が必要。
+- すぐ導入ではなく、動画生成 workflow を調査するときの比較候補。
+
+⸻
+
 ### Reactive Resume
 
 URL:
@@ -998,6 +1380,44 @@ https://github.com/Stirling-Tools/Stirling-PDF
 優先度:
 
 - 未設定
+
+⸻
+
+### LibreChat
+
+URL:
+https://github.com/danny-avila/LibreChat
+
+分類:
+
+- Self Host
+- AI UI
+- Multi-Model Chat
+
+概要:
+
+- self-hosted ChatGPT clone / AI chat UI。
+- Agents、MCP、Skills、Anthropic、OpenAI、Gemini、OpenRouter など複数 provider と model switching を扱う。
+
+用途:
+
+- 複数 AI を 1 画面で扱う UI 研究
+- AI Workspace frontend 参考
+- self-hosted AI chat
+- MCP / Skills / multi-provider workflow の比較
+
+状態:
+
+- 将来候補
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 今すぐ置き換えではなく、AI Workspace の UI / multi-model routing 研究として扱う。
+- user auth、provider API key、conversation data は公開メモリに記録しない。
 
 ⸻
 
@@ -1364,12 +1784,13 @@ URL:
 - Whisper
 - Humation
 - Humation Swift
+- VoxCPM
 - VTuber体験場
 - OpenCut
 
 用途:
 
-- AI コンパニオン、音声認識、表情・アバター表現、配信・動画導線。
+- AI コンパニオン、音声認識、音声表現、表情・アバター表現、配信・動画導線。
 
 ### Agent / Orchestration
 
@@ -1388,12 +1809,14 @@ URL:
 - Ponytail
 - deepsec
 - agency-agents
+- anthropics/skills
+- Oracle
 - Claude Code運用ミス7選
 - Memory Consolidation / Dream Review
 
 用途:
 
-- AI コーディング運用改善、専門エージェント役割設計、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
+- AI コーディング運用改善、専門エージェント役割設計、multi-model review、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
 
 ### Document Automation
 
@@ -1423,10 +1846,34 @@ URL:
 - OpenCut
 - yt-dlp
 - Whisper
+- HyperFrames
+- MoneyPrinterTurbo
+- VoxCPM
 
 用途:
 
-- 動画取得、音声抽出、文字起こし、動画編集。
+- 動画取得、音声抽出、文字起こし、動画編集、動画生成、音声生成。
+
+### AI Workspace / Integrations
+
+- LibreChat
+- Agentic Inbox
+- Nango
+- agency-agents
+
+用途:
+
+- 複数 AI UI、AI メール、外部 API 連携、専門エージェント役割設計。
+
+### Finance / Investigation
+
+- TradingAgents
+- Fincept Terminal
+- Flowsint
+
+用途:
+
+- 金融 multi-agent、金融分析 terminal、OSINT / graph investigation の研究候補。
 
 ### Amazon Sale Monitoring
 
@@ -1466,6 +1913,10 @@ URL:
 - Ponytail
 - deepsec
 - agency-agents
+- TradingAgents
+- Agentic Inbox
+- VoxCPM
+- Oracle
 
 ### 次に試す
 
@@ -1478,6 +1929,8 @@ URL:
 
 - Immich
 - AppFlowy
+- LibreChat
+- Nango
 
 ### 将来候補
 
@@ -1491,6 +1944,10 @@ URL:
 ### 保留
 
 - Reactive Resume
+- Fincept Terminal
+- MoneyPrinterTurbo
+- Flowsint
+- anthropics/skills
 
 ### 調査保留・内容確認待ち
 

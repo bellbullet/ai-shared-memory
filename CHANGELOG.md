@@ -4,6 +4,10 @@
 
 ## 2026-07-02
 
+- `AI_DRAWERS.md` に `steipete/oracle` を multi-model review / MCP / ChatGPT Project Sources 支援の調査候補として追加。
+- `AI_INDEX.md` に Oracle、second opinion、multi-model review、ChatGPT Project Sources automation の導線を追加。
+- `AI_DRAWERS.md` に X 投稿由来の OSS / AI tool 10件を追加し、優先度高め6件と保留4件に分類。
+- `AI_INDEX.md` に TradingAgents、LibreChat、HyperFrames、Agentic Inbox、VoxCPM、Nango などの導線を追加。
 - `AI_DRAWERS.md` に `agency-agents` を Agent / Orchestration と AI Coding Operations の導入検討項目として追加。
 - `AI_INDEX.md` に agency-agents、専門 AI エージェント、role agents への導線を追加。
 - `AI_DRAWERS.md` に Memory Consolidation / Dream Review を AI Coding Operations / Knowledge Management / Agent Memory の採用候補として追加。

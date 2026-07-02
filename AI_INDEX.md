@@ -110,9 +110,12 @@ AI が関連ファイルを素早く見つけるための索引です。
 - MiMo-Code → `AI_DRAWERS.md`
 - Headroom → `AI_DRAWERS.md`
 - agency-agents → `AI_DRAWERS.md`, `AI_PROFILES.md`, `SKILLS/README.md`
+- TradingAgents → `AI_DRAWERS.md`
+- Agentic Inbox → `AI_DRAWERS.md`, `NOTES/AI_Workspace_Ideas.md`
 - Agent / Orchestration → `AI_DRAWERS.md`
 - Ponytail → `AI_DRAWERS.md`, `AGENTS.md`, `PROJECT_START.md`
 - deepsec → `AI_DRAWERS.md`, `SECURITY_REVIEW.md`
+- Oracle / steipete/oracle → `AI_DRAWERS.md`, `CHATGPT_PROJECT_SOURCE.md`, `AI_INDEX.md`
 - Memory Consolidation / Dream Review → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`, `REVIEW.md`
 - Anthropic Dreams → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
 - dream-skill → `AI_DRAWERS.md`
@@ -121,6 +124,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 ### Creative / Media
 
 - OpenCut → `AI_DRAWERS.md`
+- HyperFrames → `AI_DRAWERS.md`
+- MoneyPrinterTurbo → `AI_DRAWERS.md`
+- VoxCPM → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - PPT Master → `AI_DRAWERS.md`, `OUTPUTS/README.md`
 - yt-dlp → `AI_DRAWERS.md`
 - VTuber体験場 → `AI_DRAWERS.md`
@@ -181,11 +187,21 @@ AI が関連ファイルを素早く見つけるための索引です。
 ### Self Host / Tools
 
 - Homepage → `AI_DRAWERS.md`
+- LibreChat → `AI_DRAWERS.md`
 - Immich → `AI_DRAWERS.md`
 - n8n → `AI_DRAWERS.md`
 - LocalSend → `AI_DRAWERS.md`
 - Stirling PDF → `AI_DRAWERS.md`
 - AppFlowy → `AI_DRAWERS.md`
+- Nango → `AI_DRAWERS.md`
+
+### Finance / Investigation
+
+- TradingAgents → `AI_DRAWERS.md`
+- Fincept Terminal → `AI_DRAWERS.md`
+- Flowsint → `AI_DRAWERS.md`
+- OSINT / graph investigation → `AI_DRAWERS.md`
+- Finance agents / 金融AI → `AI_DRAWERS.md`
 
 ### Ideas / Research
 
@@ -196,6 +212,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - tomari-guruguru → `AI_DRAWERS.md`
 - reviewable-html-workbench → `AI_DRAWERS.md`
 - k16shikano gist → `AI_DRAWERS.md`
+- anthropics/skills → `AI_DRAWERS.md`, `SKILLS/README.md`
 
 ## Topic Routing
 
@@ -207,6 +224,11 @@ AI が関連ファイルを素早く見つけるための索引です。
 - 設計判断・採用理由 → `DECISIONS.md`
 - 何度も参照する技術サイト・学習サイト → `AI_DRAWERS.md` の `Reference Sites`
 - AI coding operations / Claude Code 運用 → `AI_DRAWERS.md`, `LESSONS_LEARNED.md`
+- Claude Code skills / agent-skills → `AI_DRAWERS.md`, `SKILLS/README.md`
+- second opinion / multi-model review / oracle → `AI_DRAWERS.md`
+- ChatGPT Project Sources automation → `AI_DRAWERS.md`, `CHATGPT_PROJECT_SOURCE.md`
+- AI Workspace integrations / API Integration → `AI_DRAWERS.md`, `NOTES/AI_Workspace_Ideas.md`
+- AI video / voice generation → `AI_DRAWERS.md`
 - specialist agents / AI agent personas → `AI_DRAWERS.md`, `AI_PROFILES.md`, `SKILLS/README.md`
 - memory dream / memory consolidation / 記憶整理 → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`, `REVIEW.md`
 - AI にコードを書かせすぎない運用 → `AGENTS.md`, `PROJECT_START.md`, `AI_DRAWERS.md`
