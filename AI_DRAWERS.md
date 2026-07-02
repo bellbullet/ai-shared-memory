@@ -355,6 +355,54 @@ https://github.com/AI-Safeter/FUGU
 
 ⸻
 
+### agency-agents
+
+URL:
+https://github.com/msitarzewski/agency-agents
+
+分類:
+
+- Agent / Orchestration
+- AI Coding Operations
+- Prompt Engineering
+
+概要:
+
+- Claude Code、Codex、Cursor、Gemini CLI などに導入できる専門 AI エージェント人格・ワークフロー集。
+- README では 232 specialized agents、16 divisions、MIT License と説明されている。
+- 各エージェントは Identity、Mission、Workflow、Deliverables、Success Metrics などを持つ構造化された Markdown prompt として扱える。
+
+用途:
+
+- Claude Code / Codex の専門レビュー担当を増やす
+- `AGENTS.md` / `SKILLS/` / `AI_PROFILES.md` 設計の参考にする
+- Security Review、UI Review、Documentation Review、Reality Check などの専門担当を少数導入する
+- 作業前に呼び出す専門家モードのテンプレートとして試す
+
+関連:
+
+- Claude Code
+- Codex
+- Cursor
+- Gemini CLI
+- `AI_PROFILES.md`
+- `SKILLS/`
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 全エージェントを一括導入せず、Frontend Developer、Security Engineer、Reality Checker、Technical Writer など少数を選んで試す。
+- 役割が増えすぎると選択コストが上がるため、`AI_PROFILES.md` や `SKILLS/` に吸収できる型だけを採用候補にする。
+
+⸻
+
 ## LLM
 
 ### Susono Model
@@ -1329,21 +1377,23 @@ URL:
 - Headroom
 - OpenFugu
 - AI-Safeter / FUGU
+- agency-agents
 
 用途:
 
-- 複数 AI 協調、AI エージェント、長期記憶、ルーティング最適化。
+- 複数 AI 協調、AI エージェント、長期記憶、ルーティング最適化、専門エージェント役割設計。
 
 ### AI Coding Operations
 
 - Ponytail
 - deepsec
+- agency-agents
 - Claude Code運用ミス7選
 - Memory Consolidation / Dream Review
 
 用途:
 
-- AI コーディング運用改善、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
+- AI コーディング運用改善、専門エージェント役割設計、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
 
 ### Document Automation
 
@@ -1415,6 +1465,7 @@ URL:
 
 - Ponytail
 - deepsec
+- agency-agents
 
 ### 次に試す
 

@@ -4,6 +4,8 @@
 
 ## 2026-07-02
 
+- `AI_DRAWERS.md` に `agency-agents` を Agent / Orchestration と AI Coding Operations の導入検討項目として追加。
+- `AI_INDEX.md` に agency-agents、専門 AI エージェント、role agents への導線を追加。
 - `AI_DRAWERS.md` に Memory Consolidation / Dream Review を AI Coding Operations / Knowledge Management / Agent Memory の採用候補として追加。
 - `NOTES/AI_Coding_Patterns.md` に Memory Consolidation / Dream Review の運用パターンを追加。
 - `REVIEW.md` に Memory Review のトリガーとチェック項目を追加。

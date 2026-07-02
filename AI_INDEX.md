@@ -109,6 +109,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - FUGU / AI-Safeter → `AI_DRAWERS.md`
 - MiMo-Code → `AI_DRAWERS.md`
 - Headroom → `AI_DRAWERS.md`
+- agency-agents → `AI_DRAWERS.md`, `AI_PROFILES.md`, `SKILLS/README.md`
 - Agent / Orchestration → `AI_DRAWERS.md`
 - Ponytail → `AI_DRAWERS.md`, `AGENTS.md`, `PROJECT_START.md`
 - deepsec → `AI_DRAWERS.md`, `SECURITY_REVIEW.md`
@@ -140,6 +141,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Research skill → `SKILLS/Research.md`
 - Security skill → `SKILLS/Security.md`, `SECURITY_REVIEW.md`
 - AI 役割分担 / profiles → `AI_PROFILES.md`
+- 専門AIエージェント / role agents / agency-agents → `AI_DRAWERS.md`, `AI_PROFILES.md`, `SKILLS/README.md`
 - 定期レビュー / monthly review → `REVIEW.md`
 - Memory Review / 記憶整理 / dream → `REVIEW.md`, `NOTES/AI_Coding_Patterns.md`, `LESSONS_LEARNED.md`
 - memory consolidation / 記憶統合 → `NOTES/AI_Coding_Patterns.md`, `AI_DRAWERS.md`
@@ -205,6 +207,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - 設計判断・採用理由 → `DECISIONS.md`
 - 何度も参照する技術サイト・学習サイト → `AI_DRAWERS.md` の `Reference Sites`
 - AI coding operations / Claude Code 運用 → `AI_DRAWERS.md`, `LESSONS_LEARNED.md`
+- specialist agents / AI agent personas → `AI_DRAWERS.md`, `AI_PROFILES.md`, `SKILLS/README.md`
 - memory dream / memory consolidation / 記憶整理 → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`, `REVIEW.md`
 - AI にコードを書かせすぎない運用 → `AGENTS.md`, `PROJECT_START.md`, `AI_DRAWERS.md`
 - リリース前セキュリティチェック → `SECURITY_REVIEW.md`
