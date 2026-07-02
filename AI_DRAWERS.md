@@ -1210,6 +1210,57 @@ https://qiita.com/tehito/items/356e5f1dba112a075be1
 
 ⸻
 
+### Memory Consolidation / Dream Review
+
+URL:
+
+- https://platform.claude.com/docs/en/managed-agents/dreams
+- https://github.com/grandamenium/dream-skill
+- https://arxiv.org/abs/2605.20616
+
+分類:
+
+- AI Coding Operations
+- Knowledge Management
+- Agent Memory
+
+概要:
+
+- AI 共有メモリに蓄積した情報を、定期的に重複排除、矛盾解消、陳腐化除去、索引更新する運用パターン。
+- Anthropic Dreams の「入力を変更せず、出力を別 memory store として生成し、レビュー後に採用する」考え方を、git ベースの `ai-shared-memory` に手動適用する。
+- `grandamenium/dream-skill` は Claude Code 向けに 4-phase consolidation を skill 化した参考実装。
+- Auto-Dreamer は、セッションごとの記録を小さく再利用可能な記憶へオフライン統合する研究。
+
+用途:
+
+- `INBOX.md` / `AI_DRAWERS.md` / `NOTES/` / `PROJECTS/` が肥大化したときの棚卸し
+- 相対日付、古い手順、重複リンク、矛盾した判断の整理
+- 会話ログ由来の一時メモを、再利用可能な知識へ圧縮する
+- `AI_INDEX.md` と `REVIEW.md` の更新
+
+関連:
+
+- `NOTES/AI_Coding_Patterns.md`
+- `REVIEW.md`
+- `LESSONS_LEARNED.md`
+- `AI_INDEX.md`
+
+状態:
+
+- 採用候補
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- 自動実行ではなく、レビュー前提の手動運用として扱う。
+- 入力非破壊、論理単位ごとの小さな差分、ユーザーレビュー後の採用を原則にする。
+- hallucination 混入を避けるため、統合結果は既存ファイル、リンク、日付、現在の repo 状態で検証する。
+
+⸻
+
 ## Ideas
 
 ### Amazon セール検知システム
@@ -1288,10 +1339,11 @@ URL:
 - Ponytail
 - deepsec
 - Claude Code運用ミス7選
+- Memory Consolidation / Dream Review
 
 用途:
 
-- AI コーディング運用改善、最小実装、長期文脈管理、作業分割、セキュリティレビュー。
+- AI コーディング運用改善、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
 
 ### Document Automation
 
@@ -1310,10 +1362,11 @@ URL:
 - PROJECT_START
 - CURRENT
 - STATUS
+- Memory Consolidation / Dream Review
 
 用途:
 
-- AI が読みやすい共有知識ベース、メタデータ、LLM Wiki、ナレッジ検索。
+- AI が読みやすい共有知識ベース、メタデータ、LLM Wiki、ナレッジ検索、定期的な記憶統合。
 
 ### Creative Pipeline
 
@@ -1398,6 +1451,7 @@ URL:
 
 - VTuber体験場
 - Claude Code運用ミス7選
+- Memory Consolidation / Dream Review
 
 ### 研究対象
 

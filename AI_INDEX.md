@@ -84,6 +84,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - InfiniteDiffusion → `AI_DRAWERS.md`
 - VTuber体験場 → `AI_DRAWERS.md`
 - Claude Code運用ミス7選 → `AI_DRAWERS.md`, `LESSONS_LEARNED.md`
+- Memory Consolidation / Dream Review → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`, `REVIEW.md`, `LESSONS_LEARNED.md`
+- Anthropic Dreams → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
+- dream-skill → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
+- Auto-Dreamer → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
 - AI Coding Operations → `AI_DRAWERS.md`, `PROJECT_START.md`, `AGENTS.md`, `LESSONS_LEARNED.md`
 - AGENTS.md and Skills → `NOTES/AI_Coding_Patterns.md`, `SKILLS/README.md`, `AGENTS.md`
 - Thin AGENTS → `NOTES/AI_Coding_Patterns.md`, `AGENTS.md`, `SKILLS/README.md`
@@ -108,6 +112,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Agent / Orchestration → `AI_DRAWERS.md`
 - Ponytail → `AI_DRAWERS.md`, `AGENTS.md`, `PROJECT_START.md`
 - deepsec → `AI_DRAWERS.md`, `SECURITY_REVIEW.md`
+- Memory Consolidation / Dream Review → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`, `REVIEW.md`
+- Anthropic Dreams → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
+- dream-skill → `AI_DRAWERS.md`
+- Auto-Dreamer → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
 
 ### Creative / Media
 
@@ -133,6 +141,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Security skill → `SKILLS/Security.md`, `SECURITY_REVIEW.md`
 - AI 役割分担 / profiles → `AI_PROFILES.md`
 - 定期レビュー / monthly review → `REVIEW.md`
+- Memory Review / 記憶整理 / dream → `REVIEW.md`, `NOTES/AI_Coding_Patterns.md`, `LESSONS_LEARNED.md`
+- memory consolidation / 記憶統合 → `NOTES/AI_Coding_Patterns.md`, `AI_DRAWERS.md`
 - セキュリティレビュー / security review → `SECURITY_REVIEW.md`, `AGENTS.md`, `PROJECT_START.md`
 - OKF / Open Knowledge Format / metadata frontmatter → `OKF.md`, `AI_DRAWERS.md`
 - AI as front door / AIを入口に置く → `NOTES/AI_Workspace_Ideas.md`, `STATUS.md`
@@ -195,6 +205,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - 設計判断・採用理由 → `DECISIONS.md`
 - 何度も参照する技術サイト・学習サイト → `AI_DRAWERS.md` の `Reference Sites`
 - AI coding operations / Claude Code 運用 → `AI_DRAWERS.md`, `LESSONS_LEARNED.md`
+- memory dream / memory consolidation / 記憶整理 → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`, `REVIEW.md`
 - AI にコードを書かせすぎない運用 → `AGENTS.md`, `PROJECT_START.md`, `AI_DRAWERS.md`
 - リリース前セキュリティチェック → `SECURITY_REVIEW.md`
 - AI knowledge metadata / YAML frontmatter → `OKF.md`

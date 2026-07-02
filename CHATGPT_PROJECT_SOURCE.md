@@ -1,6 +1,6 @@
 # ChatGPT Project Source
 
-最終更新: 2026-07-01
+最終更新: 2026-07-02
 
 ChatGPT Projects の「情報源」に貼るための ai-shared-memory 要約。
 
@@ -125,3 +125,32 @@ When suggesting an update, state:
 - short proposed summary
 
 Do not commit or push unless the user explicitly confirms.
+
+## Recommended Project Sources
+
+Minimum:
+
+- CHATGPT_PROJECT_SOURCE.md
+- PROJECT_START.md
+- AI_INDEX.md
+- CURRENT.md
+- STATUS.md
+
+For GitHub / OSS intake:
+
+- AI_DRAWERS.md
+- INBOX.md
+
+For periodic memory review:
+
+- REVIEW.md
+- NOTES/AI_Coding_Patterns.md
+- LESSONS_LEARNED.md
+
+## Source Version
+
+Source version:
+
+- Updated: 2026-07-02
+- Repo: bellbullet/ai-shared-memory
+- Recommended with commit: current main after the 2026-07-02 Memory Review update

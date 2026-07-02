@@ -1,6 +1,6 @@
 # REVIEW
 
-最終更新: 2026-06-29
+最終更新: 2026-07-02
 
 定期的に見直す項目をまとめるファイル。
 
@@ -18,6 +18,7 @@
 - [ ] `DECISIONS.md` に重要な設計判断と理由が記録されている
 - [ ] `SECURITY_REVIEW.md` の release gate と review checklist が古くなっていない
 - [ ] `CHANGELOG.md` に構成変更や運用ルール変更が記録されている
+- [ ] Memory Review が必要なほど `INBOX.md`、`AI_DRAWERS.md`、`NOTES/`、`PROJECTS/` が肥大化していない
 
 ## Project Review
 
@@ -35,6 +36,24 @@
 - [ ] 特定プロジェクトに関係する知識は `PROJECTS/` へ接続されている
 - [ ] 横断的な知識は `NOTES/` に整理されている
 - [ ] よく使うキーワードは `AI_INDEX.md` の Quick Lookup に追加されている
+
+## Memory Review
+
+次の場合に実施する。
+
+- [ ] 新規リンク、OSS、paper、AI記事が 20〜30 件程度たまった
+- [ ] 大きな workspace / project 構成変更があった
+- [ ] `AI_DRAWERS.md` や `NOTES/` に似た説明が増えている
+- [ ] 相対日付、古い手順、存在しないファイル参照が見つかった
+
+実施内容:
+
+- [ ] `INBOX.md` を `AI_DRAWERS.md` / `NOTES/` / `PROJECTS/` へ分類した
+- [ ] 重複説明を統合した
+- [ ] 古い状態や相対日付を現在の絶対日付つき情報に直した
+- [ ] 存在しないファイル、コマンド、フラグへの参照を確認した
+- [ ] `AI_INDEX.md` の検索語を更新した
+- [ ] 変更を小さな論理単位に分け、レビュー可能にした
 
 ## Review Notes
 

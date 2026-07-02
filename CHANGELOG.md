@@ -2,6 +2,15 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-02
+
+- `AI_DRAWERS.md` に Memory Consolidation / Dream Review を AI Coding Operations / Knowledge Management / Agent Memory の採用候補として追加。
+- `NOTES/AI_Coding_Patterns.md` に Memory Consolidation / Dream Review の運用パターンを追加。
+- `REVIEW.md` に Memory Review のトリガーとチェック項目を追加。
+- `LESSONS_LEARNED.md` に shared memory が定期統合なしでノイズ化する教訓を追加。
+- `AI_INDEX.md` に memory dream / memory consolidation / Anthropic Dreams / dream-skill / Auto-Dreamer の導線を追加。
+- `CHATGPT_PROJECT_SOURCE.md` の推奨情報源セクションを整形し、Memory Review 関連ファイルを追加。
+
 ## 2026-07-01
 
 - `CHATGPT_PROJECT_SOURCE.md` を追加し、ChatGPT Projects の情報源に貼るための ai-shared-memory 要約を作成。

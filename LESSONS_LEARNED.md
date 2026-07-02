@@ -97,3 +97,28 @@ Countermeasure:
 Scope:
 
 - ai-shared-memory and workspace documentation.
+
+## 2026-07-02
+
+### Shared memory becomes noisy without periodic consolidation
+
+Problem:
+
+- `INBOX.md`, `AI_DRAWERS.md`, `NOTES/`, and `PROJECTS/` can accumulate duplicate links, stale status, relative dates, and overlapping explanations.
+- A knowledge base that only grows can become harder for AI agents to search and reuse.
+
+Cause:
+
+- New knowledge is added incrementally during sessions, but consolidation is a separate maintenance activity.
+- Similar tools, articles, and operating patterns often arrive at different times and are easy to record in multiple places.
+
+Countermeasure:
+
+- Run a periodic Memory Review when many links accumulate, after major workspace changes, or during monthly review.
+- Merge duplicates, remove stale references, convert relative dates to absolute dates, and update `AI_INDEX.md`.
+- Keep the input files intact until reviewed; make consolidation changes as small logical diffs.
+- Treat automated or AI-generated consolidation as a proposal, not as accepted truth.
+
+Scope:
+
+- `ai-shared-memory`, ChatGPT Projects sources, and any shared AI memory repository.
