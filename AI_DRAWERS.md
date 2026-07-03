@@ -1432,6 +1432,59 @@ https://github.com/Stirling-Tools/Stirling-PDF
 
 ⸻
 
+### kurashino-daicho
+
+URL:
+https://github.com/uzura89/kurashino-daicho
+
+分類:
+
+- Self Host
+- Local-first
+- Personal Data
+- Document Automation
+- Life Admin
+
+概要:
+
+- 資産・契約台帳を作って印刷するための、ログイン不要・サーバー非保持の静的ブラウザツール。
+- 銀行、カード、サブスク、保険、年金、不動産、アカウントなどの所在一覧を整理できる。
+- 終活・相続準備、サブスク解約準備、家庭内の契約整理に使える。
+- ユーザーデータはブラウザ内で完結し、サーバーDB、認証、外部API送信、LLM利用を持たない設計。
+
+用途:
+
+- 資産・契約・サブスクの棚卸し
+- 終活 / 相続準備
+- 家庭内の契約一覧作成
+- local-first / privacy-first な静的 Web アプリ設計の参考
+- PDF / CSV 出力付き台帳アプリの設計参考
+
+技術:
+
+- Next.js Pages Router
+- TypeScript
+- Tailwind CSS
+- IndexedDB
+- pdf-lib
+- papaparse
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 秘匿情報や実際の資産・契約内容は `ai-shared-memory` に記録しない。
+- 参考にする場合は、設計思想、公開コード、local-first 方針だけを保存対象にする。
+- 個人利用時も、パスワードや認証情報そのものは入力しない運用が安全。
+
+⸻
+
 ### LibreChat
 
 URL:
@@ -1928,10 +1981,11 @@ URL:
 - PPT Master
 - OUTPUTS
 - Stirling PDF
+- kurashino-daicho
 
 用途:
 
-- Markdown / PDF / DOCX から編集可能な成果物を生成し、repo 内の原本と人間向け出力を分離する。
+- Markdown / PDF / DOCX から編集可能な成果物を生成し、repo 内の原本と人間向け出力を分離する。台帳、PDF、CSV、印刷出力付き local-first アプリの設計参考も含む。
 
 ### Knowledge Management
 
@@ -2084,6 +2138,7 @@ URL:
 - AI-Safeter / FUGU
 - Amazon Creators API SDK
 - Humation
+- kurashino-daicho
 
 ### 開発アイデア
 

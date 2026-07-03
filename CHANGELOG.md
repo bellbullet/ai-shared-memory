@@ -2,6 +2,11 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-04
+
+- `AI_DRAWERS.md` に `uzura89/kurashino-daicho` を Self Host / Local-first / Personal Data / Document Automation の研究対象として追加。
+- `AI_INDEX.md` に kurashino-daicho、資産・契約台帳、Life Admin、local-first personal data tool の導線を追加。
+
 ## 2026-07-02
 
 - `AI_DRAWERS.md` に The Hitchhiker's Guide to Agentic AI を Agentic AI / RAG / Memory / MCP / A2A / agent evaluation の大型参照資料として追加。

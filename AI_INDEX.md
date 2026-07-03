@@ -79,6 +79,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 - n8n → `AI_DRAWERS.md`
 - LocalSend → `AI_DRAWERS.md`
 - Stirling PDF → `AI_DRAWERS.md`
+- kurashino-daicho → `AI_DRAWERS.md`
+- 資産・契約台帳 / Life Admin / 契約整理 → `AI_DRAWERS.md`
+- local-first personal data tool → `AI_DRAWERS.md`
 - AppFlowy → `AI_DRAWERS.md`
 - Terrain Diffusion → `AI_DRAWERS.md`
 - InfiniteDiffusion → `AI_DRAWERS.md`
@@ -195,6 +198,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - n8n → `AI_DRAWERS.md`
 - LocalSend → `AI_DRAWERS.md`
 - Stirling PDF → `AI_DRAWERS.md`
+- kurashino-daicho → `AI_DRAWERS.md`
 - AppFlowy → `AI_DRAWERS.md`
 - Nango → `AI_DRAWERS.md`
 - Puppet → `AI_DRAWERS.md`, `NOTES/HomeLab.md`
