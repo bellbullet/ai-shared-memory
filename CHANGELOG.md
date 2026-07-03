@@ -4,6 +4,8 @@
 
 ## 2026-07-04
 
+- `AI_DRAWERS.md` に `NousResearch/hermes-agent` を Agent / Orchestration、AI Coding Operations、Skills、Knowledge Management の研究対象として追加。
+- `AI_INDEX.md` に Hermes Agent、Hermes Skills、optional skills catalog、Unbroker、agent skill ecosystem security の導線を追加。
 - `AI_DRAWERS.md` に `uzura89/kurashino-daicho` を Self Host / Local-first / Personal Data / Document Automation の研究対象として追加。
 - `AI_INDEX.md` に kurashino-daicho、資産・契約台帳、Life Admin、local-first personal data tool の導線を追加。
 

@@ -403,6 +403,68 @@ https://github.com/msitarzewski/agency-agents
 
 ⸻
 
+### Hermes Agent
+
+URL:
+https://github.com/NousResearch/hermes-agent
+
+Docs:
+https://hermes-agent.nousresearch.com/docs/
+
+分類:
+
+- Agent / Orchestration
+- AI Coding Operations
+- Skills
+- Knowledge Management
+- Automation
+- AI Workspace / Integrations
+
+概要:
+
+- Nous Research による自己改善型 AI agent。
+- 経験から skill を作成・改善し、memory、過去会話検索、messaging gateway、cron automation、subagent 並列化、複数 terminal backend を統合する。
+- Skills は必要時に読み込む on-demand knowledge document として扱われ、progressive disclosure と agentskills.io open standard 互換を重視する。
+- `~/.hermes/skills/` を primary source of truth として扱い、bundled / optional / hub-installed / agent-created skills を管理する。
+
+用途:
+
+- AI agent runtime 研究
+- Skills / `SKILL.md` 運用比較
+- AI Shared Memory と agent memory の接続研究
+- ChatGPT / Codex / Claude Code / Gemini CLI の skill routing 設計比較
+- messaging gateway / scheduled automation / subagent workflow 研究
+
+関連:
+
+- `AGENTS.md`
+- `PROJECT_START.md`
+- `SKILLS/`
+- `NOTES/AI_Coding_Patterns.md`
+- Memory Consolidation / Dream Review
+- anthropics/skills
+- agency-agents
+- Oracle
+- deepsec
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- いきなり常用導入せず、まず Docs と optional skills catalog を読み、skill 構造、権限境界、agent-managed skill の更新管理を確認する。
+- optional skills では security-unbroker が privacy / security skill の代表例として参考になるが、名前、住所、電話、メール、親族などの実データは `ai-shared-memory` に記録しない。
+- agent skill ecosystem には credential theft、backdoor、data exfiltration などのリスクが報告されているため、導入前に skill 本体、参照ファイル、scripts、required environment variables をレビューする。
+- API key、token、cookie、webmail session、個人情報、broker opt-out 対象情報は公開メモリに記録しない。
+- 参考: https://arxiv.org/abs/2605.28588
+
+⸻
+
 ### TradingAgents
 
 URL:
@@ -1955,17 +2017,19 @@ URL:
 - OpenFugu
 - AI-Safeter / FUGU
 - agency-agents
+- Hermes Agent
 - The Hitchhiker's Guide to Agentic AI
 
 用途:
 
-- 複数 AI 協調、AI エージェント、長期記憶、ルーティング最適化、専門エージェント役割設計。
+- 複数 AI 協調、AI エージェント、長期記憶、ルーティング最適化、専門エージェント役割設計、自己改善型 agent runtime。
 
 ### AI Coding Operations
 
 - Ponytail
 - deepsec
 - agency-agents
+- Hermes Agent
 - anthropics/skills
 - Oracle
 - Claude Code運用ミス7選
@@ -1974,7 +2038,7 @@ URL:
 
 用途:
 
-- AI コーディング運用改善、専門エージェント役割設計、multi-model review、agentic system reference、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
+- AI コーディング運用改善、専門エージェント役割設計、multi-model review、agentic system reference、skill routing、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
 
 ### Document Automation
 
@@ -1996,10 +2060,11 @@ URL:
 - STATUS
 - Memory Consolidation / Dream Review
 - The Hitchhiker's Guide to Agentic AI
+- Hermes Agent
 
 用途:
 
-- AI が読みやすい共有知識ベース、メタデータ、LLM Wiki、ナレッジ検索、定期的な記憶統合。
+- AI が読みやすい共有知識ベース、メタデータ、LLM Wiki、ナレッジ検索、定期的な記憶統合、agent memory / skill memory の接続設計。
 
 ### Creative Pipeline
 
@@ -2020,10 +2085,11 @@ URL:
 - Agentic Inbox
 - Nango
 - agency-agents
+- Hermes Agent
 
 用途:
 
-- 複数 AI UI、AI メール、外部 API 連携、専門エージェント役割設計。
+- 複数 AI UI、AI メール、外部 API 連携、専門エージェント役割設計、messaging gateway、scheduled automation。
 
 ### Finance / Investigation
 
@@ -2073,6 +2139,7 @@ URL:
 - Ponytail
 - deepsec
 - agency-agents
+- Hermes Agent
 - TradingAgents
 - Agentic Inbox
 - VoxCPM
@@ -2121,6 +2188,7 @@ URL:
 - Claude Code運用ミス7選
 - Memory Consolidation / Dream Review
 - The Hitchhiker's Guide to Agentic AI
+- Hermes Agent
 
 ### 研究対象
 

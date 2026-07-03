@@ -57,6 +57,11 @@ AI が関連ファイルを素早く見つけるための索引です。
 - OpenFugu → `AI_DRAWERS.md`
 - AI-Safeter / FUGU → `AI_DRAWERS.md`
 - Agent / Orchestration → `AI_DRAWERS.md`
+- Hermes Agent → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
+- Hermes Skills → `AI_DRAWERS.md`, `SKILLS/README.md`, `NOTES/AI_Coding_Patterns.md`
+- optional skills catalog → `AI_DRAWERS.md`
+- Unbroker / security-unbroker → `AI_DRAWERS.md`
+- agent skill ecosystem security → `AI_DRAWERS.md`, `SECURITY_REVIEW.md`
 - Susono Model → `AI_DRAWERS.md`
 - Greenlight → `AI_DRAWERS.md`
 - Ponytail → `AI_DRAWERS.md`, `AGENTS.md`, `PROJECT_START.md`
@@ -113,6 +118,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 - MiMo-Code → `AI_DRAWERS.md`
 - Headroom → `AI_DRAWERS.md`
 - agency-agents → `AI_DRAWERS.md`, `AI_PROFILES.md`, `SKILLS/README.md`
+- Hermes Agent → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
+- Hermes Skills / agentskills.io / optional skills catalog → `AI_DRAWERS.md`, `SKILLS/README.md`, `NOTES/AI_Coding_Patterns.md`
+- agent skill ecosystem security / Unbroker → `AI_DRAWERS.md`, `SECURITY_REVIEW.md`
 - TradingAgents → `AI_DRAWERS.md`
 - Agentic Inbox → `AI_DRAWERS.md`, `NOTES/AI_Workspace_Ideas.md`
 - Agent / Orchestration → `AI_DRAWERS.md`
