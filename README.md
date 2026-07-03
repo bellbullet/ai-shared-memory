@@ -2,7 +2,11 @@
 
 GitHub型 AI Shared Memory / LLM Wiki / 軽量 Second Brain。
 
-このリポジトリは Obsidian そのものではありません。Obsidian 的な Second Brain の考え方を取り入れつつ、ChatGPT・Codex・Claude・Gemini など複数の AI が共通で参照できる、公開前提の外部記憶として運用します。
+`ai-shared-memory` は、AI と人間が共有して使う Markdown ベースの知識ベースです。
+ChatGPT・Codex・Claude・Gemini など複数の AI が共通で参照できる、公開前提の外部記憶として運用します。
+
+会話だけに残りやすい知識、OSS、AI 技術、設計メモ、プロジェクト概要を Markdown と Git で管理し、後から検索・再利用できる形にします。
+Notion や Obsidian のような個人知識管理の考え方も参考にしていますが、Obsidian 専用の vault ではありません。
 
 ## 目的
 
