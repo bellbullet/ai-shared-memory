@@ -20,7 +20,6 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Decisions: `DECISIONS.md`
 - Unsorted items: `INBOX.md`
 - Change history: `CHANGELOG.md`
-- Lessons learned: `LESSONS_LEARNED.md`
 - Technical radar: `AI_DRAWERS.md`
 
 ## Projects

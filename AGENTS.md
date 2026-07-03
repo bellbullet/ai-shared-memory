@@ -4,9 +4,9 @@
 
 ## 目的
 
-このリポジトリは GitHub型 AI Shared Memory / LLM Wiki / 軽量 Second Brain です。
+このリポジトリは、ChatGPT・Codex・Claude・Gemini など複数 AI が共通で参照する公開前提の Markdown 知識ベースです。
 
-Obsidian 的な Second Brain の考え方を取り入れつつ、GitHub 上で公開運用できる知識ベースとして管理します。
+GitHub型 AI Shared Memory / LLM Wiki / 軽量 Second Brain として運用します。Notion や Obsidian のような個人知識管理の考え方も参考にしていますが、Obsidian 専用の vault ではありません。
 
 ## AI が読む順番
 

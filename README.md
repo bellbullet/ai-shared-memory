@@ -1,11 +1,10 @@
 # ai-shared-memory
 
-GitHub型 AI Shared Memory / LLM Wiki / 軽量 Second Brain。
-
 `ai-shared-memory` は、AI と人間が共有して使う Markdown ベースの知識ベースです。
 ChatGPT・Codex・Claude・Gemini など複数の AI が共通で参照できる、公開前提の外部記憶として運用します。
 
 会話だけに残りやすい知識、OSS、AI 技術、設計メモ、プロジェクト概要を Markdown と Git で管理し、後から検索・再利用できる形にします。
+GitHub型 AI Shared Memory / LLM Wiki / 軽量 Second Brain として位置づけています。
 Notion や Obsidian のような個人知識管理の考え方も参考にしていますが、Obsidian 専用の vault ではありません。
 
 ## 目的
@@ -43,7 +42,6 @@ ai-shared-memory/
 ├─ SECURITY_REVIEW.md
 ├─ OKF.md
 ├─ CHANGELOG.md
-├─ LESSONS_LEARNED.md
 ├─ INBOX.md
 ├─ AI_DRAWERS.md
 ├─ OUTPUTS/
@@ -89,9 +87,9 @@ AI は原則として次の順で読む。
 6. [AI_INDEX.md](AI_INDEX.md) - 関連ファイル索引
 7. 必要な [SKILLS](SKILLS) - 作業種別ごとの詳細ルール
 8. 作業対象ファイル - `AI_DRAWERS.md` / `PROJECTS/*.md` / `NOTES/*.md`
-9. [SECURITY_REVIEW.md](SECURITY_REVIEW.md) - 必要に応じてリリース前・大きい変更のセキュリティレビュー
-10. [OKF.md](OKF.md) - Open Knowledge Format の採用候補メモ
-11. [INBOX.md](INBOX.md) - 未整理の新規リンクやアイデア
+9. [INBOX.md](INBOX.md) - 未整理の新規リンクやアイデア
+10. [SECURITY_REVIEW.md](SECURITY_REVIEW.md) - 必要に応じてリリース前・大きい変更のセキュリティレビュー
+11. [OKF.md](OKF.md) - 必要に応じて Open Knowledge Format の採用候補メモ
 
 ## ファイルの役割
 
@@ -110,7 +108,6 @@ AI は原則として次の順で読む。
 - [SECURITY_REVIEW.md](SECURITY_REVIEW.md): 大きい変更、公開前、リリース前のセキュリティレビュー手順。
 - [OKF.md](OKF.md): Open Knowledge Format の採用候補、利点、リスク、試験導入案。
 - [CHANGELOG.md](CHANGELOG.md): 構成変更・運用ルール変更の履歴。
-- [LESSONS_LEARNED.md](LESSONS_LEARNED.md): AI運用で得た再利用可能な教訓。
 - [INBOX.md](INBOX.md): 整理前のリンク、アイデア、調査候補。
 - [AI_DRAWERS.md](AI_DRAWERS.md): OSS・AI・開発ツールの技術レーダー。
 - [OUTPUTS](OUTPUTS): Markdown 原本から生成した PDF、PowerPoint、Excel、画像などの成果物。
