@@ -129,6 +129,61 @@ https://github.com/firecrawl/firecrawl
 
 ⸻
 
+### PixelRAG
+
+URL:
+https://github.com/StarTrail-org/PixelRAG
+
+分類:
+
+- AI
+- RAG
+- Visual Retrieval
+- Knowledge Management
+- AI Coding Operations
+
+概要:
+
+- Web ページ、PDF、画像をスクリーンショットとしてレンダリングし、画像タイル上で検索する pixel-native RAG。
+- HTML / PDF のテキスト抽出では失われやすい表、グラフ、図、レイアウト、インフォグラフィックなどの視覚構造を保持して検索できる。
+- `pixelshot` CLI、FAISS index、FastAPI search API、Claude Code plugin / pixelbrowse skill を含む。
+- Qwen3-VL-Embedding をスクリーンショットデータで LoRA fine-tune している。
+
+用途:
+
+- visual RAG 研究
+- PDF / Web page / UI screenshot retrieval
+- AI agent にページの見た目を読ませる workflow
+- `ai-shared-memory` や技術資料の図表検索研究
+- Claude Code / Codex 周辺の screenshot-based browsing 比較
+
+関連:
+
+- Firecrawl
+- Google OKF
+- Memory Consolidation / Dream Review
+- Claude Code
+- Oracle
+- Stirling PDF
+- PPT Master
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- text RAG の代替というより、表、図、レイアウトが重要な文書向けの補完技術として見る。
+- index サイズ、GPU / CPU 負荷、ローカル運用時のストレージ、PDF レンダリング品質を確認する。
+- v0.3.0 では PDF 対応、wide-page 2D tiling、macOS / Apple Silicon MPS、Windows / macOS Chrome discovery などが追加されている。
+- 公開メモリに private documents、API key、内部資料、認証情報を含めない。
+
+⸻
+
 ### Google OKF
 
 URL:
@@ -2079,13 +2134,14 @@ URL:
 - anthropics/skills
 - Oracle
 - pxpipe
+- PixelRAG
 - Claude Code運用ミス7選
 - Memory Consolidation / Dream Review
 - The Hitchhiker's Guide to Agentic AI
 
 用途:
 
-- AI コーディング運用改善、専門エージェント役割設計、multi-model review、agentic system reference、skill routing、token optimization、context compression、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
+- AI コーディング運用改善、専門エージェント役割設計、multi-model review、agentic system reference、skill routing、token optimization、context compression、screenshot-based browsing、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
 
 ### Document Automation
 
@@ -2108,10 +2164,11 @@ URL:
 - Memory Consolidation / Dream Review
 - The Hitchhiker's Guide to Agentic AI
 - Hermes Agent
+- PixelRAG
 
 用途:
 
-- AI が読みやすい共有知識ベース、メタデータ、LLM Wiki、ナレッジ検索、定期的な記憶統合、agent memory / skill memory の接続設計。
+- AI が読みやすい共有知識ベース、メタデータ、LLM Wiki、ナレッジ検索、visual retrieval、定期的な記憶統合、agent memory / skill memory の接続設計。
 
 ### Creative Pipeline
 
@@ -2237,6 +2294,7 @@ URL:
 - The Hitchhiker's Guide to Agentic AI
 - Hermes Agent
 - pxpipe
+- PixelRAG
 
 ### 研究対象
 

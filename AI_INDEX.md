@@ -47,6 +47,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 - DESIGN.md → `AI_DRAWERS.md`
 - Firecrawl → `AI_DRAWERS.md`
+- PixelRAG → `AI_DRAWERS.md`
+- visual RAG / pixel-native search → `AI_DRAWERS.md`
+- screenshot retrieval / screenshot-based browsing → `AI_DRAWERS.md`
 - Google OKF → `AI_DRAWERS.md`, `OKF.md`
 - Open Knowledge Format → `OKF.md`, `AI_DRAWERS.md`
 - Whisper → `AI_DRAWERS.md`
@@ -130,6 +133,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Context Compression / Token Optimization → `AI_DRAWERS.md`
 - optical compression / text-as-image prompts → `AI_DRAWERS.md`
 - Claude Code token reduction → `AI_DRAWERS.md`
+- PixelRAG → `AI_DRAWERS.md`
+- visual RAG / pixel-native search / screenshot retrieval → `AI_DRAWERS.md`
 - The Hitchhiker's Guide to Agentic AI → `AI_DRAWERS.md`
 - Agentic AI guide → `AI_DRAWERS.md`
 - MCP / A2A / agent evaluation → `AI_DRAWERS.md`
@@ -246,6 +251,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - 何度も参照する技術サイト・学習サイト → `AI_DRAWERS.md` の `Reference Sites`
 - AI coding operations / Claude Code 運用 → `AI_DRAWERS.md`, `LESSONS_LEARNED.md`
 - Agentic AI / RAG / Memory / MCP / A2A → `AI_DRAWERS.md`
+- visual RAG / screenshot retrieval / PixelRAG → `AI_DRAWERS.md`
 - agent evaluation / observability / safety → `AI_DRAWERS.md`
 - Claude Code skills / agent-skills → `AI_DRAWERS.md`, `SKILLS/README.md`
 - second opinion / multi-model review / oracle → `AI_DRAWERS.md`

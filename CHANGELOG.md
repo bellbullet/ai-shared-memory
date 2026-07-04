@@ -4,6 +4,8 @@
 
 ## 2026-07-04
 
+- `AI_DRAWERS.md` に `StarTrail-org/PixelRAG` を AI / RAG / Visual Retrieval / Knowledge Management の研究対象として追加。
+- `AI_INDEX.md` に PixelRAG、visual RAG、pixel-native search、screenshot retrieval の導線を追加。
 - `AI_DRAWERS.md` に `teamchong/pxpipe` を AI Coding Operations / Token Optimization / Context Compression の研究対象として追加し、text-as-image prompts の参考記事を関連付け。
 - `AI_INDEX.md` に pxpipe、Context Compression、Token Optimization、optical compression、Claude Code token reduction の導線を追加。
 - `AI_DRAWERS.md` に `NousResearch/hermes-agent` を Agent / Orchestration、AI Coding Operations、Skills、Knowledge Management の研究対象として追加。
