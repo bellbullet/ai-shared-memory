@@ -7,6 +7,8 @@
 - `AI_DRAWERS.md` に学習・知識管理・ドキュメント管理系 OSS として Open Notebook、Excalidraw、Calibre、Buzz、Anki、Zotero、Paperless-ngx、ONLYOFFICE Docs、Recordly、PhotoGIMP、Odysseus を追加。
 - `AI_DRAWERS.md` の Stirling PDF / AppFlowy と横断グループを、Learning / Research Workflow、Knowledge Management、Document Automation、Self Host / Tools、Creative Pipeline へ接続。
 - `AI_INDEX.md` に NotebookLM alternative、offline transcription、spaced repetition、reference management、document archive、Learning / Research Workflow などの導線を追加。
+- `AI_DRAWERS.md` に `darusc/VCamdroid` を Creative / Webcam / Android / Windows / Video Streaming の研究対象として追加。
+- `AI_INDEX.md` に VCamdroid、Android webcam、virtual webcam、smartphone webcam の導線を追加。
 - 公開ドキュメント内の個人環境パスを `<workspace-root>` / `<user-home>` へ置き換え、ローカル実値を Git 管理しない `LOCAL_ENVIRONMENT.md` に分離する方針を追加。
 - `LOCAL_ENVIRONMENT.example.md` を追加し、`.gitignore` に local environment / `.env` 系ファイルを追加。
 - `AI_DRAWERS.md` に `mnfst/awesome-free-llm-apis` を LLM / API Providers / Free Tier / Reference Sites の参考資料として追加。

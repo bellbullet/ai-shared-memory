@@ -70,6 +70,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 - document archive → `AI_DRAWERS.md`
 - ONLYOFFICE Docs → `AI_DRAWERS.md`
 - Recordly → `AI_DRAWERS.md`
+- VCamdroid → `AI_DRAWERS.md`
+- Android webcam / virtual webcam → `AI_DRAWERS.md`
+- smartphone webcam / Windows webcam → `AI_DRAWERS.md`
 - PhotoGIMP → `AI_DRAWERS.md`
 - Odysseus → `AI_DRAWERS.md`
 - Learning / Research Workflow → `AI_DRAWERS.md`
@@ -174,6 +177,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - yt-dlp → `AI_DRAWERS.md`
 - VTuber体験場 → `AI_DRAWERS.md`
 - Reactive Resume → `AI_DRAWERS.md`
+- VCamdroid / Android webcam / virtual webcam → `AI_DRAWERS.md`
 
 ### Workspace / Operations
 
@@ -283,6 +287,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Learning / Research Workflow / spaced repetition / reference management → `AI_DRAWERS.md`
 - document archive / Paperless-ngx / ONLYOFFICE Docs → `AI_DRAWERS.md`
 - diagramming / Excalidraw / demo recording / Recordly → `AI_DRAWERS.md`
+- Android webcam / virtual webcam / smartphone webcam → `AI_DRAWERS.md`
 - AI video / voice generation → `AI_DRAWERS.md`
 - HomeLab configuration management / Puppet / Ansible → `AI_DRAWERS.md`, `NOTES/HomeLab.md`
 - specialist agents / AI agent personas → `AI_DRAWERS.md`, `AI_PROFILES.md`, `SKILLS/README.md`

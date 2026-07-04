@@ -1665,6 +1665,48 @@ https://github.com/webadderallorg/Recordly
 
 ⸻
 
+### VCamdroid
+
+URL:
+https://github.com/darusc/VCamdroid
+
+分類:
+
+- Creative
+- Webcam
+- Android
+- Windows
+- Video Streaming
+
+概要:
+
+- Android スマホを Windows の仮想 Web カメラとして使うための OSS。
+- Windows 側は DirectShow / Softcam、Android 側は Camera2 / OpenGL / MediaCodec / RTSP を使い、Zoom、OBS、Discord、Teams などから通常の Web カメラとして扱える。
+- USB / ADB 接続と Wi-Fi 接続に対応する。
+
+用途:
+
+- スマホカメラの Web カメラ化
+- OBS / 配信 / ビデオ会議
+- WebcamFaceDemo や AI companion のカメラ入力候補
+- Android camera streaming / virtual webcam 研究
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- Windows 管理者権限、DirectShow filter 登録、ADB、Firewall 設定が絡むため、導入時は安全な検証環境で試す。
+- Android 端末相性や接続不具合の Issue があるため、本番用途では DroidCam / Camo / OBS Virtual Camera / VDO.Ninja などとの比較が必要。
+- 実カメラ映像や個人情報を含むログは公開メモリに記録しない。
+
+⸻
+
 ### PhotoGIMP
 
 URL:
@@ -2552,10 +2594,11 @@ URL:
 - VoxCPM
 - VTuber体験場
 - OpenCut
+- VCamdroid
 
 用途:
 
-- AI コンパニオン、音声認識、音声表現、表情・アバター表現、配信・動画導線。
+- AI コンパニオン、音声認識、音声表現、表情・アバター表現、カメラ入力、配信・動画導線。
 
 ### Agent / Orchestration
 
@@ -2637,10 +2680,11 @@ URL:
 - HyperFrames
 - MoneyPrinterTurbo
 - VoxCPM
+- VCamdroid
 
 用途:
 
-- 図解、画像編集、画面録画、動画取得、音声抽出、文字起こし、動画編集、動画生成、音声生成。
+- 図解、画像編集、画面録画、動画取得、音声抽出、文字起こし、動画編集、動画生成、音声生成、仮想 Web カメラ。
 
 ### Learning / Research Workflow
 
@@ -2820,6 +2864,7 @@ URL:
 - Humation
 - kurashino-daicho
 - Odysseus
+- VCamdroid
 
 ### 開発アイデア
 
