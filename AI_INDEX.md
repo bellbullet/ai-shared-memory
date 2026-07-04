@@ -106,8 +106,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Humation Swift → `AI_DRAWERS.md`
 - Anime2.5DRig → `AI_DRAWERS.md`
 - see-through → `AI_DRAWERS.md`
+- tomari-guruguru → `AI_DRAWERS.md`
 - single-image layer decomposition / anime layer decomposition → `AI_DRAWERS.md`
 - 2.5D avatar rig / PSD avatar rig → `AI_DRAWERS.md`
+- PNGTuber / AITuber avatar / 25方向アバター → `AI_DRAWERS.md`
 - Reactive Resume → `AI_DRAWERS.md`
 - Homepage → `AI_DRAWERS.md`
 - Immich → `AI_DRAWERS.md`
@@ -145,6 +147,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Humation Swift → `AI_DRAWERS.md`
 - Anime2.5DRig → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - see-through → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
+- tomari-guruguru → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - OpenFugu → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - FUGU / AI-Safeter → `AI_DRAWERS.md`
 - MiMo-Code → `AI_DRAWERS.md`
@@ -181,6 +184,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - VoxCPM → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - Anime2.5DRig / 2.5D avatar rig → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - see-through / anime layer decomposition / PSD output → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
+- tomari-guruguru / トマリトーク / 25方向アバター → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - PPT Master → `AI_DRAWERS.md`, `OUTPUTS/README.md`
 - yt-dlp → `AI_DRAWERS.md`
 - VTuber体験場 → `AI_DRAWERS.md`
@@ -269,6 +273,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Terrain Diffusion → `AI_DRAWERS.md`
 - InfiniteDiffusion → `AI_DRAWERS.md`
 - tomari-guruguru → `AI_DRAWERS.md`
+- トマリトーク / PNGTuber / AITuber avatar → `AI_DRAWERS.md`
 - reviewable-html-workbench → `AI_DRAWERS.md`
 - k16shikano gist → `AI_DRAWERS.md`
 - anthropics/skills → `AI_DRAWERS.md`, `SKILLS/README.md`

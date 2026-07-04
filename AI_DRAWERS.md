@@ -1573,6 +1573,60 @@ https://github.com/shitagaki-lab/see-through
 
 ⸻
 
+### tomari-guruguru
+
+URL:
+https://github.com/rotejin/tomari-guruguru
+
+分類:
+
+- Creative
+- Avatar
+- PNGTuber
+- AITuber
+- AI Companion / AIRI
+- OBS
+
+概要:
+
+- マウスに追従して25方向に振り向き、音声に合わせて口パク・まばたきするブラウザアバター。
+- `トマリぐるぐる` はマウス追従でキャラクターがこちらを見るシンプル版。
+- `トマリトーク` はマイク入力または音声ファイルに合わせて口パクするトーク版。
+- 5×5方向差分と、目開閉・口3段階の6状態画像を切り替えて表情を作る。
+
+用途:
+
+- AI companion / AIRI の軽量アバター表現
+- AITuber の立ち絵アバター研究
+- AI生成キャラ画像からの表情差分アバター作成
+- マウス追従・視線追従・口パクの実験
+- Live2D前の低コスト試作
+
+関連:
+
+- PuruPuruPNGTuber
+- MotionPNGTuber
+- Humation
+- VTuber体験場
+- VoxCPM
+- AIRI
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- コードは MIT License だが、キャラクター画像・音声・生成素材は MIT 対象外。素材の商用利用や他プロジェクト流用は禁止のため、`ASSET_LICENSE.md` を確認する。
+- 自作キャラで使うには 5×5 角度シートを6枚用意し、スライス生成する必要がある。
+- PuruPuruPNGTuber と合わせて、軽量 PNGTuber / AITuber 表現の比較対象として扱う。
+
+⸻
+
 ### HyperFrames
 
 URL:
@@ -2362,29 +2416,6 @@ https://arxiv.org/abs/2512.08309
 
 ⸻
 
-### tomari-guruguru
-
-URL:
-https://github.com/rotejin/tomari-guruguru
-
-概要:
-
-- 内容確認待ちの調査候補。
-
-用途:
-
-- 未整理
-
-状態:
-
-- 調査保留
-
-優先度:
-
-- 未設定
-
-⸻
-
 ### reviewable-html-workbench
 
 URL:
@@ -2675,6 +2706,7 @@ URL:
 - Humation Swift
 - Anime2.5DRig
 - see-through
+- tomari-guruguru
 - VoxCPM
 - VTuber体験場
 - OpenCut
@@ -2763,6 +2795,7 @@ URL:
 - Buzz
 - Anime2.5DRig
 - see-through
+- tomari-guruguru
 - HyperFrames
 - MoneyPrinterTurbo
 - VoxCPM
@@ -2917,7 +2950,6 @@ URL:
 
 ### 調査保留・内容確認待ち
 
-- tomari-guruguru
 - reviewable-html-workbench
 - k16shikano gist
 
@@ -2953,6 +2985,7 @@ URL:
 - Odysseus
 - VCamdroid
 - Anime2.5DRig
+- tomari-guruguru
 
 ### 開発アイデア
 
