@@ -93,6 +93,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Ponytail → `AI_DRAWERS.md`, `AGENTS.md`, `PROJECT_START.md`
 - deepsec → `AI_DRAWERS.md`, `SECURITY_REVIEW.md`, `AGENTS.md`, `PROJECT_START.md`
 - PPT Master → `AI_DRAWERS.md`, `OUTPUTS/README.md`
+- reviewable-html-workbench → `AI_DRAWERS.md`, `OUTPUTS/README.md`
+- reviewable HTML / inline document review → `AI_DRAWERS.md`
+- HTML artifact review / agent-generated document review → `AI_DRAWERS.md`
 - Document Automation → `AI_DRAWERS.md`, `OUTPUTS/README.md`
 - Minimal Implementation Policy → `AGENTS.md`, `PROJECT_START.md`, `AI_DRAWERS.md`
 - Security Review Policy → `SECURITY_REVIEW.md`, `AGENTS.md`, `PROJECT_START.md`
@@ -131,6 +134,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 - AI Coding Operations → `AI_DRAWERS.md`, `PROJECT_START.md`, `AGENTS.md`, `LESSONS_LEARNED.md`
 - AGENTS.md and Skills → `NOTES/AI_Coding_Patterns.md`, `SKILLS/README.md`, `AGENTS.md`
 - Thin AGENTS → `NOTES/AI_Coding_Patterns.md`, `AGENTS.md`, `SKILLS/README.md`
+- japanese-tech-writing / k16shikano gist → `AI_DRAWERS.md`
+- Japanese technical writing / 日本語技術文書 → `AI_DRAWERS.md`
+- LLM writing skill / 文章規範 skill → `AI_DRAWERS.md`, `SKILLS/README.md`
 - Amazon セール検知システム → `AI_DRAWERS.md`
 - Amazon Sale Monitoring → `AI_DRAWERS.md`
 - Creative Pipeline → `AI_DRAWERS.md`
@@ -210,6 +216,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - 定期レビュー / monthly review → `REVIEW.md`
 - Memory Review / 記憶整理 / dream → `REVIEW.md`, `NOTES/AI_Coding_Patterns.md`, `LESSONS_LEARNED.md`
 - memory consolidation / 記憶統合 → `NOTES/AI_Coding_Patterns.md`, `AI_DRAWERS.md`
+- reviewable HTML / agent-generated document review → `AI_DRAWERS.md`, `OUTPUTS/README.md`
+- Japanese technical writing / LLM writing skill → `AI_DRAWERS.md`, `SKILLS/README.md`
 - セキュリティレビュー / security review → `SECURITY_REVIEW.md`, `AGENTS.md`, `PROJECT_START.md`
 - OKF / Open Knowledge Format / metadata frontmatter → `OKF.md`, `AI_DRAWERS.md`
 - AI as front door / AIを入口に置く → `NOTES/AI_Workspace_Ideas.md`, `STATUS.md`
@@ -274,8 +282,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - InfiniteDiffusion → `AI_DRAWERS.md`
 - tomari-guruguru → `AI_DRAWERS.md`
 - トマリトーク / PNGTuber / AITuber avatar → `AI_DRAWERS.md`
-- reviewable-html-workbench → `AI_DRAWERS.md`
-- k16shikano gist → `AI_DRAWERS.md`
+- reviewable-html-workbench → `AI_DRAWERS.md`, `OUTPUTS/README.md`
+- japanese-tech-writing / k16shikano gist → `AI_DRAWERS.md`, `SKILLS/README.md`
 - anthropics/skills → `AI_DRAWERS.md`, `SKILLS/README.md`
 
 ## Topic Routing
@@ -315,6 +323,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - ChatGPT Project instructions / 指示欄 → `CHATGPT_PROJECT_INSTRUCTIONS.md`
 - local environment / workspace root / username → `LOCAL_ENVIRONMENT.example.md`, `.gitignore`
 - GitHub OSS 基礎体力セット / restored OSS links → `INBOX.md`
+- reviewable HTML / agent-generated document review → `AI_DRAWERS.md`, `OUTPUTS/README.md`
+- Japanese technical writing / LLM writing skill → `AI_DRAWERS.md`, `SKILLS/README.md`
 - editable PowerPoint generation / PPTX生成 → `AI_DRAWERS.md`, `OUTPUTS/README.md`
 - 新しい個人開発案 → `AI_DRAWERS.md` の `Ideas` または `PROJECTS/`
 - プロジェクト固有の情報 → `PROJECTS/`

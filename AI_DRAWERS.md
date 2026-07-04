@@ -1198,6 +1198,62 @@ https://github.com/hugohe3/ppt-master
 
 ⸻
 
+### reviewable-html-workbench
+
+URL:
+https://github.com/u-ichi/reviewable-html-workbench
+
+分類:
+
+- AI Coding Operations
+- Document Automation
+- Development Workflow
+- Review Workflow
+- Claude Code
+- Codex CLI
+
+概要:
+
+- Claude Code / Codex CLI 向けに、agent が生成した HTML 文書をレビュー可能にする plugin。
+- HTML preview 上で本文や画像を選択し、インラインコメントを残せる。
+- agent はコメントを読み取り、分類、返信、解決済みコメントの反映、再 render まで行える。
+- `visual-html-renderer`、`reviewable-design-doc`、`plan-preview` の skill を含む。
+
+用途:
+
+- agent-generated document review
+- HTML report / design doc review
+- Codex / Claude Code の成果物レビュー
+- `OUTPUTS/` に置く人間向け成果物の確認
+- Markdown / PDF / PPTX 生成前のレビュー用 HTML 中間成果物
+
+関連:
+
+- PPT Master
+- OUTPUTS
+- PixelRAG
+- Oracle
+- Claude Code
+- Codex CLI
+- Document Automation
+- AI Coding Operations
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- chat 上の「ここ直して」より、HTML 上の正確な範囲コメントとしてレビューを残せる点が強い。
+- preview server、Tailscale、browser comment、generated HTML を扱うため、公開前レビューでは private document、内部資料、個人情報、API key、token、`.env` 実値を含めない。
+- まずは `ai-shared-memory` の調査まとめや比較表を reviewable HTML 化する用途で試す。
+
+⸻
+
 ### Apple Container
 
 URL:
@@ -2416,53 +2472,59 @@ https://arxiv.org/abs/2512.08309
 
 ⸻
 
-### reviewable-html-workbench
+## Reference Sites
 
-URL:
-https://github.com/u-ichi/reviewable-html-workbench
-
-概要:
-
-- HTML レビュー支援候補。
-
-用途:
-
-- HTML レビュー支援
-
-状態:
-
-- 調査保留
-
-優先度:
-
-- 未設定
-
-⸻
-
-### k16shikano gist
+### japanese-tech-writing / k16shikano gist
 
 URL:
 https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
 
+分類:
+
+- Reference Sites
+- AI Coding Operations
+- Writing
+- Japanese Technical Writing
+- Skills
+- Prompt Engineering
+
 概要:
 
-- 内容確認待ちの gist。
+- LLM に日本語の技術文書・書籍原稿を書かせるときの文章規範 skill。
+- 整形、一文一行、段落と論証の構成、論証の厳密さ、読み手の負荷、視点と語り、演出の抑制、LLM っぽい空句の禁止、冗長の排除を扱う。
+- 人間向けの一般文章作法というより、LLM に悩ましい日本語を生成させないための規範として使う。
 
 用途:
 
-- 未整理
+- 日本語技術文書の推敲
+- README / NOTES / PROJECTS の文章品質改善
+- AI 出力の論理点検
+- LLM っぽい冗長表現の削減
+- `SKILLS/` や writing skill 設計の参考
+
+関連:
+
+- `SKILLS/`
+- `NOTES/AI_Coding_Patterns.md`
+- Claude Code運用ミス7選
+- Memory Consolidation / Dream Review
+- AI Coding Operations
 
 状態:
 
-- 内容確認待ち
+- 参考資料
 
 優先度:
 
-- 未設定
+- ★★★★★
+
+メモ:
+
+- そのまま全ルールを `AGENTS.md` に入れると肥大化するため、必要なら `SKILLS/Writing.md` のような作業別ルールとして分離する。
+- `ai-shared-memory` の公開 Markdown を整えるとき、特に「段落と論証の構成」「論証の厳密さ」「冗長の排除」を優先して参照する。
+- Gist / skill の内容を取り込む場合は、ライセンスと原文の扱いを確認し、丸写しではなく参照リンクと運用方針として残す。
 
 ⸻
-
-## Reference Sites
 
 ### VTuber体験場
 
@@ -2740,18 +2802,21 @@ URL:
 - Oracle
 - pxpipe
 - PixelRAG
+- reviewable-html-workbench
 - Claude Code運用ミス7選
 - Memory Consolidation / Dream Review
+- japanese-tech-writing / k16shikano gist
 - The Hitchhiker's Guide to Agentic AI
 
 用途:
 
-- AI コーディング運用改善、専門エージェント役割設計、multi-model review、agentic system reference、skill routing、token optimization、context compression、screenshot-based browsing、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
+- AI コーディング運用改善、専門エージェント役割設計、multi-model review、reviewable HTML artifact、Japanese technical writing skill、agentic system reference、skill routing、token optimization、context compression、screenshot-based browsing、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
 
 ### Document Automation
 
 - PPT Master
 - OUTPUTS
+- reviewable-html-workbench
 - Stirling PDF
 - kurashino-daicho
 - Paperless-ngx
@@ -2779,10 +2844,11 @@ URL:
 - The Hitchhiker's Guide to Agentic AI
 - Hermes Agent
 - PixelRAG
+- japanese-tech-writing / k16shikano gist
 
 用途:
 
-- AI が読みやすい共有知識ベース、メタデータ、LLM Wiki、ナレッジ検索、visual retrieval、学習・研究資料整理、定期的な記憶統合、agent memory / skill memory の接続設計。
+- AI が読みやすい共有知識ベース、メタデータ、LLM Wiki、ナレッジ検索、visual retrieval、学習・研究資料整理、日本語技術文書の品質改善、定期的な記憶統合、agent memory / skill memory の接続設計。
 
 ### Creative Pipeline
 
@@ -2920,6 +2986,7 @@ URL:
 - n8n
 - OpenCut
 - PPT Master
+- reviewable-html-workbench
 - Recordly
 
 ### 将来導入
@@ -2948,13 +3015,9 @@ URL:
 - Flowsint
 - anthropics/skills
 
-### 調査保留・内容確認待ち
-
-- reviewable-html-workbench
-- k16shikano gist
-
 ### 参考資料
 
+- japanese-tech-writing / k16shikano gist
 - VTuber体験場
 - Claude Code運用ミス7選
 - Memory Consolidation / Dream Review

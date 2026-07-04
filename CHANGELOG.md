@@ -8,6 +8,9 @@
 - `AI_INDEX.md` に Anime2.5DRig、see-through、single-image layer decomposition、2.5D avatar rig の導線を追加。
 - `AI_DRAWERS.md` の `tomari-guruguru` を内容確認待ちから Creative / Avatar / PNGTuber / AITuber の研究対象へ更新。
 - `AI_INDEX.md` に tomari-guruguru、トマリトーク、PNGTuber、AITuber avatar、25方向アバターの導線を追加。
+- `AI_DRAWERS.md` の `reviewable-html-workbench` を調査保留から AI Coding Operations / Document Automation の `次に試す` へ更新。
+- `AI_DRAWERS.md` の `k16shikano gist` を内容確認待ちから japanese-tech-writing / Japanese Technical Writing skill の参考資料へ更新。
+- `AI_INDEX.md` に reviewable HTML、inline document review、Japanese technical writing、LLM writing skill の導線を追加。
 
 ## 2026-07-04
 
