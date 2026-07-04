@@ -184,6 +184,45 @@ https://github.com/StarTrail-org/PixelRAG
 
 ⸻
 
+### Open Notebook
+
+URL:
+https://github.com/lfnovo/open-notebook
+
+分類:
+
+- AI
+- Knowledge Management
+- Self Host
+- NotebookLM Alternative
+
+概要:
+
+- NotebookLM 代替を目指す、privacy-focused な open source notebook / research workspace。
+- source、notes、AI assistant を組み合わせ、学習・調査・資料整理に使える。
+
+用途:
+
+- NotebookLM 代替候補
+- AI-assisted research notebook
+- 学習・調査メモの整理
+- local-first / self-hosted knowledge workspace 研究
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- notebook 内の private documents、API key、会話ログ、個人メモは公開メモリに記録しない。
+- `ai-shared-memory` とは役割が近いため、導入する場合は GitHub 原本運用との住み分けを確認する。
+
+⸻
+
 ### Google OKF
 
 URL:
@@ -662,6 +701,42 @@ https://github.com/mnfst/awesome-free-llm-apis
 - API key、token、アカウント情報、prompt 内容、利用ログは公開メモリに記載しない。
 - 無料枠では prompt が provider 側に保存、審査、学習利用される可能性があるため、センシティブ情報や非公開コードには使わない。
 - OpenRouter、LibreChat、GitHub Models、Cloudflare Workers AI などの provider / gateway / UI 選定の入口として扱う。
+
+⸻
+
+### Buzz
+
+URL:
+https://github.com/chidiwilliams/buzz
+
+分類:
+
+- AI
+- Transcription
+- Creative
+- Local-first
+
+概要:
+
+- OpenAI Whisper を使い、個人 PC 上で音声の文字起こし・翻訳を行うオフライン transcription アプリ。
+
+用途:
+
+- オフライン文字起こし
+- 音声メモ、動画、会議録のテキスト化
+- Whisper GUI / local transcription workflow の比較
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 実音声、会議録、個人情報、非公開会話の内容は公開メモリに記録しない。
 
 ⸻
 
@@ -1295,6 +1370,43 @@ https://github.com/OpenCut-app/OpenCut
 
 ⸻
 
+### Excalidraw
+
+URL:
+https://github.com/excalidraw/excalidraw
+
+分類:
+
+- Creative
+- Knowledge Management
+- Diagramming
+- Whiteboard
+
+概要:
+
+- 手描き風の図解、ワイヤーフレーム、フローチャート、ホワイトボードを作れる virtual whiteboard。
+
+用途:
+
+- 技術メモの図解
+- AI workflow / architecture の可視化
+- 学習ノート、設計メモ、README 図解
+- `NOTES/` や `PROJECTS/` の補助図作成
+
+状態:
+
+- 導入推奨
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- private diagram、内部構成、認証情報、非公開資料のスクリーンショットは公開メモリに記録しない。
+
+⸻
+
 ### yt-dlp
 
 URL:
@@ -1515,6 +1627,79 @@ https://github.com/AmruthPillai/Reactive-Resume
 
 ⸻
 
+### Recordly
+
+URL:
+https://github.com/webadderallorg/Recordly
+
+分類:
+
+- Creative
+- Video
+- Demo
+- Screen Recording
+
+概要:
+
+- 画面録画と編集を一体化し、ズーム、カーソル演出、背景、フレームなどを使って polished demo video を作る desktop app。
+- macOS、Windows、Linux 向けの screen recording / demo production 候補。
+
+用途:
+
+- app demo video
+- tutorial / walkthrough 作成
+- Codex で作った app の説明動画
+- OpenCut / HyperFrames / OUTPUTS との比較
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 録画に private window、個人情報、API key、terminal output、未公開コードが映り込まないよう確認する。
+
+⸻
+
+### PhotoGIMP
+
+URL:
+https://github.com/Diolinux/PhotoGIMP
+
+分類:
+
+- Creative
+- Image Editing
+- GIMP
+
+概要:
+
+- GIMP 3+ を Photoshop 風の UI / shortcuts / workflow に寄せる patch。
+
+用途:
+
+- GIMP の操作性改善
+- 画像編集 workflow の補助
+- README / OUTPUTS 用の軽い画像加工
+
+状態:
+
+- 必要時利用
+
+優先度:
+
+- ★★★☆☆
+
+メモ:
+
+- 導入前に対応 GIMP version と patch 適用範囲を確認する。
+
+⸻
+
 ## Self Host
 
 ### Homepage
@@ -1629,6 +1814,7 @@ https://github.com/Stirling-Tools/Stirling-PDF
 - OCR
 - 結合
 - 分割
+- 学習資料や文書アーカイブの PDF 加工
 
 状態:
 
@@ -1738,12 +1924,13 @@ https://github.com/AppFlowy-IO/AppFlowy
 
 概要:
 
-- Notion 代替候補。
+- Notion 代替候補。projects、wikis、teams、AI collaborative workspace を扱う open source workspace。
 
 用途:
 
 - Notion 代替
 - ローカル管理
+- AI collaborative workspace 研究
 
 状態:
 
@@ -1752,6 +1939,220 @@ https://github.com/AppFlowy-IO/AppFlowy
 優先度:
 
 - 未設定
+
+⸻
+
+### Calibre
+
+URL:
+https://github.com/kovidgoyal/calibre
+
+分類:
+
+- Knowledge Management
+- eBook
+- Learning / Research Workflow
+
+概要:
+
+- eBook の管理、変換、閲覧、編集、端末連携を行う定番 ebook manager。
+
+用途:
+
+- eBook / 技術書 / 教材管理
+- EPUB / PDF など学習資料の整理
+- local library workflow 研究
+
+状態:
+
+- 導入推奨
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 購入履歴、個人ライブラリ、DRM 回避、非公開ファイル名は公開メモリに記録しない。
+
+⸻
+
+### Anki
+
+URL:
+https://github.com/ankitects/anki
+
+分類:
+
+- Learning
+- Knowledge Management
+- Spaced Repetition
+
+概要:
+
+- 間隔反復で暗記・学習を支援する smart flashcard program。
+
+用途:
+
+- 学習メモの再利用
+- 技術知識、語学、資格学習の flashcard 化
+- `ai-shared-memory` の知識から復習カードを作る workflow 研究
+
+状態:
+
+- 導入推奨
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 個人学習履歴、カード内容、同期アカウント情報は公開メモリに記録しない。
+
+⸻
+
+### Zotero
+
+URL:
+https://github.com/zotero/zotero
+
+分類:
+
+- Research
+- Knowledge Management
+- Reference Management
+
+概要:
+
+- 研究資料を収集、整理、注釈、引用、共有するための文献管理ツール。
+
+用途:
+
+- 論文・記事・技術資料の管理
+- 引用情報整理
+- `AI_DRAWERS.md` / `NOTES/` の出典管理 workflow 研究
+
+状態:
+
+- 導入推奨
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- private library、個人メモ、未公開資料、同期アカウント情報は公開メモリに記録しない。
+
+⸻
+
+### Paperless-ngx
+
+URL:
+https://github.com/paperless-ngx/paperless-ngx
+
+分類:
+
+- Self Host
+- Document Archive
+- Knowledge Management
+- OCR
+
+概要:
+
+- 紙文書や PDF を scan / index / archive し、検索可能な document management system として管理する self-hosted ツール。
+
+用途:
+
+- 書類アーカイブ
+- OCR / tag / full-text search
+- 家庭内・研究資料・業務文書の整理 workflow 研究
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- 実書類、住所、契約、見積、個人情報、スキャン画像は公開メモリに記録しない。
+
+⸻
+
+### ONLYOFFICE Docs
+
+URL:
+https://github.com/ONLYOFFICE/DocumentServer
+
+分類:
+
+- Self Host
+- Document Automation
+- Office Suite
+
+概要:
+
+- docs、sheets、slides、forms、PDF を扱う collaborative online office suite。
+- Office Open XML formats とリアルタイム共同編集に対応する。
+
+用途:
+
+- Google Docs / Office 代替候補
+- self-hosted document editing
+- `OUTPUTS/` の docx / xlsx / pptx 編集環境候補
+
+状態:
+
+- 将来候補
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 実文書、契約、見積、個人情報、共有リンク、認証情報は公開メモリに記録しない。
+
+⸻
+
+### Odysseus
+
+URL:
+https://github.com/pewdiepie-archdaemon/odysseus
+
+分類:
+
+- AI Workspace / Integrations
+- Self Host
+- Knowledge Management
+
+概要:
+
+- self-hosted AI workspace。
+- ローカルまたは self-hosted な AI 作業環境の比較候補として扱う。
+
+用途:
+
+- self-hosted AI workspace 研究
+- AI Workspace UI / integrations 比較
+- Linux / Docker 寄りの運用候補確認
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- Windows 環境での実運用前に、対応 OS、Docker 構成、認証、データ保存場所を確認する。
+- API key、会話ログ、workspace data、認証情報は公開メモリに記録しない。
 
 ⸻
 
@@ -2194,13 +2595,22 @@ URL:
 - OUTPUTS
 - Stirling PDF
 - kurashino-daicho
+- Paperless-ngx
+- ONLYOFFICE Docs
 
 用途:
 
-- Markdown / PDF / DOCX から編集可能な成果物を生成し、repo 内の原本と人間向け出力を分離する。台帳、PDF、CSV、印刷出力付き local-first アプリの設計参考も含む。
+- Markdown / PDF / DOCX から編集可能な成果物を生成し、repo 内の原本と人間向け出力を分離する。台帳、PDF、CSV、OCR、印刷出力、文書アーカイブ付き local-first / self-hosted アプリの設計参考も含む。
 
 ### Knowledge Management
 
+- Open Notebook
+- Excalidraw
+- Calibre
+- Anki
+- Zotero
+- Paperless-ngx
+- AppFlowy
 - Google OKF
 - AI_INDEX
 - PROJECT_START
@@ -2213,20 +2623,38 @@ URL:
 
 用途:
 
-- AI が読みやすい共有知識ベース、メタデータ、LLM Wiki、ナレッジ検索、visual retrieval、定期的な記憶統合、agent memory / skill memory の接続設計。
+- AI が読みやすい共有知識ベース、メタデータ、LLM Wiki、ナレッジ検索、visual retrieval、学習・研究資料整理、定期的な記憶統合、agent memory / skill memory の接続設計。
 
 ### Creative Pipeline
 
+- Excalidraw
+- Recordly
+- PhotoGIMP
 - OpenCut
 - yt-dlp
 - Whisper
+- Buzz
 - HyperFrames
 - MoneyPrinterTurbo
 - VoxCPM
 
 用途:
 
-- 動画取得、音声抽出、文字起こし、動画編集、動画生成、音声生成。
+- 図解、画像編集、画面録画、動画取得、音声抽出、文字起こし、動画編集、動画生成、音声生成。
+
+### Learning / Research Workflow
+
+- Open Notebook
+- Zotero
+- Paperless-ngx
+- Calibre
+- Anki
+- Excalidraw
+- Buzz
+
+用途:
+
+- 学習、研究、文献管理、教材管理、間隔反復、オフライン文字起こし、図解作成を組み合わせた個人知識基盤。
 
 ### AI Workspace / Integrations
 
@@ -2236,10 +2664,30 @@ URL:
 - agency-agents
 - Hermes Agent
 - awesome-free-llm-apis
+- Open Notebook
+- AppFlowy
+- Odysseus
 
 用途:
 
-- 複数 AI UI、AI メール、外部 API 連携、LLM provider / fallback 調査、専門エージェント役割設計、messaging gateway、scheduled automation。
+- 複数 AI UI、AI メール、外部 API 連携、LLM provider / fallback 調査、AI notebook / workspace、専門エージェント役割設計、messaging gateway、scheduled automation。
+
+### Self Host / Tools
+
+- Homepage
+- LibreChat
+- Immich
+- n8n
+- Stirling PDF
+- AppFlowy
+- Paperless-ngx
+- ONLYOFFICE Docs
+- Odysseus
+- Nango
+
+用途:
+
+- 自宅サーバー、ローカルサービス、文書管理、AI workspace、外部 API 統合の self-host 候補。
 
 ### Finance / Investigation
 
@@ -2280,6 +2728,10 @@ URL:
 
 ### 導入推奨
 
+- Excalidraw
+- Calibre
+- Anki
+- Zotero
 - LocalSend
 - Whisper
 - Stirling PDF
@@ -2294,6 +2746,9 @@ URL:
 - Agentic Inbox
 - VoxCPM
 - Oracle
+- Open Notebook
+- Buzz
+- Paperless-ngx
 
 ### 次に試す
 
@@ -2301,6 +2756,7 @@ URL:
 - n8n
 - OpenCut
 - PPT Master
+- Recordly
 
 ### 将来導入
 
@@ -2313,10 +2769,12 @@ URL:
 
 - Firecrawl
 - Humation Swift
+- ONLYOFFICE Docs
 
 ### 必要時利用
 
 - yt-dlp
+- PhotoGIMP
 
 ### 保留
 
@@ -2342,6 +2800,7 @@ URL:
 - pxpipe
 - PixelRAG
 - awesome-free-llm-apis
+- Open Notebook
 
 ### 研究対象
 
@@ -2360,6 +2819,7 @@ URL:
 - Amazon Creators API SDK
 - Humation
 - kurashino-daicho
+- Odysseus
 
 ### 開発アイデア
 

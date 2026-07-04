@@ -56,6 +56,23 @@ AI が関連ファイルを素早く見つけるための索引です。
 - awesome-free-llm-apis → `AI_DRAWERS.md`
 - free LLM API / LLM provider free tier → `AI_DRAWERS.md`
 - OpenAI compatible API / model fallback → `AI_DRAWERS.md`
+- Open Notebook → `AI_DRAWERS.md`
+- NotebookLM alternative → `AI_DRAWERS.md`
+- Excalidraw → `AI_DRAWERS.md`
+- Calibre → `AI_DRAWERS.md`
+- Buzz → `AI_DRAWERS.md`
+- offline transcription → `AI_DRAWERS.md`
+- Anki → `AI_DRAWERS.md`
+- spaced repetition → `AI_DRAWERS.md`
+- Zotero → `AI_DRAWERS.md`
+- reference management → `AI_DRAWERS.md`
+- Paperless-ngx → `AI_DRAWERS.md`
+- document archive → `AI_DRAWERS.md`
+- ONLYOFFICE Docs → `AI_DRAWERS.md`
+- Recordly → `AI_DRAWERS.md`
+- PhotoGIMP → `AI_DRAWERS.md`
+- Odysseus → `AI_DRAWERS.md`
+- Learning / Research Workflow → `AI_DRAWERS.md`
 - Whisper → `AI_DRAWERS.md`
 - MiMo-Code → `AI_DRAWERS.md`
 - Headroom → `AI_DRAWERS.md`
@@ -262,6 +279,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - ChatGPT Project Sources automation → `AI_DRAWERS.md`, `CHATGPT_PROJECT_SOURCE.md`
 - AI Workspace integrations / API Integration → `AI_DRAWERS.md`, `NOTES/AI_Workspace_Ideas.md`
 - free LLM API / OpenAI compatible API / model fallback → `AI_DRAWERS.md`
+- NotebookLM alternative / Open Notebook → `AI_DRAWERS.md`
+- Learning / Research Workflow / spaced repetition / reference management → `AI_DRAWERS.md`
+- document archive / Paperless-ngx / ONLYOFFICE Docs → `AI_DRAWERS.md`
+- diagramming / Excalidraw / demo recording / Recordly → `AI_DRAWERS.md`
 - AI video / voice generation → `AI_DRAWERS.md`
 - HomeLab configuration management / Puppet / Ansible → `AI_DRAWERS.md`, `NOTES/HomeLab.md`
 - specialist agents / AI agent personas → `AI_DRAWERS.md`, `AI_PROFILES.md`, `SKILLS/README.md`
