@@ -52,6 +52,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 - screenshot retrieval / screenshot-based browsing → `AI_DRAWERS.md`
 - Google OKF → `AI_DRAWERS.md`, `OKF.md`
 - Open Knowledge Format → `OKF.md`, `AI_DRAWERS.md`
+- awesome-free-llm-apis → `AI_DRAWERS.md`
+- free LLM API / LLM provider free tier → `AI_DRAWERS.md`
+- OpenAI compatible API / model fallback → `AI_DRAWERS.md`
 - Whisper → `AI_DRAWERS.md`
 - MiMo-Code → `AI_DRAWERS.md`
 - Headroom → `AI_DRAWERS.md`
@@ -257,6 +260,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - second opinion / multi-model review / oracle → `AI_DRAWERS.md`
 - ChatGPT Project Sources automation → `AI_DRAWERS.md`, `CHATGPT_PROJECT_SOURCE.md`
 - AI Workspace integrations / API Integration → `AI_DRAWERS.md`, `NOTES/AI_Workspace_Ideas.md`
+- free LLM API / OpenAI compatible API / model fallback → `AI_DRAWERS.md`
 - AI video / voice generation → `AI_DRAWERS.md`
 - HomeLab configuration management / Puppet / Ansible → `AI_DRAWERS.md`, `NOTES/HomeLab.md`
 - specialist agents / AI agent personas → `AI_DRAWERS.md`, `AI_PROFILES.md`, `SKILLS/README.md`

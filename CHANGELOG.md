@@ -4,6 +4,8 @@
 
 ## 2026-07-04
 
+- `AI_DRAWERS.md` に `mnfst/awesome-free-llm-apis` を LLM / API Providers / Free Tier / Reference Sites の参考資料として追加。
+- `AI_INDEX.md` に awesome-free-llm-apis、free LLM API、OpenAI compatible API、model fallback の導線を追加。
 - `AI_DRAWERS.md` に `StarTrail-org/PixelRAG` を AI / RAG / Visual Retrieval / Knowledge Management の研究対象として追加。
 - `AI_INDEX.md` に PixelRAG、visual RAG、pixel-native search、screenshot retrieval の導線を追加。
 - `AI_DRAWERS.md` に `teamchong/pxpipe` を AI Coding Operations / Token Optimization / Context Compression の研究対象として追加し、text-as-image prompts の参考記事を関連付け。

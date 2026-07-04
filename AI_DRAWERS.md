@@ -620,6 +620,51 @@ https://huggingface.co/collections/puwaer/susono-model
 
 ⸻
 
+### awesome-free-llm-apis
+
+URL:
+https://github.com/mnfst/awesome-free-llm-apis
+
+分類:
+
+- LLM
+- API Providers
+- Free Tier
+- Reference Sites
+- AI Workspace / Integrations
+
+概要:
+
+- 無料枠がある LLM API をまとめた awesome list。
+- Provider API と inference provider を分け、base URL、代表モデル、context、rate limit、無料枠条件を一覧化している。
+- OpenAI SDK compatible endpoint を優先しており、AI Workspace や個人開発での provider 選定、fallback 検討に使える。
+- trial credits や期間限定 promo ではなく、permanent free tiers を主対象にしている。
+
+用途:
+
+- 無料枠 LLM API 調査
+- OpenAI SDK compatible endpoint 比較
+- AI Workspace の provider / fallback 候補調査
+- ローカル LLM で足りない処理の外部 API 候補確認
+- Codex / Claude Code / 個人開発での低コスト実験
+
+状態:
+
+- 参考資料
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 無料枠、rate limit、対象モデル、商用利用可否は変わりやすいため、利用前に各 provider の公式ドキュメントで確認する。
+- API key、token、アカウント情報、prompt 内容、利用ログは公開メモリに記載しない。
+- 無料枠では prompt が provider 側に保存、審査、学習利用される可能性があるため、センシティブ情報や非公開コードには使わない。
+- OpenRouter、LibreChat、GitHub Models、Cloudflare Workers AI などの provider / gateway / UI 選定の入口として扱う。
+
+⸻
+
 ## Development
 
 ### Greenlight
@@ -2190,10 +2235,11 @@ URL:
 - Nango
 - agency-agents
 - Hermes Agent
+- awesome-free-llm-apis
 
 用途:
 
-- 複数 AI UI、AI メール、外部 API 連携、専門エージェント役割設計、messaging gateway、scheduled automation。
+- 複数 AI UI、AI メール、外部 API 連携、LLM provider / fallback 調査、専門エージェント役割設計、messaging gateway、scheduled automation。
 
 ### Finance / Investigation
 
@@ -2295,6 +2341,7 @@ URL:
 - Hermes Agent
 - pxpipe
 - PixelRAG
+- awesome-free-llm-apis
 
 ### 研究対象
 
