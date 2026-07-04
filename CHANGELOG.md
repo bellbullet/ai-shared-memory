@@ -4,6 +4,8 @@
 
 ## 2026-07-04
 
+- `INBOX.md` に GitHub OSS 基礎体力セットとして、学習、Self Host、Agent、AI Coding、LLM / RAG、Creative 系リンクを一括保管。
+- `AI_INDEX.md` に GitHub OSS 基礎体力セット / restored OSS links の導線を追加。
 - `AI_DRAWERS.md` に学習・知識管理・ドキュメント管理系 OSS として Open Notebook、Excalidraw、Calibre、Buzz、Anki、Zotero、Paperless-ngx、ONLYOFFICE Docs、Recordly、PhotoGIMP、Odysseus を追加。
 - `AI_DRAWERS.md` の Stirling PDF / AppFlowy と横断グループを、Learning / Research Workflow、Knowledge Management、Document Automation、Self Host / Tools、Creative Pipeline へ接続。
 - `AI_INDEX.md` に NotebookLM alternative、offline transcription、spaced repetition、reference management、document archive、Learning / Research Workflow などの導線を追加。

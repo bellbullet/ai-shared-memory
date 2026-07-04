@@ -300,6 +300,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - ChatGPT Project source / 情報源要約 → `CHATGPT_PROJECT_SOURCE.md`
 - ChatGPT Project instructions / 指示欄 → `CHATGPT_PROJECT_INSTRUCTIONS.md`
 - local environment / workspace root / username → `LOCAL_ENVIRONMENT.example.md`, `.gitignore`
+- GitHub OSS 基礎体力セット / restored OSS links → `INBOX.md`
 - editable PowerPoint generation / PPTX生成 → `AI_DRAWERS.md`, `OUTPUTS/README.md`
 - 新しい個人開発案 → `AI_DRAWERS.md` の `Ideas` または `PROJECTS/`
 - プロジェクト固有の情報 → `PROJECTS/`
