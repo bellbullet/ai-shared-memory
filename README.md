@@ -36,6 +36,7 @@ ai-shared-memory/
 ├─ AI_INDEX.md
 ├─ CHATGPT_PROJECT_SOURCE.md
 ├─ CHATGPT_PROJECT_INSTRUCTIONS.md
+├─ LOCAL_ENVIRONMENT.example.md
 ├─ LESSONS_LEARNED.md
 ├─ DECISIONS.md
 ├─ REVIEW.md
@@ -102,6 +103,7 @@ AI は原則として次の順で読む。
 - [AI_INDEX.md](AI_INDEX.md): プロジェクト、ノート、技術項目の索引。
 - [CHATGPT_PROJECT_SOURCE.md](CHATGPT_PROJECT_SOURCE.md): ChatGPT Projects の情報源に貼るための要約。
 - [CHATGPT_PROJECT_INSTRUCTIONS.md](CHATGPT_PROJECT_INSTRUCTIONS.md): ChatGPT Projects の指示欄に貼るための短い運用ルール。
+- [LOCAL_ENVIRONMENT.example.md](LOCAL_ENVIRONMENT.example.md): Git 管理しないローカル環境設定の公開用テンプレ。
 - [LESSONS_LEARNED.md](LESSONS_LEARNED.md): 運用で学んだ問題、原因、対策。
 - [DECISIONS.md](DECISIONS.md): 重要な設計判断と採用理由。
 - [REVIEW.md](REVIEW.md): 定期レビュー用チェックリスト。

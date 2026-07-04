@@ -4,6 +4,8 @@
 
 ## 2026-07-04
 
+- 公開ドキュメント内の個人環境パスを `<workspace-root>` / `<user-home>` へ置き換え、ローカル実値を Git 管理しない `LOCAL_ENVIRONMENT.md` に分離する方針を追加。
+- `LOCAL_ENVIRONMENT.example.md` を追加し、`.gitignore` に local environment / `.env` 系ファイルを追加。
 - `AI_DRAWERS.md` に `mnfst/awesome-free-llm-apis` を LLM / API Providers / Free Tier / Reference Sites の参考資料として追加。
 - `AI_INDEX.md` に awesome-free-llm-apis、free LLM API、OpenAI compatible API、model fallback の導線を追加。
 - `AI_DRAWERS.md` に `StarTrail-org/PixelRAG` を AI / RAG / Visual Retrieval / Knowledge Management の研究対象として追加。

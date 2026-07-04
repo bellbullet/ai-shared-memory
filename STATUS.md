@@ -8,12 +8,12 @@ Workspace 全体の現在地を一覧するファイル。
 
 ## Workspace
 
-- Root: `D:\Codex`
-- Active projects: `D:\Codex\Projects`
-- Shared knowledge: `D:\Codex\ai-shared-memory`
-- Archive: `D:\Codex\Archive`
-- Sandbox: `D:\Codex\Sandbox`
-- Shared reusable material: `D:\Codex\Shared`
+- Root: `<workspace-root>`
+- Active projects: `<workspace-root>\Projects`
+- Shared knowledge: `<workspace-root>\ai-shared-memory`
+- Archive: `<workspace-root>\Archive`
+- Sandbox: `<workspace-root>\Sandbox`
+- Shared reusable material: `<workspace-root>\Shared`
 
 ## Active Projects
 

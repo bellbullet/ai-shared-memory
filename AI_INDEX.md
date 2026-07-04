@@ -11,6 +11,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - AI rules: `AGENTS.md`
 - ChatGPT Project source summary: `CHATGPT_PROJECT_SOURCE.md`
 - ChatGPT Project instructions: `CHATGPT_PROJECT_INSTRUCTIONS.md`
+- Local environment template: `LOCAL_ENVIRONMENT.example.md`
 - AI profiles: `AI_PROFILES.md`
 - Review checklist: `REVIEW.md`
 - Security review: `SECURITY_REVIEW.md`
@@ -272,6 +273,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - AGENTS.md 肥大化防止 / role split / skills → `NOTES/AI_Coding_Patterns.md`, `SKILLS/README.md`
 - ChatGPT Project source / 情報源要約 → `CHATGPT_PROJECT_SOURCE.md`
 - ChatGPT Project instructions / 指示欄 → `CHATGPT_PROJECT_INSTRUCTIONS.md`
+- local environment / workspace root / username → `LOCAL_ENVIRONMENT.example.md`, `.gitignore`
 - editable PowerPoint generation / PPTX生成 → `AI_DRAWERS.md`, `OUTPUTS/README.md`
 - 新しい個人開発案 → `AI_DRAWERS.md` の `Ideas` または `PROJECTS/`
 - プロジェクト固有の情報 → `PROJECTS/`

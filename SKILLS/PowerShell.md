@@ -7,9 +7,11 @@ Use when work involves Windows PowerShell, local paths, workspace checks, or com
 ## Required Practices
 
 - Always confirm the working folder before running or presenting commands.
-- Do not treat `C:\Users\keiya` as a project root unless explicitly requested.
+- Do not treat the user's home directory as a project root unless explicitly requested.
 - Use absolute paths when paths matter.
 - Start user-facing command snippets with `cd <project path>`.
+- Use `<workspace-root>` and `<project-name>` placeholders in public docs.
+- Keep actual workspace roots, usernames, and machine-specific paths in `LOCAL_ENVIRONMENT.md`, which is not Git-managed.
 - Prefer native PowerShell cmdlets for filesystem operations.
 - For cleanup, quarantine or archive when deletion is ambiguous.
 
@@ -17,7 +19,7 @@ Use when work involves Windows PowerShell, local paths, workspace checks, or com
 
 ```powershell
 # 1. Working folder
-cd D:\Codex\Projects\<project-name>
+cd <workspace-root>\Projects\<project-name>
 
 # 2. Runtime, if needed
 .\.venv\Scripts\Activate.ps1

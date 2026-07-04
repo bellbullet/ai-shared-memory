@@ -33,13 +33,15 @@
 - Runtime
 - `.venv`, if the project uses Python
 
-`C:\Users\keiya` を project root として扱わない。
+ユーザーのホームディレクトリを project root として扱わない。
 
 PowerShell コマンドを提示する場合は、必ず先に作業フォルダを示す。
 
 ```powershell
-cd D:\Codex\Projects\<project-name>
+cd <workspace-root>\Projects\<project-name>
 ```
+
+実際の workspace root、Windows username、ローカル環境の詳細は Git 管理しない `LOCAL_ENVIRONMENT.md` に置く。
 
 ## Knowledge Scan
 
@@ -138,6 +140,8 @@ deepsec は毎回実行するものではなく、リスクの高い変更や節
 - `.env` の実値
 - 個人情報
 - 認証情報
+- ローカルパス
+- ローカル環境設定
 - ローカル端末固有ログ
 
 ## Finish Loop

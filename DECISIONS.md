@@ -35,24 +35,24 @@ Result:
 
 ## 2026-06-27
 
-### Decision: Workspace root を `D:\Codex` に統一する
+### Decision: Workspace root を `<workspace-root>` に統一する
 
 Reason:
 
 - PowerShell が user home から始まることがあり、project root 誤認を避ける必要がある。
 - Active projects、shared memory、archive、sandbox、shared assets を一つの workspace に分けて置ける。
-- 旧 `D:\.codex` と比べて、明示的な workspace home として分かりやすい。
+- 旧 `<old-workspace-root>` と比べて、明示的な workspace home として分かりやすい。
 
 Alternatives:
 
-- `C:\Codex`
-- `D:\.codex`
+- `<alternate-workspace-root>`
+- `<old-workspace-root>`
 - project ごとに任意の場所
 
 Result:
 
-- `D:\Codex` を正式な workspace root とする。
-- 新規 active project は原則 `D:\Codex\Projects\<project-name>` に置く。
+- `<workspace-root>` を正式な workspace root とする。
+- 新規 active project は原則 `<workspace-root>\Projects\<project-name>` に置く。
 
 ### Decision: `PROJECT_START.md` を作業開始の入口にする
 

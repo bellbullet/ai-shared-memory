@@ -15,7 +15,7 @@ Use when work involves Git root detection, missing `.git`, commits, pushes, bran
 ## Checks
 
 ```powershell
-cd D:\Codex\Projects\<project-name>
+cd <workspace-root>\Projects\<project-name>
 git rev-parse --show-toplevel
 git status --short
 git remote -v

@@ -38,7 +38,7 @@ Related References:
 
 Problem:
 
-- PowerShell が `C:\Users\keiya` から始まることがある。
+- PowerShell が `<user-home>` から始まることがある。
 - AI が現在ディレクトリを推測すると、project root ではない場所で `pip install -e .` や pytest を実行しようとする。
 
 Cause:
@@ -50,11 +50,11 @@ Countermeasure:
 - `Working Directory Policy` を追加した。
 - PowerShell コマンド提示時は必ず先に `cd <project path>` を示す。
 - 作業開始時に Working Directory / Git Root / Runtime / `.venv` を確認する。
-- `C:\Users\keiya` を project root として扱わない。
+- ユーザーのホームディレクトリを project root として扱わない。
 
 Scope:
 
-- All projects under `D:\Codex`.
+- All projects under `<workspace-root>`.
 
 ### Moved workspace can leave stale `.venv` and Git assumptions
 
@@ -69,7 +69,7 @@ Cause:
 
 Countermeasure:
 
-- Use `D:\Codex` as workspace root.
+- Use `<workspace-root>` as workspace root.
 - Re-detect Git root from the target project directory.
 - Recreate `.venv` only after showing the exact target path.
 - Do not run `git init` or reconnect remote automatically.

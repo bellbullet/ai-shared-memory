@@ -16,7 +16,7 @@ Use when work involves Python projects, virtual environments, dependencies, pack
 ## Environment Checks
 
 ```powershell
-cd D:\Codex\Projects\<project-name>
+cd <workspace-root>\Projects\<project-name>
 git rev-parse --show-toplevel
 python --version
 python -c "import sys; print(sys.executable)"

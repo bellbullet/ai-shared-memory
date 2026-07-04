@@ -1,6 +1,10 @@
 .agents/
 .codex/
 .oci/
+LOCAL_ENVIRONMENT.md
+*.local.md
+.env
+.env.*
 
 # OS and editor files
 .DS_Store
