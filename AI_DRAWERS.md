@@ -1491,6 +1491,88 @@ https://github.com/humation-labs/humation-swift
 
 ⸻
 
+### Anime2.5DRig
+
+URL:
+https://852wa.github.io/Anime2.5DRig/
+
+分類:
+
+- Creative
+- Avatar
+- 2.5D Rig
+- AI Companion / AIRI
+
+概要:
+
+- パーツ分け PSD をブラウザにドロップし、自動リグ、まばたき、口パク、カメラ追従、マウス追従、髪物理などをその場で試せる 2.5D アバターデモ。
+- `face` / `eyewhite` / `irides` / `eyelash` / `mouth_open` / `front hair` などの PSD レイヤー命名規約を前提にする。
+- Live2D ほど重い制作工程に入る前の、軽量なアバター表現・AI companion 表示の研究候補。
+
+用途:
+
+- AI companion avatar
+- AIRI 表情・口パク・髪揺れ表現
+- PSD ベースの軽量 2.5D アバター実験
+- Live2D / Humation / VTuber体験場との比較
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- PSD レイヤー命名規約に依存するため、see-through などのレイヤー分解技術と組み合わせられるか確認する。
+- キャラクター画像、PSD、配信素材の権利と利用許諾を確認する。
+
+⸻
+
+### see-through
+
+URL:
+https://github.com/shitagaki-lab/see-through
+
+分類:
+
+- Research
+- Creative
+- Anime Layer Decomposition
+- 2.5D Avatar
+- AI Companion / AIRI
+
+概要:
+
+- Single-image Layer Decomposition for Anime Characters。
+- 1枚のアニメキャラクター画像を、髪、顔、目、服、アクセサリなど最大23の意味的レイヤーへ分解し、PSDとして出力する研究プロジェクト。
+- SIGGRAPH 2026 Conference Proceedings に conditionally accepted と記載されている。
+
+用途:
+
+- 1枚絵から PSD 素材を作る
+- Anime2.5DRig / Live2D / AIRI 向け素材化
+- アニメキャラの 2.5D モデル化
+- レイヤー分解・深度推定・セグメンテーション研究
+
+状態:
+
+- 最優先研究対象
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- 生成・分解した画像の権利、キャラクター利用許諾、二次利用範囲に注意する。
+- ローカル実行時は VRAM、CUDA / ROCm、PyTorch 依存関係を確認する。
+- Anime2.5DRig と組み合わせると、1枚絵から動く 2.5D アバターへの流れを作れる可能性がある。
+
+⸻
+
 ### HyperFrames
 
 URL:
@@ -2591,6 +2673,8 @@ URL:
 - Whisper
 - Humation
 - Humation Swift
+- Anime2.5DRig
+- see-through
 - VoxCPM
 - VTuber体験場
 - OpenCut
@@ -2598,7 +2682,7 @@ URL:
 
 用途:
 
-- AI コンパニオン、音声認識、音声表現、表情・アバター表現、カメラ入力、配信・動画導線。
+- AI コンパニオン、音声認識、音声表現、表情・アバター表現、2.5D アバター素材化、カメラ入力、配信・動画導線。
 
 ### Agent / Orchestration
 
@@ -2677,6 +2761,8 @@ URL:
 - yt-dlp
 - Whisper
 - Buzz
+- Anime2.5DRig
+- see-through
 - HyperFrames
 - MoneyPrinterTurbo
 - VoxCPM
@@ -2684,7 +2770,7 @@ URL:
 
 用途:
 
-- 図解、画像編集、画面録画、動画取得、音声抽出、文字起こし、動画編集、動画生成、音声生成、仮想 Web カメラ。
+- 図解、画像編集、画面録画、動画取得、音声抽出、文字起こし、動画編集、動画生成、音声生成、2.5D アバター、レイヤー分解、仮想 Web カメラ。
 
 ### Learning / Research Workflow
 
@@ -2769,6 +2855,7 @@ URL:
 
 - Terrain Diffusion
 - InfiniteDiffusion
+- see-through
 
 ### 導入推奨
 
@@ -2865,6 +2952,7 @@ URL:
 - kurashino-daicho
 - Odysseus
 - VCamdroid
+- Anime2.5DRig
 
 ### 開発アイデア
 

@@ -2,6 +2,11 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-05
+
+- `AI_DRAWERS.md` に Anime2.5DRig と `shitagaki-lab/see-through` を Creative / Avatar / Anime Layer Decomposition / AI Companion の研究対象として追加。
+- `AI_INDEX.md` に Anime2.5DRig、see-through、single-image layer decomposition、2.5D avatar rig の導線を追加。
+
 ## 2026-07-04
 
 - `INBOX.md` に GitHub OSS 基礎体力セットとして、学習、Self Host、Agent、AI Coding、LLM / RAG、Creative 系リンクを一括保管。
