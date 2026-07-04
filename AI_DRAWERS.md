@@ -807,6 +807,52 @@ https://github.com/steipete/oracle
 
 ⸻
 
+### pxpipe
+
+URL:
+https://github.com/teamchong/pxpipe
+
+Reference:
+https://www.seangoedecke.com/text-tokens-as-image-tokens/
+
+分類:
+
+- AI Coding Operations
+- Token Optimization
+- Context Compression
+- Claude Code
+
+概要:
+
+- Claude Code などの巨大な入力文脈をローカルプロキシで画像化し、入力トークン削減を狙う TypeScript 製ツール。
+- system prompt、tool docs、古い履歴などの bulky context を PNG に変換し、dense text を image token として扱わせる。
+- README では Fable 5 向けに調整され、dense context で大きな token / cost 削減が出ると説明されている。
+- Sean Goedecke の記事では、この発想を optical compression / text-as-image prompts として整理している。
+
+用途:
+
+- Claude Code の長文 context 削減
+- AI coding agent の token cost 最適化
+- context compression 研究
+- tool docs / system prompt 肥大化対策の比較候補
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- lossy な方式なので、ID、hash、secret、正確な数値、パス、契約情報など byte-exact recall が必要な情報は画像化に任せない。
+- prompt cache、要約、session boundary、Thin AGENTS / Routed Skills と比較して使い分ける。
+- まずは実運用投入ではなく、Claude Code / Fable 系の token 削減研究として扱う。
+- secret、token、cookie、`.env` 実値、個人情報、契約情報は公開メモリに記録しない。
+
+⸻
+
 ### Fincept Terminal
 
 URL:
@@ -2032,13 +2078,14 @@ URL:
 - Hermes Agent
 - anthropics/skills
 - Oracle
+- pxpipe
 - Claude Code運用ミス7選
 - Memory Consolidation / Dream Review
 - The Hitchhiker's Guide to Agentic AI
 
 用途:
 
-- AI コーディング運用改善、専門エージェント役割設計、multi-model review、agentic system reference、skill routing、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
+- AI コーディング運用改善、専門エージェント役割設計、multi-model review、agentic system reference、skill routing、token optimization、context compression、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
 
 ### Document Automation
 
@@ -2189,6 +2236,7 @@ URL:
 - Memory Consolidation / Dream Review
 - The Hitchhiker's Guide to Agentic AI
 - Hermes Agent
+- pxpipe
 
 ### 研究対象
 

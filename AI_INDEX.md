@@ -126,6 +126,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Ponytail → `AI_DRAWERS.md`, `AGENTS.md`, `PROJECT_START.md`
 - deepsec → `AI_DRAWERS.md`, `SECURITY_REVIEW.md`
 - Oracle / steipete/oracle → `AI_DRAWERS.md`, `CHATGPT_PROJECT_SOURCE.md`, `AI_INDEX.md`
+- pxpipe → `AI_DRAWERS.md`
+- Context Compression / Token Optimization → `AI_DRAWERS.md`
+- optical compression / text-as-image prompts → `AI_DRAWERS.md`
+- Claude Code token reduction → `AI_DRAWERS.md`
 - The Hitchhiker's Guide to Agentic AI → `AI_DRAWERS.md`
 - Agentic AI guide → `AI_DRAWERS.md`
 - MCP / A2A / agent evaluation → `AI_DRAWERS.md`
@@ -174,6 +178,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - 運用で学んだこと → `LESSONS_LEARNED.md`
 - PLAN.md / large task planning → `PROJECT_START.md`, `AGENTS.md`, `LESSONS_LEARNED.md`
 - compact / session boundary → `PROJECT_START.md`, `AGENTS.md`, `LESSONS_LEARNED.md`
+- context compression / token optimization / pxpipe → `AI_DRAWERS.md`
 - Minimal Implementation / 書かない設計 → `AGENTS.md`, `PROJECT_START.md`, `AI_DRAWERS.md`
 - 設計判断 / decisions / なぜそうしたか → `DECISIONS.md`
 - GitHub link 分類 → `INBOX.md`, `AI_DRAWERS.md`
