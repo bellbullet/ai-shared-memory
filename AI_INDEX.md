@@ -70,6 +70,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - document archive → `AI_DRAWERS.md`
 - ONLYOFFICE Docs → `AI_DRAWERS.md`
 - Recordly → `AI_DRAWERS.md`
+- claude-real-video → `AI_DRAWERS.md`
+- video analysis for LLM / LLM video watching → `AI_DRAWERS.md`
+- scene-aware video frames / video keyframe extraction → `AI_DRAWERS.md`
+- video to knowledge base / video note extraction → `AI_DRAWERS.md`
 - VCamdroid → `AI_DRAWERS.md`
 - Android webcam / virtual webcam → `AI_DRAWERS.md`
 - smartphone webcam / Windows webcam → `AI_DRAWERS.md`
@@ -172,6 +176,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Context Compression / Token Optimization → `AI_DRAWERS.md`
 - optical compression / text-as-image prompts → `AI_DRAWERS.md`
 - Claude Code token reduction → `AI_DRAWERS.md`
+- claude-real-video / video-to-LLM preprocessing → `AI_DRAWERS.md`
 - PixelRAG → `AI_DRAWERS.md`
 - visual RAG / pixel-native search / screenshot retrieval → `AI_DRAWERS.md`
 - The Hitchhiker's Guide to Agentic AI → `AI_DRAWERS.md`
@@ -186,6 +191,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 - OpenCut → `AI_DRAWERS.md`
 - HyperFrames → `AI_DRAWERS.md`
+- claude-real-video → `AI_DRAWERS.md`
 - MoneyPrinterTurbo → `AI_DRAWERS.md`
 - VoxCPM → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - Anime2.5DRig / 2.5D avatar rig → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
@@ -229,6 +235,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - PLAN.md / large task planning → `PROJECT_START.md`, `AGENTS.md`, `LESSONS_LEARNED.md`
 - compact / session boundary → `PROJECT_START.md`, `AGENTS.md`, `LESSONS_LEARNED.md`
 - context compression / token optimization / pxpipe → `AI_DRAWERS.md`
+- video analysis for LLM / video to knowledge base → `AI_DRAWERS.md`
 - Minimal Implementation / 書かない設計 → `AGENTS.md`, `PROJECT_START.md`, `AI_DRAWERS.md`
 - 設計判断 / decisions / なぜそうしたか → `DECISIONS.md`
 - GitHub link 分類 → `INBOX.md`, `AI_DRAWERS.md`
@@ -308,6 +315,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Learning / Research Workflow / spaced repetition / reference management → `AI_DRAWERS.md`
 - document archive / Paperless-ngx / ONLYOFFICE Docs → `AI_DRAWERS.md`
 - diagramming / Excalidraw / demo recording / Recordly → `AI_DRAWERS.md`
+- video analysis / scene-aware keyframes / claude-real-video → `AI_DRAWERS.md`
 - Android webcam / virtual webcam / smartphone webcam → `AI_DRAWERS.md`
 - 2.5D avatar / anime layer decomposition / PSD avatar素材化 → `AI_DRAWERS.md`
 - AI video / voice generation → `AI_DRAWERS.md`

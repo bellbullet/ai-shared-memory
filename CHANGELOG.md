@@ -2,6 +2,11 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-07
+
+- `AI_DRAWERS.md` に `HUANGCHIHHUNGLeo/claude-real-video` を Creative / Video Analysis / AI Coding Operations / Knowledge Management の `次に試す` 項目として追加。
+- `AI_INDEX.md` に claude-real-video、video analysis for LLM、scene-aware video frames、video to knowledge base の導線を追加。
+
 ## 2026-07-05
 
 - `AI_DRAWERS.md` に Anime2.5DRig と `shitagaki-lab/see-through` を Creative / Avatar / Anime Layer Decomposition / AI Companion の研究対象として追加。

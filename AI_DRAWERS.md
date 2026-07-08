@@ -1720,6 +1720,51 @@ https://github.com/heygen-com/hyperframes
 
 ⸻
 
+### claude-real-video
+
+URL:
+https://github.com/HUANGCHIHHUNGLeo/claude-real-video
+
+分類:
+
+- Creative
+- Video Analysis
+- AI Coding Operations
+- Knowledge Management
+
+概要:
+
+- Claude や任意の LLM が動画内容を扱えるように、動画を重要フレーム、transcript、`MANIFEST.txt` に変換するローカルツール。
+- 固定 fps ではなく scene-change detection と dedup により、意味のあるフレームを抽出する。
+- URL とローカルファイルに対応し、yt-dlp、ffmpeg、Whisper を利用する。
+- `--why` で分析目的を manifest に含め、`--kb` で dated markdown note として保存できる。
+
+用途:
+
+- 動画内容の要約
+- YouTube / SNS 動画の構成分析
+- bug repro 動画の確認
+- 講義・解説動画のノート化
+- Creative Pipeline の入力素材化
+- ai-shared-memory への動画由来知識の整理
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- ローカル処理できる点は強いが、LLM に渡す frames / transcript には動画内の個人情報や非公開情報が含まれる可能性がある。
+- `--cookies` は認証済み動画向けだが、cookie 実値や取得手順、private content は公開メモリに記録しない。
+- 著作権・利用規約上、権利のある動画や公開動画の範囲で使う。
+- crv Pro への導線があるため、無料版と有料版の機能境界は導入前に再確認する。
+
+⸻
+
 ### VoxCPM
 
 URL:
@@ -2803,6 +2848,7 @@ URL:
 - pxpipe
 - PixelRAG
 - reviewable-html-workbench
+- claude-real-video
 - Claude Code運用ミス7選
 - Memory Consolidation / Dream Review
 - japanese-tech-writing / k16shikano gist
@@ -2810,7 +2856,7 @@ URL:
 
 用途:
 
-- AI コーディング運用改善、専門エージェント役割設計、multi-model review、reviewable HTML artifact、Japanese technical writing skill、agentic system reference、skill routing、token optimization、context compression、screenshot-based browsing、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
+- AI コーディング運用改善、専門エージェント役割設計、multi-model review、reviewable HTML artifact、video-to-LLM preprocessing、Japanese technical writing skill、agentic system reference、skill routing、token optimization、context compression、screenshot-based browsing、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
 
 ### Document Automation
 
@@ -2845,10 +2891,11 @@ URL:
 - Hermes Agent
 - PixelRAG
 - japanese-tech-writing / k16shikano gist
+- claude-real-video
 
 用途:
 
-- AI が読みやすい共有知識ベース、メタデータ、LLM Wiki、ナレッジ検索、visual retrieval、学習・研究資料整理、日本語技術文書の品質改善、定期的な記憶統合、agent memory / skill memory の接続設計。
+- AI が読みやすい共有知識ベース、メタデータ、LLM Wiki、ナレッジ検索、visual retrieval、動画由来知識のノート化、学習・研究資料整理、日本語技術文書の品質改善、定期的な記憶統合、agent memory / skill memory の接続設計。
 
 ### Creative Pipeline
 
@@ -2863,13 +2910,14 @@ URL:
 - see-through
 - tomari-guruguru
 - HyperFrames
+- claude-real-video
 - MoneyPrinterTurbo
 - VoxCPM
 - VCamdroid
 
 用途:
 
-- 図解、画像編集、画面録画、動画取得、音声抽出、文字起こし、動画編集、動画生成、音声生成、2.5D アバター、レイヤー分解、仮想 Web カメラ。
+- 図解、画像編集、画面録画、動画取得、音声抽出、文字起こし、動画解析、動画編集、動画生成、音声生成、2.5D アバター、レイヤー分解、仮想 Web カメラ。
 
 ### Learning / Research Workflow
 
@@ -2987,6 +3035,7 @@ URL:
 - OpenCut
 - PPT Master
 - reviewable-html-workbench
+- claude-real-video
 - Recordly
 
 ### 将来導入
