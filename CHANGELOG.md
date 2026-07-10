@@ -2,6 +2,11 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-11
+
+- `PROJECTS/ScreenshotStitcher.md` を追加し、ローカル完結のScreenshot Stitcher MVPをActive Projectとして記録。
+- `STATUS.md` と `AI_INDEX.md` にScreenshotStitcherへの導線を追加。
+
 ## 2026-07-07
 
 - `AI_DRAWERS.md` に `HUANGCHIHHUNGLeo/claude-real-video` を Creative / Video Analysis / AI Coding Operations / Knowledge Management の `次に試す` 項目として追加。

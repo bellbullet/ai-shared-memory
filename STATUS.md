@@ -24,6 +24,7 @@ Workspace 全体の現在地を一覧するファイル。
 | KomiReader | Local-first reader; Vite / React | `PROJECTS/KomiReader.md` |
 | MahjongFirstDiscard | Static site; GitHub / Vercel workflow | `PROJECTS/MahjongFirstDiscard.md` |
 | OciMinecraftJavaServer | Terraform infrastructure project | `PROJECTS/OciMinecraftJavaServer.md` |
+| ScreenshotStitcher | Local screenshot stitching MVP; tests available | `PROJECTS/ScreenshotStitcher.md` |
 | WebcamFaceDemo | Local Python demo; tests available | `PROJECTS/WebcamFaceDemo.md` |
 | XImageBot | Python API bot; secrets local-only | `PROJECTS/XImageBot.md` |
 

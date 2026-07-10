@@ -30,6 +30,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - KomiReader → `PROJECTS/KomiReader.md`
 - MahjongFirstDiscard → `PROJECTS/MahjongFirstDiscard.md`
 - OciMinecraftJavaServer → `PROJECTS/OciMinecraftJavaServer.md`
+- ScreenshotStitcher → `PROJECTS/ScreenshotStitcher.md`
 - WebcamFaceDemo → `PROJECTS/WebcamFaceDemo.md`
 - XImageBot → `PROJECTS/XImageBot.md`
 
@@ -249,6 +250,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - KOMI / KomiReader → `PROJECTS/KomiReader.md`
 - Mahjong / 一打目 / 牌効率 → `PROJECTS/MahjongFirstDiscard.md`
 - OCI Minecraft / Terraform / Minecraft server → `PROJECTS/OciMinecraftJavaServer.md`, `NOTES/HomeLab.md`
+- Screenshot Stitcher / screenshot stitching / Tailor-style / Canvas overlap → `PROJECTS/ScreenshotStitcher.md`
 - WebcamFaceDemo / webcam face transform → `PROJECTS/WebcamFaceDemo.md`
 - XImageBot / X image bot → `PROJECTS/XImageBot.md`
 
