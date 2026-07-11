@@ -1,6 +1,6 @@
 # AI Coding Patterns
 
-最終更新: 2026-07-02
+最終更新: 2026-07-11
 
 ## Purpose
 
@@ -17,6 +17,7 @@
 - Anthropic Dreams: https://platform.claude.com/docs/en/managed-agents/dreams
 - dream-skill: https://github.com/grandamenium/dream-skill
 - Auto-Dreamer: https://arxiv.org/abs/2605.20616
+- OpenAI Prompting: https://learn.chatgpt.com/docs/prompting
 
 ## Pattern: Thin AGENTS, Routed Skills
 
@@ -41,6 +42,17 @@ Project-specific knowledge remains in `PROJECTS/`.
 Cross-project knowledge remains in `NOTES/`.
 
 Executable enforcement should live in scripts, CI, tests, or checklists rather than prose.
+
+## Pattern: Goal, Context, Output, Boundaries
+
+OpenAI の公式 Prompting 入門では、依頼の品質を上げるために、必要に応じて次の要素を明示する。
+
+- Goal: 何をしてほしいか
+- Context: 結果に影響する背景、情報源、制約
+- Output: 形式、長さ、対象読者、詳細度
+- Boundaries: 変更してはいけないもの、避けること、実行前に確認すべきこと
+
+短い依頼では必要な項目だけを使い、大きな作業では結果を先に示す。手順を細かく固定するより、目的と必要な背景を渡し、必要な確認事項を境界条件として明示する。
 
 ## Pattern: File-Based Context
 

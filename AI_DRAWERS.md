@@ -2571,6 +2571,53 @@ https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
 
 ⸻
 
+### OpenAI Prompting
+
+URL:
+https://learn.chatgpt.com/docs/prompting
+
+分類:
+
+- Reference Sites
+- Prompt Engineering
+- AI Coding Operations
+
+概要:
+
+- ChatGPT、ChatGPT Work、Codex で使えるプロンプト設計の公式入門。
+- 大きな作業では、目的（Goal）、必要な背景情報（Context）、期待する形式（Output）、守る条件や確認事項（Boundaries）を明示する考え方を整理している。
+- 短い依頼では必要な項目だけを使い、作業の手順を過度に固定せず、求める結果から伝える方針を示す。
+
+用途:
+
+- Codex / ChatGPT の依頼文改善
+- `PROJECT_START.md` や `PROJECTS/` の作業依頼テンプレート設計
+- Task / Context / Output / Boundaries の整理
+- `ai-shared-memory` の情報源と指示欄の設計参考
+
+関連:
+
+- `PROJECT_START.md`
+- `CHATGPT_PROJECT_SOURCE.md`
+- `CHATGPT_PROJECT_INSTRUCTIONS.md`
+- `NOTES/AI_Coding_Patterns.md`
+- `SKILLS/README.md`
+
+状態:
+
+- 参考資料
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- OpenAI 公式の現行ガイドとして参照する。製品やモデルの挙動に関する断定は、必要に応じて最新の公式資料で再確認する。
+- 公開メモリには API key、token、個人情報、非公開コード、実際の利用ログを記録しない。
+
+⸻
+
 ### VTuber体験場
 
 URL:

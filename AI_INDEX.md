@@ -88,6 +88,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 - OpenFugu → `AI_DRAWERS.md`
 - AI-Safeter / FUGU → `AI_DRAWERS.md`
 - Agent / Orchestration → `AI_DRAWERS.md`
+- OpenAI Prompting / Prompting fundamentals → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
+- Goal / Context / Output / Boundaries → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
+- prompt design / prompt engineering → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
 - Hermes Agent → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
 - Hermes Skills → `AI_DRAWERS.md`, `SKILLS/README.md`, `NOTES/AI_Coding_Patterns.md`
 - optional skills catalog → `AI_DRAWERS.md`
