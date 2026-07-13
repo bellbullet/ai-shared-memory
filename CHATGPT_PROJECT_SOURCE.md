@@ -1,6 +1,6 @@
 # ChatGPT Project Source
 
-最終更新: 2026-07-02
+最終更新: 2026-07-13
 
 ChatGPT Projects の「情報源」に貼るための ai-shared-memory 要約。
 
@@ -64,6 +64,17 @@ Optional, when relevant:
 - `DECISIONS.md`: design decisions and rationale.
 - `REVIEW.md`: periodic review checklist.
 - `CHANGELOG.md`: structure and operating-rule changes.
+- `VERSION`: current repository version.
+- `references/`: long-lived maps for navigating official documentation, including `CLAUDE_CODE_MAP.md`.
+
+## Current Snapshot
+
+- Version: `1.1.0`
+- Phase: collecting knowledge -> consolidating, retrieving, comparing, and reusing knowledge
+- Active project metadata includes `PROJECTS/ScreenshotStitcher.md` in addition to the existing project set.
+- Claude Code architecture and its conceptual relationship to Codex are summarized in `references/CLAUDE_CODE_MAP.md`.
+- Recent research coverage includes agmsg, NASA SpaceWasm, OpenAI Prompting, video-to-LLM preprocessing, visual RAG, context compression, and lightweight anime avatar workflows.
+- `AI_DRAWERS.md` remains a single-file technical radar for compatibility; its snapshot and review state are visible near the top of the file and in `STATUS.md`.
 
 ## New Link / OSS / Paper / AI Article Rules
 
@@ -135,6 +146,7 @@ Minimum:
 - AI_INDEX.md
 - CURRENT.md
 - STATUS.md
+- references/CLAUDE_CODE_MAP.md
 
 For GitHub / OSS intake:
 
@@ -151,6 +163,7 @@ For periodic memory review:
 
 Source version:
 
-- Updated: 2026-07-02
+- Version: 1.1.0
+- Updated: 2026-07-13
 - Repo: bellbullet/ai-shared-memory
-- Recommended with commit: current main after the 2026-07-02 Memory Review update
+- Recommended snapshot: v1.1.0 Consolidated Memory Architecture, 2026-07-13

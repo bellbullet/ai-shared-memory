@@ -1,6 +1,6 @@
 # STATUS
 
-最終更新: 2026-06-30
+最終更新: 2026-07-13
 
 Workspace 全体の現在地を一覧するファイル。
 
@@ -8,6 +8,7 @@ Workspace 全体の現在地を一覧するファイル。
 
 ## Workspace
 
+- Version: `1.1.0`
 - Root: `<workspace-root>`
 - Active projects: `<workspace-root>\Projects`
 - Shared knowledge: `<workspace-root>\ai-shared-memory`
@@ -33,6 +34,8 @@ Workspace 全体の現在地を一覧するファイル。
 | Area | Location |
 | --- | --- |
 | AI / LLM / agents | `NOTES/AI.md`, `AI_DRAWERS.md` |
+| AI coding operations / agent collaboration | `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md` |
+| Claude Code / Codex architecture | `references/CLAUDE_CODE_MAP.md`, `AI_DRAWERS.md` |
 | Creative / media tools | `AI_DRAWERS.md` |
 | Self-host tools | `AI_DRAWERS.md`, `NOTES/HomeLab.md` |
 | Solar / home energy | `NOTES/Solar.md` |
@@ -43,6 +46,26 @@ Workspace 全体の現在地を一覧するファイル。
 - Amazon セール検知システム → `AI_DRAWERS.md`
 - Other unsorted ideas → `INBOX.md`
 
+## Knowledge Health
+
+| Check | State | Next action |
+| --- | --- | --- |
+| Entry points | Synced on 2026-07-13 | Recheck after structure, version, or read-order changes |
+| `INBOX.md` | 47 GitHub links remain in one staged batch | Promote in small thematic groups during Memory Review |
+| `AI_DRAWERS.md` | 76 entries / 11 categories / 12 cross-groups; single-file layout retained | Consider splitting only when retrieval or maintenance degrades |
+| `PROJECTS/` | 8 metadata files | Refresh when project Goal / Status / Stack / Next Tasks change |
+| `NOTES/` | 8 files, including compatibility files | Review duplication and stale summaries during monthly review |
+| Pending decisions | 2 open items | Resolve or defer explicitly in `DECISIONS.md` when adopted |
+
+### Next Memory Review
+
+Run a Memory Review when any of these becomes true:
+
+- 20〜30 new links accumulate after the current INBOX batch is processed.
+- Entry-point files disagree on version, read order, structure, or current focus.
+- Similar entries or stale states make `AI_DRAWERS.md`, `PROJECTS/`, or `NOTES/` harder to search.
+- A major workspace or project structure change occurs.
+
 ## Decisions Dashboard
 
 ### Today's Decisions
@@ -51,7 +74,7 @@ Workspace 全体の現在地を一覧するファイル。
 
 ### Pending Decisions
 
-- OKF frontmatter を v1.1 で一部ファイルに試験導入するか → `OKF.md`
+- OKF frontmatter の小規模試験を v1.2 以降で行うか → `OKF.md`
 - `OUTPUTS/` を Git 管理する成果物置き場としてどこまで使うか → `OUTPUTS/README.md`
 
 ### Blocked

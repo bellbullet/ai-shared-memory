@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-07-02
+最終更新: 2026-07-13
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫です。
 
@@ -9,6 +9,18 @@
 - OSS、AI 技術、開発ツール、研究対象、個人開発アイデアを分類する。
 - 新しい GitHub リンクや公開論文を、複数 AI が再利用できる形で残す。
 - 導入候補、研究対象、アイデアを混同しない。
+
+## v1.1 Snapshot
+
+- 登録項目: 76
+- 主カテゴリ: 11
+- 横断グループ: 12
+- 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
+- 重点領域: Agent / Orchestration、AI Coding Operations、Knowledge Management、Creative Pipeline、Self Host / Tools。
+- 最近の追加: Claude Code Architecture Map、agmsg、NASA SpaceWasm、OpenAI Prompting、claude-real-video。
+- 未整理項目と次回レビュー条件は `STATUS.md`、分類前リンクは `INBOX.md` を参照する。
+
+カテゴリ別ファイル分割は、検索性や保守性が単一ファイルでは不足した時点で検討し、v1.1 では行わない。
 
 ## 引き出し早見表
 

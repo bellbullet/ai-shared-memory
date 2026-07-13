@@ -2,7 +2,14 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
-## 2026-07-13
+## 1.1.0 - Consolidated Memory Architecture (2026-07-13)
+
+- `VERSION` を追加し、現在のバージョンを `1.1.0` として明示。
+- `README.md`、`CHATGPT_PROJECT_SOURCE.md`、`CURRENT.md`、`STATUS.md` を2026-07-13時点の構成・焦点・ChatGPT Projects情報源へ同期。
+- `README.md` の構成図に `references/CLAUDE_CODE_MAP.md` と `PROJECTS/ScreenshotStitcher.md` を追加。
+- `AI_DRAWERS.md` 冒頭に登録規模、重点領域、最近の追加、単一ファイル維持方針を示すv1.1 snapshotを追加。
+- `STATUS.md` と `REVIEW.md` にKnowledge Healthと次回Memory Review条件を追加。
+- `AI_INDEX.md` に `VERSION` と `references/` の入口を追加。
 
 - `AI_DRAWERS.md` に `fujibee/agmsg` を Agent / Orchestration、AI Coding Operations、Multi-Agent Collaborationの研究対象として追加。
 - `AI_INDEX.md` に agmsg、cross-agent messaging、SQLite agent communication、agent-to-agent review の導線を追加。

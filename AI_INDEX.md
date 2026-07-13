@@ -4,6 +4,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ## Entry Points
 
+- Current version: `VERSION`
 - Start checklist: `PROJECT_START.md`
 - Workspace map: `WORKSPACE.md`
 - Workspace status: `STATUS.md`
@@ -23,6 +24,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Change history: `CHANGELOG.md`
 - Technical radar: `AI_DRAWERS.md`
 - Claude Code concept map: `references/CLAUDE_CODE_MAP.md`
+- Long-lived reference maps: `references/`
 
 ## Projects
 

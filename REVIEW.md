@@ -1,10 +1,20 @@
 # REVIEW
 
-最終更新: 2026-07-02
+最終更新: 2026-07-13
 
 定期的に見直す項目をまとめるファイル。
 
 このファイルは作業ログではなく、workspace health check のチェックリストとして使う。
+
+## Knowledge Health
+
+- [ ] `README.md`、`CHATGPT_PROJECT_SOURCE.md`、`CURRENT.md`、`STATUS.md` の version・日付・構成が一致している
+- [ ] `VERSION` と `CHANGELOG.md` の最新リリース表記が一致している
+- [ ] `INBOX.md` の件数と、分類を始める条件が `STATUS.md` に見える
+- [ ] `PROJECTS/` と `NOTES/` に更新待ち・重複・後方互換ファイルがないか確認した
+- [ ] Pending Decision、Blocked、Waiting AI、Waiting Human が現在の状態を表している
+- [ ] `references/` の索引が `README.md`、`AI_INDEX.md`、必要な情報源ファイルにある
+- [ ] ChatGPT Projects の添付情報源が必要な更新後に差し替えられている
 
 ## Monthly Review
 
@@ -45,6 +55,7 @@
 - [ ] 大きな workspace / project 構成変更があった
 - [ ] `AI_DRAWERS.md` や `NOTES/` に似た説明が増えている
 - [ ] 相対日付、古い手順、存在しないファイル参照が見つかった
+- [ ] 入口ファイルの version、日付、構成、読み順に不一致が見つかった
 
 実施内容:
 
