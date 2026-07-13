@@ -8,6 +8,7 @@
 - `STATUS.md` と `AI_INDEX.md` にScreenshotStitcherへの導線を追加。
 - `AI_DRAWERS.md` に OpenAI の Prompting 公式入門を Reference Sites / Prompt Engineering の参考資料として追加。
 - `NOTES/AI_Coding_Patterns.md` に Goal / Context / Output / Boundaries のプロンプト設計パターンを追加し、`AI_INDEX.md` に導線を追加。
+- `AI_DRAWERS.md` に `nasa/spacewasm` を WebAssembly / Rust / Safety Critical / Embedded の研究対象として追加し、`AI_INDEX.md` に導線を追加。
 
 ## 2026-07-07
 

@@ -765,6 +765,58 @@ https://github.com/RevylAI/greenlight
 
 ⸻
 
+### NASA SpaceWasm
+
+URL:
+https://github.com/nasa/spacewasm
+
+分類:
+
+- Development
+- WebAssembly
+- Rust
+- Safety Critical
+- Embedded
+
+概要:
+
+- NASA の `nasa/spacewasm` による、宇宙機上で WebAssembly 1.0 バイナリを解釈する Rust 製インタプリタ。
+- 高速化よりも、固定メモリ、決定的なメモリ使用、ストリーミングデコード、検証しやすい実装を重視する。
+- Wasm のデコーダ / バリデータとインタプリタを備え、組み込み・航空宇宙・高信頼システム向けの実装例として参照できる。
+
+用途:
+
+- Safety-critical WebAssembly 研究
+- Rust 製組み込みランタイムの設計理解
+- サンドボックス化されたプラグイン実行基盤の比較
+- WebAssembly / Embedded / Flight Software の学習
+- 決定性・固定メモリ・ストリーミング実行の設計参考
+
+関連:
+
+- Rust
+- WebAssembly
+- Wasmtime
+- Wasmi
+- wasm3
+- DLR-FT/wasm-interpreter
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- Apache-2.0 ライセンス。README の要件、対応する Wasm 機能、組み込み時の imported functions を確認してから利用する。
+- 一般的な高速サーバー向け Wasm ランタイムの代替ではなく、安全性・予測可能性・リソース制約を重視する用途の実装例として扱う。
+- 宇宙機や安全クリティカル用途への適合を、このリポジトリの記述だけで保証したり認証済みと断定したりしない。
+
+⸻
+
 ### Ponytail
 
 URL:

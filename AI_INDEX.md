@@ -88,6 +88,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 - OpenFugu → `AI_DRAWERS.md`
 - AI-Safeter / FUGU → `AI_DRAWERS.md`
 - Agent / Orchestration → `AI_DRAWERS.md`
+- NASA SpaceWasm / flight-compliant WebAssembly → `AI_DRAWERS.md`
+- Rust WebAssembly / safety-critical runtime → `AI_DRAWERS.md`
+- Embedded / deterministic memory / flight software → `AI_DRAWERS.md`
 - OpenAI Prompting / Prompting fundamentals → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
 - Goal / Context / Output / Boundaries → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
 - prompt design / prompt engineering → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
