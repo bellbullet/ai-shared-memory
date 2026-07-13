@@ -57,6 +57,17 @@ Workspace 全体の現在地を一覧するファイル。
 | `NOTES/` | 8 files, including compatibility files | Review duplication and stale summaries during monthly review |
 | Pending decisions | 2 open items | Resolve or defer explicitly in `DECISIONS.md` when adopted |
 
+## Active Reuse Trials
+
+| Candidate | State | First target | Gate |
+| --- | --- | --- | --- |
+| Ponytail / Minimal Implementation Policy | Adopted as policy | All development work | No automatic package installation |
+| Memory Consolidation / Dream Review | Adopted | ai-shared-memory | Run only at documented triggers |
+| reviewable-html-workbench | Planned | ai-shared-memory / `OUTPUTS/` | Start when a reviewable HTML artifact exists |
+| agmsg | Planned | ScreenshotStitcher | Public-safe small trial; verify Git Bash, SQLite path, and permissions |
+
+Detailed records and decisions: `TRIALS.md`
+
 ### Next Memory Review
 
 Run a Memory Review when any of these becomes true:
@@ -96,6 +107,7 @@ Run a Memory Review when any of these becomes true:
 - AI behavior rules: `AGENTS.md`
 - Current focus: `CURRENT.md`
 - Search index: `AI_INDEX.md`
+- Trial records: `TRIALS.md`
 - Review checklist: `REVIEW.md`
 - Output artifacts: `OUTPUTS/README.md`
 - Lessons learned: `LESSONS_LEARNED.md`

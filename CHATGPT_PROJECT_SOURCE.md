@@ -55,6 +55,7 @@ Optional, when relevant:
 - `AGENTS.md`: shared AI behavior rules.
 - `CURRENT.md`: current focus, waiting items, next actions.
 - `AI_INDEX.md`: keyword and file routing index.
+- `TRIALS.md`: trial results, adoption decisions, and reuse conditions for registered tools and patterns.
 - `AI_DRAWERS.md`: technical radar for OSS, AI tools, papers, research targets, ideas.
 - `INBOX.md`: temporary holding area for unsorted public links and ideas.
 - `PROJECTS/`: public-safe project metadata.
@@ -75,6 +76,18 @@ Optional, when relevant:
 - Claude Code architecture and its conceptual relationship to Codex are summarized in `references/CLAUDE_CODE_MAP.md`.
 - Recent research coverage includes agmsg, NASA SpaceWasm, OpenAI Prompting, video-to-LLM preprocessing, visual RAG, context compression, and lightweight anime avatar workflows.
 - `AI_DRAWERS.md` remains a single-file technical radar for compatibility; its snapshot and review state are visible near the top of the file and in `STATUS.md`.
+- Reuse candidates are selected through a practical Knowledge Scan, normally limited to three active candidates per task, and results are returned to `TRIALS.md`.
+
+## Reuse And Trial Loop
+
+Before non-trivial implementation or research:
+
+1. Search `AI_INDEX.md` by task or outcome.
+2. Inspect relevant entries in `AI_DRAWERS.md`, `PROJECTS/`, and `NOTES/`.
+3. Report `Found`, `Reuse`, `Not used`, and `Reason`.
+4. Actively use no more than three candidates unless the task clearly requires more.
+5. Record actual results in `TRIALS.md`.
+6. Return durable lessons or decisions to `AI_DRAWERS.md`, `LESSONS_LEARNED.md`, or `DECISIONS.md`.
 
 ## New Link / OSS / Paper / AI Article Rules
 
@@ -146,6 +159,7 @@ Minimum:
 - AI_INDEX.md
 - CURRENT.md
 - STATUS.md
+- TRIALS.md
 - references/CLAUDE_CODE_MAP.md
 
 For GitHub / OSS intake:

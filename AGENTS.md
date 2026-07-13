@@ -80,10 +80,18 @@ Rules that must be enforced mechanically should move to scripts, CI, tests, or c
 
 ```text
 Knowledge Scan
-Found: 既存プロジェクト、ノート、OSS、またはパターン
-Reuse: 再利用するもの。なければ none
+Found:
+- 既存プロジェクト、ノート、OSS、またはパターン
+Reuse:
+- 今回使う候補。原則3つまで
+Not used:
+- 見送る候補と理由。なければ none
 Reason: 再利用できる理由、または新規実装が必要な理由
 ```
+
+確認順は `AI_INDEX.md`、`AI_DRAWERS.md`、関連する `PROJECTS/`、関連する `NOTES/`、対象プロジェクトの README / docs / source とする。
+
+候補を実際に試した場合は、結果を `TRIALS.md` に記録する。長期的な教訓、採用判断、技術レーダーの状態変更は、それぞれ `LESSONS_LEARNED.md`、`DECISIONS.md`、`AI_DRAWERS.md` へ戻す。
 
 ## Reuse Before Build
 
@@ -161,6 +169,7 @@ Reason: 再利用できる理由、または新規実装が必要な理由
 - 設計判断や採用理由 → `DECISIONS.md`
 - workspace 全体の状態変化 → `STATUS.md`
 - よく探すキーワード → `AI_INDEX.md`
+- 試用結果、採用判断、再利用条件 → `TRIALS.md`
 - 定期点検項目 → `REVIEW.md`
 - 構成や運用ルール変更 → `CHANGELOG.md`
 
@@ -214,6 +223,7 @@ Reason: 再利用できる理由、または新規実装が必要な理由
 - AI Instructions
 - Next Tasks
 - Related Notes
+- Reuse Candidates
 
 新規作成時は `TEMPLATES/PROJECT_TEMPLATE.md` を使う。
 
@@ -246,6 +256,8 @@ Reason: 再利用できる理由、または新規実装が必要な理由
 - 用途
 - 状態
 - 優先度
+
+実際に試した項目は `TRIALS.md` に詳細を記録し、`AI_DRAWERS.md` には結果と再利用条件の要約を戻す。
 
 推奨カテゴリ:
 

@@ -1,6 +1,6 @@
 # AIRI
 
-最終更新: 2026-06-27
+最終更新: 2026-07-13
 
 ## Goal
 
@@ -29,6 +29,12 @@
 
 - `NOTES/AI.md`
 - `AI_DRAWERS.md`
+
+## Reuse Candidates
+
+- Ponytail / Minimal Implementation Policy - 重複したagent基盤や独自helperを増やす前に既存機能を確認する。
+- agmsg - 複数CLIエージェントの役割分担を小規模に試す場合。
+- reviewable-html-workbench - UI案や設計成果物を範囲指定でレビューする場合。
 
 ## Related Technologies
 

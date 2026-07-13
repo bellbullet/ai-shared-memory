@@ -49,18 +49,25 @@ cd <workspace-root>\Projects\<project-name>
 
 ```text
 Knowledge Scan
-Found: <existing project, note, OSS, or pattern>
-Reuse: <what will be reused, or "none">
+Found:
+- <existing project, note, OSS, or pattern>
+Reuse:
+- <what will be reused, up to three active candidates>
+Not used:
+- <candidate and reason, or "none">
 Reason: <why this is enough or why new implementation is needed>
 ```
 
 確認先:
 
-1. `CURRENT.md`
-2. `PROJECTS/`
-3. `NOTES/`
-4. `AI_DRAWERS.md`
+1. `AI_INDEX.md`
+2. `AI_DRAWERS.md`
+3. 関連する `PROJECTS/`
+4. 関連する `NOTES/`
 5. 対象プロジェクトの README / docs / source
+
+1つの作業で積極利用する候補は原則3つまでにする。
+登録済み候補を試した場合は、結果を `TRIALS.md` に記録し、必要に応じて `AI_DRAWERS.md`、`LESSONS_LEARNED.md`、`DECISIONS.md` へ戻す。
 
 ## Git Safety
 
@@ -150,6 +157,7 @@ deepsec は毎回実行するものではなく、リスクの高い変更や節
 
 - `STATUS.md` - active project や workspace 状況が変わった場合
 - `AI_INDEX.md` - よく探すキーワードや参照先が増えた場合
+- `TRIALS.md` - 登録済み候補を実際に試し、結果や再利用条件が分かった場合
 - `LESSONS_LEARNED.md` - 同じ失敗を繰り返したくない場合
 - `DECISIONS.md` - 設計判断や採用理由を残す場合
 - `SECURITY_REVIEW.md` - セキュリティレビュー手順や release gate を変えた場合

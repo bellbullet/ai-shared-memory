@@ -1,6 +1,6 @@
 # KomiReader
 
-最終更新: 2026-06-27
+最終更新: 2026-07-13
 
 ## Goal
 
@@ -49,3 +49,9 @@
 ## Related Notes
 
 - `NOTES/AI.md`
+
+## Reuse Candidates
+
+- Ponytail / Minimal Implementation Policy - browser標準機能と既存reader依存を優先する。
+- reviewable-html-workbench - UIや設計文書をHTML成果物としてレビューする場合。
+- deepsec - archive展開、local file処理、path境界を大きく変更する場合。

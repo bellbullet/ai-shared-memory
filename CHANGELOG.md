@@ -10,6 +10,11 @@
 - `AI_DRAWERS.md` 冒頭に登録規模、重点領域、最近の追加、単一ファイル維持方針を示すv1.1 snapshotを追加。
 - `STATUS.md` と `REVIEW.md` にKnowledge Healthと次回Memory Review条件を追加。
 - `AI_INDEX.md` に `VERSION` と `references/` の入口を追加。
+- `TRIALS.md` を追加し、登録済み候補の試用、結果、採用判断、再利用条件を `AI_DRAWERS.md` から分離して記録できるようにした。
+- `PROJECT_START.md` と `AGENTS.md` のKnowledge Scanを `Found / Reuse / Not used / Reason` へ拡張し、1作業あたりの積極利用候補を原則3つまでとした。
+- `CHATGPT_PROJECT_INSTRUCTIONS.md` にも同じKnowledge ScanとTrial還元ルールを追加。
+- `AI_INDEX.md` にTask-Based Reuseを追加し、やりたいことからPonytail、agmsg、Oracle、deepsec、reviewable-html-workbench、動画・文書・知識整理候補へ辿れるようにした。
+- `PROJECTS/` の8ファイルと `TEMPLATES/PROJECT_TEMPLATE.md` へReuse Candidatesを追加し、候補であって導入済みではないことを保った。
 
 - `AI_DRAWERS.md` に `fujibee/agmsg` を Agent / Orchestration、AI Coding Operations、Multi-Agent Collaborationの研究対象として追加。
 - `AI_INDEX.md` に agmsg、cross-agent messaging、SQLite agent communication、agent-to-agent review の導線を追加。

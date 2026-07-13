@@ -1,6 +1,6 @@
 # WebcamFaceDemo
 
-最終更新: 2026-06-27
+最終更新: 2026-07-13
 
 ## Goal
 
@@ -47,3 +47,9 @@
 ## Related Notes
 
 - `NOTES/AI.md`
+
+## Reuse Candidates
+
+- Ponytail / Minimal Implementation Policy - base flowとoptional AI依存を分離したまま維持する。
+- deepsec - image upload、path処理、Web/UI境界を公開前に確認する場合。
+- reviewable-html-workbench - UI仕様や安全境界の文書レビューを行う場合。

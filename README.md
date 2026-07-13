@@ -17,6 +17,7 @@ v1.1 は、知識を集めるだけでなく、AI が検索・比較・再利用
 - `AI_DRAWERS.md` は後方互換性を保つため単一ファイルを維持し、冒頭で規模・重点領域・最近の追加を確認できるようにする。
 - `STATUS.md` と `REVIEW.md` で stale な入口、未整理 INBOX、Project metadata、Pending Decision、次回 Memory Review 条件を確認する。
 - `references/` に、公式情報を読むための長期参照用マップを置く。
+- `TRIALS.md` で登録済み候補を試用し、結果を採用・継続・専門用途・保留へ戻す。
 
 ## 目的
 
@@ -46,6 +47,7 @@ ai-shared-memory/
 ├─ AI_PROFILES.md
 ├─ CURRENT.md
 ├─ AI_INDEX.md
+├─ TRIALS.md
 ├─ CHATGPT_PROJECT_SOURCE.md
 ├─ CHATGPT_PROJECT_INSTRUCTIONS.md
 ├─ LOCAL_ENVIRONMENT.example.md
@@ -103,9 +105,10 @@ AI は原則として次の順で読む。
 6. [AI_INDEX.md](AI_INDEX.md) - 関連ファイル索引
 7. 必要な [SKILLS](SKILLS) - 作業種別ごとの詳細ルール
 8. 作業対象ファイル - `AI_DRAWERS.md` / `PROJECTS/*.md` / `NOTES/*.md`
-9. [INBOX.md](INBOX.md) - 未整理の新規リンクやアイデア
-10. [SECURITY_REVIEW.md](SECURITY_REVIEW.md) - 必要に応じてリリース前・大きい変更のセキュリティレビュー
-11. [OKF.md](OKF.md) - 必要に応じて Open Knowledge Format の採用候補メモ
+9. [TRIALS.md](TRIALS.md) - 登録済み候補を試す場合の実績・判断・再利用条件
+10. [INBOX.md](INBOX.md) - 未整理の新規リンクやアイデア
+11. [SECURITY_REVIEW.md](SECURITY_REVIEW.md) - 必要に応じてリリース前・大きい変更のセキュリティレビュー
+12. [OKF.md](OKF.md) - 必要に応じて Open Knowledge Format の採用候補メモ
 
 ## ファイルの役割
 
@@ -117,6 +120,7 @@ AI は原則として次の順で読む。
 - [AI_PROFILES.md](AI_PROFILES.md): AI ごとの得意領域と振り分け目安。
 - [CURRENT.md](CURRENT.md): 現在の焦点、待ち、次の行動。
 - [AI_INDEX.md](AI_INDEX.md): プロジェクト、ノート、技術項目の索引。
+- [TRIALS.md](TRIALS.md): 登録済み候補の試用結果、採用判断、再利用条件。
 - [CHATGPT_PROJECT_SOURCE.md](CHATGPT_PROJECT_SOURCE.md): ChatGPT Projects の情報源に貼るための要約。
 - [CHATGPT_PROJECT_INSTRUCTIONS.md](CHATGPT_PROJECT_INSTRUCTIONS.md): ChatGPT Projects の指示欄に貼るための短い運用ルール。
 - [LOCAL_ENVIRONMENT.example.md](LOCAL_ENVIRONMENT.example.md): Git 管理しないローカル環境設定の公開用テンプレ。
@@ -134,6 +138,25 @@ AI は原則として次の順で読む。
 - [PROJECTS](PROJECTS): プロジェクトごとの目的、状態、次の作業。
 - [NOTES](NOTES): プロジェクトから独立した技術メモ。
 - [TEMPLATES](TEMPLATES): 新規 Project / Note の雛形。
+
+## Reuse Lifecycle
+
+```text
+検索・候補発見
+    ↓
+Knowledge Scanで最大3候補を選ぶ
+    ↓
+実作業で試す
+    ↓
+TRIALS.mdへ結果を記録
+    ↓
+AI_DRAWERS / LESSONS_LEARNED / DECISIONSへ判断を戻す
+    ↓
+次の作業で再利用
+```
+
+候補を見つけただけでは採用扱いにしない。使わなかった候補も、理由が判断に役立つ場合は Knowledge Scan に残す。
+
 
 ## 保存してよい情報
 

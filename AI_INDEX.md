@@ -5,6 +5,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 ## Entry Points
 
 - Current version: `VERSION`
+- Trial records and reuse decisions: `TRIALS.md`
 - Start checklist: `PROJECT_START.md`
 - Workspace map: `WORKSPACE.md`
 - Workspace status: `STATUS.md`
@@ -169,6 +170,19 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ## Quick Lookup
 
+### Task-Based Reuse
+
+- 新規実装で既存機能を優先したい → Ponytail / `PROJECT_START.md` / `AGENTS.md`
+- 複数AIでレビュー・引き継ぎしたい → agmsg / Oracle / `TRIALS.md`
+- AI生成文書やHTML成果物をレビューしたい → reviewable-html-workbench / `OUTPUTS/README.md` / `TRIALS.md`
+- 大きい変更や高リスク変更を確認したい → deepsec / `SECURITY_REVIEW.md` / `TRIALS.md`
+- 動画をAIが読める素材へ変換したい → claude-real-video / Whisper / Buzz
+- MarkdownやPDFから編集可能なPowerPointを作りたい → PPT Master / `OUTPUTS/README.md`
+- PDFを結合・分割・OCRしたい → Stirling PDF
+- 共有知識を棚卸し・統合したい → Memory Consolidation / `REVIEW.md` / `TRIALS.md`
+- 画像・スクリーンショット主体の資料を検索したい → PixelRAG
+- 登録済み候補の使用実績を確認したい → `TRIALS.md`
+
 ### AI / Agents
 
 - Whisper → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
@@ -253,6 +267,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Markdown / PDF / DOCX to PPTX → `AI_DRAWERS.md`, `OUTPUTS/README.md`
 - Today's Decisions / Pending Decisions / Waiting AI → `STATUS.md`
 - 運用で学んだこと → `LESSONS_LEARNED.md`
+- 試用結果 / adoption / reuse conditions → `TRIALS.md`
 - PLAN.md / large task planning → `PROJECT_START.md`, `AGENTS.md`, `LESSONS_LEARNED.md`
 - compact / session boundary → `PROJECT_START.md`, `AGENTS.md`, `LESSONS_LEARNED.md`
 - context compression / token optimization / pxpipe → `AI_DRAWERS.md`

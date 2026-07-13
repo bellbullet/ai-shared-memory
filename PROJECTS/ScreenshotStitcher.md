@@ -1,6 +1,6 @@
 # Screenshot Stitcher
 
-最終更新: 2026-07-11
+最終更新: 2026-07-13
 
 ## Goal
 
@@ -32,3 +32,9 @@
 ## Related Notes
 
 - `PROJECTS/KomiReader.md` - Vite / React のローカルファイル処理パターン。
+
+## Reuse Candidates
+
+- Ponytail / Minimal Implementation Policy - OpenCV.jsなど大きな依存を増やす前にCanvas / TypedArrayを優先する。
+- reviewable-html-workbench - 候補比較や設計成果物を範囲指定でレビューする場合。
+- agmsg - 公開可能な小規模レビューを別CLIエージェントへ引き継ぐ試験候補。

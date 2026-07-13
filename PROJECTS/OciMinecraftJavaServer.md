@@ -1,6 +1,6 @@
 # OciMinecraftJavaServer
 
-最終更新: 2026-06-27
+最終更新: 2026-07-13
 
 ## Goal
 
@@ -50,3 +50,9 @@
 ## Related Notes
 
 - `NOTES/HomeLab.md`
+
+## Reuse Candidates
+
+- Ponytail / Minimal Implementation Policy - Terraformと既存scriptで足りるかを先に確認する。
+- deepsec - shell、path、credential境界、公開前の大きい変更で検討する。
+- Oracle - Terraform構成や復旧設計のセカンドオピニオンが必要な場合。

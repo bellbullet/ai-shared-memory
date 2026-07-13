@@ -1,6 +1,6 @@
 # XImageBot
 
-最終更新: 2026-06-27
+最終更新: 2026-07-13
 
 ## Goal
 
@@ -48,3 +48,9 @@
 
 - `NOTES/AI.md`
 - `AI_DRAWERS.md`
+
+## Reuse Candidates
+
+- Ponytail / Minimal Implementation Policy - X API、requests、既存storageで足りる範囲を優先する。
+- deepsec - API、token境界、download path、公開前の高リスク変更で検討する。
+- Oracle - API制約やstorage設計でセカンドオピニオンが必要な場合。

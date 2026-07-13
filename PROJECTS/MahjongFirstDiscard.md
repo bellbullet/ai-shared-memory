@@ -1,6 +1,6 @@
 # MahjongFirstDiscard
 
-最終更新: 2026-06-27
+最終更新: 2026-07-13
 
 ## Goal
 
@@ -46,3 +46,9 @@
 ## Related Notes
 
 - `AI_DRAWERS.md`
+
+## Reuse Candidates
+
+- Ponytail / Minimal Implementation Policy - static構成と既存validationを維持する。
+- reviewable-html-workbench - 問題画面や説明文を人間が範囲指定レビューする場合。
+- Oracle - 問題生成・検証方針で難しい設計判断が発生した場合。

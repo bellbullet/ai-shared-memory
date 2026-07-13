@@ -1,6 +1,6 @@
 # GameFreezeSentinel
 
-最終更新: 2026-06-27
+最終更新: 2026-07-13
 
 ## Goal
 
@@ -48,3 +48,9 @@
 ## Related Notes
 
 - `NOTES/AI.md`
+
+## Reuse Candidates
+
+- Ponytail / Minimal Implementation Policy - 既存の診断・report・tray機能を優先する。
+- deepsec - command実行、path処理、権限、公開前の高リスク変更で検討する。
+- Oracle - 原因不明のWindows診断や設計判断でセカンドオピニオンが必要な場合。

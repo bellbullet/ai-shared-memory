@@ -15,6 +15,7 @@
 - [ ] Pending Decision、Blocked、Waiting AI、Waiting Human が現在の状態を表している
 - [ ] `references/` の索引が `README.md`、`AI_INDEX.md`、必要な情報源ファイルにある
 - [ ] ChatGPT Projects の添付情報源が必要な更新後に差し替えられている
+- [ ] `TRIALS.md` のPlanned項目、結果、判断、再利用条件が現在の状態を表している
 
 ## Monthly Review
 
@@ -46,6 +47,7 @@
 - [ ] 特定プロジェクトに関係する知識は `PROJECTS/` へ接続されている
 - [ ] 横断的な知識は `NOTES/` に整理されている
 - [ ] よく使うキーワードは `AI_INDEX.md` の Quick Lookup に追加されている
+- [ ] 試用した候補の結果が `TRIALS.md` にあり、必要な判断が `AI_DRAWERS.md` / `LESSONS_LEARNED.md` / `DECISIONS.md` に戻っている
 
 ## Memory Review
 
