@@ -22,6 +22,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Unsorted items: `INBOX.md`
 - Change history: `CHANGELOG.md`
 - Technical radar: `AI_DRAWERS.md`
+- Claude Code concept map: `references/CLAUDE_CODE_MAP.md`
 
 ## Projects
 
@@ -88,6 +89,13 @@ AI が関連ファイルを素早く見つけるための索引です。
 - OpenFugu → `AI_DRAWERS.md`
 - AI-Safeter / FUGU → `AI_DRAWERS.md`
 - Agent / Orchestration → `AI_DRAWERS.md`
+- Claude Code → `AI_DRAWERS.md`, `references/CLAUDE_CODE_MAP.md`
+- CLAUDE.md / `.claude/rules` → `references/CLAUDE_CODE_MAP.md`, `AI_DRAWERS.md`
+- Skills / Plugins / Hooks → `references/CLAUDE_CODE_MAP.md`, `AI_DRAWERS.md`
+- Permission / Sandbox → `references/CLAUDE_CODE_MAP.md`, `AI_DRAWERS.md`
+- Subagents / Worktree / Session → `references/CLAUDE_CODE_MAP.md`, `AI_DRAWERS.md`
+- MCP / Agent Runtime → `references/CLAUDE_CODE_MAP.md`, `AI_DRAWERS.md`
+- Codex comparison / AI coding agent security → `references/CLAUDE_CODE_MAP.md`, `AI_DRAWERS.md`
 - NASA SpaceWasm / flight-compliant WebAssembly → `AI_DRAWERS.md`
 - Rust WebAssembly / safety-critical runtime → `AI_DRAWERS.md`
 - Embedded / deterministic memory / flight software → `AI_DRAWERS.md`

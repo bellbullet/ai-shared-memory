@@ -2,6 +2,11 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-12
+
+- `references/CLAUDE_CODE_MAP.md` を追加し、Claude Codeの概念レイヤー、エージェントループ、Tool / Skill / Plugin / MCPの違い、安全制御、Codex対応表、公式Docs導線を整理。
+- `AI_DRAWERS.md` と `AI_INDEX.md` にClaude Code概念地図への導線を追加。変化しやすいモデル、Tool数、契約別仕様は固定的な事実として扱わない方針を明記。
+
 ## 2026-07-11
 
 - `PROJECTS/ScreenshotStitcher.md` を追加し、ローカル完結のScreenshot Stitcher MVPをActive Projectとして記録。

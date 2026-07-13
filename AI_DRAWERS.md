@@ -308,6 +308,57 @@ AI エージェント、長期記憶、複数 LLM 協調、ルーティング、
 - MiMo-Code / Headroom / OpenFugu / AI-Safeter FUGU は「AIを管理するAI」の研究候補。
 - OpenFugu は実装・統合寄り、AI-Safeter FUGU は最適化手法寄り、Headroom は記憶・コンテキスト管理寄り。
 
+### Claude Code Architecture Map
+
+URL:
+https://docs.anthropic.com/en/docs/claude-code/overview
+
+分類:
+
+- Agent / Orchestration
+- AI Coding
+- Reference
+- Security
+- Context Management
+
+概要:
+
+- Claude Codeを、モデル、ランタイム、Tool、Subagent、Skill、Plugin、MCP、安全制御、実行環境に分けて整理した概念地図。
+- 個々の機能名を暗記する資料ではなく、新機能を適切なレイヤーへ分類するための参照資料。
+- Codexなど他のコーディングエージェントとの概念比較にも利用する。
+
+用途:
+
+- Claude Code公式Docsの索引
+- Claude CodeとCodexの概念比較
+- `CLAUDE.md`、Rules、Skills、Hooksの使い分け
+- AIエージェントの権限設計
+- PluginやMCP導入時の安全確認
+
+関連:
+
+- `references/CLAUDE_CODE_MAP.md`
+- Anthropic Claude Code公式ドキュメント
+- Codex
+- MCP
+- AI Shared Memory
+
+状態:
+
+- 参照資料
+
+優先度:
+
+- ★★★★★
+
+注意:
+
+- 機能、モデル、Tool数、契約別仕様は更新されるため、公式情報で都度確認する。
+- X記事は発見経路であり、一次情報としては扱わない。
+- PluginやMCPはコード実行や外部接続を含み得るため、導入前に権限、依存関係、Hook、送信先を監査する。
+
+⸻
+
 ### MiMo-Code
 
 URL:
