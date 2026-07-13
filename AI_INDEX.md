@@ -96,6 +96,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Subagents / Worktree / Session → `references/CLAUDE_CODE_MAP.md`, `AI_DRAWERS.md`
 - MCP / Agent Runtime → `references/CLAUDE_CODE_MAP.md`, `AI_DRAWERS.md`
 - Codex comparison / AI coding agent security → `references/CLAUDE_CODE_MAP.md`, `AI_DRAWERS.md`
+- agmsg → `AI_DRAWERS.md`
+- cross-agent messaging / multi-agent collaboration → `AI_DRAWERS.md`
+- SQLite agent communication / local agent messaging → `AI_DRAWERS.md`
+- CLI AI agent handoff / agent-to-agent review → `AI_DRAWERS.md`
 - NASA SpaceWasm / flight-compliant WebAssembly → `AI_DRAWERS.md`
 - Rust WebAssembly / safety-critical runtime → `AI_DRAWERS.md`
 - Embedded / deterministic memory / flight software → `AI_DRAWERS.md`

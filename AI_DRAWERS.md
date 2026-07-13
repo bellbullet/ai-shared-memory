@@ -359,6 +359,61 @@ https://docs.anthropic.com/en/docs/claude-code/overview
 
 ⸻
 
+### agmsg
+
+URL:
+https://github.com/fujibee/agmsg
+
+分類:
+
+- Agent / Orchestration
+- AI Coding Operations
+- Multi-Agent Collaboration
+- Local-first
+- SQLite
+
+概要:
+
+- Claude Code、Codex、Gemini CLI、GitHub Copilot CLIなどのCLI AIエージェント間で、共有ローカルSQLiteデータベースを介してメッセージをやり取りするOSS。
+- daemon、ネットワーク、brokerを置かない薄いtransportとして設計され、メッセージ履歴はSQLiteに保持される。
+- MCPやSubagentの代替ではなく、異なるCLIエージェントの独立したpeer sessionを連携させるための仕組み。
+
+用途:
+
+- Codex実装後にClaude Codeへレビュー依頼を送る実験
+- Architect / Reviewer / Security / Writerなどの役割分担
+- 複数CLIエージェント間のローカル連絡
+- 長時間作業の完了通知、レビュー依頼、引き継ぎ
+- `ai-shared-memory` の共有知識とリアルタイム連絡の役割分離研究
+
+関連:
+
+- agency-agents
+- Oracle
+- OpenFugu
+- Agentic Inbox
+- Claude Code
+- Codex
+- Gemini CLI
+- `references/CLAUDE_CODE_MAP.md`
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 同一マシンまたは同じ共有SQLiteファイルへ安全にアクセスできる環境を前提とする。別PC連携や認証済みメッセージングの代替としては扱わない。
+- Windows実装はBash script群をGit Bash経由で動かす。PowerShellで裸の`bash`を使うとWSL側の別`$HOME`・別DBを参照する可能性があるため、Git Bashの実行パスを明示する。
+- Codexの`monitor`連携はREADME上でbeta / experimentalとして説明されている。まずは`turn`または手動確認を含む小規模な検証から始める。
+- agent間メッセージ、SQLite履歴、Hook設定に非公開コード、秘密情報、認証情報、個人情報を含めない。導入前にscripts、Hooks、書き込み先、spawn時の権限・sandbox設定を監査する。
+
+⸻
+
 ### MiMo-Code
 
 URL:

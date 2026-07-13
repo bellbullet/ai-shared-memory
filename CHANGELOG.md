@@ -2,6 +2,11 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-13
+
+- `AI_DRAWERS.md` に `fujibee/agmsg` を Agent / Orchestration、AI Coding Operations、Multi-Agent Collaborationの研究対象として追加。
+- `AI_INDEX.md` に agmsg、cross-agent messaging、SQLite agent communication、agent-to-agent review の導線を追加。
+
 ## 2026-07-12
 
 - `references/CLAUDE_CODE_MAP.md` を追加し、Claude Codeの概念レイヤー、エージェントループ、Tool / Skill / Plugin / MCPの違い、安全制御、Codex対応表、公式Docs導線を整理。
