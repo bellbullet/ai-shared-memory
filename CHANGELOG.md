@@ -2,6 +2,17 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-15
+
+- Xで発見後、GitHub、Hugging Face、公式販売ページ、論文まで一次情報を確認したAI関連候補を一括整理。Xの検索件数や表示順位は技術項目にせず、発見経路としてのみ扱った。
+- `AI_DRAWERS.md`へ Backlog.md、Graphify、halo-record、loopeng-bootstrap、ccc-usage-dashboard、codex-model-routing-guard、codex-hygiene、`openai/codex-plugin-cc`、small-vlm-sop-check、OpenLive、drawio-ai-kit、LiteRT.js、onnx2tf、Qwen Image Edit Pixel Perfect nodes の14件を追加。
+- 既登録の HyperFrames と agmsg は新規追加せず、ライセンス、役割比較、安全上の注意を補足。
+- `INBOX.md`へ、vault / local DBアクセス、OAuth、外部送信、任意shell / Python実行、モデル取得、GPU要件、ライセンス未確認などの追加評価が必要な候補を役割別に統合。
+- Backlog.md / AI-PLC / pm-skills、Graphify / Rowboat / Claudian、halo-record / loopeng-bootstrap、Tutti / agmsg / codex-plugin-cc、ccc-usage-dashboard / codex-hygiene、LiteRT.js / onnx2tf、HyperFrames / ChatCut / BlenderMCP の役割差を記録。
+- `AI_INDEX.md`へ、agent planning、code knowledge graph、audit trail、Codex observability、local VLM、realtime voice / vision、diagram skill、browser inference、model conversion、creative tool、research paperの検索語を追加。
+- `STATUS.md`のKnowledge Healthを、AI_DRAWERS 90件と2026-07-15の役割別INBOX保留バッチへ同期。
+- 認証回避、サービス制限回避、検知回避、crack、leak由来として元調査で除外された候補は追加していない。
+
 ## 1.1.0 - Consolidated Memory Architecture (2026-07-13)
 
 - `VERSION` を追加し、現在のバージョンを `1.1.0` として明示。

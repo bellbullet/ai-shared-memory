@@ -1,6 +1,6 @@
 # INBOX
 
-最終更新: 2026-07-04
+最終更新: 2026-07-15
 
 整理前の GitHub リンク、OSS、論文、アイデア、調査候補を一時保管する場所です。
 
@@ -115,3 +115,60 @@ URL:
 - n8n: https://github.com/n8n-io/n8n
 - TradingAgents: https://github.com/TauricResearch/TradingAgents
 - Firecrawl: https://github.com/firecrawl/firecrawl
+
+### 2026-07-15: X発見・一次情報確認済み候補
+
+X上で発見した候補を、GitHub / Hugging Face / 公式販売ページ / 論文で再確認して役割別に統合した。検索件数やXの表示順位は技術評価に使わず、一次情報URLを正本とする。`AI_DRAWERS.md`へ昇格済みの項目は重複記載しない。
+
+共通ゲート:
+
+- インストール、ログイン、モデル取得、コード実行は未実施。
+- skill / plugin / MCP / agent runtimeは、shell・Python・任意コード、Hook、書込み範囲、認証情報、外部送信を導入前に監査する。
+- ライセンス未確認またはGitHub APIで明示されない項目は、ライセンス確認まで利用・再配布を保留する。
+
+#### Agent / Shared Memory / Planning
+
+- Rowboat: https://github.com/rowboatlabs/rowboat — 個人作業情報をローカルMarkdown知識グラフへまとめるAI coworker。Apache-2.0。X / Slack / Linear / Jira / GitHub連携の認証・外部送信を確認するまで保留。
+- Claudian: https://github.com/YishenTu/claudian — Obsidian vaultをCodex等の作業ディレクトリとして使うplugin。MIT。vault読書きとbash実行を許すため、バックアップと権限境界の監査待ち。
+- Tutti: https://github.com/tutti-os/tutti — 人と複数agentの会話・ファイル・タスクを共有するworkspace。Apache-2.0。Windows対応、認証、保存先、クラウド依存の追加確認待ち。
+- AI-PLC: https://github.com/miyatti777/ai-plc — 目標から企画・実装・検証までの4段階Product Lifecycle。MIT。既存の`PROJECT_START.md` / `PLAN.md`と重なるため、丸ごと導入せず差分抽出候補。
+- pm-skills: https://github.com/phuryn/pm-skills — PMのDiscovery、戦略、優先順位、実行、launchをskill化。MIT。Claude固有workflowとCodex互換性を個別評価する。
+- MulmoClaude: https://github.com/receptron/mulmoclaude — Web UI、mobile、messaging、MCP、Docker sandboxを統合するClaude Code client。MIT。GitHub CLI資格情報転送とsandbox権限の脅威モデル確認待ち。
+- hikkaku: https://github.com/pnsk-lab/hikkaku — TypeScriptからScratch projectを作るagent向けlibrary / skill。MIT。教育用途での生成物確認とScratch資産条件を確認する。
+- codex-first: https://github.com/steipete/agent-scripts/blob/main/skills/codex-first/SKILL.md — Claude Codeを判断・レビュー、Codexを実装へ振り分ける第三者skill。repoはMIT。Codex自身から自己委任しない制約を維持する。
+- last30days-skill: https://github.com/mvanhorn/last30days-skill — 複数Web / social sourceから直近30日を調査するskill。MIT。API key、Cookie、browser session、外部送信を扱う経路は導入しないまま保留。
+
+#### Local AI / Multimodal
+
+- Meetily: https://github.com/Zackriya-Solutions/meetily — Parakeet / Whisper、話者分離、Ollama要約を使うlocal meeting assistant。MIT。録音同意、組織規程、opt-in analyticsを確認する。
+- Colibrì: https://github.com/JustVugg/colibri — 巨大MoEのexpertをdiskからstreamするpure C runtime。Apache-2.0。速度値は単発測定で、モデルweight license、storage、RAM、CPU要件の確認待ち。
+- sound-efect: https://github.com/animede/sound-efect — Stable Audio 3 Small SFXを使う効果音生成app。repoのlicense表示がGitHub APIで確認できず、gated model、HF token、CUDA、Stability AI Community Licenseが必要なため保留。
+- image-3d: https://github.com/animede/image-3d — Hunyuan3D-2を使う画像から3D / 3D printer向けpipeline。licenseはNOASSERTION。Linux / WSL2、約16〜32GB VRAM、model licenseの確認待ち。
+
+#### Creative / UI / Video / 3D
+
+- AnimeGen-T2V: https://huggingface.co/aidealab/AnimeGen-T2V — Wan 2.2 T2V A14Bベースのanime text-to-video model。Apache-2.0表記。RTX 4090以上推奨、学習データ詳細と既知の時間的一貫性制約を理由に研究候補のまま保留。
+- MotionGen: https://superhivemarket.com/products/motiongen — 動画・sketchからrig animationを作るBlender向け商用tool。addon codeはMIT表記だが、edition別動画長、Windows + NVIDIA、license確認通信を伴うため保留。
+- BlenderMCP: https://github.com/ahujasid/blender-mcp — LLMからBlenderのscene / object / materialを操作するMCP。MIT。Blender内で任意Pythonを実行できるため、sandboxと対象fileを限定するまで保留。
+- ChatCut agent-plugin: https://github.com/ChatCut-Inc/agent-plugin — ChatCutの素材取込、timeline編集、字幕、書出しをagentから操作するplugin。GitHub APIでlicense未確認。OAuthとhosted MCPへの外部接続が必要なため保留。
+- MengTo/Skills: https://github.com/MengTo/Skills — UI、frontend、reference capture、prompt化のagent skill集。MIT。各skillのbrowser操作、script、asset条件を個別レビューする。
+- emilkowalski/skills: https://github.com/emilkowalski/skills — UI / animation / Apple Design判断をskill化。MIT。適用範囲、引用元、asset条件をskill単位で確認する。
+- Astryx: https://github.com/facebook/astryx — agent-readyなReact design system。MIT。導入候補ではなく、人間向けdocsとAI向けCLIが同じ型付きdataを使う設計参考として保留。
+
+#### Edge AI / Research
+
+- MAD-OPD: https://github.com/chiefovoavicii/MAD-OPD / https://arxiv.org/abs/2605.01347 — multi-agent debateを教師側へ入れるon-policy distillation。Apache-2.0。GPU・学習費用と論文再現性の評価待ち。
+- MMD-Reg: https://github.com/csiro-robotics/mmd-reg / https://arxiv.org/abs/2606.27818 — MMDとrandom Fourier featuresによる点群位置合わせ。GitHub APIでlicenseがNOASSERTION。CUDA環境と非決定的前処理を含むため保留。
+- LA4VLA: https://github.com/MINT-SJTU/LA4VLA / https://arxiv.org/abs/2606.27295 — vision encoderをmaskしてlanguage-actionを先行学習するVLA研究。MIT。dataset / checkpoint / GPU要件と再現手順の評価待ち。
+
+#### 役割比較
+
+| 比較 | 役割差 |
+| --- | --- |
+| Backlog.md / AI-PLC / pm-skills | Backlog.mdはGit上の実行単位、AI-PLCは目標から検証までのlifecycle、pm-skillsはPM判断framework群。 |
+| Graphify / Rowboat / Claudian | Graphifyはcode中心のknowledge graph、Rowboatは個人作業情報のMarkdown graph、ClaudianはObsidian vaultへagent UIと実行権限を接続。 |
+| halo-record / loopeng-bootstrap | halo-recordは改ざん検知可能な証跡層、loopeng-bootstrapは監査可能な実行・受入・memory更新loop。 |
+| Tutti / agmsg / codex-plugin-cc | Tuttiは共有workspace、agmsgはpeer session messaging、codex-plugin-ccはClaude CodeからCodexへの委譲。 |
+| ccc-usage-dashboard / codex-hygiene | 前者は利用量・cost・quota観測、後者はcontext・tool surface・telemetry監査。 |
+| LiteRT.js / onnx2tf | onnx2tfはmodel変換、LiteRT.jsは変換済みmodelをbrowserで実行するruntime。 |
+| HyperFrames / ChatCut / BlenderMCP | HyperFramesはcode生成型video、ChatCutはOAuth経由の編集software連携、BlenderMCPは任意Pythonを含む3D制作連携。 |

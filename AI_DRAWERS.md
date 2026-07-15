@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-07-13
+最終更新: 2026-07-15
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫です。
 
@@ -12,12 +12,12 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 76
+- 登録項目: 90
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
 - 重点領域: Agent / Orchestration、AI Coding Operations、Knowledge Management、Creative Pipeline、Self Host / Tools。
-- 最近の追加: Claude Code Architecture Map、agmsg、NASA SpaceWasm、OpenAI Prompting、claude-real-video。
+- 最近の追加: X発見候補から Backlog.md、halo-record、loopeng-bootstrap、Graphify、Codex運用3件、Edge / Local AI 4件、制作支援2件を一次情報確認後に統合。
 - 未整理項目と次回レビュー条件は `STATUS.md`、分類前リンクは `INBOX.md` を参照する。
 
 カテゴリ別ファイル分割は、検索性や保守性が単一ファイルでは不足した時点で検討し、v1.1 では行わない。
@@ -332,6 +332,80 @@ https://github.com/openai/whisper
 
 ⸻
 
+### small-vlm-sop-check
+
+URL:
+https://github.com/shure-dev/small-vlm-sop-check
+
+分類:
+
+- Local AI
+- VLM / Video Analysis
+- SOP / Safety
+
+概要:
+
+- 一人称作業動画をフレーム単位で説明し、手順書への準拠を小型VLMで判定・可視化する実験リポジトリ。
+- 生成モデルと決定的なルール判定を分離する設計が、監査可能な現場AIの参考になる。
+
+用途:
+
+- 外部送信を避けたい現場動画分析
+- SOP逸脱検知と評価データ設計
+- WebcamFaceDemoなどのローカル映像処理との比較
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- MIT License。参照実装はApple Silicon向けMLX、既定1fpsで、正式な精度評価は未完了。
+- 現場映像には個人情報や機密情報が含まれ得るため、保存・同意・閲覧権限を先に決める。
+
+⸻
+
+### OpenLive
+
+URL:
+https://github.com/katipally/openlive
+
+分類:
+
+- Local AI
+- Realtime Voice / Vision
+- WebGPU
+
+概要:
+
+- 音声区間検出、音声認識、ターン検出、音声合成をオンデバイスで扱い、任意のLLMへ音声・カメラ・画面入力を接続するOSS。
+- 音声ループをローカルに保ちながら、LLM部分を差し替える境界設計が参考になる。
+
+用途:
+
+- AIRI / AI companionの音声・視覚入力
+- ローカル優先のリアルタイム対話
+- Whisper、VoxCPM、WebcamFaceDemoとの比較
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- MIT License。LLM接続にはprovider設定やAPI keyが必要になる場合があり、音声以外の送信範囲を個別確認する。
+- カメラ・画面共有、マイク、モデルproxyの権限境界を確認してから試す。
+
+⸻
+
 ## Agent / Orchestration
 
 AI エージェント、長期記憶、複数 LLM 協調、ルーティング、オーケストレーター系をまとめる。
@@ -444,6 +518,152 @@ https://github.com/fujibee/agmsg
 - Windows実装はBash script群をGit Bash経由で動かす。PowerShellで裸の`bash`を使うとWSL側の別`$HOME`・別DBを参照する可能性があるため、Git Bashの実行パスを明示する。
 - Codexの`monitor`連携はREADME上でbeta / experimentalとして説明されている。まずは`turn`または手動確認を含む小規模な検証から始める。
 - agent間メッセージ、SQLite履歴、Hook設定に非公開コード、秘密情報、認証情報、個人情報を含めない。導入前にscripts、Hooks、書き込み先、spawn時の権限・sandbox設定を監査する。
+- Tuttiは共有ワークスペース、agmsgはpeer session間の薄いメッセージtransport、`openai/codex-plugin-cc`はClaude CodeからCodexへの委譲に特化する。
+
+⸻
+
+### Backlog.md
+
+URL:
+https://github.com/MrLesk/Backlog.md
+
+分類:
+
+- Agent / Planning
+- Markdown-native Workflow
+- Local-first
+
+概要:
+
+- Gitリポジトリ内のMarkdownを正本にし、タスク・Kanban・AIエージェント向け指示を同じ履歴で管理するOSS。
+- 「仕様レビュー → 計画レビュー → 実装レビュー」と「1タスク = 1コンテキスト = 1PR」の分割パターンが再利用しやすい。
+
+用途:
+
+- `PLAN.md`とセッション境界の改善
+- 人間とAIのタスク引き継ぎ
+- AI-PLC / pm-skillsとの役割比較
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- MIT License。サーバー、アカウント、テレメトリなしで使えるが、任意MCPやCLI導入時は書込み範囲を確認する。
+- AI-PLCは目標から検証までの4段階ライフサイクル、pm-skillsはPM判断フレームワーク群、Backlog.mdは日々の実行単位とGit履歴を担う。
+
+⸻
+
+### Graphify
+
+URL:
+https://github.com/Graphify-Labs/graphify
+
+分類:
+
+- Agent / Codebase Knowledge Graph
+- RAG / Code Intelligence
+
+概要:
+
+- コード、SQL、shell、文書、論文、画像、動画を解析し、AIコーディング支援から問い合わせ可能な知識グラフへ変換する。
+- アプリ、DB、インフラを同じグラフで扱う設計が、大規模リポジトリの再読コスト削減に向く。
+
+用途:
+
+- コードベース理解と依存関係探索
+- Rowboat / Claudianとの知識ワークスペース比較
+- PixelRAGとの検索表現比較
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- MIT License。取り込み対象、保存先、増分更新、埋め込み・モデル呼出しの外部送信有無を導入前に確認する。
+- Graphifyはコード中心の知識グラフ、Rowboatは個人作業情報のローカルMarkdownグラフ、ClaudianはObsidian vault内のエージェントUIという役割差がある。
+
+⸻
+
+### halo-record
+
+URL:
+https://github.com/bkuan001/halo-record
+
+分類:
+
+- Agent Audit
+- Tamper Evidence / Hash Chain
+
+概要:
+
+- ツール呼出し、モデル呼出し、データアクセス、承認を追記型ハッシュチェーンへ記録する参照実装。
+- エージェントの自己申告ではなく、第三者が後から検証できる証跡層を分離する。
+
+用途:
+
+- エージェント実行証跡
+- 承認・データアクセス履歴の検証
+- loopeng-bootstrapの実行ループとの責務分離
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- Apache-2.0、依存なし。外部witnessは件数とhead hashだけを保持できる。
+- 認証・認可や監査合格を自動保証する製品ではない。記録内容に秘密情報を含めない設計が必要。
+
+⸻
+
+### loopeng-bootstrap
+
+URL:
+https://github.com/fumihito/loopeng-bootstrap
+
+分類:
+
+- Agent / Auditable Loop
+- Durable Memory / OKF
+
+概要:
+
+- Codex / Claude Codeを監査可能な自律ループとして運用するBootstrap。
+- 決定的なRun Report、アラート、検証済みトランザクションによるLLMWiki更新を組み合わせる。
+
+用途:
+
+- 長時間エージェント作業の完了判定
+- protected path変更やjournal漏れのレビュー
+- `OKF.md`、`TRIALS.md`、halo-recordとの比較
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- MIT License、Python 3.10以上。任意コード・shell・ファイル更新を伴う実行ループとして、導入前に保護パス、rollback、承認境界を監査する。
+- halo-recordは改ざん検知可能な証跡層、loopeng-bootstrapは証跡を含む監査可能な実行・受入ループを担う。
 
 ⸻
 
@@ -1501,6 +1721,265 @@ https://github.com/mrmishmash/amazon_creators_api
 
 ⸻
 
+### ccc-usage-dashboard
+
+URL:
+https://github.com/cero-t/ccc-usage-dashboard
+
+分類:
+
+- Codex / Claude Code
+- Observability
+- Local Dashboard
+
+概要:
+
+- 利用量、トークン、推定コスト、クォータ、帰属情報を分けて表示するローカルダッシュボード。
+- OTLPログから長時間エージェント作業の消費量とエラーを振り返る観測層として使える。
+
+用途:
+
+- Codex / Claude Codeの利用量観測
+- モデル別・タスク別コストの振り返り
+- codex-hygieneとの責務比較
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- Apache-2.0。既定はlocalhost待受で履歴をローカルDBへ保存する。
+- 生OTLPログにはプロンプト由来情報が含まれ得るため、LAN公開、保持期間、DBアクセスを監査する。
+- ccc-usage-dashboardは利用量観測、codex-hygieneはコンテキスト・ツール面の監査を担う。
+
+⸻
+
+### codex-model-routing-guard
+
+URL:
+https://github.com/vida994/codex-model-routing-guard
+
+分類:
+
+- Codex
+- Hook / Model Routing
+- Safety
+
+概要:
+
+- 選択中モデルが作業内容に明確に不向きな場合だけ確認を促す、助言専用のローカルhook。
+- モデルを自動変更せず、高リスク作業での人間確認を残す保守的パターン。
+
+用途:
+
+- セキュリティ、決済、並行処理、データ変更時のモデル選択確認
+- 小タスクと高リスクタスクのルーティング基準
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- MIT License、Python 3.9以上。ネットワーク通信、会話履歴読取り、テレメトリなしとREADMEに記載。
+- OpenAI公式ポリシーではなく作者のヒューリスティック。Hook導入前に判定条件とローカル状態保存を監査する。
+
+⸻
+
+### codex-hygiene
+
+URL:
+https://github.com/sunflower-of-parchman/codex-hygiene
+
+分類:
+
+- Codex
+- Context Audit
+- Tool Surface / Telemetry
+
+概要:
+
+- Codex Desktopのコンテキスト、ツール面、MCP / app / skill可用性、長期goalのスコープを点検するコミュニティskill。
+- 利用量の増加を、tool availability、snapshot再利用、長いthread replayなどへ分解して調べる。
+
+用途:
+
+- 長期タスクのコンテキスト肥大化調査
+- MCP / plugin / skill棚卸し
+- ccc-usage-dashboardとの比較
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- MIT License。ローカルSQLiteを読み取るため、対象DB、取得列、出力範囲を導入前にレビューする。
+- OpenAI公式skillではない。公開メモリへテレメトリやローカルパスを転記しない。
+
+⸻
+
+### openai/codex-plugin-cc
+
+URL:
+https://github.com/openai/codex-plugin-cc
+
+分類:
+
+- Agent / Orchestration
+- Claude Code Plugin
+- Codex Delegation
+
+概要:
+
+- Claude CodeからCodexへレビュー、実装、デバッグ、セッション引き継ぎ、バックグラウンド作業を委譲するOpenAI公式プラグイン。
+- Claudeを判断・統合側、Codexを別実行セッションとして使う役割分担の公式実装例。
+
+用途:
+
+- Claude CodeからCodexへの明示的委譲
+- adversarial review / rescue / transfer
+- Tutti / agmsg / codex-firstとの比較
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- Apache-2.0。Node.js 18.18以上と、ChatGPT契約またはOpenAI API key、既存Codex認証・設定を利用する。
+- 長時間レビューゲートは使用枠を消費する。認証情報、subprocess、background session、書込み権限を試用前に確認する。
+
+⸻
+
+### drawio-ai-kit
+
+URL:
+https://github.com/sparklabx/drawio-ai-kit
+
+分類:
+
+- Agent Skill
+- Diagram / Architecture
+- Validation
+
+概要:
+
+- 実在するdraw.ioステンシルID、宣言的レイアウト、構造検証、視覚セルフチェックを組み合わせる図解生成キット。
+- AIが存在しないIDを生成する失敗を、ground truthと検証工程で抑える設計が再利用しやすい。
+
+用途:
+
+- AWS / Azure / GCP / Databricks / BPMN構成図
+- AI生成図の構造検証
+- Excalidrawとの役割比較
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- MIT License、zero dependencies。公式クラウドアイコンは別の利用条件を持ち得るため、再配布時に確認する。
+- skill / CLIが生成・実行するファイルとコマンドを導入前に監査する。
+
+⸻
+
+### LiteRT.js
+
+URL:
+https://github.com/google-ai-edge/LiteRT/tree/main/litert/js
+
+分類:
+
+- Edge AI
+- Browser Runtime
+- WebGPU / WASM
+
+概要:
+
+- Google AI EdgeのLiteRTモデルをブラウザ内でWASMまたはWebGPU実行する公式JavaScriptランタイム。
+- 入力をサーバーへ送らないWeb AIと、TensorFlow.jsとのGPU共有の基盤候補。
+
+用途:
+
+- ブラウザ内ローカル推論
+- WebGPU対応UI
+- onnx2tfで変換したモデルの実行先
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- Apache-2.0。WebGPU未対応演算はWASMまたはCPUへフォールバックし、大規模モデルはWASMメモリ上限で失敗し得る。
+- ブラウザ互換性、モデル配布ライセンス、初回ダウンロード容量を個別確認する。
+
+⸻
+
+### onnx2tf
+
+URL:
+https://github.com/PINTO0309/onnx2tf
+
+分類:
+
+- Edge AI
+- Model Conversion
+- ONNX / LiteRT / TFLite
+
+概要:
+
+- ONNXからLiteRT / TFLite / TensorFlow、PyTorch各形式へ変換し、LiteRTからPyTorchへの逆変換も扱うモデル変換ツール。
+- LiteRT.jsなどの実行ランタイムへモデルを渡す前段の変換・互換性検証に位置付ける。
+
+用途:
+
+- Edge向けモデル変換
+- ONNX経由の移植パイプライン
+- LiteRT.jsとの変換→実行関係
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- MIT License。対応形式が広く、演算・量子化・入出力の差異が生じ得るため、実モデルごとの数値比較が必要。
+- 変換時の任意Python実行、依存パッケージ、モデルライセンスを確認する。
+
+⸻
+
 ## GPU / HPC
 
 ### CuPy
@@ -1887,15 +2366,15 @@ https://github.com/heygen-com/hyperframes
 
 概要:
 
-- HeyGen のオープンソース動画生成エンジン。
-- HTML を書いて video を render する、agent 向け動画生成 workflow の研究候補。
+- HTML / CSS / mediaとseek可能なanimationから決定的なMP4をrenderする、agent向けオープンソース動画生成エンジン。
+- Codex、Claude Code、Cursor、Gemini CLIなどで使える制作skillを同梱し、plan、lint、preview、renderを一つのループにする。
 
 用途:
 
 - AI video generation
 - HTML to video
 - agent-driven creative workflow
-- OpenCut / PPT Master / OUTPUTS との比較
+- OpenCut / ChatCut / BlenderMCP / PPT Master / OUTPUTS との比較
 
 状態:
 
@@ -1907,7 +2386,8 @@ https://github.com/heygen-com/hyperframes
 
 メモ:
 
-- 実運用より先に、生成品質、依存関係、ローカル実行性、ライセンス境界を確認する。
+- Apache-2.0。生成品質、render依存、素材ライセンス、生成物の権利を実運用前に確認する。
+- HyperFramesはコード生成型動画、ChatCutはOAuth経由の編集ソフト連携、BlenderMCPは任意Python実行を含む3D制作連携という役割差がある。
 
 ⸻
 
@@ -2167,6 +2647,43 @@ https://github.com/Diolinux/PhotoGIMP
 メモ:
 
 - 導入前に対応 GIMP version と patch 適用範囲を確認する。
+
+⸻
+
+### Qwen Image Edit Pixel Perfect nodes
+
+URL:
+https://github.com/oron1208/comfyui_qwen_edit_pixel_perfect
+
+分類:
+
+- Creative / ComfyUI
+- Image Editing
+- Registration / Mask Preservation
+
+概要:
+
+- Qwen-Image-Edit-2511で起きる画素ずれとマスク外改変を補正するComfyUIカスタムノード。
+- 事前クロップと、AKAZE + RANSACによる後段位置合わせを比較できる。
+
+用途:
+
+- 線画・固定部分を保つ画像編集
+- マスク外のハッシュ一致を使う合成検証
+- ComfyUI編集パイプラインの再現性改善
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- MIT License。後段補正はOpenCVが必要。事前クロップは依存なしだが端が切れる場合がある。
+- ComfyUI custom nodeはPythonコードを実行するため、依存とファイルアクセスを導入前に監査する。
 
 ⸻
 

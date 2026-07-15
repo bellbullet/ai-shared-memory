@@ -167,6 +167,38 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Amazon Sale Monitoring → `AI_DRAWERS.md`
 - Creative Pipeline → `AI_DRAWERS.md`
 - Infinite World Generation → `AI_DRAWERS.md`
+- Backlog.md / Markdown task manager / 1 task 1 context 1 PR → `AI_DRAWERS.md`
+- AI-PLC / Product Lifecycle / pm-skills → `INBOX.md`, `AI_DRAWERS.md`
+- Graphify / codebase knowledge graph / code intelligence → `AI_DRAWERS.md`
+- Rowboat / personal knowledge graph / local Markdown memory → `INBOX.md`, `AI_DRAWERS.md`
+- Claudian / Obsidian Codex / vault agent → `INBOX.md`, `AI_DRAWERS.md`
+- halo-record / tamper-evident agent audit / hash chain → `AI_DRAWERS.md`
+- loopeng-bootstrap / auditable agent loop / durable Run Report → `AI_DRAWERS.md`, `OKF.md`
+- Tutti / shared agent workspace → `INBOX.md`, `AI_DRAWERS.md`
+- ccc-usage-dashboard / Codex usage / OTLP / quota / cost → `AI_DRAWERS.md`
+- codex-model-routing-guard / Codex hook / model routing → `AI_DRAWERS.md`
+- codex-hygiene / context audit / tool surface / Codex telemetry → `AI_DRAWERS.md`
+- openai/codex-plugin-cc / Claude to Codex delegation → `AI_DRAWERS.md`
+- small-vlm-sop-check / local VLM / SOP video analysis → `AI_DRAWERS.md`
+- OpenLive / realtime voice and vision / on-device audio → `AI_DRAWERS.md`
+- Meetily / local meeting transcription / diarization → `INBOX.md`
+- Colibrì / MoE expert streaming / disk offload → `INBOX.md`
+- sound-efect / Stable Audio SFX / local sound generation → `INBOX.md`
+- image-3d / Hunyuan3D / image to 3D / fabrication → `INBOX.md`
+- AnimeGen-T2V / anime text-to-video → `INBOX.md`
+- MotionGen / Blender motion capture / video to rig → `INBOX.md`
+- BlenderMCP / Blender MCP / LLM 3D creation → `INBOX.md`
+- drawio-ai-kit / draw.io stencil validation / architecture diagram skill → `AI_DRAWERS.md`
+- Qwen Image Edit Pixel Perfect / ComfyUI registration / mask preservation → `AI_DRAWERS.md`
+- ChatCut agent-plugin / OAuth video editing MCP → `INBOX.md`
+- MengTo Skills / design agent skills / frontend workflow → `INBOX.md`
+- emilkowalski skills / apple-design / motion design skill → `INBOX.md`
+- Astryx / agent-ready React design system → `INBOX.md`
+- LiteRT.js / browser inference / WebGPU / WASM → `AI_DRAWERS.md`
+- onnx2tf / ONNX conversion / LiteRT / TFLite → `AI_DRAWERS.md`
+- MAD-OPD / multi-agent debate distillation → `INBOX.md`
+- MMD-Reg / point-cloud registration / MMD → `INBOX.md`
+- LA4VLA / language-action pretraining / VLA → `INBOX.md`
 
 ## Quick Lookup
 

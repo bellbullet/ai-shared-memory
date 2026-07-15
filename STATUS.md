@@ -1,6 +1,6 @@
 # STATUS
 
-最終更新: 2026-07-13
+最終更新: 2026-07-15
 
 Workspace 全体の現在地を一覧するファイル。
 
@@ -51,8 +51,8 @@ Workspace 全体の現在地を一覧するファイル。
 | Check | State | Next action |
 | --- | --- | --- |
 | Entry points | Synced on 2026-07-13 | Recheck after structure, version, or read-order changes |
-| `INBOX.md` | 47 GitHub links remain in one staged batch | Promote in small thematic groups during Memory Review |
-| `AI_DRAWERS.md` | 76 entries / 11 categories / 12 cross-groups; single-file layout retained | Consider splitting only when retrieval or maintenance degrades |
+| `INBOX.md` | Existing OSS batch plus the 2026-07-15 X-derived candidates remain grouped by role and risk | Promote only after the recorded license, permission, external transmission, and runtime gates are cleared |
+| `AI_DRAWERS.md` | 90 entries / 11 categories / 12 cross-groups; single-file layout retained | Consider splitting only when retrieval or maintenance degrades |
 | `PROJECTS/` | 8 metadata files | Refresh when project Goal / Status / Stack / Next Tasks change |
 | `NOTES/` | 8 files, including compatibility files | Review duplication and stale summaries during monthly review |
 | Pending decisions | 2 open items | Resolve or defer explicitly in `DECISIONS.md` when adopted |
