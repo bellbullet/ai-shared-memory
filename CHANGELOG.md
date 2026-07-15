@@ -4,6 +4,7 @@
 
 ## 2026-07-15
 
+- `AI_DRAWERS.md` の優先度未設定17件を、状態、現在の再利用フロー、既存プロジェクトとの関連で ★★★☆☆ から ★★★★★ へ整理。
 - VitePressによる公開知識ベース閲覧サイトを追加し、日本語UI、ダークモード、ローカル全文検索、サイトマップ、GitHub上の原本への導線を整備。
 - GitHub Pages向けのActions Workflowと `base: "/ai-shared-memory/"` を追加し、`main` へのpushで自動デプロイする構成へ更新。
 - GitHub PagesのSourceをGitHub Actionsへ設定し、初回デプロイと公開URL `https://bellbullet.github.io/ai-shared-memory/` の表示を確認。

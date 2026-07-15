@@ -134,7 +134,7 @@ https://github.com/google-labs-code/design.md
 
 優先度:
 
-- 未設定
+- ★★★★☆
 
 ⸻
 
@@ -158,7 +158,7 @@ https://github.com/firecrawl/firecrawl
 
 優先度:
 
-- 未設定
+- ★★★★☆
 
 ⸻
 
@@ -328,7 +328,7 @@ https://github.com/openai/whisper
 
 優先度:
 
-- 未設定
+- ★★★★★
 
 ⸻
 
@@ -687,7 +687,7 @@ https://github.com/XiaomiMiMo/MiMo-Code
 
 優先度:
 
-- 未設定
+- ★★★☆☆
 
 ⸻
 
@@ -711,7 +711,7 @@ https://github.com/chopratejas/headroom
 
 優先度:
 
-- 未設定
+- ★★★★☆
 
 ⸻
 
@@ -1014,7 +1014,7 @@ https://huggingface.co/collections/puwaer/susono-model
 
 優先度:
 
-- 未設定
+- ★★★☆☆
 
 ⸻
 
@@ -1120,7 +1120,7 @@ https://github.com/RevylAI/greenlight
 
 優先度:
 
-- 未設定
+- ★★★☆☆
 
 ⸻
 
@@ -1685,7 +1685,7 @@ https://github.com/apple/container
 
 優先度:
 
-- 未設定
+- ★★★☆☆
 
 ⸻
 
@@ -2092,7 +2092,7 @@ https://github.com/OpenCut-app/OpenCut
 
 優先度:
 
-- 未設定
+- ★★★★☆
 
 ⸻
 
@@ -2154,7 +2154,7 @@ https://github.com/yt-dlp/yt-dlp
 
 優先度:
 
-- 未設定
+- ★★★★☆
 
 ⸻
 
@@ -2531,7 +2531,7 @@ https://github.com/AmruthPillai/Reactive-Resume
 
 優先度:
 
-- 未設定
+- ★★★☆☆
 
 ⸻
 
@@ -2709,7 +2709,7 @@ https://github.com/gethomepage/homepage
 
 優先度:
 
-- 未設定
+- ★★★★☆
 
 ⸻
 
@@ -2734,7 +2734,7 @@ https://github.com/immich-app/immich
 
 優先度:
 
-- 未設定
+- ★★★★☆
 
 ⸻
 
@@ -2758,7 +2758,7 @@ https://github.com/n8n-io/n8n
 
 優先度:
 
-- 未設定
+- ★★★★☆
 
 ⸻
 
@@ -2782,7 +2782,7 @@ https://github.com/localsend/localsend
 
 優先度:
 
-- 未設定
+- ★★★★☆
 
 ⸻
 
@@ -2809,7 +2809,7 @@ https://github.com/Stirling-Tools/Stirling-PDF
 
 優先度:
 
-- 未設定
+- ★★★★★
 
 ⸻
 
@@ -2925,7 +2925,7 @@ https://github.com/AppFlowy-IO/AppFlowy
 
 優先度:
 
-- 未設定
+- ★★★★☆
 
 ⸻
 
