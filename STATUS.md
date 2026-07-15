@@ -12,6 +12,8 @@ Workspace 全体の現在地を一覧するファイル。
 - Root: `<workspace-root>`
 - Active projects: `<workspace-root>\Projects`
 - Shared knowledge: `<workspace-root>\ai-shared-memory`
+- Public knowledge site: https://bellbullet.github.io/ai-shared-memory/
+- Deployment: GitHub Pages / GitHub Actions (`main` push)
 - Archive: `<workspace-root>\Archive`
 - Sandbox: `<workspace-root>\Sandbox`
 - Shared reusable material: `<workspace-root>\Shared`
@@ -50,6 +52,7 @@ Workspace 全体の現在地を一覧するファイル。
 
 | Check | State | Next action |
 | --- | --- | --- |
+| Public knowledge site | Live on GitHub Pages; initial deployment verified on 2026-07-15 | Recheck the Actions run and public URL after site-related changes |
 | Entry points | Synced on 2026-07-13 | Recheck after structure, version, or read-order changes |
 | `INBOX.md` | Existing OSS batch plus the 2026-07-15 X-derived candidates remain grouped by role and risk | Promote only after the recorded license, permission, external transmission, and runtime gates are cleared |
 | `AI_DRAWERS.md` | 90 entries / 11 categories / 12 cross-groups; single-file layout retained | Consider splitting only when retrieval or maintenance degrades |
@@ -61,6 +64,7 @@ Workspace 全体の現在地を一覧するファイル。
 
 | Candidate | State | First target | Gate |
 | --- | --- | --- | --- |
+| VitePress / GitHub Pages | Adopted | ai-shared-memory | Keep the repository base path, local build, and public-safe content checks |
 | Ponytail / Minimal Implementation Policy | Adopted as policy | All development work | No automatic package installation |
 | Memory Consolidation / Dream Review | Adopted | ai-shared-memory | Run only at documented triggers |
 | reviewable-html-workbench | Planned | ai-shared-memory / `OUTPUTS/` | Start when a reviewable HTML artifact exists |

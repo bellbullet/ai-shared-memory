@@ -4,6 +4,9 @@
 
 ## 2026-07-15
 
+- VitePressによる公開知識ベース閲覧サイトを追加し、日本語UI、ダークモード、ローカル全文検索、サイトマップ、GitHub上の原本への導線を整備。
+- GitHub Pages向けのActions Workflowと `base: "/ai-shared-memory/"` を追加し、`main` へのpushで自動デプロイする構成へ更新。
+- GitHub PagesのSourceをGitHub Actionsへ設定し、初回デプロイと公開URL `https://bellbullet.github.io/ai-shared-memory/` の表示を確認。
 - Xで発見後、GitHub、Hugging Face、公式販売ページ、論文まで一次情報を確認したAI関連候補を一括整理。Xの検索件数や表示順位は技術項目にせず、発見経路としてのみ扱った。
 - `AI_DRAWERS.md`へ Backlog.md、Graphify、halo-record、loopeng-bootstrap、ccc-usage-dashboard、codex-model-routing-guard、codex-hygiene、`openai/codex-plugin-cc`、small-vlm-sop-check、OpenLive、drawio-ai-kit、LiteRT.js、onnx2tf、Qwen Image Edit Pixel Perfect nodes の14件を追加。
 - 既登録の HyperFrames と agmsg は新規追加せず、ライセンス、役割比較、安全上の注意を補足。

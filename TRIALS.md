@@ -1,6 +1,6 @@
 # TRIALS
 
-最終更新: 2026-07-13
+最終更新: 2026-07-15
 
 登録済みの OSS、AI 技術、運用パターンを実際の作業で試し、採用判断へつなげるための記録です。
 
@@ -46,6 +46,47 @@
 - Oracle: 難しい設計判断、原因不明の不具合、release readinessのセカンドオピニオンが必要なときに検討する。
 
 ## Trial Records
+
+### 2026-07-15 VitePress / GitHub Pages
+
+対象:
+
+- ai-shared-memory の公開閲覧サイト
+
+目的:
+
+- 既存Markdownを原本として維持しながら、検索性、ナビゲーション、現在地の見やすさを改善する。
+
+結果:
+
+- 有効
+
+有効だった点:
+
+- VitePressで既存Markdownを大きく移動せずサイト化できた。
+- 日本語UI、ダークモード、ローカル全文検索、GitHub上の原本への導線を追加できた。
+- `base: "/ai-shared-memory/"` でGitHub Pagesのサブパス配信に対応できた。
+- `main` へのpushからGitHub Actionsによるビルドとデプロイが成功し、公開URLの表示を確認できた。
+
+問題:
+
+- GitHub Actionsの実行環境更新に伴う非致命的なNode.js互換性注記があるため、利用Actionの更新状況を継続確認する。
+
+判断:
+
+- Adopted
+
+再利用条件:
+
+- リポジトリ名に合わせた `base` を設定し、PagesのSourceをGitHub Actionsにする。
+- 公開前に `npm ci`、`npm run docs:build`、内部リンク、公開対象、秘密情報の混入を確認する。
+
+反映先:
+
+- `CHANGELOG.md`
+- `STATUS.md`
+- `.vitepress/`
+- `.github/workflows/deploy-pages.yml`
 
 ### 2026-07-13 Memory Consolidation / Dream Review
 
