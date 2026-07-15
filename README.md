@@ -103,7 +103,7 @@ AI は原則として次の順で読む。
 4. [AGENTS.md](AGENTS.md) - AI 向け運用ルール
 5. [CURRENT.md](CURRENT.md) - 現在の焦点、待ち、次の行動
 6. [AI_INDEX.md](AI_INDEX.md) - 関連ファイル索引
-7. 必要な [SKILLS](SKILLS) - 作業種別ごとの詳細ルール
+7. 必要な [SKILLS](SKILLS/) - 作業種別ごとの詳細ルール
 8. 作業対象ファイル - `AI_DRAWERS.md` / `PROJECTS/*.md` / `NOTES/*.md`
 9. [TRIALS.md](TRIALS.md) - 登録済み候補を試す場合の実績・判断・再利用条件
 10. [INBOX.md](INBOX.md) - 未整理の新規リンクやアイデア
@@ -113,7 +113,7 @@ AI は原則として次の順で読む。
 ## ファイルの役割
 
 - [PROJECT_START.md](PROJECT_START.md): AI が最初に読む作業開始チェックリスト。
-- [VERSION](VERSION): 現在のリポジトリバージョン。
+- [VERSION](https://github.com/bellbullet/ai-shared-memory/blob/main/VERSION): 現在のリポジトリバージョン。
 - [WORKSPACE.md](WORKSPACE.md): ワークスペース地図。
 - [STATUS.md](STATUS.md): workspace 全体の現在地。
 - [AGENTS.md](AGENTS.md): 複数 AI 向けの編集・運用ルール。
@@ -132,12 +132,12 @@ AI は原則として次の順で読む。
 - [CHANGELOG.md](CHANGELOG.md): 構成変更・運用ルール変更の履歴。
 - [INBOX.md](INBOX.md): 整理前のリンク、アイデア、調査候補。
 - [AI_DRAWERS.md](AI_DRAWERS.md): OSS・AI・開発ツールの技術レーダー。
-- [references](references): 公式ドキュメントを読むための概念地図や長期参照資料。
-- [OUTPUTS](OUTPUTS): Markdown 原本から生成した PDF、PowerPoint、Excel、画像などの成果物。
-- [SKILLS](SKILLS): PowerShell、Python、Git、Research、Security など作業種別ごとの詳細ルール。
-- [PROJECTS](PROJECTS): プロジェクトごとの目的、状態、次の作業。
-- [NOTES](NOTES): プロジェクトから独立した技術メモ。
-- [TEMPLATES](TEMPLATES): 新規 Project / Note の雛形。
+- [references](references/): 公式ドキュメントを読むための概念地図や長期参照資料。
+- [OUTPUTS](OUTPUTS/): Markdown 原本から生成した PDF、PowerPoint、Excel、画像などの成果物。
+- [SKILLS](SKILLS/): PowerShell、Python、Git、Research、Security など作業種別ごとの詳細ルール。
+- [PROJECTS](PROJECTS/): プロジェクトごとの目的、状態、次の作業。
+- [NOTES](NOTES/): プロジェクトから独立した技術メモ。
+- [TEMPLATES](TEMPLATES/): 新規 Project / Note の雛形。
 
 ## Reuse Lifecycle
 
