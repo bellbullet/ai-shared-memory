@@ -42,6 +42,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 ## Notes
 
 - AI → `NOTES/AI.md`
+- AI Behavior Candidates → `NOTES/AI_Behavior_Candidates.md`
 - AI Coding Patterns → `NOTES/AI_Coding_Patterns.md`
 - AI Workspace Ideas → `NOTES/AI_Workspace_Ideas.md`
 - HomeLab → `NOTES/HomeLab.md`
@@ -109,6 +110,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Embedded / deterministic memory / flight software → `AI_DRAWERS.md`
 - OpenAI Prompting / Prompting fundamentals → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
 - Goal / Context / Output / Boundaries → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
+- AI Behavior / AI Behavior Library / Behavior Candidate → `NOTES/AI_Behavior_Candidates.md`
+- AI Operating Rules / Cognitive Skills / AI Reasoning Skills → `NOTES/AI_Behavior_Candidates.md`
 - prompt design / prompt engineering → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
 - Hermes Agent → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
 - Hermes Skills → `AI_DRAWERS.md`, `SKILLS/README.md`, `NOTES/AI_Coding_Patterns.md`

@@ -6,6 +6,8 @@
 
 - `PROJECTS/AIHub.md`を追加し、AI Hub Lite Phase 01の目的、MVP項目、Google AI Studio・GitHub・Codex間の運用、非対象、段階的な次作業を定義。
 - `PROJECTS/index.md`、`AI_INDEX.md`、`CURRENT.md`へAI Hubの入口と現在の優先作業を同期。
+- `NOTES/AI_Behavior_Candidates.md` を追加し、AIの思考・出力品質を改善する候補の保管先、2件の初期候補、昇格条件を定義。正式なカテゴリや強制ルールはまだ作成していない。
+- `NOTES/index.md` と `AI_INDEX.md` にAI Behavior Candidatesと関連キーワードの導線を追加。
 
 ## 2026-07-15
 
