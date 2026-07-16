@@ -68,6 +68,7 @@
 - 既存のPortalデザイン、AI Shared Memory、GitHubを再利用し、新しい認証・APIキー・データベースなしで公開できた。
 - Google AI Studio、GitHub、Codex、公開Portalをつなぐ案内板として機能した。
 - `bellbullet.ai.studio`への再公開後、AI Hubの表示と`PROJECTS/AIHub.md`へのDocumentationリンクを確認できた。
+- 公開後チェックで、スマホ390px幅の横はみ出しなし、Projects / AI Tools / Current Work、Coming Soon 3件、外部リンク、公開安全性、キャッシュ回避表示、実行ログ0件を確認できた。
 
 問題:
 
