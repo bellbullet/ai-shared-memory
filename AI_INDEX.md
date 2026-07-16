@@ -30,6 +30,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 ## Projects
 
 - AIRI → `PROJECTS/AIRI.md`
+- AI Hub / AI Hub Lite → `PROJECTS/AIHub.md`
 - GameFreezeSentinel → `PROJECTS/GameFreezeSentinel.md`
 - KomiReader → `PROJECTS/KomiReader.md`
 - MahjongFirstDiscard → `PROJECTS/MahjongFirstDiscard.md`
@@ -217,6 +218,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ### AI / Agents
 
+- AI Hub / AI開発管制Hub / AI Hub Lite → `PROJECTS/AIHub.md`
 - Whisper → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - AIRI → `PROJECTS/AIRI.md`
 - AI Companion / AIRI support → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`

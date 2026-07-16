@@ -2,6 +2,11 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-16
+
+- `PROJECTS/AIHub.md`を追加し、AI Hub Lite Phase 01の目的、MVP項目、Google AI Studio・GitHub・Codex間の運用、非対象、段階的な次作業を定義。
+- `PROJECTS/index.md`、`AI_INDEX.md`、`CURRENT.md`へAI Hubの入口と現在の優先作業を同期。
+
 ## 2026-07-15
 
 - `AI_DRAWERS.md` の優先度未設定17件を、状態、現在の再利用フロー、既存プロジェクトとの関連で ★★★☆☆ から ★★★★★ へ整理。

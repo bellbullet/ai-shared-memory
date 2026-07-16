@@ -3,6 +3,7 @@
 進行中プロジェクトの目的、状態、次の作業、再利用候補をまとめています。
 
 - [AIRI](AIRI.md)
+- [AI Hub](AIHub.md)
 - [GameFreezeSentinel](GameFreezeSentinel.md)
 - [KomiReader](KomiReader.md)
 - [MahjongFirstDiscard](MahjongFirstDiscard.md)

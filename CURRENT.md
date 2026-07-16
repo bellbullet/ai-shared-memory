@@ -1,11 +1,13 @@
 # CURRENT
 
-最終更新: 2026-07-13
+最終更新: 2026-07-16
 
 このファイルは `PROJECT_START.md`、`WORKSPACE.md`、`STATUS.md`、`AGENTS.md` の後に読む現在地です。
 
 ## Current Focus
 
+- `PROJECTS/AIHub.md`を起点に、AI Workspace Portal内でAI Hub Lite Phase 01を進める。
+- まずは静的データでProjects、AI Tools、Current Workを見渡せるようにし、API統合は利用実績ができるまで追加しない。
 - v1.1 Consolidated Memory Architecture として、収集済み知識を検索・比較・再利用しやすい状態に保つ。
 - README、ChatGPT Projects 用情報源、現在地、索引、レビュー条件を同じスナップショットへ同期する。
 - 新規リンクや未整理アイデアは `INBOX.md` または `AI_DRAWERS.md` に入れ、分類済み知識は `AI_INDEX.md` から辿れるようにする。
@@ -22,6 +24,7 @@
 
 ## Next Actions
 
+- AI Hub Liteの表示と外部リンクを検証し、実際の利用で更新負担と自動化候補を見極める。
 - 作業開始時は `PROJECT_START.md` → `WORKSPACE.md` → `STATUS.md` → `AGENTS.md` → `CURRENT.md` → `AI_INDEX.md` の順に確認する。
 - 関連ファイルを探すときは `AI_INDEX.md` を参照する。
 - workspace の健康状態と次回 Memory Review 条件は `STATUS.md` と `REVIEW.md` で確認する。
