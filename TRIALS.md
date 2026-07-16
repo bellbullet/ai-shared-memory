@@ -47,6 +47,50 @@
 
 ## Trial Records
 
+### 2026-07-16 AI Hub Lite Phase 01
+
+対象:
+
+- BellBullet AI Workspace Portalの静的AI開発管制Hub
+
+目的:
+
+- プロジェクト、使用AI、現在作業、公開物、共有知識への導線を一画面で確認できるようにする。
+- API、認証、データベースを追加せず、管制盤としての実用性を確認する。
+
+結果:
+
+- 有効
+
+有効だった点:
+
+- 静的データだけでも、各プロジェクトのStatus、使用AI、Next Action、公開URL、GitHub、Documentationを一か所で確認できた。
+- 既存のPortalデザイン、AI Shared Memory、GitHubを再利用し、新しい認証・APIキー・データベースなしで公開できた。
+- Google AI Studio、GitHub、Codex、公開Portalをつなぐ案内板として機能した。
+- `bellbullet.ai.studio`への再公開後、AI Hubの表示と`PROJECTS/AIHub.md`へのDocumentationリンクを確認できた。
+
+問題:
+
+- Phase 01は静的データのため、Status、Last Updated、Next Actionは手動更新になる。
+- CodexからGoogle AI Studioへの反映は、GitHub pushだけでは完結せず、AI Studio側でコード反映とRepublishが必要だった。
+
+判断:
+
+- Adopted
+
+再利用条件:
+
+- まず静的表示を運用し、実際の更新負荷を観察する。
+- Status、Last Updated、Next Actionの更新負荷が明確になった場合だけ、`PROJECTS/*.md`や`CURRENT.md`からのビルド時取得をPhase 02として検討する。
+- 複数AIのAPI統合、認証、履歴同期、データベースは、管制盤の利用実績から必要性が確認されるまで追加しない。
+
+反映先:
+
+- `PROJECTS/AIHub.md`
+- `CURRENT.md`
+- `AI_INDEX.md`
+- BellBullet AI Workspace Portal
+
 ### 2026-07-15 VitePress / GitHub Pages
 
 対象:
