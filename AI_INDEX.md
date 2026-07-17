@@ -167,6 +167,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - japanese-tech-writing / k16shikano gist → `AI_DRAWERS.md`
 - Japanese technical writing / 日本語技術文書 → `AI_DRAWERS.md`
 - LLM writing skill / 文章規範 skill → `AI_DRAWERS.md`, `SKILLS/README.md`
+- textlint-rule-preset-ai-writing / AI writing lint / textlint MCP → `AI_DRAWERS.md`
 - Amazon セール検知システム → `AI_DRAWERS.md`
 - Amazon Sale Monitoring → `AI_DRAWERS.md`
 - Creative Pipeline → `AI_DRAWERS.md`
@@ -203,6 +204,19 @@ AI が関連ファイルを素早く見つけるための索引です。
 - MAD-OPD / multi-agent debate distillation → `INBOX.md`
 - MMD-Reg / point-cloud registration / MMD → `INBOX.md`
 - LA4VLA / language-action pretraining / VLA → `INBOX.md`
+- Superpowers / spec-first / TDD / subagent development → `AI_DRAWERS.md`
+- Grok Build / coding agent TUI / SpaceXAI source mirror → `INBOX.md`
+- RunCat Neo / local JSON metrics / menubar usage display → `INBOX.md`
+- Cua / computer-use driver / agent sandbox / herdr multiplexer → `INBOX.md`
+- wigolo / local-first web research MCP / crawl cache → `INBOX.md`
+- CX Notifier / Codex completion notification / webhook Hook → `INBOX.md`
+- EdgeEver / Cloudflare notes / remote MCP / flyai travel skill → `INBOX.md`
+- pdf-brain / local PDF Markdown semantic search / Ollama libSQL → `INBOX.md`
+- EasyEDA API Skill / WebSocket bridge / circuit design agent → `INBOX.md`
+- Hallmark / anti-slop UI design skill / design audit → `INBOX.md`
+- text-to-vrma / VRMA motion / Live2D motion Web UI / AIRI → `INBOX.md`
+- ComfyUI_VNCCS / visual novel character consistency → `INBOX.md`
+- StarVector / image to SVG code / PiD pixel diffusion / qllm2 → `INBOX.md`
 
 ## Quick Lookup
 
@@ -366,6 +380,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - reviewable-html-workbench → `AI_DRAWERS.md`, `OUTPUTS/README.md`
 - japanese-tech-writing / k16shikano gist → `AI_DRAWERS.md`, `SKILLS/README.md`
 - anthropics/skills → `AI_DRAWERS.md`, `SKILLS/README.md`
+- Superpowers / composable agent skills / TDD workflow → `AI_DRAWERS.md`
 
 ## Topic Routing
 

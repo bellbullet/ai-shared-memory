@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-07-15
+最終更新: 2026-07-17
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫です。
 
@@ -12,12 +12,12 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 90
+- 登録項目: 92
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
 - 重点領域: Agent / Orchestration、AI Coding Operations、Knowledge Management、Creative Pipeline、Self Host / Tools。
-- 最近の追加: X発見候補から Backlog.md、halo-record、loopeng-bootstrap、Graphify、Codex運用3件、Edge / Local AI 4件、制作支援2件を一次情報確認後に統合。
+- 最近の追加: X発見候補から Superpowers と textlint-rule-preset-ai-writing を一次情報確認後に統合し、実行・認証・外部依存を伴う候補は `INBOX.md` へ保留。
 - 未整理項目と次回レビュー条件は `STATUS.md`、分類前リンクは `INBOX.md` を参照する。
 
 カテゴリ別ファイル分割は、検索性や保守性が単一ファイルでは不足した時点で検討し、v1.1 では行わない。
@@ -1339,6 +1339,45 @@ https://github.com/anthropics/skills
 メモ:
 
 - ai-shared-memory ではすでに `SKILLS/` 思想を取り込んでいるため、今すぐ導入ではなく参照枠として扱う。
+
+⸻
+
+### Superpowers
+
+URL:
+https://github.com/obra/superpowers
+
+分類:
+
+- AI Coding Operations
+- Development Workflow
+- Skills
+- TDD / Subagent Review
+
+概要:
+
+- 要件の具体化、設計承認、実装計画、red / green TDD、subagentによる実装とレビューをcomposable skillとしてまとめた開発方法論。
+- Codex App / CLIを含む複数のcoding agent harnessへ同じ工程を移植できる点が、skill routingと開発loopの比較材料になる。
+
+用途:
+
+- `PROJECT_START.md`、`PLAN.md`、`AGENTS.md`の工程設計との比較
+- spec-first、TDD、実装後レビューの再利用可能な分割
+- 長時間agent作業の承認点とsubagent境界の研究
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- MIT License。
+- 自動trigger、plugin導入、subagent駆動を前提にするため、既存運用へ丸ごと追加せず、skill単位で指示内容・shell実行・書込み範囲を監査する。
+- `loopeng-bootstrap`が監査可能な実行・受入・memory更新loopを重視するのに対し、Superpowersは要件確認からTDD・subagent reviewまでの開発方法論を重視する。
 
 ⸻
 
@@ -3279,6 +3318,45 @@ https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
 
 ⸻
 
+### textlint-rule-preset-ai-writing
+
+URL:
+https://github.com/textlint-ja/textlint-rule-preset-ai-writing
+
+分類:
+
+- AI Coding Operations
+- Writing Quality
+- Japanese Text Lint
+- MCP
+
+概要:
+
+- AI生成文に多い機械的なlist、見出し、対比などの構造を検出し、より自然な日本語への改善を促すtextlint preset。
+- textlintのMCP serverを使い、生成、検査、改善提案を分離したfeedback loopを組める。
+
+用途:
+
+- README、NOTES、PROJECTSの日本語品質チェック
+- AI生成Markdownの構造的な癖の可視化
+- `japanese-tech-writing`の文章規範を自動検査で補助
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- MIT License。textlint 15.1.0以上が必要。
+- patch更新でも検出件数が変わり得るため、導入時はversionを固定し、既存文書への一括修正を自動適用しない。
+- 文章品質の補助として使い、AI利用の隠蔽、検知回避、出自の偽装には使わない。
+
+⸻
+
 ### OpenAI Prompting
 
 URL:
@@ -3599,6 +3677,7 @@ URL:
 - agency-agents
 - Hermes Agent
 - anthropics/skills
+- Superpowers
 - Oracle
 - pxpipe
 - PixelRAG
@@ -3607,6 +3686,7 @@ URL:
 - Claude Code運用ミス7選
 - Memory Consolidation / Dream Review
 - japanese-tech-writing / k16shikano gist
+- textlint-rule-preset-ai-writing
 - The Hitchhiker's Guide to Agentic AI
 
 用途:
@@ -3646,6 +3726,7 @@ URL:
 - Hermes Agent
 - PixelRAG
 - japanese-tech-writing / k16shikano gist
+- textlint-rule-preset-ai-writing
 - claude-real-video
 
 用途:
@@ -3782,6 +3863,7 @@ URL:
 - Open Notebook
 - Buzz
 - Paperless-ngx
+- Superpowers
 
 ### 次に試す
 
@@ -3792,6 +3874,7 @@ URL:
 - reviewable-html-workbench
 - claude-real-video
 - Recordly
+- textlint-rule-preset-ai-writing
 
 ### 将来導入
 
@@ -3831,6 +3914,7 @@ URL:
 - PixelRAG
 - awesome-free-llm-apis
 - Open Notebook
+- textlint-rule-preset-ai-writing
 
 ### 研究対象
 

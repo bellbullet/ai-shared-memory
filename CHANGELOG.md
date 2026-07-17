@@ -2,6 +2,11 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-17
+
+- Xの`github.com`検索で異なる投稿URLを100件確認し、過去調査と重複した4件を除いて一次情報を再確認。`Superpowers`と`textlint-rule-preset-ai-writing`を`AI_DRAWERS.md`へ昇格し、実行・認証・外部依存を伴う17件を`INBOX.md`へ役割別に統合。
+- `AI_INDEX.md`へspec-first / TDD / subagent development、日本語AI文章lint、computer-use、local web research MCP、AIRI motion、SVG / pixel diffusion研究などの検索導線を追加。リーク、認証・制限回避、既登録項目は除外。
+
 ## 2026-07-16
 
 - `PROJECTS/AIHub.md`を追加し、AI Hub Lite Phase 01の目的、MVP項目、Google AI Studio・GitHub・Codex間の運用、非対象、段階的な次作業を定義。
