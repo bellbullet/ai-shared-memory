@@ -4,6 +4,8 @@
 
 ## 2026-07-18
 
+- `SKILLS/Git.md`に`Codex Git Gate`を追加し、`ai-shared-memory`での条件付き自律commit / push、限定stage、既存未push commitの確認、停止条件、固定結果語彙、最終報告項目を定義した。
+- `AI_INDEX.md`へCodex Git Gate、autonomous commit / push decision、exact staging、unpushed commit safety checkの検索導線を追加。
 - Switch to Codex galleryの6カテゴリ535件を末尾まで確認し、Developers 30、Operations & data 22、Product & design 20、Education 15、Marketing 8、Founders 5の計100件を再選別。キャンペーン投稿は発見経路に限定した。
 - `Haoleme`と`Spell Quest`を、terminal output外部送信、pairing、任意command実行、ライセンス未確認、asset条件のため`INBOX.md`へ保留。新規の`AI_DRAWERS.md`昇格は行わなかった。
 - OpenAI公式のSol / Terra / Lunaを能力・コストtierとして確認し、固定planner / executor roleではなくtask contractとacceptance gateで選ぶmodel routingを`NOTES/AI_Coding_Patterns.md`へ追加。

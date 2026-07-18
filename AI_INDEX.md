@@ -317,6 +317,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 - PowerShell skill → `SKILLS/PowerShell.md`
 - Python skill → `SKILLS/Python.md`
 - Git skill → `SKILLS/Git.md`
+- Codex Git Gate / autonomous commit / push decision → `SKILLS/Git.md`
+- Push / Commit only / No commit / No change / Blocked → `SKILLS/Git.md`
+- exact staging / unpushed commit safety check → `SKILLS/Git.md`
 - Research skill → `SKILLS/Research.md`
 - Security skill → `SKILLS/Security.md`, `SECURITY_REVIEW.md`
 - AI 役割分担 / profiles → `AI_PROFILES.md`
