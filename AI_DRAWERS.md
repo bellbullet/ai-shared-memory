@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-07-17
+最終更新: 2026-07-18
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫です。
 
@@ -12,12 +12,12 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 92
+- 登録項目: 94
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
 - 重点領域: Agent / Orchestration、AI Coding Operations、Knowledge Management、Creative Pipeline、Self Host / Tools。
-- 最近の追加: X発見候補から Superpowers と textlint-rule-preset-ai-writing を一次情報確認後に統合し、実行・認証・外部依存を伴う候補は `INBOX.md` へ保留。
+- 最近の追加: Xブックマーク発見候補から ChatGPT Sites と Gemma 4 を一次情報確認後に統合し、外部送信、認証、モデル取得、ライセンス制約を伴う候補は `INBOX.md` へ保留。
 - 未整理項目と次回レビュー条件は `STATUS.md`、分類前リンクは `INBOX.md` を参照する。
 
 カテゴリ別ファイル分割は、検索性や保守性が単一ファイルでは不足した時点で検討し、v1.1 では行わない。
@@ -1018,6 +1018,68 @@ https://huggingface.co/collections/puwaer/susono-model
 
 ⸻
 
+### Gemma 4
+
+Category:
+
+- LLM
+- Local AI
+- Edge AI
+- Multimodal
+
+Tags:
+
+- Google DeepMind
+- Open-weight LLM
+- Mixture-of-Experts
+- On-device AI
+- Function calling
+- Structured JSON
+- Vision
+- Audio
+
+Official Links:
+
+- Announcement: https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/
+- Model card: https://ai.google.dev/gemma/docs/core/model_card_4
+- Hugging Face models: https://huggingface.co/google
+
+License:
+
+- Apache-2.0。モデル、量子化物、派生物を利用する場合も、取得元のmodel cardと配布条件を個別に確認する。
+
+概要:
+
+- Google DeepMindが2026-04-02に公開したオープンモデル群。現行model cardではE2B、E4B、12B Unified、26B A4B MoE、31B Denseの5サイズで、reasoning、agentic workflow、function calling、structured JSON、system instructionを想定する。
+- 全モデルが画像と動画を扱い、E2B / E4B / 12B Unifiedは音声入力にも対応する。edge modelは128K、larger modelは最大256K context、140以上の言語で事前学習されている。
+
+用途:
+
+- オフラインのlocal AI assistant、coding assistant、RAG、tool-use agentの基盤候補
+- Android、Raspberry Pi、Jetson Orin Nanoなどのedge multimodal研究
+- LiteRT-LM、Transformers、llama.cpp、MLX、Ollama、vLLMなどのruntime比較
+
+制約:
+
+- model weightsと量子化物のdownloadが必要。runtime、quantization、対応hardware、実測RAM / VRAMは配布形式ごとに確認する。
+- Googleのlaunch blogでは、26B / 31Bの非量子化BF16は単一80GB H100を想定し、consumer GPUでは量子化版を使う。E2B / E4Bはedge向けだが、端末別性能を保証する記述ではない。
+- 公開ベンチマークは用途別の品質、安全性、言語性能を保証しないため、採用前に対象taskと日本語で評価する。
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- LiteRT.jsはbrowser実行runtime、onnx2tfはmodel変換、Gemma 4は実行対象となるmodel familyという役割差で整理する。
+- E2B / E4BをAIRIや端末内multimodal assistantへ接続する場合は、音声・画像のlocal処理範囲とfallback時の外部送信を分離して評価する。
+
+⸻
+
 ### awesome-free-llm-apis
 
 URL:
@@ -1701,6 +1763,53 @@ https://github.com/u-ichi/reviewable-html-workbench
 - chat 上の「ここ直して」より、HTML 上の正確な範囲コメントとしてレビューを残せる点が強い。
 - preview server、Tailscale、browser comment、generated HTML を扱うため、公開前レビューでは private document、内部資料、個人情報、API key、token、`.env` 実値を含めない。
 - まずは `ai-shared-memory` の調査まとめや比較表を reviewable HTML 化する用途で試す。
+
+⸻
+
+### ChatGPT Sites
+
+Official Links:
+
+- Help Center: https://help.openai.com/en/articles/20001339-creating-and-managing-chatgpt-sites
+- OpenAI Academy: https://openai.com/academy/chatgpt-sites/
+
+分類:
+
+- Development
+- AI Coding Operations
+- Document Automation
+- AI Workspace / Integrations
+- Site Generation
+
+概要:
+
+- ChatGPTのWorkまたはCodexから、interactive websiteやlightweight appを作成、preview、version保存、deploy、共有できるpublic beta機能。
+- dashboard、project tracker、internal portal、reportなど、AI Hub Liteと近い小規模な業務サイトを会話から作る用途を想定する。
+
+運用パターン:
+
+- 最初は対象者と1つの課題を限定し、private previewで確認する。
+- live更新の前にversionを保存し、deploy後は生成URL、公開範囲、実コンテンツを別セッションで検証する。
+- audience設定とsite内authenticationは別の制御として扱い、forms、sign-in、file、link、個人情報、secretを公開前に確認する。
+
+制約:
+
+- public betaで、plan、region、workspace policy、rollout、利用上限に依存する。上限到達時は新規作成、storage追加、高利用siteの公開継続に制約が出る場合がある。
+- すべてのdeployment URLはproduction URL。preview確認なしのdeployを行わない。
+- prompt、conversation context、upload / reference file、site code、storage、metadata、logなどがホスト運用に使われ得る。Free / Go / Plus / Proではdata control設定により会話が学習利用される可能性があるため、秘密情報や権限のない情報を渡さない。
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- Google AI StudioでのAI Hub Lite運用と比較し、生成速度だけでなくversion、公開範囲、custom domain、data control、公開後検証を評価する。
+- beta仕様は変わりやすいため、利用時はHelp Centerと画面内表示を再確認する。
 
 ⸻
 

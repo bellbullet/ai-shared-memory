@@ -119,11 +119,18 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Unbroker / security-unbroker → `AI_DRAWERS.md`
 - agent skill ecosystem security → `AI_DRAWERS.md`, `SECURITY_REVIEW.md`
 - Susono Model → `AI_DRAWERS.md`
+- Gemma 4 / Google DeepMind open model → `AI_DRAWERS.md`
+- E2B / E4B / 12B Unified / 26B A4B MoE / 31B Dense → `AI_DRAWERS.md`
+- edge multimodal / on-device audio / local agent model → `AI_DRAWERS.md`
 - Greenlight → `AI_DRAWERS.md`
 - Ponytail → `AI_DRAWERS.md`, `AGENTS.md`, `PROJECT_START.md`
 - deepsec → `AI_DRAWERS.md`, `SECURITY_REVIEW.md`, `AGENTS.md`, `PROJECT_START.md`
 - PPT Master → `AI_DRAWERS.md`, `OUTPUTS/README.md`
 - reviewable-html-workbench → `AI_DRAWERS.md`, `OUTPUTS/README.md`
+- ChatGPT Sites / @Sites / lightweight app hosting → `AI_DRAWERS.md`
+- Codex site generation / internal portal / production deployment URL → `AI_DRAWERS.md`, `PROJECTS/AIHub.md`
+- staged enterprise agent rollout / sandboxed AI adoption → `NOTES/AI_Coding_Patterns.md`
+- Mercari AI Agent Day / Claude Cowork guardrails → `NOTES/AI_Coding_Patterns.md`
 - reviewable HTML / inline document review → `AI_DRAWERS.md`
 - HTML artifact review / agent-generated document review → `AI_DRAWERS.md`
 - Document Automation → `AI_DRAWERS.md`, `OUTPUTS/README.md`
@@ -217,6 +224,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - text-to-vrma / VRMA motion / Live2D motion Web UI / AIRI → `INBOX.md`
 - ComfyUI_VNCCS / visual novel character consistency → `INBOX.md`
 - StarVector / image to SVG code / PiD pixel diffusion / qllm2 → `INBOX.md`
+- MuScriptor / multi-instrument audio-to-MIDI / MusicXML → `INBOX.md`
+- Lucy 2.5 / Decart realtime video / camera stream → `INBOX.md`
+- SAORI / Stable Audio Open ReImplementation → `INBOX.md`
+- GPT-5.6 Sol cybersecurity / Trusted Access / Advanced Account Security → `INBOX.md`, `SECURITY_REVIEW.md`
 
 ## Quick Lookup
 

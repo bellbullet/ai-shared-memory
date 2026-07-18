@@ -1,6 +1,6 @@
 # AI Coding Patterns
 
-最終更新: 2026-07-11
+最終更新: 2026-07-18
 
 ## Purpose
 
@@ -18,6 +18,8 @@
 - dream-skill: https://github.com/grandamenium/dream-skill
 - Auto-Dreamer: https://arxiv.org/abs/2605.20616
 - OpenAI Prompting: https://learn.chatgpt.com/docs/prompting
+- Mercari AI Agent Day: https://careers.mercari.com/en/mercan/articles/60180/
+- Mercari AI Agent Day behind the scenes: https://careers.mercari.com/en/mercan/articles/60642/
 
 ## Pattern: Thin AGENTS, Routed Skills
 
@@ -129,6 +131,23 @@ For high-risk or public changes:
 3. manual review
 4. fix
 5. commit / push / release
+
+## Pattern: Staged Enterprise Agent Rollout
+
+AI agentを非エンジニアを含む組織へ広げる場合は、tool配布を単発eventにせず、学習、制限付き実践、定着、権限拡張を段階化する。
+
+Mercariの2026年AI Agent Day事例から再利用できる構造:
+
+1. 対象toolとuse caseを絞り、開始前に学習とpre-workの期間を置く。
+2. 初回はcentralized control、sandbox、strict access controlを優先し、初心者が安全に試せる共通環境を用意する。
+3. 実践日だけで終わらせず、その後に業務へ組み込む期間とpeer learning groupを設ける。
+4. 実績、問い合わせ、失敗例、権限要求を観測し、熟練度と必要性に応じて利用範囲を段階的に広げる。
+
+適用時の注意:
+
+- 公式事例が説明する対象は主にNotion AIとClaude Coworkであり、X上の二次投稿が示唆したClaude Code全社展開と同一視しない。
+- sandboxがあっても、外部送信、connector、MCP、file access、credential、生成物公開の境界は別々に監査する。
+- completion rateや利用者の好意的反応だけで安全性や業務効果を判断せず、権限逸脱、情報漏えい、手戻り、support costも評価する。
 
 ## AI Instructions
 

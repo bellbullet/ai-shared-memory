@@ -2,6 +2,14 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-18
+
+- Chromeで開かれていたXブックマークから異なる投稿URLを100件確認し、過去調査と同一の1件を除いた99件を再選別。投稿を正本にせず、OpenAI、Google DeepMind、GitHub、Hugging Face、Mirelo、Kyutai、Decart、Mercariの一次情報を確認した。
+- `ChatGPT Sites`と`Gemma 4`を`AI_DRAWERS.md`へ昇格。public beta、production deployment、data control、model download、hardware要件を明記し、登録数を94件へ更新した。
+- `MuScriptor`、`Lucy 2.5`、`SAORI`、`GPT-5.6 Sol cybersecurity`を、非商用weight、Hugging Face認証、外部camera stream、一次情報不足、access / safeguard依存のため`INBOX.md`へ保留した。
+- Mercariの公式AI Agent Day事例から、事前学習、集中実践、定着期間、peer group、centralized control、sandbox、段階的な権限拡張を`NOTES/AI_Coding_Patterns.md`へ運用パターンとして追記した。
+- `AI_INDEX.md`へChatGPT Sites、Gemma 4、edge multimodal、MuScriptor、realtime video、staged enterprise agent rollout、GPT-5.6 security運用の検索導線を追加。認証proxy、cheat、leak、制限回避、無断clone、NSFW用途は除外した。
+
 ## 2026-07-17
 
 - Xの`github.com`検索で異なる投稿URLを100件確認し、過去調査と重複した4件を除いて一次情報を再確認。`Superpowers`と`textlint-rule-preset-ai-writing`を`AI_DRAWERS.md`へ昇格し、実行・認証・外部依存を伴う17件を`INBOX.md`へ役割別に統合。
