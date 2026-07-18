@@ -4,6 +4,8 @@
 
 ## 2026-07-18
 
+- `AI_DRAWERS.md`にOpenMOSS TeamのApache-2.0 text-to-audio model `MOSS-SoundEffect-v2.0`を追加。公式model cardとsourceを基に、1.3B DiT、Flow Matching、英語・中国語prompt、48 kHz・最大30秒、v1とのarchitecture差、CUDA / Triton中心の実行条件を記録した。
+- `AI_INDEX.md`へMOSS-SoundEffect-v2.0、text-to-audio / text-to-sound、1.3B DiT audio、Flow Matching audio、48 kHz bilingual sound effectsの検索導線を追加。
 - `SKILLS/Git.md`に`Codex Git Gate`を追加し、`ai-shared-memory`での条件付き自律commit / push、限定stage、既存未push commitの確認、停止条件、固定結果語彙、最終報告項目を定義した。
 - `AI_INDEX.md`へCodex Git Gate、autonomous commit / push decision、exact staging、unpushed commit safety checkの検索導線を追加。
 - Switch to Codex galleryの6カテゴリ535件を末尾まで確認し、Developers 30、Operations & data 22、Product & design 20、Education 15、Marketing 8、Founders 5の計100件を再選別。キャンペーン投稿は発見経路に限定した。

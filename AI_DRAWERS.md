@@ -12,7 +12,7 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 94
+- 登録項目: 95
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
@@ -2623,6 +2623,66 @@ https://github.com/OpenBMB/VoxCPM
 
 ⸻
 
+### MOSS-SoundEffect-v2.0
+
+URL:
+https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0
+
+Repository:
+https://github.com/OpenMOSS/MOSS-TTS/tree/main/moss_soundeffect_v2
+
+Demo:
+https://huggingface.co/spaces/OpenMOSS-Team/MOSS-SoundEffect-v2.0
+
+分類:
+
+- Creative
+- Audio / Sound Effects
+- Text-to-Audio
+- Diffusion Transformer / DiT
+- Flow Matching
+- Creative Pipeline
+
+概要:
+
+- OpenMOSS Teamによる、自然言語から非音声の効果音を生成するオープンウェイトtext-to-audio model。
+- 1.3B parameterのDiffusion TransformerをFlow Matchingで学習し、DAC VAEとQwen3 text encoderを組み合わせる。
+- 英語・中国語のpromptに対応し、環境音、都市音、動物、人物動作、短い音楽的・打楽器的clipを48 kHz、最大30秒で生成する。
+- v1の8B discrete-token autoregressive `MossTTSDelay`を置き換える、continuous-latent系のv2 modelとして公開されている。
+
+用途:
+
+- 動画、ゲーム、配信、デモ向けの効果音・環境音生成
+- OpenCut / HyperFramesなどCreative Pipeline用の音響素材作成
+- text-to-audio、Diffusion Transformer、Flow Matchingの研究
+- 英語・中国語promptによる効果音生成の比較
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- Apache-2.0
+
+メモ:
+
+- 公式model cardはPython 3.12、PyTorch 2.9、CUDA 12.8系のisolated environment、`bfloat16`とCUDA deviceを案内する。DiT accelerationに`torch.compile`とTriton CUDA Graphを使い、初回compileには数分かかる場合がある。
+- 公式情報に正確なVRAM要件、Windows、AMD Radeon / ROCm、CPUのみでの実用性は明記されていない。ローカル導入前に対応環境とdisk / VRAM使用量を確認する。
+- v1とv2はarchitectureと専用Python環境が異なる。top-level MOSS-TTS環境とは互換性がないため、versionと環境を分離する。
+- 生成音を公開・商用利用する場合は、prompt、元素材、第三者の権利、利用先の規約を確認する。実在の音源や権利物を再現する目的では使わない。
+
+Official Links:
+
+- Model card: https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0/blob/main/README.md
+- Source repository: https://github.com/OpenMOSS/MOSS-TTS
+
+⸻
+
 ### MoneyPrinterTurbo
 
 URL:
@@ -3859,6 +3919,7 @@ URL:
 - claude-real-video
 - MoneyPrinterTurbo
 - VoxCPM
+- MOSS-SoundEffect-v2.0
 - VCamdroid
 
 用途:
@@ -4047,6 +4108,7 @@ URL:
 - VCamdroid
 - Anime2.5DRig
 - tomari-guruguru
+- MOSS-SoundEffect-v2.0
 
 ### 開発アイデア
 

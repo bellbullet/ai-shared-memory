@@ -296,6 +296,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - claude-real-video → `AI_DRAWERS.md`
 - MoneyPrinterTurbo → `AI_DRAWERS.md`
 - VoxCPM → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
+- MOSS-SoundEffect-v2.0 / OpenMOSS sound effect model → `AI_DRAWERS.md`
+- text-to-audio / text-to-sound / sound effect generation → `AI_DRAWERS.md`, `INBOX.md`
+- 1.3B DiT audio / Flow Matching audio → `AI_DRAWERS.md`
+- 48 kHz bilingual sound effects / English Chinese audio prompts → `AI_DRAWERS.md`
 - Anime2.5DRig / 2.5D avatar rig → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - see-through / anime layer decomposition / PSD output → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - tomari-guruguru / トマリトーク / 25方向アバター → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
