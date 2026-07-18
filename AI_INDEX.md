@@ -103,6 +103,11 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Codex comparison / AI coding agent security → `references/CLAUDE_CODE_MAP.md`, `AI_DRAWERS.md`
 - agmsg → `AI_DRAWERS.md`
 - cross-agent messaging / multi-agent collaboration → `AI_DRAWERS.md`
+- capability-tier routing / Sol Terra Luna task routing → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
+- planner executor / task contract / acceptance gate → `NOTES/AI_Coding_Patterns.md`
+- evidence-first delivery / simulator browser accessibility verification → `NOTES/AI_Coding_Patterns.md`
+- Haoleme / terminal command mobile monitoring / Android completion notification → `INBOX.md`
+- Spell Quest / local-first learning game / PWA Android build → `INBOX.md`
 - SQLite agent communication / local agent messaging → `AI_DRAWERS.md`
 - CLI AI agent handoff / agent-to-agent review → `AI_DRAWERS.md`
 - NASA SpaceWasm / flight-compliant WebAssembly → `AI_DRAWERS.md`
@@ -413,6 +418,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - free LLM API / OpenAI compatible API / model fallback → `AI_DRAWERS.md`
 - NotebookLM alternative / Open Notebook → `AI_DRAWERS.md`
 - Learning / Research Workflow / spaced repetition / reference management → `AI_DRAWERS.md`
+- reproducible research workflow / paper data code human audit → `NOTES/AI_Coding_Patterns.md`
+- traceable decision artifact / assumptions challenge points → `NOTES/AI_Workspace_Ideas.md`
 - document archive / Paperless-ngx / ONLYOFFICE Docs → `AI_DRAWERS.md`
 - diagramming / Excalidraw / demo recording / Recordly → `AI_DRAWERS.md`
 - video analysis / scene-aware keyframes / claude-real-video → `AI_DRAWERS.md`

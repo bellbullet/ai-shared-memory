@@ -4,6 +4,10 @@
 
 ## 2026-07-18
 
+- Switch to Codex galleryの6カテゴリ535件を末尾まで確認し、Developers 30、Operations & data 22、Product & design 20、Education 15、Marketing 8、Founders 5の計100件を再選別。キャンペーン投稿は発見経路に限定した。
+- `Haoleme`と`Spell Quest`を、terminal output外部送信、pairing、任意command実行、ライセンス未確認、asset条件のため`INBOX.md`へ保留。新規の`AI_DRAWERS.md`昇格は行わなかった。
+- OpenAI公式のSol / Terra / Lunaを能力・コストtierとして確認し、固定planner / executor roleではなくtask contractとacceptance gateで選ぶmodel routingを`NOTES/AI_Coding_Patterns.md`へ追加。
+- tests、Simulator / browser、accessibility、配布artifact、human reviewを接続するEvidence-First Deliveryと、source / assumption / challenge pointを残すTraceable Decision Artifactを既存ノートへ統合した。
 - Chromeで開かれていたXブックマークから異なる投稿URLを100件確認し、過去調査と同一の1件を除いた99件を再選別。投稿を正本にせず、OpenAI、Google DeepMind、GitHub、Hugging Face、Mirelo、Kyutai、Decart、Mercariの一次情報を確認した。
 - `ChatGPT Sites`と`Gemma 4`を`AI_DRAWERS.md`へ昇格。public beta、production deployment、data control、model download、hardware要件を明記し、登録数を94件へ更新した。
 - `MuScriptor`、`Lucy 2.5`、`SAORI`、`GPT-5.6 Sol cybersecurity`を、非商用weight、Hugging Face認証、外部camera stream、一次情報不足、access / safeguard依存のため`INBOX.md`へ保留した。

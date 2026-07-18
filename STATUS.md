@@ -54,7 +54,7 @@ Workspace 全体の現在地を一覧するファイル。
 | --- | --- | --- |
 | Public knowledge site | Live on GitHub Pages; initial deployment verified on 2026-07-15 | Recheck the Actions run and public URL after site-related changes |
 | Entry points | Synced on 2026-07-13 | Recheck after structure, version, or read-order changes |
-| `INBOX.md` | Existing OSS batches plus the 2026-07-15, 2026-07-17, and 2026-07-18 X-derived candidates remain grouped by role and risk | Promote only after the recorded license, permission, external transmission, and runtime gates are cleared |
+| `INBOX.md` | Existing OSS batches plus the 2026-07-15, 2026-07-17, and 2026-07-18 X / Switch to Codex gallery candidates remain grouped by role and risk | Promote only after the recorded license, permission, external transmission, and runtime gates are cleared |
 | `AI_DRAWERS.md` | 94 entries / 11 categories / 12 cross-groups; single-file layout retained | Consider splitting only when retrieval or maintenance degrades |
 | `PROJECTS/` | 8 metadata files | Refresh when project Goal / Status / Stack / Next Tasks change |
 | `NOTES/` | 8 files, including compatibility files | Review duplication and stale summaries during monthly review |

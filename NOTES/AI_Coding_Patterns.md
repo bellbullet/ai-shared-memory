@@ -18,6 +18,9 @@
 - dream-skill: https://github.com/grandamenium/dream-skill
 - Auto-Dreamer: https://arxiv.org/abs/2605.20616
 - OpenAI Prompting: https://learn.chatgpt.com/docs/prompting
+- OpenAI GPT-5.6: https://openai.com/index/gpt-5-6/
+- Introducing Codex: https://openai.com/index/introducing-codex/
+- Switch to Codex gallery: https://switch-to-codex.openai.chatgpt.site/
 - Mercari AI Agent Day: https://careers.mercari.com/en/mercan/articles/60180/
 - Mercari AI Agent Day behind the scenes: https://careers.mercari.com/en/mercan/articles/60642/
 
@@ -131,6 +134,39 @@ For high-risk or public changes:
 3. manual review
 4. fix
 5. commit / push / release
+
+## Pattern: Capability-Tier Routing, Not Fixed Model Roles
+
+モデル名をplanner / executorへ固定せず、task contractと検証条件から能力・コストtierを選ぶ。
+
+OpenAIのGPT-5.6公式区分:
+
+- Sol: flagship。難しい推論、長時間作業、高リスク変更の候補。
+- Terra: balanced。日常作業の性能とcostの中間候補。
+- Luna: fastest / most affordable。境界が明確で、安価に反復できる作業の候補。
+
+Switch to Codex galleryには「Solで複雑な計画、Lunaで明確な実行」という利用例があるが、これはOpenAI公式の固定role定義ではない。次をtaskごとに明示する。
+
+1. 変更可能範囲と禁止事項
+2. 必要なcontextとtool権限
+3. security、data loss、financial impactなどのrisk
+4. latencyとcostの上限
+5. tests、diff、artifact、human approvalなどのacceptance gate
+
+高能力modelを使ったこと自体を品質保証にせず、低cost modelへ任せる場合もverification gateを省略しない。
+
+## Pattern: Evidence-First End-to-End Delivery
+
+「実装した」というagentの要約だけで完了扱いにせず、成果物と検証証拠を同じloopへ含める。
+
+1. acceptance criteriaと対象外を先に固定する。
+2. repository内で小さい変更単位に分ける。
+3. tests、lint、typecheckなど再実行可能なcheckを通す。
+4. browser、Simulator、mobile、accessibilityなど対象環境固有の確認を行う。
+5. diff、test output、screenshot、buildまたは配布artifactを残す。
+6. 未検証部分と失敗を明記し、人間が統合・公開を判断する。
+
+OpenAIのCodex公式説明はterminal logとtest resultによる追跡可能性、人間によるmanual reviewを重視する。gallery内のiOS Simulator、browser / mobile E2E、accessibility、TestFlightの事例は、このloopの適用例として扱い、個々の性能主張は独立したbenchmarkとみなさない。
 
 ## Pattern: Staged Enterprise Agent Rollout
 

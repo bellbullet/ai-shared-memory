@@ -93,6 +93,19 @@ AI に任せる:
 - コストやリスクの受け入れ
 - 例外判断
 
+### Traceable Decision Artifact
+
+AIが業務データや調査資料から結論を作る場合は、文章だけでなく判断を再検証できるartifactとして残す。
+
+- Source: 使用した公開資料、dataset、入力範囲
+- Assumptions: 欠損値、推定条件、除外条件
+- Transformation: 集計、計算、code、prompt、modelの役割
+- Result: 表、report、推奨案
+- Challenge Points: 結論が変わる条件、反証可能な箇所
+- Human Decision: 採用、保留、差戻しと理由
+
+顧客メール、生徒情報、研究データ、financial dataを扱う場合は、外部送信、保存、access control、retentionを先に確認する。X上の利用例は発見経路にとどめ、結論の正本には一次資料と再現可能な計算を使う。
+
 ## Possible Workspace Changes
 
 - `OUTPUTS/` を成果物置き場として追加する。

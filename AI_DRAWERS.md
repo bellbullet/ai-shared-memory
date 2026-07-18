@@ -1940,6 +1940,7 @@ https://github.com/vida994/codex-model-routing-guard
 
 - MIT License、Python 3.9以上。ネットワーク通信、会話履歴読取り、テレメトリなしとREADMEに記載。
 - OpenAI公式ポリシーではなく作者のヒューリスティック。Hook導入前に判定条件とローカル状態保存を監査する。
+- GPT-5.6のOpenAI公式区分はSolがflagship、Terraがbalanced、Lunaがfastest / most affordableという能力・コストtierであり、固定的なplanner / executor roleではない。個別投稿にある「Solで計画、Lunaで実行」は運用例として扱い、task risk、必要context、latency、cost、verification gateで選択する。
 
 ⸻
 
