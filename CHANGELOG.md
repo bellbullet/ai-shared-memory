@@ -2,6 +2,11 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-19
+
+- Hugging Faceの`m15dg/local-ai-toolkit`を一次情報で確認し、RTX 3060 12GB向けの役割別local model collectionとして`INBOX.md`へ追加。137ファイル・約308 GiB、AI生成README、quality / speed tier、複数形式・複数model familyを記録した。
+- repository全体が`license: other`で、uncensored / abliterated weightや複数licenseの派生modelを含むため、技術レーダーへは昇格せず、origin、hash、model card、licenseの個別監査とAMD / ROCm実機検証を保留条件にした。`AI_INDEX.md`へlocal model collection、consumer hardware routing、mixed-license bundleの導線を追加。
+
 ## 2026-07-18
 
 - `AI_DRAWERS.md`にOpenMOSS TeamのApache-2.0 text-to-audio model `MOSS-SoundEffect-v2.0`を追加。公式model cardとsourceを基に、1.3B DiT、Flow Matching、英語・中国語prompt、48 kHz・最大30秒、v1とのarchitecture差、CUDA / Triton中心の実行条件を記録した。

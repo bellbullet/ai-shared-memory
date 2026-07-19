@@ -200,6 +200,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 - OpenLive / realtime voice and vision / on-device audio → `AI_DRAWERS.md`
 - Meetily / local meeting transcription / diarization → `INBOX.md`
 - Colibrì / MoE expert streaming / disk offload → `INBOX.md`
+- local-ai-toolkit / RTX 3060 12GB local model collection → `INBOX.md`
+- quality speed tier / consumer hardware model routing → `INBOX.md`, `NOTES/AI_Coding_Patterns.md`
+- mixed-license GGUF bundle / local model license audit → `INBOX.md`
 - sound-efect / Stable Audio SFX / local sound generation → `INBOX.md`
 - image-3d / Hunyuan3D / image to 3D / fabrication → `INBOX.md`
 - AnimeGen-T2V / anime text-to-video → `INBOX.md`

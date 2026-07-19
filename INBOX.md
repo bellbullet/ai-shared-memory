@@ -33,6 +33,49 @@ URL:
 
 ## 未整理
 
+### 2026-07-19: local-ai-toolkit
+
+URL:
+https://huggingface.co/m15dg/local-ai-toolkit
+
+分類候補:
+
+- Local LLM
+- Model Collection
+- Consumer Hardware
+- Coding Agents
+- RAG / Speech / Multimodal
+
+概要:
+
+- RTX 3060 12GB VRAMと32GB system RAMを基準に、汎用LLM、coding agent、agent orchestration、RAG、TTS、STT、multimodal、uncensored modelを役割別に集めたHugging Face model repository。
+- quality tierはGPUとCPU RAMへのoffload、speed tierは12GB VRAM内でのfull-GPU実行を想定する。GGUF、SafeTensors、ONNX、NeMoなど複数形式を同じrepositoryで配布している。
+- 公式Hugging Face APIで137ファイル、合計約308 GiBを確認した。README自身がAI生成・AI支援選定であり、最適構成ではなくstarting pointとして扱うよう明記している。
+
+用途:
+
+- 12GB VRAM向けlocal AI stackの役割分担例
+- quality / speed tierによるmodel routingの参考
+- coding、RAG、TTS、STT、multimodalをローカルで組み合わせる際の候補表
+- Ollama、LM Studio、llama.cpp、vLLM、KoboldCpp向けmodel選定の入口
+
+状態:
+
+- 保留
+
+優先度候補:
+
+- ★★★☆☆
+
+メモ:
+
+- repository全体のHugging Face metadataは`license: other`。収録物は複数作者・複数licenseのmodel、quantization、派生weightを含むため、bundle全体を一つのlicenseで利用・再配布できるとは判断しない。
+- READMEは元model sourceをSHA-256で復元したとする一方、一部linkは同じquantization family内の異なるfile versionを指す可能性があるとも記載する。利用前に対象fileのhash、origin、model card、licenseを個別確認する。
+- uncensored / abliterated modelを含む。safety解除を品質向上と同一視せず、用途、法令、出力監査、第三者権利、組織policyをmodelごとに確認する。
+- multimodal GGUFは現行toolingでは画像のみで、audio inputは動作しないとREADMEが警告している。full multimodal用途では元の非量子化weightと対応runtimeを確認する。
+- NVIDIA / CUDAを中心に選定されている。AMD Radeon / ROCmでの互換性、速度、VRAM / RAM / storage使用量は別途検証が必要。今回はdownload、install、model実行を行っていない。
+- `AI_DRAWERS.md`へ昇格する場合はbundleそのものではなく、実機Trialで有効だった個別modelまたは再利用可能なselection patternを記録する。
+
 ### 2026-07-04: GitHub OSS 基礎体力セット
 
 分類前の GitHub / OSS リンク復元リスト。
