@@ -12,12 +12,12 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 95
+- 登録項目: 99
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
 - 重点領域: Agent / Orchestration、AI Coding Operations、Knowledge Management、Creative Pipeline、Self Host / Tools。
-- 最近の追加: Xブックマーク発見候補から ChatGPT Sites と Gemma 4 を一次情報確認後に統合し、外部送信、認証、モデル取得、ライセンス制約を伴う候補は `INBOX.md` へ保留。
+- 最近の追加: Hallmark、Orca、OfficeCLIを実作業向け候補として統合し、awesome-llm-appsは個別候補を選ぶための参照カタログとして記録。外部送信、認証、モデル取得、ライセンス制約を伴う候補は `INBOX.md` へ保留。
 - 未整理項目と次回レビュー条件は `STATUS.md`、分類前リンクは `INBOX.md` を参照する。
 
 カテゴリ別ファイル分割は、検索性や保守性が単一ファイルでは不足した時点で検討し、v1.1 では行わない。
@@ -410,6 +410,55 @@ https://github.com/katipally/openlive
 
 AI エージェント、長期記憶、複数 LLM 協調、ルーティング、オーケストレーター系をまとめる。
 
+### Orca
+
+URL:
+https://github.com/stablyai/orca
+
+分類:
+
+- Agent / Orchestration
+- AI Coding Operations
+- Parallel Worktree
+- Mobile Companion
+
+概要:
+
+- Codex、Claude Codeなどターミナルで動くコーディングエージェントを、独立したGit worktreeで並列実行・比較・レビューするデスクトップ環境。
+- Windows、macOS、Linuxに対応し、モバイル companionから進捗確認、完了通知、追加指示を行える。
+- worktree、Diff注釈、組み込みブラウザのDesign Mode、SSH worktreeを一つの作業面にまとめる。
+
+用途:
+
+- 同一タスクを複数エージェントへ分けた実装・レビュー比較
+- 長時間のコーディング作業をiPhoneから監督
+- worktreeを使った変更の隔離と採用案の選別
+- PocketTableなどGit管理済みプロジェクトの並列検証
+
+関連:
+
+- agmsg
+- Tutti
+- Backlog.md
+- Codex
+- Claude Code
+- AI Coding Operations
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- ChatGPT内のCodex会話を引き継ぐものではなく、PC上で別途起動するCLIエージェントを管理する環境として扱う。
+- 最初は公開リポジトリのcloneで、worktree分離・モバイル通知・Diffレビューだけを確認する。private project、認証情報、外部接続権限は初回試用へ含めない。
+- MIT License。モバイル連携、利用量表示、Computer Useを使う場合は送信範囲とテレメトリ設定を確認する。
+
+⸻
 関連グループ:
 
 - MiMo-Code / Headroom / OpenFugu / AI-Safeter FUGU は「AIを管理するAI」の研究候補。
@@ -1163,6 +1212,53 @@ https://github.com/chidiwilliams/buzz
 
 ## Development
 
+### OfficeCLI
+
+URL:
+https://github.com/iOfficeAI/OfficeCLI
+
+分類:
+
+- Development
+- Document Automation
+- AI Coding Operations
+- Office Documents
+
+概要:
+
+- Word、Excel、PowerPointの.docx、.xlsx、.pptxを、Office本体なしで作成・読取・編集できるAIエージェント向けCLI。
+- 単一バイナリにHTML／PNGレンダリングとプレビューを含み、生成後に見た目を確認して修正するループを作れる。
+- Windowsを含む主要OS向けバイナリを提供する。
+
+用途:
+
+- Markdown原本からの文書・表・スライド生成
+- 既存Officeファイルの構造確認と一括編集
+- agent-generated documentのレンダリング検証
+- OUTPUTS、PPT Master、reviewable-html-workbenchとのDocument Automation比較
+
+関連:
+
+- PPT Master
+- reviewable-html-workbench
+- Stirling PDF
+- OUTPUTS/README.md
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- Apache-2.0。PPT Masterはスライド設計・制作手順、OfficeCLIはOfficeファイル操作とレンダリング検証を担うため、置換ではなく補完関係として扱う。
+- 初回は使い捨ての公開可能な.pptx／.xlsxで、生成、編集、HTML／PNG表示、Microsoft Officeでの互換性を確認する。
+- 自動更新を含む実行バイナリとして、導入時は配布元、更新設定、対象ファイル範囲を確認する。
+
+⸻
 ### Greenlight
 
 URL:
@@ -2221,6 +2317,52 @@ https://github.com/cool-japan/scirs
 
 ## Creative
 
+### Hallmark
+
+URL:
+https://github.com/Nutlope/hallmark
+
+分類:
+
+- Creative
+- UI Design
+- AI Coding Operations
+- Agent Skills
+
+概要:
+
+- Claude Code、Cursor、Codex向けのUIデザインskill。新規UI生成、既存画面の監査、再設計、参考URLやスクリーンショットからのデザイン研究を扱う。
+- テーマ、構造、配色、タイポグラフィ、レイアウトの指針と自己監査を通じて、AI生成UIが同じ見た目へ収束する問題を避けることを目指す。
+
+用途:
+
+- PocketTableのゲーム画面・対戦導線のUI改善
+- Bellbullet WorkspaceのデスクトップUIの差別化
+- 既存実装のdesign auditと改善指示
+- Apple風UIを含む既存デザインskillとの比較
+
+関連:
+
+- DESIGN.md
+- Apple design skill
+- ChatGPT Sites
+- Bellbullet Workspace
+- PocketTable
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- MIT License。デザイン品質は自動保証されないため、生成結果を実機とブラウザで確認し、アクセシビリティと既存ブランド要件を優先する。
+- studyで私的画面、認証画面、非公開資料を扱う場合は、送信先と利用条件を確認する。参照デザインは模倣ではなく構造・余白・配色の研究に留める。
+
+⸻
 ### OpenCut
 
 URL:
@@ -3436,6 +3578,45 @@ https://arxiv.org/abs/2512.08309
 
 ## Reference Sites
 
+### awesome-llm-apps
+
+URL:
+https://github.com/Shubhamsaboo/awesome-llm-apps
+
+分類:
+
+- Reference Sites
+- AI Agents
+- RAG
+- Implementation Examples
+
+概要:
+
+- AI agent、agent skill、RAG appの実装例を100件以上集めたApache-2.0の参照カタログ。
+- 単体エージェント、複数エージェント、音声、Web、RAG、agent skillなどを、cloneして検証できるサンプルとして横断できる。
+
+用途:
+
+- 新規機能の実装パターン探索
+- agent skill、RAG、音声／動画、Web操作の最小構成の比較
+- 個別プロジェクト採用前の一次調査の入口
+- AIエージェントの設計例・依存関係・評価方法の参照
+
+状態:
+
+- 参考資料
+
+優先度:
+
+- ★★★☆☆
+
+メモ:
+
+- このリポジトリ自体を依存関係や導入候補として扱わず、必要な個別例だけを一次情報・ライセンス・外部送信・API key・保守状況で再評価する。
+- 100件以上やend-to-end testedは作者の説明であり、各サンプルの品質、安全性、商用利用可否を一律に保証しない。
+- 個別候補が実作業で有効だった場合のみ、重複を確認してAI_DRAWERS.mdまたはTRIALS.mdへ昇格する。
+
+⸻
 ### japanese-tech-writing / k16shikano gist
 
 URL:
