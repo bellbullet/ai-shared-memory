@@ -2,6 +2,13 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-21
+
+- X投稿で紹介されたGitHub候補10件を一次情報で確認し、既登録のGraphifyとclaude-real-videoとの役割重複を整理した。
+- AI_DRAWERS.mdへ、UIデザインskillのHallmark、並列worktreeでCLIエージェントを管理するOrca、Office文書の作成・編集・レンダリングを行うOfficeCLIを追加。いずれも実作業での試用前提として状態と安全上の確認条件を記録した。
+- awesome-llm-appsは導入物ではなく、個別候補を選ぶための参考カタログとしてAI_DRAWERS.mdへ記録。各テンプレートは必要時に一次情報・ライセンス・外部送信・API key・保守状況を再評価する方針とした。
+- AI_INDEX.mdへHallmark、Orca、OfficeCLI、awesome-llm-appsの検索導線を追加。
+
 ## 2026-07-19
 
 - Hugging Faceの`m15dg/local-ai-toolkit`を一次情報で確認し、RTX 3060 12GB向けの役割別local model collectionとして`INBOX.md`へ追加。137ファイル・約308 GiB、AI生成README、quality / speed tier、複数形式・複数model familyを記録した。
