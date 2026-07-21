@@ -53,6 +53,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ## AI_DRAWERS Keywords
 
+- Hallmark / UI design skill / design audit / UI redesign → `AI_DRAWERS.md`
+- Orca / parallel worktree / mobile agent supervision → `AI_DRAWERS.md`
+- OfficeCLI / headless Office automation / docx xlsx pptx render → `AI_DRAWERS.md`, `OUTPUTS/README.md`
+- awesome-llm-apps / AI agent examples / RAG app templates → `AI_DRAWERS.md`
 - DESIGN.md → `AI_DRAWERS.md`
 - Firecrawl → `AI_DRAWERS.md`
 - PixelRAG → `AI_DRAWERS.md`
@@ -433,6 +437,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - document archive / Paperless-ngx / ONLYOFFICE Docs → `AI_DRAWERS.md`
 - diagramming / Excalidraw / demo recording / Recordly → `AI_DRAWERS.md`
 - video analysis / scene-aware keyframes / claude-real-video → `AI_DRAWERS.md`
+- UI design skill / design audit / Hallmark → `AI_DRAWERS.md`
+- parallel worktree / mobile agent supervision / Orca → `AI_DRAWERS.md`
+- headless Office automation / OfficeCLI / docx xlsx pptx render → `AI_DRAWERS.md`, `OUTPUTS/README.md`
+- AI agent examples / RAG app templates / awesome-llm-apps → `AI_DRAWERS.md`
 - Android webcam / virtual webcam / smartphone webcam → `AI_DRAWERS.md`
 - 2.5D avatar / anime layer decomposition / PSD avatar素材化 → `AI_DRAWERS.md`
 - AI video / voice generation → `AI_DRAWERS.md`
