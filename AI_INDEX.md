@@ -53,6 +53,16 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ## AI_DRAWERS Keywords
 
+- Squoosh / browser image compression / local image optimization → `AI_DRAWERS.md`
+- Semantic Scholar / academic search / scientific literature discovery → `AI_DRAWERS.md`
+- Have I Been Pwned / HIBP / breach exposure / Pwned Passwords → `AI_DRAWERS.md`
+- Photopea / browser PSD editor / local image editing → `AI_DRAWERS.md`
+- VirusTotal / malware scan / file hash / URL analysis → `AI_DRAWERS.md`
+- Elicit / systematic literature review / AI research assistant → `AI_DRAWERS.md`
+- AlternativeTo / software alternatives / crowdsourced software discovery → `AI_DRAWERS.md`
+- regex101 / regex debugger / regular expression tester → `AI_DRAWERS.md`
+- ExplainShell / shell command explanation / man page parser → `AI_DRAWERS.md`
+- tldraw / infinite canvas / React canvas SDK → `AI_DRAWERS.md`
 - Hallmark / UI design skill / design audit / UI redesign → `AI_DRAWERS.md`
 - Orca / parallel worktree / mobile agent supervision → `AI_DRAWERS.md`
 - OfficeCLI / headless Office automation / docx xlsx pptx render → `AI_DRAWERS.md`, `OUTPUTS/README.md`

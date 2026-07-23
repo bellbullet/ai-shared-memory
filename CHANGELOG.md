@@ -2,6 +2,13 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-24
+
+- [X投稿の「50 websites」](https://x.com/artic_ai/status/2079903994856485293)を発見経路として扱い、「すべて合法・無料」という宣伝文句は採用せず、公式site、公式document、source repositoryで利用条件を再評価した。
+- Squoosh、Semantic Scholar、Have I Been Pwnedを有望候補として`AI_DRAWERS.md`へ昇格し、優先度を★★★★★に設定した。
+- Photopea、VirusTotal、Elicit、AlternativeTo、regex101、ExplainShell、tldrawは、外部送信、機密情報、AI出力の検証、二次情報、本番licenseなどの注意点を明記し、優先度を★★★☆☆〜★★★★☆へ下げて保存した。
+- `AI_INDEX.md`へ10件の検索導線を追加し、`AI_DRAWERS.md`の登録数を109件へ更新した。著作権侵害や認証・制限回避につながる候補、既登録と重複する候補は昇格対象から除外した。
+
 ## 2026-07-21
 
 - X投稿で紹介されたGitHub候補10件を一次情報で確認し、既登録のGraphifyとclaude-real-videoとの役割重複を整理した。

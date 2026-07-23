@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-07-18
+最終更新: 2026-07-24
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫です。
 
@@ -12,12 +12,12 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 99
+- 登録項目: 109
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
 - 重点領域: Agent / Orchestration、AI Coding Operations、Knowledge Management、Creative Pipeline、Self Host / Tools。
-- 最近の追加: Hallmark、Orca、OfficeCLIを実作業向け候補として統合し、awesome-llm-appsは個別候補を選ぶための参照カタログとして記録。外部送信、認証、モデル取得、ライセンス制約を伴う候補は `INBOX.md` へ保留。
+- 最近の追加: X投稿の「50 websites」を一次情報で再評価し、Squoosh、Semantic Scholar、Have I Been Pwnedを有望候補へ昇格。Photopea、VirusTotal、Elicit、AlternativeTo、regex101、ExplainShell、tldrawは注意条件を明記して優先度を下げた。
 - 未整理項目と次回レビュー条件は `STATUS.md`、分類前リンクは `INBOX.md` を参照する。
 
 カテゴリ別ファイル分割は、検索性や保守性が単一ファイルでは不足した時点で検討し、v1.1 では行わない。
@@ -1212,6 +1212,192 @@ https://github.com/chidiwilliams/buzz
 
 ## Development
 
+### Have I Been Pwned
+
+URL:
+https://haveibeenpwned.com/
+
+分類:
+
+- Development
+- Security
+- Reference Service
+
+概要:
+
+- メールアドレスが既知のデータ侵害に含まれるかを確認し、新しい侵害の通知を受け取れるサービス。
+- Pwned Passwordsは、パスワード全体や完全なhashを送らず、SHA-1 hashの先頭5文字だけを照合するk-anonymity方式を提供する。
+
+用途:
+
+- 公開済み侵害データへの露出確認
+- パスワード再利用リスクの確認
+- 認証機能でのPwned Passwords API活用調査
+
+状態:
+
+- 有望・必要時利用
+
+優先度:
+
+- ★★★★★
+
+注意:
+
+- 「現在hackされているか」を診断するサービスではなく、既知の侵害データに含まれるかを確認するもの。
+- パスワードはWeb検索欄へ直接入力せず、公式のPwned Passwords方式と利用手順を確認する。
+
+⸻
+
+### VirusTotal
+
+URL:
+https://www.virustotal.com/
+
+分類:
+
+- Development
+- Security
+- Malware Analysis
+
+概要:
+
+- file、URL、domain、IP address、file hashを複数のsecurity engineと関連情報で調査するサービス。
+- hashや公開URLの評判確認、疑わしい公開sampleの初期triageに利用できる。
+
+用途:
+
+- file hashとURLの初期調査
+- malware検知結果の横断確認
+- security incidentの補助情報収集
+
+状態:
+
+- 条件付き採用
+
+優先度:
+
+- ★★★★☆
+
+注意:
+
+- 通常の公開scanへ機密file、未公開code、顧客data、個人情報をuploadしない。Private Scanningは別機能・別条件。
+- 単一engineの判定や検知数だけで安全・危険を断定せず、source、signature、挙動を追加確認する。
+
+⸻
+
+### regex101
+
+URL:
+https://regex101.com/
+
+分類:
+
+- Development
+- Regular Expressions
+- Debugging
+
+概要:
+
+- 複数のregex flavorに対応し、match結果、capture group、説明、performance情報を対話的に確認できるdebugger。
+
+用途:
+
+- regular expressionの作成と検証
+- test caseの共有
+- flavor差とbacktrackingの調査
+
+状態:
+
+- 注意付き・必要時利用
+
+優先度:
+
+- ★★★☆☆
+
+注意:
+
+- access token、password、個人情報、非公開logなどをsample textへ貼り付けない。
+- 保存・共有linkを作る場合は、test dataが公開可能なdummy dataだけであることを確認する。
+
+⸻
+
+### ExplainShell
+
+URL:
+https://explainshell.com/
+
+Source:
+https://github.com/idank/explainshell
+
+分類:
+
+- Development
+- Shell
+- Reference Service
+
+概要:
+
+- shell commandを解析し、対応するman pageの説明をargument単位で表示するGPL-3.0のWeb service。
+
+用途:
+
+- 未知のshell commandとoptionの初期理解
+- man pageを読む入口
+- command reviewの補助
+
+状態:
+
+- 注意付き・必要時利用
+
+優先度:
+
+- ★★★☆☆
+
+注意:
+
+- token、credential、内部host名、private path、顧客名を含むcommandを外部serviceへ送らない。
+- 表示結果を実行許可とはみなさず、対象OSのman pageと公式documentで確認してから実行する。
+
+⸻
+
+### tldraw
+
+URL:
+https://github.com/tldraw/tldraw
+
+分類:
+
+- Development
+- Infinite Canvas
+- React SDK
+
+概要:
+
+- React向けのinfinite canvas SDKと、共同編集可能なcanvas appを構築するためのtoolkit。
+- starter kitにはMIT licenseのものがある一方、SDK本体のproduction利用にはtldraw license keyが必要。
+
+用途:
+
+- diagram、whiteboard、visual editorのprototype
+- AIとcanvasを組み合わせたinterface研究
+- self-host構成とrealtime collaborationの調査
+
+状態:
+
+- ライセンス確認付き・導入検討
+
+優先度:
+
+- ★★★☆☆
+
+注意:
+
+- 「無料のOSS whiteboard」と一括りにせず、SDK、starter kit、sync機能ごとのlicenseと料金条件を確認する。
+- production採用前にlicense key、self-host範囲、data保存先、共同編集backendを確定する。
+
+⸻
+
 ### OfficeCLI
 
 URL:
@@ -2316,6 +2502,83 @@ https://github.com/cool-japan/scirs
 ⸻
 
 ## Creative
+
+### Squoosh
+
+URL:
+https://squoosh.app/
+
+Source:
+https://github.com/GoogleChromeLabs/squoosh
+
+分類:
+
+- Creative
+- Image Optimization
+- Local Processing
+
+概要:
+
+- browser上で画像format、quality、resize条件を比較しながら圧縮できるApache-2.0のWeb app。
+- 画像処理はlocal device上で行われ、画像自体はserverへ送信されない。
+
+用途:
+
+- Web公開前の画像圧縮
+- formatと画質・file sizeの比較
+- screenshotやdocument assetの軽量化
+
+状態:
+
+- 有望・導入推奨
+
+優先度:
+
+- ★★★★★
+
+注意:
+
+- 利用統計にはGoogle Analyticsが使われるため、完全なoffline toolとして扱う場合はrepositoryからのlocal利用も検討する。
+- 元画像を保持し、圧縮後の可読性とartifactを目視確認する。
+
+⸻
+
+### Photopea
+
+URL:
+https://www.photopea.com/
+
+分類:
+
+- Creative
+- Browser Image Editor
+- PSD
+
+概要:
+
+- PSDを含む複数formatをbrowserで編集できる画像editor。
+- 公式privacy説明では、開いたfileはdevice上で処理され、serverへ送信されない。
+
+用途:
+
+- PSDの閲覧と軽微な編集
+- software installが難しい環境での画像編集
+- format変換と簡易asset作成
+
+状態:
+
+- 注意付き・条件付き採用
+
+優先度:
+
+- ★★★★☆
+
+注意:
+
+- account、広告、cookie、payment情報は画像fileのlocal処理とは別に扱われる。
+- AI機能や外部resourceを使う場合は通信先と利用条件を再確認し、機密画像はoffline editorを優先する。
+
+⸻
 
 ### Hallmark
 
@@ -3496,6 +3759,81 @@ https://github.com/pewdiepie-archdaemon/odysseus
 
 ## Research
 
+### Semantic Scholar
+
+URL:
+https://www.semanticscholar.org/
+
+分類:
+
+- Research
+- Academic Search
+- Literature Discovery
+
+概要:
+
+- Allen Institute for AIが提供する、AIを用いた無料の学術検索・literature discovery service。
+- 関連論文、引用関係、著者、要約などを横断し、研究分野の入口を短時間で作れる。
+
+用途:
+
+- 先行研究の探索
+- citation graphと関連論文の確認
+- arXiv、publisher、著者情報への導線作成
+
+状態:
+
+- 有望・導入推奨
+
+優先度:
+
+- ★★★★★
+
+注意:
+
+- AI生成・抽出された要約だけで結論を出さず、原論文、版、撤回・訂正、licenseを確認する。
+- 検索結果の網羅性は分野や収録状況に依存するため、他のdatabaseやpublisher検索と併用する。
+
+⸻
+
+### Elicit
+
+URL:
+https://elicit.com/
+
+分類:
+
+- Research
+- AI Research Assistant
+- Literature Review
+
+概要:
+
+- 論文検索、screening、data extraction、systematic reviewを支援するAI research assistant。
+- sentence-level citationを手掛かりに、回答と根拠論文を行き来できる。
+
+用途:
+
+- literature reviewの初期探索
+- inclusion / exclusion候補のscreening
+- 論文からの比較項目抽出
+
+状態:
+
+- 注意付き・導入検討
+
+優先度:
+
+- ★★★★☆
+
+注意:
+
+- AIの要約・分類・抽出は誤る可能性があるため、必ず原論文と照合する。
+- 未公開原稿や機密資料のupload前にprivacy、data retention、学習利用条件を確認する。
+- 高度なworkflowには有料planが含まれるため、「完全無料」として扱わない。
+
+⸻
+
 ### Terrain Diffusion
 
 URL:
@@ -3577,6 +3915,42 @@ https://arxiv.org/abs/2512.08309
 ⸻
 
 ## Reference Sites
+
+### AlternativeTo
+
+URL:
+https://alternativeto.net/
+
+分類:
+
+- Reference Sites
+- Software Discovery
+- Crowdsourced Directory
+
+概要:
+
+- softwareやWeb serviceの代替候補を、platform、license、用途、利用者評価などから探すcrowdsourced directory。
+
+用途:
+
+- 既存toolの代替候補探索
+- self-hosted、open source、platform別候補の発見
+- 比較調査の候補list作成
+
+状態:
+
+- 注意付き・必要時利用
+
+優先度:
+
+- ★★★☆☆
+
+注意:
+
+- 掲載内容と評価は二次情報であり、正確性や安全性は保証されない。
+- download、購入、導入前に、公式site、source repository、license、保守状況、security情報を一次情報で確認する。
+
+⸻
 
 ### awesome-llm-apps
 
