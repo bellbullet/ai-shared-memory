@@ -53,6 +53,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ## AI_DRAWERS Keywords
 
+- code-review-graph / local-first code intelligence / Tree-sitter graph / MCP code review → `AI_DRAWERS.md`
+- impact analysis / review context reduction / risk-scored PR review → `AI_DRAWERS.md`
+- mattpocock/skills / engineering agent skills / grill-with-docs / diagnosing-bugs → `AI_DRAWERS.md`
+- composable agent skills / TDD skill / code review skill / domain modeling skill → `AI_DRAWERS.md`
 - Squoosh / browser image compression / local image optimization → `AI_DRAWERS.md`
 - Semantic Scholar / academic search / scientific literature discovery → `AI_DRAWERS.md`
 - Have I Been Pwned / HIBP / breach exposure / Pwned Passwords → `AI_DRAWERS.md`

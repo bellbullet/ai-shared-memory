@@ -4,6 +4,10 @@
 
 ## 2026-07-24
 
+- [X投稿の急上昇AI OSS 10選](https://x.com/so_ainsight/status/2080144636170117582)を発見経路として一次情報を再確認し、star増加数ではなく用途、license、権限、外部送信、既登録項目との重複で評価した。
+- MIT licenseでlocal-firstのcode intelligence graphを構築する`code-review-graph`を、code主体projectでの実試用候補として`AI_DRAWERS.md`へ昇格した。外部LLM利用時のsource送信、benchmarkの前提、MCP・CI権限を確認条件とした。
+- MIT licenseの`mattpocock/skills`を、engineering skillの選別採用候補として昇格した。collection全体の自動installは行わず、個別skillの内容、既存ruleとの競合、commit固定、実projectでの検証を採用条件とした。
+- `AI_INDEX.md`へ2件の検索導線を追加し、`AI_DRAWERS.md`の登録数を111件へ更新した。Hallmark、Orca、awesome-llm-apps、OfficeCLI、Codexは既登録・既知のため重複追加せず、金融・実験的broker連携を含むVibe-Tradingなど残り3件は昇格しなかった。
 - [X投稿の「50 websites」](https://x.com/artic_ai/status/2079903994856485293)を発見経路として扱い、「すべて合法・無料」という宣伝文句は採用せず、公式site、公式document、source repositoryで利用条件を再評価した。
 - Squoosh、Semantic Scholar、Have I Been Pwnedを有望候補として`AI_DRAWERS.md`へ昇格し、優先度を★★★★★に設定した。
 - Photopea、VirusTotal、Elicit、AlternativeTo、regex101、ExplainShell、tldrawは、外部送信、機密情報、AI出力の検証、二次情報、本番licenseなどの注意点を明記し、優先度を★★★☆☆〜★★★★☆へ下げて保存した。

@@ -12,12 +12,12 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 109
+- 登録項目: 111
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
 - 重点領域: Agent / Orchestration、AI Coding Operations、Knowledge Management、Creative Pipeline、Self Host / Tools。
-- 最近の追加: X投稿の「50 websites」を一次情報で再評価し、Squoosh、Semantic Scholar、Have I Been Pwnedを有望候補へ昇格。Photopea、VirusTotal、Elicit、AlternativeTo、regex101、ExplainShell、tldrawは注意条件を明記して優先度を下げた。
+- 最近の追加: X投稿の急上昇OSSランキングを一次情報で再評価し、code-review-graphとmattpocock/skillsを有望候補へ昇格。star増加数は採用根拠にせず、local-firstのcode解析と選別可能なengineering skillとしての実用性を評価した。
 - 未整理項目と次回レビュー条件は `STATUS.md`、分類前リンクは `INBOX.md` を参照する。
 
 カテゴリ別ファイル分割は、検索性や保守性が単一ファイルでは不足した時点で検討し、v1.1 では行わない。
@@ -1211,6 +1211,104 @@ https://github.com/chidiwilliams/buzz
 ⸻
 
 ## Development
+
+### code-review-graph
+
+URL:
+https://github.com/tirth8205/code-review-graph
+
+分類:
+
+- Development
+- Code Intelligence
+- MCP
+- Static Analysis
+- Local First
+
+概要:
+
+- Tree-sitterでcodebaseを解析し、function、class、import、call関係などの永続graphをlocalに構築するMIT licenseのcode intelligence tool。
+- MCP、CLI、GitHub Actionから変更の影響範囲、関連test、review対象を絞り、AI agentへ必要なcontextを渡すことを目的とする。
+- 公式benchmarkは、単純な全corpus比較と現実的なgrep baselineを区別し、小さな変更ではgraph responseの方が大きくなる場合や、impact評価の循環性も明記している。
+
+用途:
+
+- 大規模・複数言語repositoryでの変更影響調査
+- AI code reviewへ渡すcontextの絞り込み
+- PRのrisk、関連function、test gapの補助確認
+- ScreenshotStitcherなどcode主体projectでの小規模trial
+
+状態:
+
+- 有望・実試用候補
+
+優先度:
+
+- ★★★★★
+
+注意:
+
+- graph構築とqueryはlocal-firstだが、MCP clientが外部LLMを使う場合、取得されたsource contextはmodel providerへ送信され得る。「local-first」をcode全体の外部送信禁止と同義にしない。
+- benchmarkの削減率を固定値として転用せず、対象repository、query、変更規模、grep / `rg` baselineと比較する。
+- 初回trialは機密性のないcode主体repositoryで行い、生成cache、index保存場所、MCP権限、CI comment権限、更新時のdependency差分を確認する。
+
+関連:
+
+- `TRIALS.md` — 実際に試した時点でtoken量、検索精度、false positive、index時間を記録する。
+- `PROJECTS/ScreenshotStitcher.md`
+- `SKILLS/Research.md`
+
+⸻
+
+### mattpocock/skills
+
+URL:
+https://github.com/mattpocock/skills
+
+分類:
+
+- Development
+- Agent Skills
+- AI Coding Operations
+- TDD
+- Code Review
+
+概要:
+
+- 要件の聞き取り、domain modeling、仕様化、ticket分割、TDD、bug診断、code review、handoffなどを、小さく組み合わせ可能なagent skillとして公開するMIT licenseのcollection。
+- Claude Code pluginとしてbundle購読する方法と、skills.sh経由でprojectへcopyして編集する方法がある。CodexなどAgent Skills互換環境にも対応する。
+- process全体をframeworkへ明け渡すより、必要なengineering disciplineをskill単位で組み合わせる設計を重視する。
+
+用途:
+
+- `grill-with-docs`の要件・用語・ADR整理pattern研究
+- `diagnosing-bugs`と`code-review`の検証loop比較
+- `tdd`、`to-spec`、`handoff`の既存workspace運用への部分統合
+- AI agent向けskill設計と呼び出し境界の参考資料
+
+状態:
+
+- 有望・選別採用
+
+優先度:
+
+- ★★★★★
+
+注意:
+
+- collection全体を自動installせず、採用候補の`SKILL.md`、script、tool呼び出し、外部service、file変更範囲を個別にreviewする。
+- managed pluginは作者の更新へ追従するため、再現性が必要なprojectでは確認済みcommitを固定し、必要なskillだけをrepository内へ取り込む。
+- 既存の`AGENTS.md`、`SKILLS/Git.md`、`SKILLS/Research.md`、Codex built-in skillと責務・命令が競合しないか比較する。
+- skillの説明は品質保証ではない。実projectでacceptance criteria、test、diff reviewを通し、成果物を検証する。
+
+関連:
+
+- `SKILLS/README.md`
+- `SKILLS/Git.md`
+- `SKILLS/Research.md`
+- `TRIALS.md` — 個別skillを実際に試した時点で再利用判断を記録する。
+
+⸻
 
 ### Have I Been Pwned
 
