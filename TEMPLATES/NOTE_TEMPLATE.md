@@ -1,3 +1,13 @@
+---
+type: note
+status: active
+created: "{{date:YYYY-MM-DD}}"
+updated:
+tags: []
+source:
+visibility: public
+---
+
 # Note Title
 
 最終更新: YYYY-MM-DD

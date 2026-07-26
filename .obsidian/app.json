@@ -1,0 +1,18 @@
+{
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "ATTACHMENTS",
+  "defaultViewMode": "source",
+  "livePreview": true,
+  "newFileFolderPath": "NOTES",
+  "newFileLocation": "folder",
+  "newLinkFormat": "relative",
+  "propertiesInDocument": "visible",
+  "readableLineLength": true,
+  "trashOption": "system",
+  "useMarkdownLinks": true,
+  "userIgnoreFilters": [
+    "node_modules/",
+    "public/.vitepress/cache/",
+    "public/.vitepress/dist/"
+  ]
+}

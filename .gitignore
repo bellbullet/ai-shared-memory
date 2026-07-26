@@ -9,8 +9,29 @@ node_modules/
 .vitepress/cache/
 .vitepress/dist/
 
+# Obsidian machine-specific state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/plugins/
+.obsidian/themes/
+.trash/
+
+# Private/local notes and raw conversation archives
+LOCAL_PRIVATE/
+PRIVATE/
+CHAT_ARCHIVE_RAW/
+CONVERSATIONS_RAW/
+
+# Secrets and credentials
+*.key
+*.pem
+secrets.*
+credentials.*
+
 # OS and editor files
 .DS_Store
 Thumbs.db
+desktop.ini
 *.swp
 *.tmp
