@@ -4,6 +4,11 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ## Entry Points
 
+- Obsidian human entry point: `OBSIDIAN_HOME.md`
+- Obsidian MOCs: `MOC/PROJECTS.md`, `MOC/AI_AND_TOOLS.md`, `MOC/OPERATIONS.md`
+- Obsidian integration audit: `references/OBSIDIAN_INTEGRATION_AUDIT.md`
+- Obsidian plugin and CLI review: `references/OBSIDIAN_PLUGIN_REVIEW.md`
+- Conversation archive design: `references/CONVERSATION_ARCHIVE_DESIGN.md`
 - Current version: `VERSION`
 - Trial records and reuse decisions: `TRIALS.md`
 - Start checklist: `PROJECT_START.md`
@@ -332,6 +337,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ### Workspace / Operations
 
+- Obsidian / Vault / Backlinks / MOC → `OBSIDIAN_HOME.md`, `MOC/OPERATIONS.md`
+- Obsidian CLI / plugin review / Dataview / Tasks / Linter / Templater / Obsidian Git → `references/OBSIDIAN_PLUGIN_REVIEW.md`
+- Conversation archive / raw AI logs / public summary promotion → `references/CONVERSATION_ARCHIVE_DESIGN.md`
+- Obsidian compatibility audit / Markdown links / Windows filenames → `references/OBSIDIAN_INTEGRATION_AUDIT.md`
 - 作業開始 → `PROJECT_START.md`
 - 全体状況 / Status → `STATUS.md`
 - ワークスペース構成 → `WORKSPACE.md`

@@ -1,6 +1,6 @@
 # STATUS
 
-最終更新: 2026-07-24
+最終更新: 2026-07-25
 
 Workspace 全体の現在地を一覧するファイル。
 
@@ -53,6 +53,7 @@ Workspace 全体の現在地を一覧するファイル。
 | Check | State | Next action |
 | --- | --- | --- |
 | Public knowledge site | Live on GitHub Pages; initial deployment verified on 2026-07-15 | Recheck the Actions run and public URL after site-related changes |
+| Obsidian access | Desktop 1.12.7でRepository root、Home、標準Markdown link、公式CLIを確認。Community pluginは0件 | Mobileは必要になった時点で表示と同期境界を確認 |
 | Entry points | Synced on 2026-07-13 | Recheck after structure, version, or read-order changes |
 | `INBOX.md` | Existing OSS batches plus the 2026-07-15, 2026-07-17, and 2026-07-18 X / Switch to Codex gallery candidates remain grouped by role and risk | Promote only after the recorded license, permission, external transmission, and runtime gates are cleared |
 | `AI_DRAWERS.md` | 111 entries / 11 categories / 12 cross-groups; single-file layout retained | Trial code-review-graph on a public code-heavy project; review mattpocock/skills individually before adoption |

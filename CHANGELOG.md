@@ -2,6 +2,17 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-25
+
+- Repository rootを既存構造のままObsidian Vaultとして開ける最小`.obsidian/`設定を追加。Live Preview、relative Markdown link、link自動更新、`NOTES/`への新規note、`ATTACHMENTS/`への添付、OSのごみ箱、Backlinks、Outgoing Links、Properties、Templatesを有効にした。
+- `OBSIDIAN_HOME.md`と`MOC/PROJECTS.md`、`MOC/AI_AND_TOOLS.md`、`MOC/OPERATIONS.md`を追加し、既存の`PROJECT_START.md`、`AI_INDEX.md`、Project / Note / Trial / Decision運用を置き換えない補助導線とした。
+- `references/OBSIDIAN_INTEGRATION_AUDIT.md`へ変更前のstructure、link、filename、Windows、GitHub / Obsidian表示差、private情報risk、CLI検出結果を記録した。
+- `references/CONVERSATION_ARCHIVE_DESIGN.md`へRaw private archiveとpublic-safe processed summaryの分離、masking、human review、誤投入時の対応を定義した。
+- `references/OBSIDIAN_PLUGIN_REVIEW.md`で候補5件を権限・network・maintenance・標準機能代替から比較し、初期導入0件とした。公式Obsidian CLIは対応versionを確認できる端末だけで有効化する。
+- Project / Note Templateだけに最小YAML Propertiesを追加し、既存Markdownへの一括frontmatter追加は行わなかった。
+- `.gitignore`へObsidianのmachine state、plugin / theme、Raw conversation、private note、secret file patternを追加した。
+- Obsidian Desktop 1.12.7でVaultとHome表示を確認し、公式CLIを有効化・PATH登録した。`node_modules/`とVitePress生成物はObsidianの検索・Graph対象から除外した。
+
 ## 2026-07-24
 
 - [X投稿の急上昇AI OSS 10選](https://x.com/so_ainsight/status/2080144636170117582)を発見経路として一次情報を再確認し、star増加数ではなく用途、license、権限、外部送信、既登録項目との重複で評価した。

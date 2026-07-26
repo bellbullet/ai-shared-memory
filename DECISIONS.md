@@ -33,6 +33,43 @@ Result:
 
 `Review Date` は、後で見直す前提の判断だけに設定する。恒久的な workspace rule には `Not scheduled` と書いてよい。
 
+## 2026-07-25
+
+### Decision: Obsidianを既存Markdownの任意UIとして追加する
+
+Decision:
+
+- Repository rootをそのままObsidian Vaultとして開ける最小設定と案内層を追加する。
+- 既存Markdown、Git history、AIの読み順を正本として維持する。
+
+Reason:
+
+- `ai-shared-memory`は複数AIが読む公開前提のknowledge baseであり、Obsidian専用Vaultではない。
+- Backlinks、Search、Properties、Templates、MOCは、既存構造を移動せずに人間の再発見性を改善できる。
+- Obsidian固有依存を増やすと、GitHub、VS Code、Codex、Claude Codeなどからの互換性が下がる。
+
+Alternatives:
+
+- Obsidian専用の新Vaultへ全fileを移行する。
+- 既存fileを一括改名し、Wiki linkとfrontmatterへ変換する。
+- Community plugin中心の自動生成Vaultにする。
+
+Chosen:
+
+- 標準Markdown linkを使う`OBSIDIAN_HOME.md`と3つのMOCを追加する。
+- PropertiesはTemplateだけに追加し、新規作成分から段階導入する。
+- Community pluginは0件で開始し、必要性が実証されたものだけ再評価する。
+- Raw conversationとprivate noteはrepository外へ分離する。
+
+Review Date:
+
+- 2026-10-25、またはMOC更新負荷・query不足・Git操作負荷が繰り返し発生した時点。
+
+Result:
+
+- Obsidianなしでも利用できる後方互換性を維持する。
+- Obsidianは閲覧・編集UIであり、保存・履歴・AI共有の基盤はGitHubと既存Markdownのままとする。
+
 ## 2026-06-27
 
 ### Decision: Workspace root を `<workspace-root>` に統一する

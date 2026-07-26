@@ -1,3 +1,13 @@
+---
+type: project
+status: planning
+created: "{{date:YYYY-MM-DD}}"
+updated:
+tags: []
+source:
+visibility: public
+---
+
 # Project Name
 
 最終更新: YYYY-MM-DD
