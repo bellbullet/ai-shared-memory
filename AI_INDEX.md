@@ -63,6 +63,16 @@ AI が関連ファイルを素早く見つけるための索引です。
 - awesome-free-llm-apis → `AI_DRAWERS.md`
 - free LLM API / LLM provider free tier → `AI_DRAWERS.md`
 - OpenAI compatible API / model fallback → `AI_DRAWERS.md`
+- speech-to-speech / Hugging Face local voice agent → `AI_DRAWERS.md`
+- Silero VAD / Whisper / llama.cpp / Qwen3-TTS pipeline → `AI_DRAWERS.md`
+- Yorishiro / Presence Harness / VRM coding terminal → `AI_DRAWERS.md`
+- Wakapippi Vocal Remover Extension / WebGPU audio separation → `AI_DRAWERS.md`
+- 四葉公ラボ 配信ペット / YouTube viewer engagement → `AI_DRAWERS.md`
+- animede 3D Character Pipeline → `AI_DRAWERS.md`
+- diffusers-server / image-3d / rig-service → `AI_DRAWERS.md`
+- dotneet image-to-3d / TRELLIS.2 Apple Silicon → `AI_DRAWERS.md`
+- AKARI Video / agent-readable video editing / edit.json → `AI_DRAWERS.md`
+- VoiceDenoiser / TTS dataset denoising → `AI_DRAWERS.md`
 - Open Notebook → `AI_DRAWERS.md`
 - NotebookLM alternative → `AI_DRAWERS.md`
 - Excalidraw → `AI_DRAWERS.md`
@@ -104,6 +114,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - agmsg → `AI_DRAWERS.md`
 - cross-agent messaging / multi-agent collaboration → `AI_DRAWERS.md`
 - capability-tier routing / Sol Terra Luna task routing → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
+- Kura / file-first LoRA experiment workspace → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
+- frozen training plan / human-approved GPU job / experiment ledger → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
+- Krea 2 Raw / Turbo / Community License / LoRA training → `AI_DRAWERS.md`
+- RunPod LoRA training / ComfyUI checkpoint comparison → `AI_DRAWERS.md`
 - planner executor / task contract / acceptance gate → `NOTES/AI_Coding_Patterns.md`
 - evidence-first delivery / simulator browser accessibility verification → `NOTES/AI_Coding_Patterns.md`
 - Haoleme / terminal command mobile monitoring / Android completion notification → `INBOX.md`
@@ -124,6 +138,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Unbroker / security-unbroker → `AI_DRAWERS.md`
 - agent skill ecosystem security → `AI_DRAWERS.md`, `SECURITY_REVIEW.md`
 - Susono Model → `AI_DRAWERS.md`
+- Inkling → `AI_DRAWERS.md`
+- Thinking Machines Lab / Mira Murati → `AI_DRAWERS.md`
+- MoE / Open-weight LLM / multimodal → `AI_DRAWERS.md`
+- effort reasoning / ForecastBench / IFBench → `AI_DRAWERS.md`
 - Gemma 4 / Google DeepMind open model → `AI_DRAWERS.md`
 - E2B / E4B / 12B Unified / 26B A4B MoE / 31B Dense → `AI_DRAWERS.md`
 - edge multimodal / on-device audio / local agent model → `AI_DRAWERS.md`
@@ -229,7 +247,14 @@ AI が関連ファイルを素早く見つけるための索引です。
 - pdf-brain / local PDF Markdown semantic search / Ollama libSQL → `INBOX.md`
 - EasyEDA API Skill / WebSocket bridge / circuit design agent → `INBOX.md`
 - Hallmark / anti-slop UI design skill / design audit → `INBOX.md`
-- text-to-vrma / VRMA motion / Live2D motion Web UI / AIRI → `INBOX.md`
+- Text-To-VRMA / text-to-motion / VRMA / ARDY waypoint / AIRI motion → `AI_DRAWERS.md`
+- 2d2vrm / single image to VRM / 立ち絵VRM化 → `INBOX.md`
+- AivisSpeech Engine / AIVM / AIVMX / local Style-Bert-VITS2 API → `AI_DRAWERS.md`
+- VOICEVOX ENGINE / Japanese local HTTP TTS / speaker style ID → `AI_DRAWERS.md`
+- Irodori-TTS / Japanese TTS / emoji voice control / VoiceDesign / OpenAI-compatible TTS server → `AI_DRAWERS.md`
+- VoiceDesignCloner / TTS corpus generation / Irodori LoRA / Style-Bert-VITS2 dataset → `INBOX.md`
+- AITuberKit / VRM Live2D PNGTuber / LLM TTS YouTube integration → `INBOX.md`, `NOTES/AI_Workspace_Ideas.md`
+- composable AITuber pipeline / avatar motion voice interaction layers → `NOTES/AI_Workspace_Ideas.md`
 - ComfyUI_VNCCS / visual novel character consistency → `INBOX.md`
 - StarVector / image to SVG code / PiD pixel diffusion / qllm2 → `INBOX.md`
 - MuScriptor / multi-instrument audio-to-MIDI / MusicXML → `INBOX.md`
@@ -267,7 +292,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - FUGU / AI-Safeter → `AI_DRAWERS.md`
 - MiMo-Code → `AI_DRAWERS.md`
 - Headroom → `AI_DRAWERS.md`
-- agency-agents → `AI_DRAWERS.md`, `AI_PROFILES.md`, `SKILLS/README.md`
+- agency-agents → `AI_DRAWERS.md`, `NOTES/AI_Behavior_Candidates.md`, `TRIALS.md`
 - Hermes Agent → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`
 - Hermes Skills / agentskills.io / optional skills catalog → `AI_DRAWERS.md`, `SKILLS/README.md`, `NOTES/AI_Coding_Patterns.md`
 - agent skill ecosystem security / Unbroker → `AI_DRAWERS.md`, `SECURITY_REVIEW.md`
@@ -311,6 +336,18 @@ AI が関連ファイルを素早く見つけるための索引です。
 - VTuber体験場 → `AI_DRAWERS.md`
 - Reactive Resume → `AI_DRAWERS.md`
 - VCamdroid / Android webcam / virtual webcam → `AI_DRAWERS.md`
+- Camera Camera Camera / 顔出しなしアバター通話 → `AI_DRAWERS.md`
+- VRM video call / VRoid Hub avatar call → `AI_DRAWERS.md`
+- AI bot call / AITuber Bot API → `AI_DRAWERS.md`
+- avatar talk video / podcast recording → `AI_DRAWERS.md`
+- Yorishiro / VRM coding terminal / Presence Harness → `AI_DRAWERS.md`
+- speech-to-speech / local voice agent pipeline → `AI_DRAWERS.md`
+- Wakapippi Vocal Remover Extension / browser audio separation → `AI_DRAWERS.md`
+- 四葉公ラボ 配信ペット / streaming pet → `AI_DRAWERS.md`
+- animede 3D Character Pipeline / image-to-3D / auto-rig / VRM → `AI_DRAWERS.md`
+- image-to-3d / TRELLIS.2 / Apple Silicon 3D generation → `AI_DRAWERS.md`
+- AKARI Video / AI-native video editor → `AI_DRAWERS.md`
+- VoiceDenoiser / voice dataset preparation → `AI_DRAWERS.md`
 
 ### Workspace / Operations
 
@@ -330,7 +367,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Research skill → `SKILLS/Research.md`
 - Security skill → `SKILLS/Security.md`, `SECURITY_REVIEW.md`
 - AI 役割分担 / profiles → `AI_PROFILES.md`
-- 専門AIエージェント / role agents / agency-agents → `AI_DRAWERS.md`, `AI_PROFILES.md`, `SKILLS/README.md`
+- 専門AIエージェント / role agents / agency-agents → `AI_DRAWERS.md`, `NOTES/AI_Behavior_Candidates.md`, `TRIALS.md`
 - 定期レビュー / monthly review → `REVIEW.md`
 - Memory Review / 記憶整理 / dream → `REVIEW.md`, `NOTES/AI_Coding_Patterns.md`, `LESSONS_LEARNED.md`
 - memory consolidation / 記憶統合 → `NOTES/AI_Coding_Patterns.md`, `AI_DRAWERS.md`
@@ -397,10 +434,17 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ### Ideas / Research
 
+- LingBot-Map → `AI_DRAWERS.md`
+- streaming 3D reconstruction / feed-forward 3D foundation model → `AI_DRAWERS.md`
+- Geometric Context Transformer / Geometric Context Attention → `AI_DRAWERS.md`
+- camera pose / depth / point cloud estimation → `AI_DRAWERS.md`
+- Spatial AI / SLAM / visual odometry → `AI_DRAWERS.md`
 - Amazon セール検知システム → `AI_DRAWERS.md`
 - Amazon Creators API SDK → `AI_DRAWERS.md`
 - Terrain Diffusion → `AI_DRAWERS.md`
 - InfiniteDiffusion → `AI_DRAWERS.md`
+- animede 3D Character Pipeline → `AI_DRAWERS.md`
+- image-to-3d / Apple Silicon image-to-3D → `AI_DRAWERS.md`
 - tomari-guruguru → `AI_DRAWERS.md`
 - トマリトーク / PNGTuber / AITuber avatar → `AI_DRAWERS.md`
 - reviewable-html-workbench → `AI_DRAWERS.md`, `OUTPUTS/README.md`
@@ -436,6 +480,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Android webcam / virtual webcam / smartphone webcam → `AI_DRAWERS.md`
 - 2.5D avatar / anime layer decomposition / PSD avatar素材化 → `AI_DRAWERS.md`
 - AI video / voice generation → `AI_DRAWERS.md`
+- local voice agent / VAD STT LLM TTS pipeline → `AI_DRAWERS.md`
+- image-to-3D / auto-rig / VRM generation → `AI_DRAWERS.md`
+- agentic video editing / edit.json → `AI_DRAWERS.md`
+- audio separation / voice dataset preparation → `AI_DRAWERS.md`
 - HomeLab configuration management / Puppet / Ansible → `AI_DRAWERS.md`, `NOTES/HomeLab.md`
 - specialist agents / AI agent personas → `AI_DRAWERS.md`, `AI_PROFILES.md`, `SKILLS/README.md`
 - memory dream / memory consolidation / 記憶整理 → `AI_DRAWERS.md`, `NOTES/AI_Coding_Patterns.md`, `REVIEW.md`

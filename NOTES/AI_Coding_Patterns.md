@@ -1,6 +1,6 @@
 # AI Coding Patterns
 
-最終更新: 2026-07-18
+最終更新: 2026-07-19
 
 ## Purpose
 
@@ -23,6 +23,8 @@
 - Switch to Codex gallery: https://switch-to-codex.openai.chatgpt.site/
 - Mercari AI Agent Day: https://careers.mercari.com/en/mercan/articles/60180/
 - Mercari AI Agent Day behind the scenes: https://careers.mercari.com/en/mercan/articles/60642/
+- Kura: https://github.com/nomadoor/Kura
+- KuraによるKrea 2 LoRA学習例: https://comfyui.nomadoor.net/ja/notes/kura-krea2-lora-training/
 
 ## Pattern: Thin AGENTS, Routed Skills
 
@@ -184,6 +186,27 @@ Mercariの2026年AI Agent Day事例から再利用できる構造:
 - 公式事例が説明する対象は主にNotion AIとClaude Coworkであり、X上の二次投稿が示唆したClaude Code全社展開と同一視しない。
 - sandboxがあっても、外部送信、connector、MCP、file access、credential、生成物公開の境界は別々に監査する。
 - completion rateや利用者の好意的反応だけで安全性や業務効果を判断せず、権限逸脱、情報漏えい、手戻り、support costも評価する。
+
+## Pattern: File-First Approved Experiment Loop
+
+高コストまたは失敗時の損失が大きいAI実験では、agentへ一括で自律実行させず、提案、承認、実行、観測、評価を通常ファイルで分離する。
+
+KuraのLoRA学習workspaceから再利用できる構造:
+
+1. datasetと目的を先に固定し、agentが設定値を`run.yaml`へ書く。
+2. model、backend、dataset件数、resolution、rank、learning rate、steps、GPU、download、storage、費用などの前提とtrade-offをplanへ展開する。
+3. 人間がplanを確認し、明示承認した時点の内容をfreezeする。曖昧な「進めて」ではなく実行開始の指示を独立させる。
+4. frozen planからlocalまたはremote jobを実行する。monitorはread-onlyとし、開始・停止・設定変更権限を持たせない。
+5. checkpointと複数promptの比較artifactを作り、undertraining、overtraining、identity、style、破綻を人間が評価する。
+6. 人間の判断を`notes.md`へ残し、次回のplan作成時に過去の設定、結果、判断をcontextとして再利用する。
+
+適用時の注意:
+
+- file-firstは改ざん検知を自動提供しない。強い証跡が必要ならhash chain、署名、append-only logなどを別層で使う。
+- code、model、dataset、LoRA、生成物は別々のlicenseと権利を確認する。toolのOSS licenseをmodel weightへ誤適用しない。
+- remote GPUではAPI key、dataset upload、課金上限、lease、output回収後のpod停止をgateに含める。
+- local GPUでもDocker、任意code、model download、disk、ComfyUIや他directoryへのfile accessを事前に列挙する。
+- 比較画像の自動生成を品質判定と同一視せず、最終的な採否と理由を人間の評価として残す。
 
 ## AI Instructions
 

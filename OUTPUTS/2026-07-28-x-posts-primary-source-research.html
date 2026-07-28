@@ -1,0 +1,1135 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>X投稿16件 一次情報調査レポート - 2026-07-28</title>
+  <style>
+    :root {
+      --bg: #f4f6f7;
+      --surface: #ffffff;
+      --surface-muted: #eef1f2;
+      --text: #162026;
+      --muted: #59666d;
+      --border: #cfd7db;
+      --header: #182126;
+      --header-text: #f7f9fa;
+      --accent: #087f72;
+      --accent-soft: #d9f1ed;
+      --warn: #9a5b00;
+      --warn-soft: #fff0cc;
+      --danger: #aa2e25;
+      --danger-soft: #fde3e0;
+      --info: #245ea8;
+      --info-soft: #e3edfb;
+      --code: #edf1f2;
+      --shadow: 0 8px 24px rgba(23, 31, 35, 0.08);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101416;
+        --surface: #171d20;
+        --surface-muted: #20282c;
+        --text: #eef2f3;
+        --muted: #aeb9be;
+        --border: #39454a;
+        --header: #0b0e10;
+        --header-text: #f7f9fa;
+        --accent: #55c8b6;
+        --accent-soft: #163b36;
+        --warn: #f1bd64;
+        --warn-soft: #443313;
+        --danger: #ff8a80;
+        --danger-soft: #48211e;
+        --info: #8bb8f5;
+        --info-soft: #1a304d;
+        --code: #20282c;
+        --shadow: none;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", "Yu Gothic UI", "Meiryo", sans-serif;
+      line-height: 1.72;
+    }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    code {
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+      background: var(--code);
+      font-family: Consolas, "Cascadia Code", monospace;
+      overflow-wrap: anywhere;
+    }
+    .page-header {
+      background: var(--header);
+      color: var(--header-text);
+      border-bottom: 4px solid var(--accent);
+    }
+    .header-inner,
+    main,
+    .toolbar-inner,
+    footer {
+      width: min(1180px, calc(100% - 32px));
+      margin-inline: auto;
+    }
+    .header-inner { padding: 44px 0 38px; }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #9bdacf;
+      font-weight: 700;
+      font-size: 0.84rem;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      max-width: 900px;
+      font-size: clamp(1.9rem, 4vw, 3.25rem);
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    .lead {
+      max-width: 900px;
+      margin: 18px 0 0;
+      color: #d4dde0;
+      font-size: 1rem;
+    }
+    .header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      margin-top: 24px;
+      color: #b8c4c8;
+      font-size: 0.88rem;
+    }
+    .toolbar {
+      position: sticky;
+      z-index: 10;
+      top: 0;
+      background: color-mix(in srgb, var(--surface) 94%, transparent);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+    .toolbar-inner {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 0;
+    }
+    .search {
+      width: 100%;
+      min-height: 42px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--text);
+      padding: 9px 12px;
+      font: inherit;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-end;
+    }
+    .filter-button {
+      min-height: 38px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--text);
+      padding: 6px 10px;
+      font: inherit;
+      font-size: 0.84rem;
+      cursor: pointer;
+    }
+    .filter-button[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--text);
+      font-weight: 700;
+    }
+    main { padding: 32px 0 64px; }
+    section { margin-top: 38px; }
+    section:first-child { margin-top: 0; }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.5rem;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 0;
+      font-size: 1.12rem;
+      letter-spacing: 0;
+    }
+    h4 {
+      margin: 18px 0 6px;
+      font-size: 0.94rem;
+      letter-spacing: 0;
+    }
+    p { margin: 8px 0; }
+    ul { margin: 7px 0 7px 1.25rem; padding: 0; }
+    .summary-band {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--surface);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .metric {
+      min-height: 112px;
+      padding: 18px;
+      border-right: 1px solid var(--border);
+    }
+    .metric:last-child { border-right: 0; }
+    .metric strong {
+      display: block;
+      font-size: 1.55rem;
+      line-height: 1.2;
+    }
+    .metric span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+    .notice {
+      padding: 16px 18px;
+      border-left: 4px solid var(--info);
+      background: var(--info-soft);
+    }
+    .notice.warning {
+      border-color: var(--warn);
+      background: var(--warn-soft);
+    }
+    .key-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .key-table th,
+    .key-table td {
+      padding: 12px;
+      border: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+    .key-table th {
+      background: var(--surface-muted);
+      font-size: 0.86rem;
+    }
+    .report-list {
+      display: grid;
+      gap: 16px;
+    }
+    .report-item {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .item-head {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: start;
+      padding: 17px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+    .item-number {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--header);
+      color: var(--header-text);
+      font-weight: 800;
+      font-size: 0.84rem;
+    }
+    .item-subtitle {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.83rem;
+    }
+    .item-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+      gap: 22px;
+      padding: 18px;
+    }
+    .fact-panel {
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      background: var(--surface-muted);
+    }
+    .fact-panel h4:first-child { margin-top: 0; }
+    .badge {
+      display: inline-block;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .badge.try { color: var(--accent); background: var(--accent-soft); }
+    .badge.research { color: var(--info); background: var(--info-soft); }
+    .badge.reference { color: var(--muted); background: var(--surface-muted); }
+    .badge.caution { color: var(--warn); background: var(--warn-soft); }
+    .badge.high-risk { color: var(--danger); background: var(--danger-soft); }
+    .source-list {
+      list-style: none;
+      margin-left: 0;
+    }
+    .source-list li {
+      margin: 7px 0;
+      overflow-wrap: anywhere;
+    }
+    .judgment {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+    }
+    .judgment.caution {
+      border-color: var(--warn);
+      background: var(--warn-soft);
+    }
+    .judgment.danger {
+      border-color: var(--danger);
+      background: var(--danger-soft);
+    }
+    .memory-route {
+      color: var(--muted);
+      font-size: 0.87rem;
+    }
+    .hidden { display: none !important; }
+    .appendix {
+      padding: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .appendix ol { padding-left: 1.4rem; }
+    .appendix li { margin: 9px 0; }
+    footer {
+      padding: 22px 0 42px;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+    .no-results {
+      display: none;
+      padding: 24px;
+      border: 1px dashed var(--border);
+      text-align: center;
+      color: var(--muted);
+    }
+
+    @media (max-width: 820px) {
+      .toolbar-inner { grid-template-columns: 1fr; }
+      .filters { justify-content: flex-start; }
+      .summary-band { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .metric:nth-child(2) { border-right: 0; }
+      .metric:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+      .item-body { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .header-inner, main, .toolbar-inner, footer {
+        width: min(100% - 20px, 1180px);
+      }
+      .header-inner { padding: 30px 0 28px; }
+      .summary-band { grid-template-columns: 1fr; }
+      .metric {
+        min-height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .metric:last-child { border-bottom: 0; }
+      .item-head { grid-template-columns: auto minmax(0, 1fr); }
+      .item-head .badge { grid-column: 2; justify-self: start; }
+      .item-body { padding: 15px; }
+      .key-table { display: block; overflow-x: auto; }
+    }
+    @media print {
+      .toolbar { display: none; }
+      body { background: #fff; color: #111; }
+      .report-item { break-inside: avoid; box-shadow: none; }
+      a { color: #111; }
+    }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-inner">
+      <p class="eyebrow">Primary-source review / 2026-07-28</p>
+      <h1>X投稿16件 一次情報調査レポート</h1>
+      <p class="lead">
+        投稿本文、スレッド・引用元、外部リンクを確認し、公式GitHub、公式ドキュメント、
+        配布ストアなどの一次情報と照合しました。投稿の勢いと、再現可能な事実を分けて整理しています。
+      </p>
+      <div class="header-meta">
+        <span>対象: 2026年7月24日〜27日の投稿</span>
+        <span>作成日: 2026年7月28日</span>
+        <span>形式: 公開可能な要約のみ</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <input id="search" class="search" type="search" placeholder="投稿、ツール、判定、キーワードで検索" aria-label="レポートを検索">
+      <div class="filters" aria-label="分類フィルター">
+        <button class="filter-button" type="button" data-filter="all" aria-pressed="true">すべて</button>
+        <button class="filter-button" type="button" data-filter="try" aria-pressed="false">試す候補</button>
+        <button class="filter-button" type="button" data-filter="research" aria-pressed="false">研究</button>
+        <button class="filter-button" type="button" data-filter="reference" aria-pressed="false">運用知識</button>
+        <button class="filter-button" type="button" data-filter="caution" aria-pressed="false">注意</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section aria-labelledby="summary-title">
+      <h2 id="summary-title">調査サマリー</h2>
+      <div class="summary-band">
+        <div class="metric"><strong>16</strong><span>確認したX投稿</span></div>
+        <div class="metric"><strong>一次情報優先</strong><span>公式GitHub・公式Docs・公式ストアを照合</span></div>
+        <div class="metric"><strong>4区分</strong><span>試す候補・研究・運用知識・注意</span></div>
+        <div class="metric"><strong>新規HTML 1件</strong><span>既存の共有メモリ本文は未変更</span></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="conclusion-title">
+      <h2 id="conclusion-title">先に読む結論</h2>
+      <div class="notice warning">
+        <strong>X投稿は発見経路として有用ですが、性能・利益・「完全無料」「標準機能」といった強い表現は、
+        一次情報で同じ主張が確認できないものが複数ありました。</strong>
+        本レポートでは、確認できない部分を「未確認」「環境依存」「誇張」と明示しています。
+      </div>
+      <table class="key-table">
+        <thead>
+          <tr><th>判断</th><th>対象</th><th>要点</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>試す価値が高い</td>
+            <td>Wakapippi Vocal Remover、Yorishiro、AKARI、VoiceDenoiser</td>
+            <td>用途が明確。もっとも、YorishiroとAKARIは現状macOS中心。</td>
+          </tr>
+          <tr>
+            <td>研究価値が高い</td>
+            <td>animede 3Dパイプライン、image-to-3d、speech-to-speech</td>
+            <td>3D生成・ローカル音声AIの参考になるが、GPU・OS・ライセンス条件を要確認。</td>
+          </tr>
+          <tr>
+            <td>運用へ反映できる</td>
+            <td>ハーネス設計、RAG品質、ChatGPT Skills、Claude/Codex設定</td>
+            <td>方向性は有用。ただしCodex Rulesなど、投稿時点の記述に現行仕様との不一致あり。</td>
+          </tr>
+          <tr>
+            <td>強い注意が必要</td>
+            <td>取引利益、FaceSwap、煽り型OSS一覧</td>
+            <td>利益の監査証拠なし、顔交換は高い悪用リスク、OSSの商用版との同等性は未確認。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="details-title">
+      <h2 id="details-title">投稿別の調査結果</h2>
+      <div id="report-list" class="report-list">
+
+        <article class="report-item" data-category="caution" data-search="github repos yt-dlp ollama fooocus whisper plausible appflowy penpot n8n cal bitwarden 無料 誇張">
+          <div class="item-head">
+            <span class="item-number">01</span>
+            <div>
+              <h3>「違法であるべきGitHubリポジトリ10選」</h3>
+              <div class="item-subtitle">@Nozelcode / OSS一覧</div>
+            </div>
+            <span class="badge caution">誇張を補正</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>投稿の内容</h4>
+              <p>著名OSS 10件を、有料サービスを破壊する「100%無料」の代替として紹介し、企業に500億ドル超の損失を与えたと主張しています。</p>
+              <h4>一次情報で確認できたこと</h4>
+              <ul>
+                <li>列挙された10リポジトリは実在します。</li>
+                <li>ライセンスは一様ではありません。MIT、GPL、AGPL、MPL、Unlicenseのほか、n8nはSustainable Use Licenseです。</li>
+                <li>Bitwardenは主要サーバーがAGPL-3.0ですが、企業向けモジュールには別のSource Availableライセンスがあります。</li>
+                <li><code>calcom/cal.com</code> は現在 <code>calcom/cal.diy</code> へリダイレクトされます。</li>
+              </ul>
+              <div class="judgment caution">
+                <strong>判定:</strong> 発見用リストとしては有用ですが、「有料版と同じ」「無制限」「500億ドル損失」は検証できません。
+                機能差、運用コスト、モデル費用、商用利用条件を個別に確認すべきです。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> 多くが既登録・既知。個別重複を増やさず、必要なものだけ既存項目を更新。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>対象リポジトリ</h4>
+              <ul class="source-list">
+                <li><a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a></li>
+                <li><a href="https://github.com/ollama/ollama">Ollama</a></li>
+                <li><a href="https://github.com/lllyasviel/Fooocus">Fooocus</a></li>
+                <li><a href="https://github.com/openai/whisper">Whisper</a></li>
+                <li><a href="https://github.com/plausible/analytics">Plausible Analytics</a></li>
+                <li><a href="https://github.com/AppFlowy-IO/AppFlowy">AppFlowy</a></li>
+                <li><a href="https://github.com/penpot/penpot">Penpot</a></li>
+                <li><a href="https://github.com/n8n-io/n8n">n8n</a></li>
+                <li><a href="https://github.com/calcom/cal.com">Cal.com repository redirect</a></li>
+                <li><a href="https://github.com/bitwarden/server">Bitwarden server</a></li>
+              </ul>
+              <p><a href="https://x.com/nozelcode/status/2081822520991265097">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="reference" data-search="graph engineering harness context loop agent openai anthropic グラフ ハーネス コンテキスト">
+          <div class="item-head">
+            <span class="item-number">02</span>
+            <div>
+              <h3>「プロンプトではなくグラフエンジニアリング」</h3>
+              <div class="item-subtitle">@MakeAI_CEO / 引用X記事</div>
+            </div>
+            <span class="badge reference">概念は有用</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>投稿・引用記事の内容</h4>
+              <p>コンテキスト、ハーネス、ループ、グラフをAIエージェント設計の中心概念として紹介し、海外ではグラフ設計が標準だと強く主張しています。</p>
+              <h4>公式情報との照合</h4>
+              <ul>
+                <li>OpenAIとAnthropicは、エージェントループ、ツール、オーケストレーション、ハーネス設計を公式資料で扱っています。</li>
+                <li>一方、Anthropicは複雑なフレームワークを常に推すのではなく、単純で合成可能なパターンから始めることを勧めています。</li>
+                <li>「海外のプロはグラフエンジニアリングが当たり前」「公式の設計5つ」という表現は、引用投稿だけでは一次情報に対応付けられません。</li>
+              </ul>
+              <div class="judgment">
+                <strong>判定:</strong> 「プロンプトだけでなく、状態・ツール・反復・検証を設計する」という方向は正しいです。
+                ただし、グラフを必須の上位概念にせず、単一エージェントのループで足りるか先に判断するのが安全です。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> <code>NOTES/AI_Coding_Patterns.md</code> のハーネス・エージェント設計と接続候補。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>一次情報</h4>
+              <ul class="source-list">
+                <li><a href="https://openai.com/index/harness-engineering/">OpenAI: Harness engineering</a></li>
+                <li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/">OpenAI: A practical guide to building agents</a></li>
+                <li><a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic: Building effective agents</a></li>
+                <li><a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">Anthropic: Effective harnesses for long-running agents</a></li>
+              </ul>
+              <p><a href="https://x.com/makeai_ceo/status/2081690501854478727">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="reference" data-search="claude code desktop session rename scheduled task loop set_session_title 自動リネーム">
+          <div class="item-head">
+            <span class="item-number">03</span>
+            <div>
+              <h3>Claude Code Desktopのセッション名を20分ごとに更新</h3>
+              <div class="item-subtitle">@kotetsu_0321 / 運用レシピ</div>
+            </div>
+            <span class="badge reference">環境で再確認</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>投稿の内容</h4>
+              <p><code>list_sessions</code>、<code>list_events</code>、<code>set_session_title</code> と定期実行を組み合わせ、作業内容に応じてセッション名を更新する手順です。</p>
+              <h4>確認結果</h4>
+              <ul>
+                <li>セッションの散乱を抑える目的と、Skillへ指示を分離する設計は合理的です。</li>
+                <li>ただし、列挙された内部ツール名、<code>/loop 20m</code>、再起動後の永続性を確認できる公開Anthropic公式資料は見つかりませんでした。</li>
+                <li>デスクトップ版の特定ビルドや段階提供機能である可能性があるため、手元のツール一覧と実行結果を先に確認すべきです。</li>
+              </ul>
+              <div class="judgment">
+                <strong>判定:</strong> 便利な試行候補ですが、「標準機能」と断定して共有ルールへ入れる段階ではありません。
+                1セッションで手動実行し、タイトル変更と定期実行の挙動を確認してから採用します。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> 実機検証後に <code>TRIALS.md</code> へ。現時点は参考レシピ。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>参照</h4>
+              <ul class="source-list">
+                <li><a href="https://docs.anthropic.com/en/docs/claude-code/overview">Claude Code documentation</a></li>
+                <li><a href="https://learn.chatgpt.com/docs/automations">ChatGPT/Codex Automations</a></li>
+              </ul>
+              <p><a href="https://x.com/kotetsu_0321/status/2081658444554326425">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="caution" data-search="faceswap deepfake face recognition consent dual use 顔交換 ディープフェイク">
+          <div class="item-head">
+            <span class="item-number">04</span>
+            <div>
+              <h3>FaceSwap</h3>
+              <div class="item-subtitle">@GithubProjects / 顔交換OSS</div>
+            </div>
+            <span class="badge high-risk">高リスク用途</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>投稿の内容</h4>
+              <p>画像・動画から顔を抽出し、学習し、別動画へ変換できるGUI付きOSSとして紹介しています。</p>
+              <h4>公式リポジトリで確認</h4>
+              <ul>
+                <li>Extract、Train、Convert、GUIという説明は公式READMEと一致します。</li>
+                <li>GPL-3.0。Windows、Linux、macOSを案内し、GPU利用を推奨しています。</li>
+                <li>公式リポジトリは、本人の同意のない顔交換や違法・非倫理的利用を明確に禁じています。</li>
+                <li>投稿アカウントはGitHub公式ではなく、コミュニティ系の紹介アカウントです。</li>
+              </ul>
+              <div class="judgment danger">
+                <strong>判定:</strong> 技術は実在しますが、本人同意、肖像権、なりすまし、性的・詐欺的利用への悪用リスクが高い領域です。
+                一般的な「試すOSS」としては推奨しません。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> 保存するならSecurity / Responsible AIの注意事例。導入候補にはしない。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>一次情報</h4>
+              <ul class="source-list">
+                <li><a href="https://github.com/deepfakes/faceswap">deepfakes/faceswap</a></li>
+              </ul>
+              <p><a href="https://x.com/githubprojects/status/2081628631777124469">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="try" data-search="wakapippi vocal remover webgpu chrome firefox uv r mdx net browser audio">
+          <div class="item-head">
+            <span class="item-number">05</span>
+            <div>
+              <h3>Wakapippi Vocal Remover Extension</h3>
+              <div class="item-subtitle">@wakapippi / ブラウザ内音源分離</div>
+            </div>
+            <span class="badge try">次に試す候補</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>投稿の内容</h4>
+              <p>YouTubeなどの再生音を、WebGPUでリアルタイムにボーカルと伴奏へ分離するChrome・Firefox拡張です。</p>
+              <h4>公式ストアで確認</h4>
+              <ul>
+                <li>UVR-MDX-NETをWebGPUでオンデバイス実行し、外部サーバーへ音声を送らないという説明があります。</li>
+                <li>Chrome版はChrome 113以降とWebGPUが必要。複数タブ同時利用は非対応です。</li>
+                <li>Firefox版は「すべてのWebサイト上のデータへのアクセス」を要求します。開発者はデータ収集なしと申告しています。</li>
+                <li>FirefoxストアではApache-2.0と表示されていますが、投稿からソースリポジトリは特定できませんでした。</li>
+              </ul>
+              <div class="judgment">
+                <strong>判定:</strong> 用途が明確で、短時間の試用価値があります。インストール前に権限、公開ソース、著作権上の私的利用範囲を確認します。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> AI_DRAWERSのCreative / Audio / Browser Toolへ新規候補。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>公式配布</h4>
+              <ul class="source-list">
+                <li><a href="https://chromewebstore.google.com/detail/wakapippi-vocal-remover-e/mfdkjbkokfdnegolbddbacaafcekijgf">Chrome Web Store</a></li>
+                <li><a href="https://addons.mozilla.org/en-US/firefox/addon/wakapippi-vocal-remover/">Firefox Add-ons</a></li>
+              </ul>
+              <p><a href="https://x.com/wakapippi/status/2081680230574625104">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="try" data-search="streaming pet youtube comment reaction subscription gif obs 配信 ペット しばコメ">
+          <div class="item-head">
+            <span class="item-number">06</span>
+            <div>
+              <h3>配信画面で視聴者と育てるペット</h3>
+              <div class="item-subtitle">@Shiba_Kou_v / ホスト型配信ツール</div>
+            </div>
+            <span class="badge try">条件付き試用</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>投稿の内容</h4>
+              <p>コメント、リアクション、新規登録などで成長し、画像・GIFと進化段階を設定できる無料の配信ペットです。</p>
+              <h4>サイトで確認したこと</h4>
+              <ul>
+                <li>設定URLは「しばコメ」ログイン画面へ移動し、YouTubeアカウントでのログインを求めます。</li>
+                <li>メンバー向け機能の判定にはDiscord連携を使う旨が表示されます。</li>
+                <li>公開リポジトリ、ソースライセンス、イベントデータの保持方針は投稿と公開画面だけでは確認できませんでした。</li>
+              </ul>
+              <div class="judgment">
+                <strong>判定:</strong> 配信演出として面白いですが、OSSではなくホスト型サービスとして扱うのが適切です。
+                OAuth権限とプライバシー説明を確認してからテスト用アカウントで試します。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> Creative / Streaming / Hosted Tool候補。OSSとしては登録しない。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>参照</h4>
+              <ul class="source-list">
+                <li><a href="https://shibakou-lab.jp/settings">公式設定ページ</a></li>
+              </ul>
+              <p><a href="https://x.com/shiba_kou_v/status/2081576308060909610">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="try" data-search="yorishiro ai terminal vrm companion claude code codex macos presence harness">
+          <div class="item-head">
+            <span class="item-number">07</span>
+            <div>
+              <h3>Yorishiro</h3>
+              <div class="item-subtitle">@shinshin86 / AIに身体と居場所を与えるターミナル</div>
+            </div>
+            <span class="badge try">高関心・OS制約</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>公式リポジトリで確認</h4>
+              <ul>
+                <li>AIコーディングエージェントを、VRMキャラクターが暮らす空間と統合する「Presence Harness」です。</li>
+                <li>Claude Codeを主対象とし、Codex対応はexperimentalです。</li>
+                <li>現時点はmacOSのみ。Windowsはランタイムが不安定なため非対応、Linux版もありません。</li>
+                <li>コードはMITですが、名称・ロゴには別の商標上の制約があります。</li>
+              </ul>
+              <div class="judgment">
+                <strong>判定:</strong> AIRIやCodex petの方向と非常に近い研究候補です。ただし現在のWindows環境では導入せず、
+                Windows対応とCodex統合の成熟を監視します。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> AI_DRAWERSのAI Companion / Agent Runtimeへ追加価値が高い。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>一次情報</h4>
+              <ul class="source-list">
+                <li><a href="https://github.com/sktkkoo/Yorishiro">sktkkoo/Yorishiro</a></li>
+              </ul>
+              <p><a href="https://x.com/shinshin86/status/2081726145385660898">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="reference" data-search="claude code codex config agents md rules skills hooks symlink synchronization 設定 同期">
+          <div class="item-head">
+            <span class="item-number">08</span>
+            <div>
+              <h3>Claude CodeとCodexの設定同期メモ</h3>
+              <div class="item-subtitle">@kanta_tkd / AGENTS.md・Skills・Rules・Hooks</div>
+            </div>
+            <span class="badge caution">一部更新が必要</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>投稿の提案</h4>
+              <p>Claude側からAGENTS.mdをimportし、Skillsはsymlink、RulesとHooksは変換して共有するという構成です。</p>
+              <h4>現行公式仕様との照合</h4>
+              <ul>
+                <li>Claudeの<code>CLAUDE.md</code>から<code>@path</code>で別ファイルをimportする仕組みは公式です。</li>
+                <li>「CodexにはRulesがない」は現行Codex公式資料と不一致です。CodexにはRulesとHooksの公式ドキュメントがあります。</li>
+                <li>現在のCodex Skillsは、ユーザー側<code>~/.agents/skills</code>、リポジトリ側<code>.agents/skills</code>が共通形式の中心です。</li>
+                <li>symlink自体はファイル共有手段ですが、Hookのイベント名・payload・権限モデルは製品間で異なります。設定ファイルをそのまま相互参照させるのは危険です。</li>
+              </ul>
+              <div class="judgment caution">
+                <strong>判定:</strong> 共通ルールをAGENTS.mdへ集約する考えは再利用できます。
+                Skillsは共通形式を優先し、HooksとRulesは各製品の公式形式で薄いアダプターを持つ方が安全です。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> 既存のThin AGENTS / Routed Skills方針を補強。投稿手順の丸写しはしない。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>公式資料</h4>
+              <ul class="source-list">
+                <li><a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md">Codex AGENTS.md</a></li>
+                <li><a href="https://learn.chatgpt.com/docs/skills">Codex Skills</a></li>
+                <li><a href="https://learn.chatgpt.com/docs/hooks">Codex Hooks</a></li>
+                <li><a href="https://learn.chatgpt.com/docs/rules">Codex Rules</a></li>
+                <li><a href="https://docs.anthropic.com/en/docs/claude-code/memory">Claude Code memory / imports</a></li>
+              </ul>
+              <p><a href="https://x.com/kanta_tkd/status/2081592988837548304">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="caution" data-search="trading bot claude code profit arbitrage 218000 8400 68 financial unverified 取引 利益">
+          <div class="item-head">
+            <span class="item-number">09</span>
+            <div>
+              <h3>18歳の学生がClaude Code取引Botで21.8万ドル</h3>
+              <div class="item-subtitle">@ClaudeCode_UT / 引用元 @zrebroia → @twetsfyp</div>
+            </div>
+            <span class="badge high-risk">未検証の金融主張</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>スレッド・引用元</h4>
+              <p>元投稿は、60市場の監視、BTCデータ同期、価格遅延の利用、68ドルから21.8万ドルという利益を動画付きで紹介しています。さらに別アカウントの投稿を引用しています。</p>
+              <h4>確認できなかったもの</h4>
+              <ul>
+                <li>Botのソースコード、取引所の監査可能な履歴、資金曲線、手数料・スリッページ、清算リスク。</li>
+                <li>本人・年齢・期間・初期資金・総利益を独立に裏づける一次資料。</li>
+                <li>再現可能な戦略仕様と、規約・法令への適合性。</li>
+              </ul>
+              <div class="judgment danger">
+                <strong>判定:</strong> バイラルな成功談であり、投資判断や実装要件の根拠にはできません。
+                価格遅延アービトラージは速度、手数料、流動性、規約、資本毀損リスクに強く依存します。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> 保存非推奨。残す場合は「未検証の金融事例」としてのみ。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>投稿チェーン</h4>
+              <ul class="source-list">
+                <li><a href="https://x.com/claudecode_ut/status/2081363936570708048">日本語紹介投稿</a></li>
+                <li><a href="https://x.com/zrebroia/status/2079759093368062249">引用元投稿</a></li>
+              </ul>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="reference" data-search="rag knowledge faq retrieval chunking corpus prompt evaluation microsoft azure ai search ナレッジ">
+          <div class="item-head">
+            <span class="item-number">10</span>
+            <div>
+              <h3>RAGはプロンプト以上にナレッジが重要</h3>
+              <div class="item-subtitle">@__yonis__ / 社内FAQ</div>
+            </div>
+            <span class="badge reference">方向性は妥当</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>投稿の主張</h4>
+              <p>社内FAQの精度を上げるには、プロンプトよりもナレッジの品質が重要だと述べています。</p>
+              <h4>公式資料からの補足</h4>
+              <ul>
+                <li>最新性、正確性、重複、アクセス権、文書構造など、元データの品質はRAGの上限を大きく左右します。</li>
+                <li>同時に、chunking、index、query、ranking、引用、評価セット、プロンプトも結果へ影響します。</li>
+                <li>したがって「ナレッジだけ」ではなく、corpus preparationとretrieval pipelineを一体で管理するのが正確です。</li>
+              </ul>
+              <div class="judgment">
+                <strong>判定:</strong> 実務上の優先順位として有用です。社内FAQでは、プロンプト調整の前に
+                正本、更新責任者、権限、検索失敗例、評価用質問を整備するべきです。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> Research Protocol / Knowledge Managementの規範候補。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>一次情報</h4>
+              <ul class="source-list">
+                <li><a href="https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview">Microsoft: RAG overview</a></li>
+                <li><a href="https://learn.microsoft.com/en-ie/azure/ai-foundry/concepts/retrieval-augmented-generation">Microsoft Foundry: RAG concepts</a></li>
+              </ul>
+              <p><a href="https://x.com/__yonis__/status/2081663834490917101">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="research" data-search="animede diffusers server image 3d rig service hunyuan3d vrm cuda polyform apache">
+          <div class="item-head">
+            <span class="item-number">11</span>
+            <div>
+              <h3>animede: 画像生成 → 3D化 → 自動リグ</h3>
+              <div class="item-subtitle">@uzuki425 / 3リポジトリ構成</div>
+            </div>
+            <span class="badge research">研究対象</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>3リポジトリの役割</h4>
+              <ul>
+                <li><strong>diffusers-server:</strong> 画像・動画モデルを扱うFastAPI/WebUI。自動VRAM管理を掲げます。</li>
+                <li><strong>image-3d:</strong> 画像からSTL、3MF、GLB、OBJを生成。既定はmock generatorで、実際のHunyuan3D利用は追加設定が必要です。</li>
+                <li><strong>rig-service:</strong> humanoid auto-rigとVRM出力を扱います。</li>
+              </ul>
+              <h4>重要な制約</h4>
+              <ul>
+                <li>diffusers-serverは48GB級GPUを推奨し、モデルごとのライセンスは別途確認が必要です。</li>
+                <li>image-3dは形状生成16GB、テクスチャ込み32GBのNVIDIA CUDA環境を案内しています。</li>
+                <li>rig-serviceはPolyForm Small Business Licenseで、一般的なOSIオープンソースライセンスではありません。</li>
+              </ul>
+              <div class="judgment">
+                <strong>判定:</strong> 3Dキャラクターパイプラインの研究価値は高い一方、標準設定で完成AIパイプラインになるわけではありません。
+                Windows + RX 7900 XTXでの直接利用は、CUDA依存のため現状ハードルが高いです。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> Creative / 3D / Avatar Pipelineへ3件を関連付けて追加候補。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>一次情報</h4>
+              <ul class="source-list">
+                <li><a href="https://github.com/animede/diffusers-server">animede/diffusers-server</a></li>
+                <li><a href="https://github.com/animede/image-3d">animede/image-3d</a></li>
+                <li><a href="https://github.com/animede/rig-service">animede/rig-service</a></li>
+              </ul>
+              <p><a href="https://x.com/uzuki425/status/2081725340230255078">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="research" data-search="dotneet image to 3d trellis apple silicon mps glb auto rig macos">
+          <div class="item-head">
+            <span class="item-number">12</span>
+            <div>
+              <h3>dotneet/image-to-3d</h3>
+              <div class="item-subtitle">@santa128bit / Apple Silicon向け画像3D化</div>
+            </div>
+            <span class="badge research">環境限定研究</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>公式リポジトリで確認</h4>
+              <ul>
+                <li>TRELLIS.2をApple Silicon / MPS向けに調整した、画像からGLBを生成するローカルアプリです。</li>
+                <li>UV、repair、projection、auto-rigを含む一連の処理を提供します。</li>
+                <li>macOS 12以降、Apple Silicon M1以降、24GB unified memory、Python 3.11、Node 20、約20GBの空き容量を案内しています。</li>
+                <li>リポジトリのライセンスはMITです。</li>
+              </ul>
+              <div class="judgment">
+                <strong>判定:</strong> Apple Silicon上のローカル3D生成として優れた比較対象です。
+                現在のWindows / AMD環境へそのまま導入する候補ではありません。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> 既存のsee-through / Anime2.5DRig / 3D Avatar研究との比較候補。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>一次情報</h4>
+              <ul class="source-list">
+                <li><a href="https://github.com/dotneet/image-to-3d">dotneet/image-to-3d</a></li>
+              </ul>
+              <p><a href="https://x.com/santa128bit/status/2081343036542570709">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="try" data-search="akari video ai native editor claude code codex local first edit json macos windows">
+          <div class="item-head">
+            <span class="item-number">13</span>
+            <div>
+              <h3>AKARI Video</h3>
+              <div class="item-subtitle">@ryoma_nakajima / AIネイティブ動画編集</div>
+            </div>
+            <span class="badge try">次に試す・待機</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>公式サイト・GitHubで確認</h4>
+              <ul>
+                <li>Public Betaの無料・オープンソース動画編集アプリです。</li>
+                <li><code>edit.json</code>を正本とし、Claude CodeやCodexなどの外部エージェントが編集操作を行う設計です。</li>
+                <li>解析はローカルファーストで、AIによる変更には承認ゲートがあります。アプリ自体にAIモデルを内蔵するわけではありません。</li>
+                <li>現在はmacOS Apple Silicon向け。WindowsはComing Soonです。</li>
+              </ul>
+              <div class="judgment">
+                <strong>判定:</strong> 「成果物の状態を構造化し、外部エージェントに編集させる」設計はai-shared-memoryと相性が良いです。
+                投稿の「最大8割自動化」は可能性の表現であり、公式ベンチマークではありません。Windows対応後に試す候補です。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> Creative Pipeline / AI Coding Operationsへ高優先度候補。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>一次情報</h4>
+              <ul class="source-list">
+                <li><a href="https://akari-oss.app/">AKARI公式サイト</a></li>
+                <li><a href="https://github.com/akari-video">AKARI GitHub organization</a></li>
+              </ul>
+              <p><a href="https://x.com/ryoma_nakajima/status/2081389001349677166">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="research" data-search="speech to speech silero vad whisper llama cpp qwen3 tts local voice ai girlfriend 15gb vram">
+          <div class="item-head">
+            <span class="item-number">14</span>
+            <div>
+              <h3>ローカル音声エージェント構成</h3>
+              <div class="item-subtitle">@QCXINT_ / Silero VAD + Whisper + llama.cpp + Qwen3-TTS</div>
+            </div>
+            <span class="badge research">構成は実在・数値未確認</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>関連公式リポジトリ</h4>
+              <p>投稿が直接リンクを示していませんが、構成はHugging Faceの<code>speech-to-speech</code>と強く一致します。</p>
+              <ul>
+                <li>VAD → STT → LLM → TTSの交換可能なモジュール構成です。</li>
+                <li>llama.cppによるローカルLLMとQwen3-TTSを選択肢として扱います。</li>
+                <li>Apache-2.0。汎用の音声対話フレームワークであり、「AI girlfriend」専用ではありません。</li>
+                <li>READMEから「4モデルが15GB VRAM」「即時ホットスワップ」という数値・挙動は確認できませんでした。</li>
+              </ul>
+              <div class="judgment">
+                <strong>判定:</strong> AIRIやローカル音声対話の研究に直結します。15GBという値はモデルサイズ、量子化、
+                同時常駐、backendに依存するため、実測前提で扱います。AMD ROCm対応も別途検証が必要です。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> AIRI / Local Voice / Agent Runtimeへ研究候補。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>一次情報</h4>
+              <ul class="source-list">
+                <li><a href="https://github.com/huggingface/speech-to-speech">huggingface/speech-to-speech</a></li>
+              </ul>
+              <p><a href="https://x.com/qcxint_/status/2081146083582103627">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="reference" data-search="chatgpt skills openai academy reusable workflow plan availability desktop web mobile">
+          <div class="item-head">
+            <span class="item-number">15</span>
+            <div>
+              <h3>ChatGPT Skillsの正式提供</h3>
+              <div class="item-subtitle">@hanjuku_yanen / OpenAI公式機能</div>
+            </div>
+            <span class="badge reference">事実・提供条件あり</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>OpenAI公式情報で確認</h4>
+              <ul>
+                <li>Skillsは、指示、例、コードなどを含められる再利用・共有可能なワークフローです。</li>
+                <li>タスクに役立つとChatGPTが判断した場合、自動的に使用されます。</li>
+                <li>提供範囲はプラン、組織設定、利用面で異なります。すべてのユーザー・すべての画面で同じではありません。</li>
+                <li>個人SkillはデスクトップとWeb/モバイルへ別々に追加する必要があり、自動同期されない場合があります。</li>
+                <li>外部Skillは導入前の手動レビューが必要です。自動スキャンだけでは安全性を保証しません。</li>
+              </ul>
+              <div class="judgment">
+                <strong>判定:</strong> 投稿の中心主張は正しいです。ただし「全ChatGPTユーザーが同じように使える」とは限りません。
+                ai-shared-memoryの<code>SKILLS/</code>設計と接続できます。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> 既存Skills運用を更新する際の一次情報。重複登録より公式リンク更新が優先。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>一次情報</h4>
+              <ul class="source-list">
+                <li><a href="https://help.openai.com/en/articles/20001066-skills-in-chatgpt/">OpenAI Help: Skills in ChatGPT</a></li>
+                <li><a href="https://openai.com/academy/skills/">OpenAI Academy: Skills</a></li>
+              </ul>
+              <p><a href="https://x.com/hanjuku_yanen/status/2080576673934983545">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="report-item" data-category="try" data-search="voice denoiser deepfilternet resemble enhance rvc sovits tts normalize silence trim gradio">
+          <div class="item-head">
+            <span class="item-number">16</span>
+            <div>
+              <h3>VoiceDenoiser</h3>
+              <div class="item-subtitle">@ReineHonoka / 音声学習データの一括前処理</div>
+            </div>
+            <span class="badge try">次に試す候補</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>公式リポジトリで確認</h4>
+              <ul>
+                <li>TTS、RVC、SoVITS向け音声データセットを一括処理するツールです。</li>
+                <li>DeepFilterNetまたはResemble Enhanceでノイズ除去し、normalize、無音カット、resumeを提供します。</li>
+                <li>Gradio GUI、Python 3.10以降、Windows/Linux対応。CPUでも動作しますが低速で、NVIDIA GPUが推奨です。</li>
+                <li>MIT Licenseです。</li>
+              </ul>
+              <div class="judgment">
+                <strong>判定:</strong> 機能が明確で、VoxCPMや音声モデルのデータ整備に有用です。
+                まず少量の権利確認済み音声で、処理前後の音質と発話欠損を比較する試用が適しています。
+              </div>
+              <p class="memory-route"><strong>共有メモリ:</strong> Creative / Voice / Dataset Preparationへ新規候補。試用後はTRIALSへ。</p>
+            </div>
+            <aside class="fact-panel">
+              <h4>一次情報</h4>
+              <ul class="source-list">
+                <li><a href="https://github.com/reinehonoka/VoiceDenoiser">reinehonoka/VoiceDenoiser</a></li>
+              </ul>
+              <p><a href="https://x.com/reinehonoka/status/2080624035990307146">元のX投稿</a></p>
+            </aside>
+          </div>
+        </article>
+
+      </div>
+      <div id="no-results" class="no-results">条件に一致する項目がありません。</div>
+    </section>
+
+    <section aria-labelledby="routing-title">
+      <h2 id="routing-title">ai-shared-memoryへの反映候補</h2>
+      <table class="key-table">
+        <thead>
+          <tr><th>反映先</th><th>候補</th><th>扱い</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>AI_DRAWERS.md</code></td>
+            <td>Wakapippi Vocal Remover、Yorishiro、配信ペット、animede 3D stack、image-to-3d、AKARI、speech-to-speech、VoiceDenoiser</td>
+            <td>既存重複を再確認し、試用候補と研究対象を分離して登録。</td>
+          </tr>
+          <tr>
+            <td><code>NOTES/AI_Coding_Patterns.md</code></td>
+            <td>ハーネス設計、Claude/Codex設定の対応、RAGのナレッジ品質</td>
+            <td>投稿本文ではなく、公式資料で補正した運用パターンを保存。</td>
+          </tr>
+          <tr>
+            <td><code>TRIALS.md</code></td>
+            <td>セッション自動リネーム、Vocal Remover、VoiceDenoiser</td>
+            <td>実機検証後に結果、制約、再利用条件を記録。</td>
+          </tr>
+          <tr>
+            <td>保存非推奨</td>
+            <td>取引利益の成功談、500億ドル損失の数値</td>
+            <td>一次証拠がなく、長期的な再利用価値が低い。</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="notice">
+        今回は調査報告の作成だけを行い、<code>AI_DRAWERS.md</code>、<code>AI_INDEX.md</code>、
+        <code>CHANGELOG.md</code>など既存ファイルは変更していません。
+      </p>
+    </section>
+
+    <section aria-labelledby="method-title">
+      <h2 id="method-title">調査方法と限界</h2>
+      <div class="appendix">
+        <ol>
+          <li>指定されたX投稿をログイン済みブラウザで開き、本文、引用投稿、スレッド内リンクを確認。</li>
+          <li>短縮URLを展開し、公式GitHub、公式ドキュメント、公式ストア、公式サイトを優先して照合。</li>
+          <li>投稿の説明と一次情報が一致しない場合は、一次情報を優先。</li>
+          <li>Star数、閲覧数、ユーザー数など変動の大きい値は、判断に必要な場合を除いて固定値として保存しない。</li>
+          <li>動画だけで提示された利益、性能、再現性は、監査可能なログやコードがない限り未確認とした。</li>
+        </ol>
+        <p>
+          <strong>限界:</strong> Xの返信・引用は表示順やログイン状態で変わります。非公開資料、削除済み投稿、
+          動画内だけの主張、サーバー側のデータ保持は確認できない場合があります。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Generated for ai-shared-memory / Public-safe research artifact / 2026-07-28</p>
+  </footer>
+
+  <script>
+    const search = document.getElementById("search");
+    const buttons = [...document.querySelectorAll(".filter-button")];
+    const items = [...document.querySelectorAll(".report-item")];
+    const noResults = document.getElementById("no-results");
+    let activeFilter = "all";
+
+    function updateResults() {
+      const query = search.value.trim().toLocaleLowerCase("ja");
+      let visible = 0;
+      for (const item of items) {
+        const categoryMatch = activeFilter === "all" || item.dataset.category === activeFilter;
+        const haystack = `${item.dataset.search || ""} ${item.textContent}`.toLocaleLowerCase("ja");
+        const queryMatch = !query || haystack.includes(query);
+        const show = categoryMatch && queryMatch;
+        item.classList.toggle("hidden", !show);
+        if (show) visible += 1;
+      }
+      noResults.style.display = visible ? "none" : "block";
+    }
+
+    search.addEventListener("input", updateResults);
+    for (const button of buttons) {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+        for (const target of buttons) {
+          target.setAttribute("aria-pressed", String(target === button));
+        }
+        updateResults();
+      });
+    }
+  </script>
+</body>
+</html>

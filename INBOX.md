@@ -186,7 +186,6 @@ X上で発見した候補を、GitHub / Hugging Face / 公式販売ページ / �
 - Meetily: https://github.com/Zackriya-Solutions/meetily — Parakeet / Whisper、話者分離、Ollama要約を使うlocal meeting assistant。MIT。録音同意、組織規程、opt-in analyticsを確認する。
 - Colibrì: https://github.com/JustVugg/colibri — 巨大MoEのexpertをdiskからstreamするpure C runtime。Apache-2.0。速度値は単発測定で、モデルweight license、storage、RAM、CPU要件の確認待ち。
 - sound-efect: https://github.com/animede/sound-efect — Stable Audio 3 Small SFXを使う効果音生成app。repoのlicense表示がGitHub APIで確認できず、gated model、HF token、CUDA、Stability AI Community Licenseが必要なため保留。
-- image-3d: https://github.com/animede/image-3d — Hunyuan3D-2を使う画像から3D / 3D printer向けpipeline。licenseはNOASSERTION。Linux / WSL2、約16〜32GB VRAM、model licenseの確認待ち。
 
 #### Creative / UI / Video / 3D
 
@@ -245,7 +244,6 @@ Xの「話題のポスト」で異なる投稿URLを100件確認した。過去�
 
 #### AIRI / Creative / Research
 
-- text-to-vrma: https://github.com/Kirakun0328/text-to-vrma — VRM向けtext-to-motionとVRMA出力。sourceはMIT。OpenAI接続、Codex CLI、約20GBのARDY engine / model、同梱素材の別licenseを確認する。
 - live2d-add-motion-sample-web-ui: https://github.com/shinshin86/live2d-add-motion-sample-web-ui — JSON編集とWeb UIでLive2D motionを追加・検証するsample。独自部分はMIT。Python / headless Chrome、Live2D Core CDN、model / SDKの別licenseを確認する。
 - ComfyUI_VNCCS: https://github.com/AHEKOT/ComfyUI_VNCCS — visual novel向けの一貫したcharacter sprite生成suite。MIT。ComfyUI node、model、GPU、生成assetの利用条件を確認する。
 - StarVector: https://github.com/joanrod/star-vector — image / textからSVG codeを生成するApache-2.0 foundation model。checkpoint、GPU、生成SVGの安全性と再現性の評価待ち。
@@ -305,3 +303,19 @@ Chromeで開かれていたXブックマークから異なる投稿URLを100件�
 - Founder Desk OS、AirBricks、Teacher Copilot、AnalyzeData 2.0、Veyl / Fonaなどは投稿と同一の正本を十分に特定できず、名称だけで別製品へ結び付けない。
 - Solをplanner、Lunaをexecutorへ固定する投稿は、公式model roleではなく利用例として`NOTES/AI_Coding_Patterns.md`へ一般化した。
 - crypto / trading、無監督実行、security audit成功、品質・速度比較の自己申告は、独立検証なしに技術項目化しない。
+
+### 2026-07-18: X投稿 2078210765342097812 — AITuber構成メモ
+
+X投稿は、静止画からVRM、text-to-motion、voice design / TTS、AITuber対話基盤を接続する発見経路として扱った。各候補は公式サイト、GitHub、Hugging Face model card、公式docsで再確認し、インストール、画像upload、model download、API login、音声生成、コード実行は行っていない。
+
+- 2d2vrm: https://2d2vrm.k2wanko.dev/ — 透過立ち絵1枚と任意の表情差分から、ブラウザ上でVRMを生成・downloadするWeb tool。入力欄とVRM生成機能は確認できたが、公開source、license、画像処理が完全localか、生成VRMの権利条件を一次情報から確認できないため保留。
+- VoiceDesignCloner: https://github.com/reinehonoka/Voice-Design-Cloner — Qwen3-TTSとIrodori-TTSをGUIで扱い、promptからのvoice design、数百〜数千文のcorpus音声化、Style-Bert-VITS2形式への変換、Irodori LoRA学習まで接続するMIT tool。NVIDIA GPU / CUDA、VRAM 8GB以上、setup script、venv作成、PyTorch / model自動download、subprocess、音声権利を伴うため保留。Qwen3-TTSのtraining data / 権利状況が非公開である点も商用利用時の確認事項。
+- AITuberKit: https://github.com/tegnike/aituber-kit / https://docs.aituberkit.com/guide/introduction — VRM / Live2D / PNGTuber、複数LLM、複数TTS、YouTube comment、自発発話、camera multimodal、Realtime API、WebSocket連携を束ねるAITuber基盤。v2.0.0以降はcustom licenseで、個人非営利・教育・非営利・一定の展示は無償だが商用利用はcommercial licenseが必要。API key、camera、YouTube data、外部AI / TTS送信、関数実行、認証・認可を伴うため保留。
+
+比較:
+
+- `2d2vrm`: 立ち絵 → VRM asset。source / license / local処理境界の確認待ち。
+- `text-to-vrma`: text → VRMA motion。作者本人のv1.1.0 release投稿とGitHubのlicense・要件・third-party noticeまで確認できたため`AI_DRAWERS.md`へ昇格。
+- `Irodori-TTS`: 日本語TTS / voice design基盤。source・model・制約が確認できたため`AI_DRAWERS.md`へ昇格。
+- `VoiceDesignCloner`: TTSを用いた教師データ量産・LoRA学習pipeline。実行負荷とvoice rightsのため保留。
+- `AITuberKit`: avatar、LLM、TTS、配信・対話を束ねるintegration layer。custom licenseと外部依存のため保留。

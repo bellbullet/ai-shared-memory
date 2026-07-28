@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-07-18
+最終更新: 2026-07-26
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫です。
 
@@ -12,12 +12,12 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 95
+- 登録項目: 111
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
 - 重点領域: Agent / Orchestration、AI Coding Operations、Knowledge Management、Creative Pipeline、Self Host / Tools。
-- 最近の追加: Xブックマーク発見候補から ChatGPT Sites と Gemma 4 を一次情報確認後に統合し、外部送信、認証、モデル取得、ライセンス制約を伴う候補は `INBOX.md` へ保留。
+- 最近の追加: 2026-07-28のX投稿調査から、試用候補と研究候補8件を一次情報で再確認して統合。運用知識はProject最適化の再検討まで保留し、未検証の金融主張や高リスク用途は登録しなかった。
 - 未整理項目と次回レビュー条件は `STATUS.md`、分類前リンクは `INBOX.md` を参照する。
 
 カテゴリ別ファイル分割は、検索性や保守性が単一ファイルでは不足した時点で検討し、v1.1 では行わない。
@@ -406,6 +406,52 @@ https://github.com/katipally/openlive
 
 ⸻
 
+### speech-to-speech
+
+URL:
+https://github.com/huggingface/speech-to-speech
+
+分類:
+
+- AI
+- Local Voice Agent
+- Realtime Speech
+- AI Companion / AIRI
+- Modular Pipeline
+
+概要:
+
+- Hugging Faceが公開する、VAD、STT、LLM、TTSを交換可能な部品として接続するリアルタイム音声対話フレームワーク。
+- Silero VAD、Whisper系STT、llama.cppによるlocal LLM、Qwen3-TTSなどを組み合わせられる。
+- 特定のキャラクター用途に限定されたアプリではなく、音声エージェントを構成・比較するための汎用基盤。
+
+用途:
+
+- AIRI / AI companionのlocal voice loop研究
+- VAD、STT、LLM、TTSの役割分離と差し替え
+- OpenLive、Whisper、VoxCPM、VOICEVOXとの比較
+- local-firstなリアルタイム音声会話
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★★
+
+License:
+
+- Apache-2.0
+
+メモ:
+
+- X投稿で紹介された「4モデルが15GB VRAMに収まる」「即時hot swap」という構成固有の値は、公式READMEでは確認できない。model、量子化、backend、同時常駐条件を固定して実測する。
+- Windows、AMD Radeon / ROCm、CPU fallback、正確な遅延とVRAM使用量は導入前に確認する。
+- マイク音声、会話内容、話者情報、model providerへの送信範囲を確認し、実データを公開メモリへ保存しない。
+
+⸻
+
 ## Agent / Orchestration
 
 AI エージェント、長期記憶、複数 LLM 協調、ルーティング、オーケストレーター系をまとめる。
@@ -664,6 +710,63 @@ https://github.com/fumihito/loopeng-bootstrap
 
 - MIT License、Python 3.10以上。任意コード・shell・ファイル更新を伴う実行ループとして、導入前に保護パス、rollback、承認境界を監査する。
 - halo-recordは改ざん検知可能な証跡層、loopeng-bootstrapは証跡を含む監査可能な実行・受入ループを担う。
+
+⸻
+
+### Kura
+
+URL:
+https://github.com/nomadoor/Kura
+
+Guide:
+https://comfyui.nomadoor.net/ja/notes/kura-krea2-lora-training/
+
+分類:
+
+- Agent / Orchestration
+- Creative / LoRA Training
+- File-First Experiment Workspace
+- Human Approval / Reproducibility
+
+概要:
+
+- AI agentが操作するLoRA学習・画像比較のexperiment workspace。trainer本体ではなく、AI-ToolkitとMusubi Tunerを束ねる薄い管理層。
+- dataset、`run.yaml`、固定した実行plan、artifact、比較画像、人間の評価を通常ファイルへ残し、学習条件と判断を次回の実験へ再利用する。
+- local DockerまたはRunPodで学習し、ComfyUIでcheckpoint比較をrenderできる。実行前にagentが前提、resource、trade-offをplanとして提示し、人間の明示承認後に実行する。
+
+用途:
+
+- LoRA学習の再現可能な実験管理
+- agent提案とhuman approvalを分離したGPU job運用
+- checkpoint / prompt比較とundertraining・overtraining判定
+- `loopeng-bootstrap`、`halo-record`、`TRIALS.md`との実験監査設計比較
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★★
+
+License:
+
+- Kura source: MIT
+
+メモ:
+
+- 2026-07-18公開の初期release `0.1.0`。設計は有用だが、backend更新への追従、失敗回復、Windowsでの実運用安定性は未検証。
+- Kura自身はMITだが、backend、base model、LoRA、dataset、生成assetのlicenseは別に確認する。記事のKrea 2例では、codeはApache-2.0、weightはKrea 2 Community Licenseであり、同一条件ではない。
+- Krea 2 Community Licenseは、商用利用を全社年商100万USD未満に限定し、それ以上はenterprise licenseを要求する。派生model配布時の名称・notice・license継承と、deployment時の適切なcontent filteringも条件になる。
+- local実行はDocker、NVIDIA GPU、任意code・shell、model download、大容量storage、ComfyUI directoryへのfile操作を伴う。remote実行はRunPod API key、GPU課金、dataset upload、pod停止・lease管理を伴う。
+- `.env.local`のRunPod / Hugging Face tokenを公開repoへ入れない。monitorはread-onlyとし、agentの開始・停止・設定変更権限と分離する。
+- `halo-record`は改ざん検知可能な証跡、`loopeng-bootstrap`は汎用agentの実行・受入ループ、KuraはGPU学習experimentのplan・artifact・人間評価をfile-firstで束ねる役割。
+
+Official Links:
+
+- Krea 2 source: https://github.com/krea-ai/krea-2
+- Krea 2 Raw model card: https://huggingface.co/krea/Krea-2-Raw
+- Krea 2 license: https://www.krea.ai/krea-2-licensing
 
 ⸻
 
@@ -992,6 +1095,52 @@ https://github.com/cloudflare/agentic-inbox
 
 ⸻
 
+### Yorishiro
+
+URL:
+https://github.com/sktkkoo/Yorishiro
+
+分類:
+
+- Agent / Orchestration
+- AI Coding
+- AI Companion / AIRI
+- VRM
+- Presence Harness
+
+概要:
+
+- Claude CodeやCodexなどのAI coding agentへ、VRM characterが暮らす視覚的な空間とterminalを与えるdesktop application。
+- AIを単なるchat paneではなく、身体と居場所を持つ存在として見せる`Presence Harness`の設計例。
+- Claude Codeを主対象とし、Codex integrationはexperimentalとして案内されている。
+
+用途:
+
+- AI companionとcoding agentの統合研究
+- AIRI、Codex pet、VRM terminalの比較
+- task stateやagent activityの視覚表現
+- presence、character、workspaceを接続するUI研究
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+License:
+
+- MIT（source code）
+
+メモ:
+
+- 現在はmacOS向け。Windowsはruntimeが不安定として非対応、Linux版も案内されていないため、現在のWindows workspaceでは対応状況を監視する。
+- repositoryのMIT licenseとは別に、Yorishiroの名称とlogoにはtrademark上の制約がある。
+- Codex support、session data、terminal command、file accessの権限境界を確認してから試す。
+
+⸻
+
 ## LLM
 
 ### Susono Model
@@ -1015,6 +1164,92 @@ https://huggingface.co/collections/puwaer/susono-model
 優先度:
 
 - ★★★☆☆
+
+⸻
+
+### Inkling
+
+Category:
+
+- LLM
+
+Tags:
+
+- Thinking Machines Lab
+- Mira Murati
+- Open-weight LLM
+- Mixture-of-Experts
+- Multimodal
+- Reasoning effort
+- Agentic coding
+
+Official Links:
+
+- Announcement: https://thinkingmachines.ai/news/introducing-inkling/
+- Model card: https://thinkingmachines.ai/model-card/inkling/
+- Hugging Face weights: https://huggingface.co/thinkingmachines/Inkling
+- Model Acceptable Use Policy: https://thinkingmachines.ai/model-acceptable-use-policy/
+
+License:
+
+- Apache-2.0. The official Model Acceptable Use Policy also applies to access and use of the model materials.
+
+概要:
+
+- Thinking Machines Lab, Inc. が2026-07-15に公開した汎用マルチモーダル・オープンウェイトモデル。Thinking Machines Labの共同創業者兼CEOであるMira Murati氏は、OpenAIの元CTO。
+- 975B total / 41B active parameters のsparse MoE decoder-only transformer。各tokenは256 expert中6 expertと、常時有効な2 shared expertsへroutingされる。
+- 入力はtext、image、audio、出力はtext。最大context lengthは1M tokens。
+
+effort:
+
+- 推論時のthinking effortを制御し、性能とtoken efficiencyのバランスを調整できる。公式ベンチマーク表はeffort=0.99で報告されている。
+
+公式ベンチマーク（公開時点）:
+
+- HLE text only: 29.7%
+- SWE-bench Verified: 77.6%
+- Terminal Bench 2.1 (best harness): 63.8%
+- IFBench: 79.8%
+- ForecastBench Brier Index: searchなし 61.1 +/- 0.79、searchあり 63.7 +/- 0.82。ForecastBenchの結果は2026-06-30から2026-07-13に、公開checkpointとは異なるcheckpointで得たものと公式が注記している。
+
+用途:
+
+- オープンウェイトLLM、MoE、長context、multimodal reasoningの研究
+- agentic / tool-use systems、coding assistant、chatbot、RAG applicationの基盤候補
+- Tinkerまたは第三者inference providerを介したfine-tuning / inferenceの検討
+
+強み:
+
+- text、image、audioをnativeに扱う汎用モデルとして公開され、open weightsによるresearch、fine-tuning、third-party integrationを想定している。
+- controllable thinking effortとMoEにより、taskごとの性能、token使用量、latencyの調整を狙う設計。
+
+制約:
+
+- foundation modelとしてhallucination、instruction-following failure、長いmulti-turn conversationでの性能低下、training data由来のbiasがあり得るとモデルカードに記載されている。
+- 高リスク用途ではhuman oversight、用途別評価、application layerのsafeguardsが必要。公開ウェイトであってもModel Acceptable Use Policyを確認する。
+
+ローカル実行:
+
+- BF16 checkpointは最低2TB、NVFP4 checkpointは最低600GBのaggregate VRAMを公式が要件としている。単一GPU向けモデルではなく、対応GPU clusterとSGLang、vLLM、TokenSpeed、Unsloth、Hugging Faceなどのinference frameworkが必要。
+- 対応GPU、quantization、runtime、OSの互換性はリリース後も変化し得るため、導入前に公式model cardと各runtimeの最新documentationを確認する。
+
+Inkling-Small:
+
+- 276B total / 12B active parametersのMoEモデルをpreviewとして同時公開。公式発表時点ではtesting中で、full weightsはtesting完了後に公開予定とされている。
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- 公開時点の仕様、ベンチマーク、提供形態を記録した参照項目。モデル、checkpoint、runtime、third-party availabilityは変更されるため、利用時は公式情報を再確認する。
+- 比較候補: DeepSeek、Qwen、Gemma、Llama、Nemotron。
+- 今後確認: Inkling-Smallのfull weights公開、GGUF、Ollama、LM Studio、MLXの対応状況、およびvLLMを含む各runtimeの対応バージョンと実行要件。
 
 ⸻
 
@@ -2502,6 +2737,67 @@ https://github.com/rotejin/tomari-guruguru
 
 ⸻
 
+### Camera Camera Camera
+
+URL:
+https://camera-camera-camera.com/
+
+Demo:
+https://camera-camera-camera.com/room/demo
+
+Developers:
+https://camera-camera-camera.com/developers
+
+分類:
+
+- Creative
+- Avatar
+- Video Call
+- Talk Video / Podcast
+- VRM / VRoid Hub
+- WebRTC
+- AI Companion / AITuber
+
+概要:
+
+- 顔や部屋をカメラで送らず、声に反応する3Dアバターで最大4人の通話や対談動画を作れるブラウザサービス。
+- アプリやゲスト登録なしで人同士のルームに参加でき、手持ちのVRMファイルとVRoid Hubのモデルにも対応する。
+- 話者に合わせたカット割り、リップシンク、端末内でのクリップ生成に対応する。
+- 開発者向けBot APIでは、AIキャラクターやAITuberがPCM16 24kHz音声をWebSocketで送受信し、相手の文字起こし、字幕、表情イベントを扱える。
+
+用途:
+
+- 顔出しなしのアバター通話
+- VTuber対談、ポッドキャスト、インタビュー収録
+- AIRIやAIキャラクターを人との通話へ参加させる実験
+- VRM / VRoid Hubを使ったブラウザアバター体験
+- WebRTC通話とAIボット接続の構成比較
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- 人同士の音声はWebRTCで暗号化され、通常はP2Pで送受信される。TURN利用時も暗号化されたまま中継され、サービスは復号・録音・保存しないと説明されている。
+- ボット通話では音声が暗号化WebSocket経由で接続先ボットへ送られ、ボット運営者が音声、文字起こし、応答を処理・保存する場合がある。接続先のポリシー確認が必要。
+- カメラ映像は使用せず、アバター映像と録画クリップは端末内で生成される。クリップを公開・共有する場合は、全参加者の同意が必要。
+- Bot APIキーの発行にはログインが必要。公開仕様では1ルームにつき人間1人とボット1体、セッション発行はキーあたり10回/分とされている。
+- ホスト型サービスであり、公開ソースやOSSライセンスは確認できていない。利用条件、API仕様、無料範囲は利用前に公式ページで再確認する。
+- アップロードするVRMの利用条件と `avatarPermission` を確認し、会話内容、音声、個人情報、APIキーを公開メモリへ記録しない。
+
+Official Links:
+
+- Bot API: https://camera-camera-camera.com/docs/api.md
+- Privacy: https://camera-camera-camera.com/privacy
+- Terms: https://camera-camera-camera.com/terms
+
+⧻
+
 ### HyperFrames
 
 URL:
@@ -2623,6 +2919,143 @@ https://github.com/OpenBMB/VoxCPM
 
 ⸻
 
+### AivisSpeech Engine
+
+URL:
+https://github.com/Aivis-Project/AivisSpeech-Engine
+
+分類:
+
+- Creative
+- Voice
+- TTS
+- Local API
+- AI Companion / AIRI
+
+概要:
+
+- VOICEVOX ENGINE 互換を目指す、日本語音声合成のローカル HTTP サーバー。`/audio_query` と `/synthesis`、`/speakers` を使い、AIVMX 形式の Style-Bert-VITS2 系音声モデルを扱う。
+- Windows の既定ポートは `10101`。AivisSpeech デスクトップアプリに同梱される engine を利用でき、モデルごとに話者・スタイル・ライセンス情報を確認できる。
+
+用途:
+
+- AI companion / Codex 完了通知のローカル音声
+- 日本語の感情表現・話者スタイル選択
+- VOICEVOX 互換クライアントの声モデル差し替え
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+License:
+
+- Engine: LGPL-3.0 または別ライセンス。音声モデルの利用条件は個別に確認する。
+
+メモ:
+
+- CPU 推論に対応するが、初回は既定モデルと BERT モデルの download を伴う。Codex 通知のような短文では、起動済み engine の localhost API だけに接続する構成が扱いやすい。
+- `intonationScale` は AivisSpeech では話者スタイルの感情表現の強さを表す。上げ過ぎると不自然になるため、モデルごとに短文で試聴して決める。
+- 公開時は、選んだ音声モデルのクレジット・用途制限を確認する。実在人物の声を無断で模倣しない。
+
+⸻
+
+### VOICEVOX ENGINE
+
+URL:
+https://github.com/VOICEVOX/voicevox_engine
+
+分類:
+
+- Creative
+- Voice
+- TTS
+- Local API
+- AI Companion / AIRI
+
+概要:
+
+- 日本語音声合成のローカル HTTP サーバー。`/audio_query` で読みとパラメータを作り、`/synthesis` で WAV を生成する。話者スタイル ID は `/speakers` から取得する。
+- 既定ポートは `50021`。話速、音高、抑揚をクエリ上で調整できる。
+
+用途:
+
+- Codex 完了通知など短い日本語読み上げ
+- AivisSpeech と共通クライアントでの声・話し方比較
+- AI companion / AITuber のローカル TTS 試作
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+License:
+
+- Engine: LGPL-3.0 または別ライセンス。各キャラクター音声・クレジット・利用条件は別途確認する。
+
+メモ:
+
+- `speaker` は `/speakers` が返す各スタイルの ID を指定する互換名。音声を使う前に、選択する話者スタイルの規約を確認する。
+- localhost で起動した engine だけへ接続し、音声テキストや生成音声を外部サービスへ送らない構成にできる。
+
+⸻
+
+### Irodori-TTS
+
+URL:
+https://github.com/Aratako/Irodori-TTS
+
+Model:
+https://huggingface.co/Aratako/Irodori-TTS-500M-v3
+
+Server:
+https://github.com/Aratako/Irodori-TTS-Server
+
+分類:
+
+- Creative
+- Voice
+- TTS
+- Voice Design
+- AI Companion / AIRI
+
+概要:
+
+- Flow Matchingベースの日本語TTS。500M v3は参照音声によるzero-shot voice cloning、emojiによる感情・話し方・効果音制御、生成音声へのSilentCipher watermarkを扱う。
+- 600M v3 VoiceDesignは、本文、参照音声、自然言語captionを組み合わせて声質と感情・話し方を分離制御する。
+- CLI、Gradio UI、OpenAI互換server、LoRA fine-tuning、speaker inversionを用意する。公式 server は `POST /v1/audio/speech` と `GET /health` を提供する。
+
+用途:
+
+- AIRI / AI companionの日本語音声表現
+- AITuberの感情・話者・演技制御
+- local TTS / voice design研究
+- VoxCPM、VOICEVOX、Style-Bert-VITS2との比較
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- sourceと公式v3 model cardはMIT。ただしmodel cardは、本人の明示同意がない実在人物のvoice clone / impersonation、deepfake、誤情報目的の利用を禁止している。
+- 500M / 600Mのmodel download、Python / PyTorch、GPU / VRAM、Hugging Face依存を導入前に確認する。公式 server は CPU backend も用意するが、実用的な推論には CUDA / ROCm GPU を推奨している。今回はdownload・実行していない。
+- v1とv2 / v3でcheckpoint・preprocessing互換性がなく、`main`はv3系。再現時はcode tagとmodel versionを固定する。
+- 日本語専用で、複雑な漢字の読みやemoji / caption制御は不安定な場合がある。reference audioとcaptionの条件が矛盾すると品質が崩れる可能性がある。
+- VoiceDesignClonerはIrodori-TTS / Qwen3-TTSを使って教師データ生成とLoRA学習まで束ねるGUIであり、本項目は基盤model / training・inference codeとして区別する。
+
+⸻
+
 ### MOSS-SoundEffect-v2.0
 
 URL:
@@ -2680,6 +3113,51 @@ Official Links:
 
 - Model card: https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0/blob/main/README.md
 - Source repository: https://github.com/OpenMOSS/MOSS-TTS
+
+⸻
+
+### Text-To-VRMA
+
+URL:
+https://github.com/Kirakun0328/text-to-vrma
+
+分類:
+
+- Creative
+- VRM / VRMA
+- Text-to-Motion
+- AI Character
+- AITuber / AIRI
+
+概要:
+
+- テキスト指示からVRM向けbody motionと表情を生成し、VRM Animation形式の`.vrma`としてpreview・保存するMIT Web / Electron tool。
+- OpenAI APIまたはdesktop版のCodex CLIを使うLLM keyframe engineと、NVIDIA ARDYをlocal実行するfull-body motion engineを選択できる。
+- ARDY modeはlocal translation / Llama 3 text encoder / motion diffusionを組み合わせ、waypoint、連続動作分割、VRM retarget、足滑り補正を扱う。
+
+用途:
+
+- AIRI / AITuberのbody motion生成
+- VRM character、game、配信向けVRMA asset作成
+- text-to-motionとLLM keyframe生成の比較
+- 2d2vrm等で作ったavatar assetへmotionを付与するpipeline研究
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- sourceはMIT。公式READMEはsource codeと、同梱VRM・ARDY・Llama 3・FuguMT等のthird-party asset / model licenseを分離している。
+- LLM modeはOpenAI APIへのprompt送信と利用料を伴う。API keyはlocalStorage保存と説明されているため、browser profile、XSS、共有端末、data sharing設定を含めて導入前に監査する。
+- desktop版のCodex modeはChatGPT login済みCodex CLIの認証を再利用し、logoutがPC全体のCodex CLI login状態へ影響する。利用条件と組織policyも確認する。
+- ARDY setupはPython、PowerShell / shell installer、約20GBのmodel download、約35GBのdisk、local server、任意code実行を伴う。今回はinstall・download・実行していない。
+- 作者本人のv1.1.0 release投稿で、ARDY / waypoint、多言語UI、VRM game・配信・AITuber用途を確認した。ただしX上の性能主張ではなくGitHub README / LICENSE / third-party noticeを正本とする。
+- `2d2vrm`は静止画からVRM asset、本項目はtextからVRMA motion、`AITuberKit`はLLM / TTS / 配信を束ねるintegration layerとして役割を分ける。
 
 ⸻
 
@@ -2856,6 +3334,244 @@ https://github.com/Diolinux/PhotoGIMP
 メモ:
 
 - 導入前に対応 GIMP version と patch 適用範囲を確認する。
+
+⸻
+
+### Wakapippi Vocal Remover Extension
+
+Official Links:
+
+- Chrome: https://chromewebstore.google.com/detail/wakapippi-vocal-remover-e/mfdkjbkokfdnegolbddbacaafcekijgf
+- Firefox: https://addons.mozilla.org/en-US/firefox/addon/wakapippi-vocal-remover/
+
+分類:
+
+- Creative
+- Audio Separation
+- Browser Extension
+- WebGPU
+- Local-first
+
+概要:
+
+- 再生中のWeb動画の音声を、ブラウザ内でボーカルと伴奏へリアルタイム分離するChrome / Firefox extension。
+- UVR-MDX-NETをWebGPUでon-device実行し、ボーカルと伴奏のmix量、noise reductionを調整できる。
+
+用途:
+
+- 歌唱、楽器、耳コピー練習
+- 動画音声のlocal separation
+- Creative Pipeline向けの音源確認
+- WebGPUによるon-device audio inferenceの研究
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- Firefox Add-ons表示: Apache-2.0
+
+メモ:
+
+- Chrome 113以降とWebGPUが必要。低性能GPUでは正常動作しない場合があり、複数動画・複数tabでの同時使用は非対応。
+- Firefox版は全website上のdata access権限を要求する。developerはdata collectionなしと申告しているが、導入前に権限とprivacy policyを確認する。
+- 投稿ではopen sourceと説明されているが、配布ページからsource repositoryは特定できていない。正式なsource URLを確認後にlicense表記を再確認する。
+- 分離音源の公開・配信・再利用は原著作物の権利を確認し、私的利用の範囲を越えない。
+
+⸻
+
+### 四葉公ラボ 配信ペット
+
+URL:
+https://shibakou-lab.jp/settings
+
+分類:
+
+- Creative
+- Streaming
+- Hosted Tool
+- YouTube
+- Viewer Engagement
+
+概要:
+
+- 配信中のreaction、comment、新規channel登録などを成長条件にし、視聴者と一緒にpetを育てる配信画面向けservice。
+- 任意画像やGIFを設定し、levelや進化段階に応じて見た目を変える用途を想定する。
+
+用途:
+
+- YouTube配信のviewer engagement
+- OBS browser source向けの演出候補
+- 配信pet、成長演出、community participationの研究
+- Codex petやAITuberの配信連携比較
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★☆☆
+
+License:
+
+- 未確認
+
+メモ:
+
+- 設定画面ではYouTube loginが必要で、member向け機能の判定にはDiscord連携を使うと表示される。
+- public source repository、source license、event dataの保存期間、OAuth scopeは確認できていないため、OSSではなくhosted serviceとして扱う。
+- 導入前にYouTube / Discordの権限、privacy policy、OBS公開画面に出る情報を確認し、test accountで試す。
+
+⸻
+
+### animede 3D Character Pipeline
+
+Official Links:
+
+- Diffusion frontend: https://github.com/animede/diffusers-server
+- Image to 3D: https://github.com/animede/image-3d
+- Auto rig / VRM: https://github.com/animede/rig-service
+
+分類:
+
+- Creative
+- Image Generation
+- Image to 3D
+- Auto Rig
+- VRM
+- Creative Pipeline
+
+概要:
+
+- 画像・動画生成、画像からの3D asset生成、humanoid auto-rig / VRM出力を3つのrepositoryでつなぐcharacter production pipeline。
+- `diffusers-server`は複数の画像・動画modelをFastAPI / Web UIから扱い、`image-3d`はSTL / 3MF / GLB / OBJ、`rig-service`はrigged model / VRMを出力する。
+- `image-3d`の既定設定はmock generatorであり、実際のHunyuan3D生成には追加設定とmodelが必要。
+
+用途:
+
+- AI生成characterから3D / VRM assetを作るworkflow研究
+- AIRI、AITuber、game characterの素材生成
+- image generation、3D generation、auto-rigの分離設計
+- see-through、Anime2.5DRig、Text-To-VRMAとの比較
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★★
+
+License:
+
+- `diffusers-server`: Apache-2.0
+- `image-3d`: repository licenseの確認が必要
+- `rig-service`: PolyForm Small Business License
+
+メモ:
+
+- `diffusers-server`は48GB-class GPU、`image-3d`はshape 16GB / texture 32GB程度のNVIDIA CUDA環境を案内する。modelごとのlicenseとdownload条件は別に確認する。
+- PolyForm Small Business Licenseは一般的なOSI open-source licenseではない。利用規模、商用利用、配布条件を確認する。
+- Windows + AMD Radeon / ROCmでの動作は公式の主経路ではないため、現在のlocal環境へ直接導入せず構成研究から始める。
+
+⸻
+
+### AKARI Video
+
+Official Links:
+
+- Website: https://akari-oss.app/
+- GitHub: https://github.com/akari-video
+
+分類:
+
+- Creative
+- Video Editing
+- AI Coding Operations
+- Local-first
+- Agentic Workflow
+
+概要:
+
+- `edit.json`を編集状態の正本とし、Claude CodeやCodexなどの外部coding agentから動画編集操作を行うAI-native video editor。
+- application自体にAI modelを内蔵せず、local media analysis、agentによる変更提案、human approvalを分離する。
+- Public Betaとして公開されている。
+
+用途:
+
+- Codex / Claude Codeによる動画編集
+- agent-readableな編集状態とapproval gateの研究
+- OpenCut、HyperFrames、PPT MasterとのCreative Pipeline比較
+- OUTPUTS向け動画成果物の作成
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+License:
+
+- Open source。利用するrepositoryごとのlicenseを導入前に確認する。
+
+メモ:
+
+- 現在はmacOS Apple Silicon向けで、Windows版はComing Soon。現在のWindows workspaceでは対応を待つ。
+- X投稿の「最大8割自動化」はpotentialの説明で、公式の再現可能なbenchmarkとしては扱わない。
+- media file、analysis result、外部agentへ渡すcontext、agentが実行するcommandの範囲を確認する。
+
+⸻
+
+### VoiceDenoiser
+
+URL:
+https://github.com/reinehonoka/VoiceDenoiser
+
+分類:
+
+- Creative
+- Voice
+- Dataset Preparation
+- Denoising
+- Local Tool
+
+概要:
+
+- TTS、RVC、SoVITSなどの学習用音声datasetへ、noise reduction、normalize、silence trimを一括適用するlocal tool。
+- DeepFilterNetまたはResemble Enhanceを選択でき、途中再開とGradio GUIを備える。
+
+用途:
+
+- local TTS / voice conversion向けdataset整備
+- VoxCPM、Irodori-TTS、VOICEVOX関連の音声前処理
+- 大量音声のnoise reductionとvolume normalization
+- 処理前後の音質・発話欠損比較
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- MIT
+
+メモ:
+
+- Python 3.10以降、Windows / Linux対応。CPUでも動作するが低速で、公式はNVIDIA GPUを推奨する。AMD accelerationは確認できていない。
+- 最初は権利確認済みの少量音声をcopyして使い、原本を保持したまま処理前後のnoise、発話欠損、音量差を比較する。
+- voice dataset、話者情報、private recording、生成結果の実体は公開メモリへ保存しない。
 
 ⸻
 
@@ -3354,6 +4070,115 @@ https://github.com/pewdiepie-archdaemon/odysseus
 
 ## Research
 
+### LingBot-Map
+
+URL:
+https://github.com/Robbyant/lingbot-map
+
+Paper:
+https://arxiv.org/abs/2604.14141
+
+Model:
+https://huggingface.co/robbyant/lingbot-map
+
+分類:
+
+- Research
+- 3D Reconstruction
+- Streaming 3D
+- Spatial AI
+- SLAM / Visual Odometry
+- Creative Pipeline
+
+概要:
+
+- 動画ストリームからカメラ姿勢、深度、点群を逐次推定するfeed-forward型の3D foundation model。
+- Geometric Context Transformer / Geometric Context Attentionにより、anchor context、pose-reference window、trajectory memoryを組み合わせ、座標の固定、密な局所幾何、長距離ドリフト補正を分担する。
+- 論文と公式READMEでは、518×378入力で約20 FPS、10,000フレームを超える長尺シーケンスでの安定した推論を報告している。
+- `lingbot-map-long`、balanced checkpointの`lingbot-map`、VGGTへ読み込めるstage-1 checkpointがHugging FaceとModelScopeで公開されている。
+
+用途:
+
+- 動画からの3Dシーン再構成
+- camera pose / depth / point cloud推定
+- SLAM、visual odometry、長尺ストリーミング3D研究
+- 動画から3D可視化素材を作るCreative Pipeline
+- AI companionやロボティクスの空間理解に向けた将来候補
+- Terrain Diffusion / InfiniteDiffusionなど生成型ワールド技術との比較
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★★
+
+License:
+
+- Apache-2.0
+
+メモ:
+
+- 公式手順はPython 3.10、CUDA 12.8、PyTorch 2.8.0を推奨し、ストリーミング推論にはFlashInferを推奨する。FlashInferなしでは`--use_sdpa`によるPyTorch SDPA fallbackがある。
+- 320 viewsを超えるKV cacheでは性能低下があるためkeyframe strategyを使い、3,000フレーム超の長尺入力ではwindowed inferenceが案内されている。学習時より長い移動範囲ではpose collapseが起こり得る。
+- batch renderingはOpen3D、NVIDIA Kaolin、ffmpeg、CUDA extensionを追加で必要とする。公式READMEに正確なVRAM要件、Windows対応、AMD Radeon / ROCm対応は明記されていない。
+- Terrain Diffusion / InfiniteDiffusionは世界を生成する技術、LingBot-Mapは実動画や生成動画から幾何を再構成する技術として区別する。
+- 実行前にCUDA、FlashInfer、Kaolin、PyTorchの対応版とモデル利用条件を再確認する。動画に含まれる人物、住所、室内、位置情報などを公開メモリへ保存しない。
+
+Official Links:
+
+- Project: https://technology.robbyant.com/lingbot-map
+- ModelScope: https://www.modelscope.cn/models/Robbyant/lingbot-map
+- Demo dataset: https://huggingface.co/datasets/robbyant/lingbot-map-demo
+
+⧻
+
+### image-to-3d
+
+URL:
+https://github.com/dotneet/image-to-3d
+
+分類:
+
+- Research
+- Creative
+- Image to 3D
+- Apple Silicon
+- Auto Rig
+
+概要:
+
+- TRELLIS.2をApple Silicon / MPS向けに移植・調整し、1枚の画像からGLB assetを生成するlocal web application。
+- generation pipelineの簡略化、UV、mesh repair、texture projection、auto-rigなどを一連の処理として扱う。
+
+用途:
+
+- Apple Silicon上のlocal image-to-3D研究
+- 画像から3D character / object assetを作るworkflow
+- animede 3D Character Pipeline、LingBot-Mapとの役割比較
+- Creative Pipelineでの3D素材生成
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- MIT
+
+メモ:
+
+- 公式要件はmacOS 12以降、Apple Silicon M1以降、24GB unified memory、Python 3.11、Node.js 20、約20GBの空き容量。Blenderは一部処理で任意。
+- Windows / AMD Radeon向けの実装ではないため、現在のworkspaceでは導入候補ではなく比較研究として扱う。
+- 入力画像、3D出力、model weight、生成assetの権利と利用条件を個別に確認する。
+
+⸻
+
 ### Terrain Diffusion
 
 URL:
@@ -3821,10 +4646,14 @@ URL:
 - VTuber体験場
 - OpenCut
 - VCamdroid
+- Camera Camera Camera
+- speech-to-speech
+- Yorishiro
+- 四葉公ラボ 配信ペット
 
 用途:
 
-- AI コンパニオン、音声認識、音声表現、表情・アバター表現、2.5D アバター素材化、カメラ入力、配信・動画導線。
+- AI コンパニオン、音声認識、音声表現、表情・アバター表現、2.5D アバター素材化、顔出しなし通話、カメラ入力、配信pet、coding agentのpresence、配信・動画導線。
 
 ### Agent / Orchestration
 
@@ -3835,10 +4664,11 @@ URL:
 - agency-agents
 - Hermes Agent
 - The Hitchhiker's Guide to Agentic AI
+- Yorishiro
 
 用途:
 
-- 複数 AI 協調、AI エージェント、長期記憶、ルーティング最適化、専門エージェント役割設計、自己改善型 agent runtime。
+- 複数 AI 協調、AI エージェント、長期記憶、ルーティング最適化、専門エージェント役割設計、自己改善型 agent runtime、characterとterminalを接続するpresence harness。
 
 ### AI Coding Operations
 
@@ -3858,10 +4688,12 @@ URL:
 - japanese-tech-writing / k16shikano gist
 - textlint-rule-preset-ai-writing
 - The Hitchhiker's Guide to Agentic AI
+- Kura
+- AKARI Video
 
 用途:
 
-- AI コーディング運用改善、専門エージェント役割設計、multi-model review、reviewable HTML artifact、video-to-LLM preprocessing、Japanese technical writing skill、agentic system reference、skill routing、token optimization、context compression、screenshot-based browsing、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
+- AI コーディング運用改善、専門エージェント役割設計、multi-model review、reviewable HTML artifact、agent-readable video editing、video-to-LLM preprocessing、Japanese technical writing skill、agentic system reference、skill routing、token optimization、context compression、screenshot-based browsing、最小実装、長期文脈管理、作業分割、セキュリティレビュー、記憶整理。
 
 ### Document Automation
 
@@ -3921,10 +4753,19 @@ URL:
 - VoxCPM
 - MOSS-SoundEffect-v2.0
 - VCamdroid
+- LingBot-Map
+- Kura
+- Wakapippi Vocal Remover Extension
+- 四葉公ラボ 配信ペット
+- animede 3D Character Pipeline
+- image-to-3d
+- AKARI Video
+- VoiceDenoiser
+- speech-to-speech
 
 用途:
 
-- 図解、画像編集、画面録画、動画取得、音声抽出、文字起こし、動画解析、動画編集、動画生成、音声生成、2.5D アバター、レイヤー分解、仮想 Web カメラ。
+- 図解、画像編集、画面録画、動画取得、音声分離・前処理、文字起こし、local voice agent、動画解析、agentic video editing、動画生成、画像・動画からの3D asset化、auto-rig、音声生成、LoRA学習実験、2.5D アバター、レイヤー分解、仮想 Web カメラ、配信演出。
 
 ### Learning / Research Workflow
 
@@ -3996,10 +4837,11 @@ URL:
 
 - Terrain Diffusion
 - InfiniteDiffusion
+- LingBot-Map（生成動画や実動画からの3D再構成を比較）
 
 用途:
 
-- 無限ワールド生成、プロシージャル生成、Minecraft Mod、ゲーム開発研究。
+- 無限ワールド生成、プロシージャル生成、Minecraft Mod、ゲーム開発研究。生成と動画からの3D再構成を区別して比較する。
 
 ⸻
 
@@ -4007,6 +4849,7 @@ URL:
 
 ### 最優先研究対象
 
+- LingBot-Map
 - Terrain Diffusion
 - InfiniteDiffusion
 - see-through
@@ -4046,6 +4889,11 @@ URL:
 - claude-real-video
 - Recordly
 - textlint-rule-preset-ai-writing
+- Wakapippi Vocal Remover Extension
+- 四葉公ラボ 配信ペット
+- Yorishiro
+- AKARI Video
+- VoiceDenoiser
 
 ### 将来導入
 
@@ -4109,6 +4957,9 @@ URL:
 - Anime2.5DRig
 - tomari-guruguru
 - MOSS-SoundEffect-v2.0
+- speech-to-speech
+- animede 3D Character Pipeline
+- image-to-3d
 
 ### 開発アイデア
 

@@ -2,23 +2,45 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-29
+
+- 2026-07-28に作成したX投稿16件の一次情報調査レポートから、`試す候補`と`研究`に分類した8件を`AI_DRAWERS.md`へ正式登録した。
+- `Wakapippi Vocal Remover Extension`、`四葉公ラボ 配信ペット`、`Yorishiro`、`AKARI Video`、`VoiceDenoiser`を試用候補として追加。browser extension権限、YouTube / Discord OAuth、macOS限定、Windows対応待ち、音声datasetの権利を導入条件として記録した。
+- `speech-to-speech`、`animede 3D Character Pipeline`、`dotneet/image-to-3d`を研究対象として追加。VAD / STT / LLM / TTS分離、画像生成から3D / auto-rig / VRMへのpipeline、Apple Silicon向けTRELLIS.2実装を整理した。
+- `INBOX.md`の`image-3d`仮登録を、`animede 3D Character Pipeline`へ統合して削除した。
+- `AI_INDEX.md`へlocal voice agent、VRM coding terminal、WebGPU audio separation、streaming pet、image-to-3D、auto-rig、agentic video editing、voice dataset preparationの検索導線を追加した。
+- X投稿調査の`運用知識`は現在のProjectへ最適化して再検討するまで保留し、未検証の金融利益、誇張された損失額、FaceSwapのような高リスク用途は技術レーダーへ登録しなかった。
+
 ## 2026-07-19
 
 - Hugging Faceの`m15dg/local-ai-toolkit`を一次情報で確認し、RTX 3060 12GB向けの役割別local model collectionとして`INBOX.md`へ追加。137ファイル・約308 GiB、AI生成README、quality / speed tier、複数形式・複数model familyを記録した。
 - repository全体が`license: other`で、uncensored / abliterated weightや複数licenseの派生modelを含むため、技術レーダーへは昇格せず、origin、hash、model card、licenseの個別監査とAMD / ROCm実機検証を保留条件にした。`AI_INDEX.md`へlocal model collection、consumer hardware routing、mixed-license bundleの導線を追加。
+- X投稿を発見経路として`nomadoor/Kura`、作者によるKrea 2 LoRA学習記事、公式GitHub、Krea 2 model cardとCommunity Licenseを確認した。
+- MITの`Kura`を、AI-Toolkit / Musubi Tunerを束ねるfile-first LoRA experiment workspaceとして`AI_DRAWERS.md`へ追加。機械集計で既存表示の1件ずれも検出し、登録数を実数の102件へ同期した。
+- agentが設定を提案し、人間がplanを承認してから固定内容を実行し、read-only monitor、checkpoint比較、人間の評価メモへ接続する`File-First Approved Experiment Loop`を`NOTES/AI_Coding_Patterns.md`へ追加した。
+- Krea 2は独立項目へ昇格せず、Kuraの実例として記録。sourceのApache-2.0とweightのCommunity Licenseを分離し、年商100万USDの商用利用境界、派生model配布、content filtering条件を明記した。
+- Docker、NVIDIA GPU、任意code / shell、model download、ComfyUI file access、RunPod API key・dataset upload・GPU課金を導入前の確認事項として残し、install、login、download、実行は行っていない。
 
 ## 2026-07-18
 
 - `AI_DRAWERS.md`にOpenMOSS TeamのApache-2.0 text-to-audio model `MOSS-SoundEffect-v2.0`を追加。公式model cardとsourceを基に、1.3B DiT、Flow Matching、英語・中国語prompt、48 kHz・最大30秒、v1とのarchitecture差、CUDA / Triton中心の実行条件を記録した。
 - `AI_INDEX.md`へMOSS-SoundEffect-v2.0、text-to-audio / text-to-sound、1.3B DiT audio、Flow Matching audio、48 kHz bilingual sound effectsの検索導線を追加。
+- 作者本人による`Text-To-VRMA` v1.1.0 release投稿とGitHubのMIT license、ARDY / waypoint、OpenAI API / Codex CLI認証、model取得、third-party noticeを確認し、既存INBOX項目を`AI_DRAWERS.md`へ昇格。登録数を97件へ更新した。
 - `SKILLS/Git.md`に`Codex Git Gate`を追加し、`ai-shared-memory`での条件付き自律commit / push、限定stage、既存未push commitの確認、停止条件、固定結果語彙、最終報告項目を定義した。
 - `AI_INDEX.md`へCodex Git Gate、autonomous commit / push decision、exact staging、unpushed commit safety checkの検索導線を追加。
+- X投稿`2078210765342097812`を発見経路として、`2d2vrm`、`text-to-vrma`、`Irodori-TTS`、`VoiceDesignCloner`、`AITuberKit`の一次情報を確認。静止画asset、motion、voice、conversation / broadcastを分離するComposable AITuber Pipelineとして整理した。
+- sourceとv3 model cardがMITで、watermark、制約、voice cloneの倫理条件が明示された`Irodori-TTS`を`AI_DRAWERS.md`へ昇格。登録数を96件へ更新した。
+- `2d2vrm`、`VoiceDesignCloner`、`AITuberKit`は、source / license未確認、GPU・model取得・setup script、voice rights、custom commercial license、API key・camera・外部送信・関数実行のため`INBOX.md`へ保留した。
+- `AI_DRAWERS.md`に、動画ストリームからカメラ姿勢、深度、点群を推定するApache-2.0の3D foundation model `LingBot-Map`を追加。論文、公式GitHub、公式モデル配布を基に、GCT / GCA、長尺推論、CUDA中心の依存環境、生成型ワールド技術との違いを記録した。
+- `AI_INDEX.md`へLingBot-Map、streaming 3D reconstruction、Geometric Context Transformer、camera pose / depth / point cloud、Spatial AI / SLAMの検索導線を追加。
+- `AI_DRAWERS.md`に、カメラ映像を送らずVRMアバターで通話・対談収録できるブラウザサービス`Camera Camera Camera`を追加。人同士のWebRTC通話とBot APIのデータ経路、端末内クリップ生成、参加者同意、VRM利用条件を区別して記録した。
+- `AI_INDEX.md`へ顔出しなしアバター通話、VRM / VRoid Hub通話、AI bot call、アバター対談動画の検索導線を追加。
 - Switch to Codex galleryの6カテゴリ535件を末尾まで確認し、Developers 30、Operations & data 22、Product & design 20、Education 15、Marketing 8、Founders 5の計100件を再選別。キャンペーン投稿は発見経路に限定した。
 - `Haoleme`と`Spell Quest`を、terminal output外部送信、pairing、任意command実行、ライセンス未確認、asset条件のため`INBOX.md`へ保留。新規の`AI_DRAWERS.md`昇格は行わなかった。
 - OpenAI公式のSol / Terra / Lunaを能力・コストtierとして確認し、固定planner / executor roleではなくtask contractとacceptance gateで選ぶmodel routingを`NOTES/AI_Coding_Patterns.md`へ追加。
 - tests、Simulator / browser、accessibility、配布artifact、human reviewを接続するEvidence-First Deliveryと、source / assumption / challenge pointを残すTraceable Decision Artifactを既存ノートへ統合した。
 - Chromeで開かれていたXブックマークから異なる投稿URLを100件確認し、過去調査と同一の1件を除いた99件を再選別。投稿を正本にせず、OpenAI、Google DeepMind、GitHub、Hugging Face、Mirelo、Kyutai、Decart、Mercariの一次情報を確認した。
-- `ChatGPT Sites`と`Gemma 4`を`AI_DRAWERS.md`へ昇格。public beta、production deployment、data control、model download、hardware要件を明記し、登録数を94件へ更新した。
+- `ChatGPT Sites`と`Gemma 4`を`AI_DRAWERS.md`へ昇格。public beta、production deployment、data control、model download、hardware要件を明記し、登録数を95件へ更新した。
 - `MuScriptor`、`Lucy 2.5`、`SAORI`、`GPT-5.6 Sol cybersecurity`を、非商用weight、Hugging Face認証、外部camera stream、一次情報不足、access / safeguard依存のため`INBOX.md`へ保留した。
 - Mercariの公式AI Agent Day事例から、事前学習、集中実践、定着期間、peer group、centralized control、sandbox、段階的な権限拡張を`NOTES/AI_Coding_Patterns.md`へ運用パターンとして追記した。
 - `AI_INDEX.md`へChatGPT Sites、Gemma 4、edge multimodal、MuScriptor、realtime video、staged enterprise agent rollout、GPT-5.6 security運用の検索導線を追加。認証proxy、cheat、leak、制限回避、無断clone、NSFW用途は除外した。
@@ -27,11 +49,15 @@
 
 - Xの`github.com`検索で異なる投稿URLを100件確認し、過去調査と重複した4件を除いて一次情報を再確認。`Superpowers`と`textlint-rule-preset-ai-writing`を`AI_DRAWERS.md`へ昇格し、実行・認証・外部依存を伴う17件を`INBOX.md`へ役割別に統合。
 - `AI_INDEX.md`へspec-first / TDD / subagent development、日本語AI文章lint、computer-use、local web research MCP、AIRI motion、SVG / pixel diffusion研究などの検索導線を追加。リーク、認証・制限回避、既登録項目は除外。
+- Bellbullet Workspace MVPを`https://bellbullet.ai.studio/`へ再公開し、1023px以下の従来Portalと1024px以上のWorkspace OS表示、公開サイトのConsole errorなしを確認。
+- Google AI StudioのLast published `2026-07-17 18:50:06 JST`を記録し、公開後に残る未公開差分は内容確認まで追加Republishしない運用とした。
 
 ## 2026-07-16
 
 - `PROJECTS/AIHub.md`を追加し、AI Hub Lite Phase 01の目的、MVP項目、Google AI Studio・GitHub・Codex間の運用、非対象、段階的な次作業を定義。
 - `PROJECTS/index.md`、`AI_INDEX.md`、`CURRENT.md`へAI Hubの入口と現在の優先作業を同期。
+- `AI_DRAWERS.md` にThinking Machines LabのオープンウェイトMoEモデル `Inkling` を追加。公式発表、model card、Hugging Face公式モデルページを基に、仕様、公開時点の評価、ローカル実行要件、Inkling-Small preview、利用上の制約を記録。
+- `AI_INDEX.md` にInkling、Thinking Machines Lab、Mira Murati、MoE、Open-weight LLM、effort reasoning、multimodal、ForecastBench、IFBenchの検索導線を追加。
 - `NOTES/AI_Behavior_Candidates.md` を追加し、AIの思考・出力品質を改善する候補の保管先、2件の初期候補、昇格条件を定義。正式なカテゴリや強制ルールはまだ作成していない。
 - `NOTES/index.md` と `AI_INDEX.md` にAI Behavior Candidatesと関連キーワードの導線を追加。
 
