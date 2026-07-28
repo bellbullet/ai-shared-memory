@@ -49,6 +49,12 @@ AI が関連ファイルを素早く見つけるための索引です。
 - AI → `NOTES/AI.md`
 - AI Behavior Candidates → `NOTES/AI_Behavior_Candidates.md`
 - AI Coding Patterns → `NOTES/AI_Coding_Patterns.md`
+- Agent Operations → `SKILLS/AgentOperations.md`
+- Simple Loop Before Graph → `NOTES/AI_Coding_Patterns.md`, `SKILLS/AgentOperations.md`
+- Portable Agent Configuration → `NOTES/AI_Coding_Patterns.md`, `SKILLS/AgentOperations.md`
+- Knowledge Quality Gate → `SKILLS/Research.md`, `NOTES/AI_Coding_Patterns.md`
+- Session Hygiene → `SKILLS/AgentOperations.md`
+- Claude Code Desktop session title refresh → `TRIALS.md`, `references/CLAUDE_CODE_MAP.md`
 - AI Workspace Ideas → `NOTES/AI_Workspace_Ideas.md`
 - HomeLab → `NOTES/HomeLab.md`
 - Solar → `NOTES/Solar.md`

@@ -74,6 +74,8 @@ MCP Server は信頼境界の内側に置かれるとは限らない。提供元
 Checkpoint は Git、バックアップ、データベースのトランザクション、外部サービスのロールバックの代わりにはならない。
 Bash、API、Database、Git Push、Deploy、公開処理などの副作用は別途管理する。
 
+session titleの自動更新、session一覧やevent取得、定期loopなどの操作は、実行面とversionによって利用可否が変わる。X投稿や第三者の手順だけで標準機能と判断せず、Anthropic公式情報と実機で確認し、採用前は`TRIALS.md`で扱う。
+
 ### 実行面
 
 Claude Code は CLI だけでなく、IDE、デスクトップ、Web、CI、SDK など複数の実行面から利用できる。

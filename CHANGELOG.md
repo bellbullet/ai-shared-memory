@@ -2,6 +2,14 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-29
+
+- `SKILLS/AgentOperations.md`を追加し、Task Contract、基本agent loop、Simple Loop Before Graph、cross-agent portability、session hygiene、外部skill安全確認、停止条件を作業別ruleとして分離した。
+- `SKILLS/Research.md`へKnowledge Quality Gateを追加し、一次情報、正本、鮮度、重複、検索性、公開境界、検証証拠を長期保存前に確認する流れを定義した。
+- `NOTES/AI_Coding_Patterns.md`へSimple Loop Before Graph、Portable Agent Configuration、Knowledge Quality Before Prompt Tuningを追加した。
+- 未確認のClaude Code Desktop session title自動更新は標準採用せず、`TRIALS.md`の検証候補と`references/CLAUDE_CODE_MAP.md`の変動項目として記録した。
+- `PROJECT_START.md`、`AGENTS.md`、`SKILLS/README.md`、`AI_INDEX.md`へAgent Operationsのroutingを追加し、Obsidianの`MOC/OPERATIONS.md`から正本fileへ辿れるようにした。GitHubを正本、Obsidianを任意の閲覧・編集UIとする関係は変更していない。
+
 ## 2026-07-25
 
 - Repository rootを既存構造のままObsidian Vaultとして開ける最小`.obsidian/`設定を追加。Live Preview、relative Markdown link、link自動更新、`NOTES/`への新規note、`ATTACHMENTS/`への添付、OSのごみ箱、Backlinks、Outgoing Links、Properties、Templatesを有効にした。

@@ -1,6 +1,6 @@
 # AI Coding Patterns
 
-最終更新: 2026-07-18
+最終更新: 2026-07-29
 
 ## Purpose
 
@@ -58,6 +58,40 @@ OpenAI の公式 Prompting 入門では、依頼の品質を上げるために�
 - Boundaries: 変更してはいけないもの、避けること、実行前に確認すべきこと
 
 短い依頼では必要な項目だけを使い、大きな作業では結果を先に示す。手順を細かく固定するより、目的と必要な背景を渡し、必要な確認事項を境界条件として明示する。
+
+## Pattern: Simple Loop Before Graph
+
+agent workflowは、まず次の単純なloopとして設計する。
+
+```text
+Context -> Plan -> Act -> Verify -> Repeat or Finish
+```
+
+分岐、永続state、retry、並列処理、human approvalが明示的に必要になるまでは、graphや大きなorchestration frameworkを追加しない。
+
+graphを導入する場合も、各nodeの入力、出力、失敗条件、再実行条件を説明できる状態にする。graphの存在自体を品質や自律性の証明にしない。
+
+## Pattern: Portable Agent Configuration
+
+複数agentで共有するのは、目的、制約、完了条件、公開安全性などの共通意図とする。
+
+- 共通意図 → `AGENTS.md`、project docs、shared notes
+- 作業別手順 → `SKILLS/`
+- agent固有設定 → `CLAUDE.md`、Rules、Hooks、Permissionsなど各実行面のadapter
+
+設定名、hook payload、permission、tool、session機能はagent間で同一と仮定しない。自動変換やsymlinkを使う場合は、公式仕様、更新方向、秘密情報、Windows互換性を先に検証する。
+
+## Pattern: Knowledge Quality Before Prompt Tuning
+
+出力が不安定なとき、promptだけを長くする前にknowledge layerを確認する。
+
+1. 一次情報または正本へ到達できるか。
+2. 古いversion、重複、矛盾が残っていないか。
+3. 名前ではなく用途から検索できるか。
+4. agentが読む権限とpublic/private境界が正しいか。
+5. 採用判断を支えるsourceまたはTrial結果があるか。
+
+knowledgeの品質が不足している状態でpromptを追加すると、古い情報や矛盾を強く再現することがある。詳細な確認手順は`SKILLS/Research.md`のKnowledge Quality Gateへ分離する。
 
 ## Pattern: File-Based Context
 

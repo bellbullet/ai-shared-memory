@@ -38,6 +38,16 @@
 
 採用・試用・保留・却下は、話題性ではなく再利用条件とリスクで判断します。
 
+## Agent運用
+
+- Agent workflow、cross-agent portability、session hygiene、skill safety: [Agent Operations Skill](../SKILLS/AgentOperations.md)
+- 外部調査とKnowledge Quality Gate: [Research Skill](../SKILLS/Research.md)
+- 長期的な設計パターン: [AI Coding Patterns](../NOTES/AI_Coding_Patterns.md)
+- 未確認の自動化と試用結果: [TRIALS](../TRIALS.md)
+- Claude Codeの概念地図: [Claude Code Architecture Map](../references/CLAUDE_CODE_MAP.md)
+
+このMOCは案内だけを持ち、ルールや試用結果の本文は正本fileへ置きます。
+
 ## Git運用
 
 - Git root、branch、upstream、既存変更を作業前に確認する。
