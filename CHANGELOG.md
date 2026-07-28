@@ -10,6 +10,40 @@
 - `INBOX.md`の`image-3d`仮登録を、`animede 3D Character Pipeline`へ統合して削除した。
 - `AI_INDEX.md`へlocal voice agent、VRM coding terminal、WebGPU audio separation、streaming pet、image-to-3D、auto-rig、agentic video editing、voice dataset preparationの検索導線を追加した。
 - X投稿調査の`運用知識`は現在のProjectへ最適化して再検討するまで保留し、未検証の金融利益、誇張された損失額、FaceSwapのような高リスク用途は技術レーダーへ登録しなかった。
+- `SKILLS/AgentOperations.md`を追加し、Task Contract、基本agent loop、Simple Loop Before Graph、cross-agent portability、session hygiene、外部skill安全確認、停止条件を作業別ruleとして分離した。
+- `SKILLS/Research.md`へKnowledge Quality Gateを追加し、一次情報、正本、鮮度、重複、検索性、公開境界、検証証拠を長期保存前に確認する流れを定義した。
+- `NOTES/AI_Coding_Patterns.md`へSimple Loop Before Graph、Portable Agent Configuration、Knowledge Quality Before Prompt Tuningを追加した。
+- 未確認のClaude Code Desktop session title自動更新は標準採用せず、`TRIALS.md`の検証候補と`references/CLAUDE_CODE_MAP.md`の変動項目として記録した。
+- `PROJECT_START.md`、`AGENTS.md`、`SKILLS/README.md`、`AI_INDEX.md`へAgent Operationsのroutingを追加し、Obsidianの`MOC/OPERATIONS.md`から正本fileへ辿れるようにした。GitHubを正本、Obsidianを任意の閲覧・編集UIとする関係は変更していない。
+
+## 2026-07-25
+
+- Repository rootを既存構造のままObsidian Vaultとして開ける最小`.obsidian/`設定を追加。Live Preview、relative Markdown link、link自動更新、`NOTES/`への新規note、`ATTACHMENTS/`への添付、OSのごみ箱、Backlinks、Outgoing Links、Properties、Templatesを有効にした。
+- `OBSIDIAN_HOME.md`と`MOC/PROJECTS.md`、`MOC/AI_AND_TOOLS.md`、`MOC/OPERATIONS.md`を追加し、既存の`PROJECT_START.md`、`AI_INDEX.md`、Project / Note / Trial / Decision運用を置き換えない補助導線とした。
+- `references/OBSIDIAN_INTEGRATION_AUDIT.md`へ変更前のstructure、link、filename、Windows、GitHub / Obsidian表示差、private情報risk、CLI検出結果を記録した。
+- `references/CONVERSATION_ARCHIVE_DESIGN.md`へRaw private archiveとpublic-safe processed summaryの分離、masking、human review、誤投入時の対応を定義した。
+- `references/OBSIDIAN_PLUGIN_REVIEW.md`で候補5件を権限・network・maintenance・標準機能代替から比較し、初期導入0件とした。公式Obsidian CLIは対応versionを確認できる端末だけで有効化する。
+- Project / Note Templateだけに最小YAML Propertiesを追加し、既存Markdownへの一括frontmatter追加は行わなかった。
+- `.gitignore`へObsidianのmachine state、plugin / theme、Raw conversation、private note、secret file patternを追加した。
+- Obsidian Desktop 1.12.7でVaultとHome表示を確認し、公式CLIを有効化・PATH登録した。`node_modules/`とVitePress生成物はObsidianの検索・Graph対象から除外した。
+
+## 2026-07-24
+
+- [X投稿の急上昇AI OSS 10選](https://x.com/so_ainsight/status/2080144636170117582)を発見経路として一次情報を再確認し、star増加数ではなく用途、license、権限、外部送信、既登録項目との重複で評価した。
+- MIT licenseでlocal-firstのcode intelligence graphを構築する`code-review-graph`を、code主体projectでの実試用候補として`AI_DRAWERS.md`へ昇格した。外部LLM利用時のsource送信、benchmarkの前提、MCP・CI権限を確認条件とした。
+- MIT licenseの`mattpocock/skills`を、engineering skillの選別採用候補として昇格した。collection全体の自動installは行わず、個別skillの内容、既存ruleとの競合、commit固定、実projectでの検証を採用条件とした。
+- `AI_INDEX.md`へ2件の検索導線を追加し、`AI_DRAWERS.md`の登録数を111件へ更新した。Hallmark、Orca、awesome-llm-apps、OfficeCLI、Codexは既登録・既知のため重複追加せず、金融・実験的broker連携を含むVibe-Tradingなど残り3件は昇格しなかった。
+- [X投稿の「50 websites」](https://x.com/artic_ai/status/2079903994856485293)を発見経路として扱い、「すべて合法・無料」という宣伝文句は採用せず、公式site、公式document、source repositoryで利用条件を再評価した。
+- Squoosh、Semantic Scholar、Have I Been Pwnedを有望候補として`AI_DRAWERS.md`へ昇格し、優先度を★★★★★に設定した。
+- Photopea、VirusTotal、Elicit、AlternativeTo、regex101、ExplainShell、tldrawは、外部送信、機密情報、AI出力の検証、二次情報、本番licenseなどの注意点を明記し、優先度を★★★☆☆〜★★★★☆へ下げて保存した。
+- `AI_INDEX.md`へ10件の検索導線を追加し、`AI_DRAWERS.md`の登録数を109件へ更新した。著作権侵害や認証・制限回避につながる候補、既登録と重複する候補は昇格対象から除外した。
+
+## 2026-07-21
+
+- X投稿で紹介されたGitHub候補10件を一次情報で確認し、既登録のGraphifyとclaude-real-videoとの役割重複を整理した。
+- AI_DRAWERS.mdへ、UIデザインskillのHallmark、並列worktreeでCLIエージェントを管理するOrca、Office文書の作成・編集・レンダリングを行うOfficeCLIを追加。いずれも実作業での試用前提として状態と安全上の確認条件を記録した。
+- awesome-llm-appsは導入物ではなく、個別候補を選ぶための参考カタログとしてAI_DRAWERS.mdへ記録。各テンプレートは必要時に一次情報・ライセンス・外部送信・API key・保守状況を再評価する方針とした。
+- AI_INDEX.mdへHallmark、Orca、OfficeCLI、awesome-llm-appsの検索導線を追加。
 
 ## 2026-07-19
 

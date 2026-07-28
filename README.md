@@ -34,10 +34,44 @@ v1.1 は、知識を集めるだけでなく、AI が検索・比較・再利用
 
 Private 情報が必要な場合は、別の private repository またはローカル専用メモで管理する。
 
+## Obsidianから使う
+
+Repository rootをそのままVaultとして開けます。Obsidianは閲覧・検索・編集UIであり、既存MarkdownとGitHubが引き続き正本です。
+
+1. Obsidianで **Open folder as vault** を選ぶ。
+2. Cloneした`ai-shared-memory`のroot folderを選ぶ。
+3. [OBSIDIAN_HOME.md](OBSIDIAN_HOME.md)を開く。
+4. 編集前に`git status --short --branch`を確認する。
+
+共有する設定は`.obsidian/`内の最小構成だけです。
+
+- Live Preview
+- 新規noteの保存先: `NOTES/`
+- 添付fileの保存先: `ATTACHMENTS/`
+- Relative Markdown linkとlink自動更新
+- OSのごみ箱
+- Backlinks、Outgoing Links、Properties、Templates、Graph、Canvas
+- Daily Notes、Sync、Publish: 無効
+- Community plugin: 0件
+
+UI言語はapplication全体の設定であり、Vaultへ固定しません。必要な端末でObsidianの表示言語を日本語に設定してください。Workspace配置、recent file、cache、plugin本体・端末固有dataはGit管理しません。
+
+Templateから作る場合は、Core Templatesの`TEMPLATES/PROJECT_TEMPLATE.md`または`TEMPLATES/NOTE_TEMPLATE.md`を使います。Propertiesは新規作成分から段階導入し、既存noteへ一括追加しません。
+
+公式Obsidian CLIはObsidian 1.12で追加され、Windowsでは1.12.7以降のinstallerが必要です。Install済みversionを確認し、Settings → General → Command line interfaceから有効化した端末でだけ使用します。詳しくは[plugin / CLI調査](references/OBSIDIAN_PLUGIN_REVIEW.md)を参照してください。
+
+Raw conversation、private note、認証情報はこのVaultに置きません。[Conversation Archive Design](references/CONVERSATION_ARCHIVE_DESIGN.md)に従い、repository外のprivate層から公開可能なsummaryだけを昇格します。
+
 ## 構成
 
 ```text
 ai-shared-memory/
+├─ .obsidian/
+│  ├─ app.json
+│  ├─ community-plugins.json
+│  ├─ core-plugins.json
+│  └─ templates.json
+├─ OBSIDIAN_HOME.md
 ├─ README.md
 ├─ VERSION
 ├─ PROJECT_START.md
@@ -59,8 +93,15 @@ ai-shared-memory/
 ├─ CHANGELOG.md
 ├─ INBOX.md
 ├─ AI_DRAWERS.md
+├─ MOC/
+│  ├─ PROJECTS.md
+│  ├─ AI_AND_TOOLS.md
+│  └─ OPERATIONS.md
 ├─ references/
-│  └─ CLAUDE_CODE_MAP.md
+│  ├─ CLAUDE_CODE_MAP.md
+│  ├─ OBSIDIAN_INTEGRATION_AUDIT.md
+│  ├─ OBSIDIAN_PLUGIN_REVIEW.md
+│  └─ CONVERSATION_ARCHIVE_DESIGN.md
 ├─ OUTPUTS/
 │  └─ README.md
 ├─ SKILLS/
@@ -103,7 +144,7 @@ AI は原則として次の順で読む。
 4. [AGENTS.md](AGENTS.md) - AI 向け運用ルール
 5. [CURRENT.md](CURRENT.md) - 現在の焦点、待ち、次の行動
 6. [AI_INDEX.md](AI_INDEX.md) - 関連ファイル索引
-7. 必要な [SKILLS](SKILLS/) - 作業種別ごとの詳細ルール
+7. 必要な [SKILLS](SKILLS/index.md) - 作業種別ごとの詳細ルール
 8. 作業対象ファイル - `AI_DRAWERS.md` / `PROJECTS/*.md` / `NOTES/*.md`
 9. [TRIALS.md](TRIALS.md) - 登録済み候補を試す場合の実績・判断・再利用条件
 10. [INBOX.md](INBOX.md) - 未整理の新規リンクやアイデア
@@ -132,12 +173,14 @@ AI は原則として次の順で読む。
 - [CHANGELOG.md](CHANGELOG.md): 構成変更・運用ルール変更の履歴。
 - [INBOX.md](INBOX.md): 整理前のリンク、アイデア、調査候補。
 - [AI_DRAWERS.md](AI_DRAWERS.md): OSS・AI・開発ツールの技術レーダー。
-- [references](references/): 公式ドキュメントを読むための概念地図や長期参照資料。
-- [OUTPUTS](OUTPUTS/): Markdown 原本から生成した PDF、PowerPoint、Excel、画像などの成果物。
-- [SKILLS](SKILLS/): PowerShell、Python、Git、Research、Security など作業種別ごとの詳細ルール。
-- [PROJECTS](PROJECTS/): プロジェクトごとの目的、状態、次の作業。
-- [NOTES](NOTES/): プロジェクトから独立した技術メモ。
-- [TEMPLATES](TEMPLATES/): 新規 Project / Note の雛形。
+- [OBSIDIAN_HOME.md](OBSIDIAN_HOME.md): Obsidianから利用する人間向けの入口。
+- [MOC](MOC/OPERATIONS.md): Projects、AI / Tools、Operationsの補助案内。
+- [references](references/index.md): 公式ドキュメントを読むための概念地図や長期参照資料。
+- [OUTPUTS](OUTPUTS/index.md): Markdown 原本から生成した PDF、PowerPoint、Excel、画像などの成果物。
+- [SKILLS](SKILLS/index.md): PowerShell、Python、Git、Research、Security など作業種別ごとの詳細ルール。
+- [PROJECTS](PROJECTS/index.md): プロジェクトごとの目的、状態、次の作業。
+- [NOTES](NOTES/index.md): プロジェクトから独立した技術メモ。
+- [TEMPLATES](TEMPLATES/index.md): 新規 Project / Note の雛形。
 
 ## Reuse Lifecycle
 

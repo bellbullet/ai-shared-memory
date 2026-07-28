@@ -4,6 +4,11 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ## Entry Points
 
+- Obsidian human entry point: `OBSIDIAN_HOME.md`
+- Obsidian MOCs: `MOC/PROJECTS.md`, `MOC/AI_AND_TOOLS.md`, `MOC/OPERATIONS.md`
+- Obsidian integration audit: `references/OBSIDIAN_INTEGRATION_AUDIT.md`
+- Obsidian plugin and CLI review: `references/OBSIDIAN_PLUGIN_REVIEW.md`
+- Conversation archive design: `references/CONVERSATION_ARCHIVE_DESIGN.md`
 - Current version: `VERSION`
 - Trial records and reuse decisions: `TRIALS.md`
 - Start checklist: `PROJECT_START.md`
@@ -44,6 +49,12 @@ AI が関連ファイルを素早く見つけるための索引です。
 - AI → `NOTES/AI.md`
 - AI Behavior Candidates → `NOTES/AI_Behavior_Candidates.md`
 - AI Coding Patterns → `NOTES/AI_Coding_Patterns.md`
+- Agent Operations → `SKILLS/AgentOperations.md`
+- Simple Loop Before Graph → `NOTES/AI_Coding_Patterns.md`, `SKILLS/AgentOperations.md`
+- Portable Agent Configuration → `NOTES/AI_Coding_Patterns.md`, `SKILLS/AgentOperations.md`
+- Knowledge Quality Gate → `SKILLS/Research.md`, `NOTES/AI_Coding_Patterns.md`
+- Session Hygiene → `SKILLS/AgentOperations.md`
+- Claude Code Desktop session title refresh → `TRIALS.md`, `references/CLAUDE_CODE_MAP.md`
 - AI Workspace Ideas → `NOTES/AI_Workspace_Ideas.md`
 - HomeLab → `NOTES/HomeLab.md`
 - Solar → `NOTES/Solar.md`
@@ -53,6 +64,24 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ## AI_DRAWERS Keywords
 
+- code-review-graph / local-first code intelligence / Tree-sitter graph / MCP code review → `AI_DRAWERS.md`
+- impact analysis / review context reduction / risk-scored PR review → `AI_DRAWERS.md`
+- mattpocock/skills / engineering agent skills / grill-with-docs / diagnosing-bugs → `AI_DRAWERS.md`
+- composable agent skills / TDD skill / code review skill / domain modeling skill → `AI_DRAWERS.md`
+- Squoosh / browser image compression / local image optimization → `AI_DRAWERS.md`
+- Semantic Scholar / academic search / scientific literature discovery → `AI_DRAWERS.md`
+- Have I Been Pwned / HIBP / breach exposure / Pwned Passwords → `AI_DRAWERS.md`
+- Photopea / browser PSD editor / local image editing → `AI_DRAWERS.md`
+- VirusTotal / malware scan / file hash / URL analysis → `AI_DRAWERS.md`
+- Elicit / systematic literature review / AI research assistant → `AI_DRAWERS.md`
+- AlternativeTo / software alternatives / crowdsourced software discovery → `AI_DRAWERS.md`
+- regex101 / regex debugger / regular expression tester → `AI_DRAWERS.md`
+- ExplainShell / shell command explanation / man page parser → `AI_DRAWERS.md`
+- tldraw / infinite canvas / React canvas SDK → `AI_DRAWERS.md`
+- Hallmark / UI design skill / design audit / UI redesign → `AI_DRAWERS.md`
+- Orca / parallel worktree / mobile agent supervision → `AI_DRAWERS.md`
+- OfficeCLI / headless Office automation / docx xlsx pptx render → `AI_DRAWERS.md`, `OUTPUTS/README.md`
+- awesome-llm-apps / AI agent examples / RAG app templates → `AI_DRAWERS.md`
 - DESIGN.md → `AI_DRAWERS.md`
 - Firecrawl → `AI_DRAWERS.md`
 - PixelRAG → `AI_DRAWERS.md`
@@ -351,6 +380,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ### Workspace / Operations
 
+- Obsidian / Vault / Backlinks / MOC → `OBSIDIAN_HOME.md`, `MOC/OPERATIONS.md`
+- Obsidian CLI / plugin review / Dataview / Tasks / Linter / Templater / Obsidian Git → `references/OBSIDIAN_PLUGIN_REVIEW.md`
+- Conversation archive / raw AI logs / public summary promotion → `references/CONVERSATION_ARCHIVE_DESIGN.md`
+- Obsidian compatibility audit / Markdown links / Windows filenames → `references/OBSIDIAN_INTEGRATION_AUDIT.md`
 - 作業開始 → `PROJECT_START.md`
 - 全体状況 / Status → `STATUS.md`
 - ワークスペース構成 → `WORKSPACE.md`
@@ -477,6 +510,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - document archive / Paperless-ngx / ONLYOFFICE Docs → `AI_DRAWERS.md`
 - diagramming / Excalidraw / demo recording / Recordly → `AI_DRAWERS.md`
 - video analysis / scene-aware keyframes / claude-real-video → `AI_DRAWERS.md`
+- UI design skill / design audit / Hallmark → `AI_DRAWERS.md`
+- parallel worktree / mobile agent supervision / Orca → `AI_DRAWERS.md`
+- headless Office automation / OfficeCLI / docx xlsx pptx render → `AI_DRAWERS.md`, `OUTPUTS/README.md`
+- AI agent examples / RAG app templates / awesome-llm-apps → `AI_DRAWERS.md`
 - Android webcam / virtual webcam / smartphone webcam → `AI_DRAWERS.md`
 - 2.5D avatar / anime layer decomposition / PSD avatar素材化 → `AI_DRAWERS.md`
 - AI video / voice generation → `AI_DRAWERS.md`

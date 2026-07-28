@@ -1,6 +1,6 @@
 # SKILLS
 
-最終更新: 2026-06-30
+最終更新: 2026-07-29
 
 作業種別ごとの詳細ルールを置く場所。
 
@@ -13,6 +13,7 @@
 - Git root / branch / commit / push / missing `.git` → `Git.md`
 - External article / OSS / paper / source verification → `Research.md`
 - Security review / release gate / risky code changes → `Security.md`
+- Agent workflow / cross-agent portability / session hygiene / skill safety → `AgentOperations.md`
 
 ## Rules
 

@@ -1,6 +1,6 @@
 # TRIALS
 
-最終更新: 2026-07-17
+最終更新: 2026-07-29
 
 登録済みの OSS、AI 技術、運用パターンを実際の作業で試し、採用判断へつなげるための記録です。
 
@@ -35,12 +35,14 @@
 | reviewable-html-workbench | ai-shared-memory / `OUTPUTS/` | AI生成文書やHTML成果物への範囲指定レビュー | Planned |
 | agency-agents lightweight roles | ScreenshotStitcher | Security EngineerとReality Checkerの軽量役割を実開発の受入判定で評価 | Prepared |
 | agmsg | ScreenshotStitcher | Codexと別CLIエージェント間の小規模なレビュー引き継ぎ | Planned |
+| Claude Code Desktop session title refresh | public-safe test project | session title自動更新の有効性と副作用確認 | Not started |
 
 開始条件:
 
 - reviewable-html-workbench: 次にレビュー対象となるHTML文書または設計成果物ができたとき。
 - agency-agents lightweight roles: 20枚制限の実装差分と検証結果がそろったとき。外部CLIやHooksは前提にしない。
 - agmsg: 公開可能な小規模リポジトリで、Git Bash、SQLite保存先、権限境界を確認できるとき。
+- Claude Code Desktop session title refresh: 公式情報と実機でsession一覧、event取得、title変更、定期実行の利用可否を確認できるとき。session増殖、誤命名、履歴消失、不要なtool callが起きないことを確認するまで標準運用にしない。
 
 ## Specialist Tools
 

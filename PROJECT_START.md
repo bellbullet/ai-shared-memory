@@ -23,6 +23,7 @@
 - Git root / branch / commit / push / missing `.git` → `SKILLS/Git.md`
 - External article / OSS / paper / source verification → `SKILLS/Research.md`
 - Security review / release gate / risky code changes → `SKILLS/Security.md`
+- Agent workflow / cross-agent portability / session hygiene → `SKILLS/AgentOperations.md`
 
 ## Required Checks
 

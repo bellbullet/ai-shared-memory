@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-07-26
+最終更新: 2026-07-29
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫です。
 
@@ -12,12 +12,12 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 111
+- 登録項目: 127
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
 - 重点領域: Agent / Orchestration、AI Coding Operations、Knowledge Management、Creative Pipeline、Self Host / Tools。
-- 最近の追加: 2026-07-28のX投稿調査から、試用候補と研究候補8件を一次情報で再確認して統合。運用知識はProject最適化の再検討まで保留し、未検証の金融主張や高リスク用途は登録しなかった。
+- 最近の追加: X投稿の候補を一次情報で再評価し、code-review-graph、mattpocock/skills、音声・配信・3D・動画系8件を用途と安全条件つきで統合した。star増加数、未検証の金融主張、高リスク用途は採用根拠にしなかった。
 - 未整理項目と次回レビュー条件は `STATUS.md`、分類前リンクは `INBOX.md` を参照する。
 
 カテゴリ別ファイル分割は、検索性や保守性が単一ファイルでは不足した時点で検討し、v1.1 では行わない。
@@ -456,6 +456,55 @@ License:
 
 AI エージェント、長期記憶、複数 LLM 協調、ルーティング、オーケストレーター系をまとめる。
 
+### Orca
+
+URL:
+https://github.com/stablyai/orca
+
+分類:
+
+- Agent / Orchestration
+- AI Coding Operations
+- Parallel Worktree
+- Mobile Companion
+
+概要:
+
+- Codex、Claude Codeなどターミナルで動くコーディングエージェントを、独立したGit worktreeで並列実行・比較・レビューするデスクトップ環境。
+- Windows、macOS、Linuxに対応し、モバイル companionから進捗確認、完了通知、追加指示を行える。
+- worktree、Diff注釈、組み込みブラウザのDesign Mode、SSH worktreeを一つの作業面にまとめる。
+
+用途:
+
+- 同一タスクを複数エージェントへ分けた実装・レビュー比較
+- 長時間のコーディング作業をiPhoneから監督
+- worktreeを使った変更の隔離と採用案の選別
+- PocketTableなどGit管理済みプロジェクトの並列検証
+
+関連:
+
+- agmsg
+- Tutti
+- Backlog.md
+- Codex
+- Claude Code
+- AI Coding Operations
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- ChatGPT内のCodex会話を引き継ぐものではなく、PC上で別途起動するCLIエージェントを管理する環境として扱う。
+- 最初は公開リポジトリのcloneで、worktree分離・モバイル通知・Diffレビューだけを確認する。private project、認証情報、外部接続権限は初回試用へ含めない。
+- MIT License。モバイル連携、利用量表示、Computer Useを使う場合は送信範囲とテレメトリ設定を確認する。
+
+⸻
 関連グループ:
 
 - MiMo-Code / Headroom / OpenFugu / AI-Safeter FUGU は「AIを管理するAI」の研究候補。
@@ -1398,6 +1447,337 @@ https://github.com/chidiwilliams/buzz
 
 ## Development
 
+### code-review-graph
+
+URL:
+https://github.com/tirth8205/code-review-graph
+
+分類:
+
+- Development
+- Code Intelligence
+- MCP
+- Static Analysis
+- Local First
+
+概要:
+
+- Tree-sitterでcodebaseを解析し、function、class、import、call関係などの永続graphをlocalに構築するMIT licenseのcode intelligence tool。
+- MCP、CLI、GitHub Actionから変更の影響範囲、関連test、review対象を絞り、AI agentへ必要なcontextを渡すことを目的とする。
+- 公式benchmarkは、単純な全corpus比較と現実的なgrep baselineを区別し、小さな変更ではgraph responseの方が大きくなる場合や、impact評価の循環性も明記している。
+
+用途:
+
+- 大規模・複数言語repositoryでの変更影響調査
+- AI code reviewへ渡すcontextの絞り込み
+- PRのrisk、関連function、test gapの補助確認
+- ScreenshotStitcherなどcode主体projectでの小規模trial
+
+状態:
+
+- 有望・実試用候補
+
+優先度:
+
+- ★★★★★
+
+注意:
+
+- graph構築とqueryはlocal-firstだが、MCP clientが外部LLMを使う場合、取得されたsource contextはmodel providerへ送信され得る。「local-first」をcode全体の外部送信禁止と同義にしない。
+- benchmarkの削減率を固定値として転用せず、対象repository、query、変更規模、grep / `rg` baselineと比較する。
+- 初回trialは機密性のないcode主体repositoryで行い、生成cache、index保存場所、MCP権限、CI comment権限、更新時のdependency差分を確認する。
+
+関連:
+
+- `TRIALS.md` — 実際に試した時点でtoken量、検索精度、false positive、index時間を記録する。
+- `PROJECTS/ScreenshotStitcher.md`
+- `SKILLS/Research.md`
+
+⸻
+
+### mattpocock/skills
+
+URL:
+https://github.com/mattpocock/skills
+
+分類:
+
+- Development
+- Agent Skills
+- AI Coding Operations
+- TDD
+- Code Review
+
+概要:
+
+- 要件の聞き取り、domain modeling、仕様化、ticket分割、TDD、bug診断、code review、handoffなどを、小さく組み合わせ可能なagent skillとして公開するMIT licenseのcollection。
+- Claude Code pluginとしてbundle購読する方法と、skills.sh経由でprojectへcopyして編集する方法がある。CodexなどAgent Skills互換環境にも対応する。
+- process全体をframeworkへ明け渡すより、必要なengineering disciplineをskill単位で組み合わせる設計を重視する。
+
+用途:
+
+- `grill-with-docs`の要件・用語・ADR整理pattern研究
+- `diagnosing-bugs`と`code-review`の検証loop比較
+- `tdd`、`to-spec`、`handoff`の既存workspace運用への部分統合
+- AI agent向けskill設計と呼び出し境界の参考資料
+
+状態:
+
+- 有望・選別採用
+
+優先度:
+
+- ★★★★★
+
+注意:
+
+- collection全体を自動installせず、採用候補の`SKILL.md`、script、tool呼び出し、外部service、file変更範囲を個別にreviewする。
+- managed pluginは作者の更新へ追従するため、再現性が必要なprojectでは確認済みcommitを固定し、必要なskillだけをrepository内へ取り込む。
+- 既存の`AGENTS.md`、`SKILLS/Git.md`、`SKILLS/Research.md`、Codex built-in skillと責務・命令が競合しないか比較する。
+- skillの説明は品質保証ではない。実projectでacceptance criteria、test、diff reviewを通し、成果物を検証する。
+
+関連:
+
+- `SKILLS/README.md`
+- `SKILLS/Git.md`
+- `SKILLS/Research.md`
+- `TRIALS.md` — 個別skillを実際に試した時点で再利用判断を記録する。
+
+⸻
+
+### Have I Been Pwned
+
+URL:
+https://haveibeenpwned.com/
+
+分類:
+
+- Development
+- Security
+- Reference Service
+
+概要:
+
+- メールアドレスが既知のデータ侵害に含まれるかを確認し、新しい侵害の通知を受け取れるサービス。
+- Pwned Passwordsは、パスワード全体や完全なhashを送らず、SHA-1 hashの先頭5文字だけを照合するk-anonymity方式を提供する。
+
+用途:
+
+- 公開済み侵害データへの露出確認
+- パスワード再利用リスクの確認
+- 認証機能でのPwned Passwords API活用調査
+
+状態:
+
+- 有望・必要時利用
+
+優先度:
+
+- ★★★★★
+
+注意:
+
+- 「現在hackされているか」を診断するサービスではなく、既知の侵害データに含まれるかを確認するもの。
+- パスワードはWeb検索欄へ直接入力せず、公式のPwned Passwords方式と利用手順を確認する。
+
+⸻
+
+### VirusTotal
+
+URL:
+https://www.virustotal.com/
+
+分類:
+
+- Development
+- Security
+- Malware Analysis
+
+概要:
+
+- file、URL、domain、IP address、file hashを複数のsecurity engineと関連情報で調査するサービス。
+- hashや公開URLの評判確認、疑わしい公開sampleの初期triageに利用できる。
+
+用途:
+
+- file hashとURLの初期調査
+- malware検知結果の横断確認
+- security incidentの補助情報収集
+
+状態:
+
+- 条件付き採用
+
+優先度:
+
+- ★★★★☆
+
+注意:
+
+- 通常の公開scanへ機密file、未公開code、顧客data、個人情報をuploadしない。Private Scanningは別機能・別条件。
+- 単一engineの判定や検知数だけで安全・危険を断定せず、source、signature、挙動を追加確認する。
+
+⸻
+
+### regex101
+
+URL:
+https://regex101.com/
+
+分類:
+
+- Development
+- Regular Expressions
+- Debugging
+
+概要:
+
+- 複数のregex flavorに対応し、match結果、capture group、説明、performance情報を対話的に確認できるdebugger。
+
+用途:
+
+- regular expressionの作成と検証
+- test caseの共有
+- flavor差とbacktrackingの調査
+
+状態:
+
+- 注意付き・必要時利用
+
+優先度:
+
+- ★★★☆☆
+
+注意:
+
+- access token、password、個人情報、非公開logなどをsample textへ貼り付けない。
+- 保存・共有linkを作る場合は、test dataが公開可能なdummy dataだけであることを確認する。
+
+⸻
+
+### ExplainShell
+
+URL:
+https://explainshell.com/
+
+Source:
+https://github.com/idank/explainshell
+
+分類:
+
+- Development
+- Shell
+- Reference Service
+
+概要:
+
+- shell commandを解析し、対応するman pageの説明をargument単位で表示するGPL-3.0のWeb service。
+
+用途:
+
+- 未知のshell commandとoptionの初期理解
+- man pageを読む入口
+- command reviewの補助
+
+状態:
+
+- 注意付き・必要時利用
+
+優先度:
+
+- ★★★☆☆
+
+注意:
+
+- token、credential、内部host名、private path、顧客名を含むcommandを外部serviceへ送らない。
+- 表示結果を実行許可とはみなさず、対象OSのman pageと公式documentで確認してから実行する。
+
+⸻
+
+### tldraw
+
+URL:
+https://github.com/tldraw/tldraw
+
+分類:
+
+- Development
+- Infinite Canvas
+- React SDK
+
+概要:
+
+- React向けのinfinite canvas SDKと、共同編集可能なcanvas appを構築するためのtoolkit。
+- starter kitにはMIT licenseのものがある一方、SDK本体のproduction利用にはtldraw license keyが必要。
+
+用途:
+
+- diagram、whiteboard、visual editorのprototype
+- AIとcanvasを組み合わせたinterface研究
+- self-host構成とrealtime collaborationの調査
+
+状態:
+
+- ライセンス確認付き・導入検討
+
+優先度:
+
+- ★★★☆☆
+
+注意:
+
+- 「無料のOSS whiteboard」と一括りにせず、SDK、starter kit、sync機能ごとのlicenseと料金条件を確認する。
+- production採用前にlicense key、self-host範囲、data保存先、共同編集backendを確定する。
+
+⸻
+
+### OfficeCLI
+
+URL:
+https://github.com/iOfficeAI/OfficeCLI
+
+分類:
+
+- Development
+- Document Automation
+- AI Coding Operations
+- Office Documents
+
+概要:
+
+- Word、Excel、PowerPointの.docx、.xlsx、.pptxを、Office本体なしで作成・読取・編集できるAIエージェント向けCLI。
+- 単一バイナリにHTML／PNGレンダリングとプレビューを含み、生成後に見た目を確認して修正するループを作れる。
+- Windowsを含む主要OS向けバイナリを提供する。
+
+用途:
+
+- Markdown原本からの文書・表・スライド生成
+- 既存Officeファイルの構造確認と一括編集
+- agent-generated documentのレンダリング検証
+- OUTPUTS、PPT Master、reviewable-html-workbenchとのDocument Automation比較
+
+関連:
+
+- PPT Master
+- reviewable-html-workbench
+- Stirling PDF
+- OUTPUTS/README.md
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- Apache-2.0。PPT Masterはスライド設計・制作手順、OfficeCLIはOfficeファイル操作とレンダリング検証を担うため、置換ではなく補完関係として扱う。
+- 初回は使い捨ての公開可能な.pptx／.xlsxで、生成、編集、HTML／PNG表示、Microsoft Officeでの互換性を確認する。
+- 自動更新を含む実行バイナリとして、導入時は配布元、更新設定、対象ファイル範囲を確認する。
+
+⸻
 ### Greenlight
 
 URL:
@@ -2456,6 +2836,129 @@ https://github.com/cool-japan/scirs
 
 ## Creative
 
+### Squoosh
+
+URL:
+https://squoosh.app/
+
+Source:
+https://github.com/GoogleChromeLabs/squoosh
+
+分類:
+
+- Creative
+- Image Optimization
+- Local Processing
+
+概要:
+
+- browser上で画像format、quality、resize条件を比較しながら圧縮できるApache-2.0のWeb app。
+- 画像処理はlocal device上で行われ、画像自体はserverへ送信されない。
+
+用途:
+
+- Web公開前の画像圧縮
+- formatと画質・file sizeの比較
+- screenshotやdocument assetの軽量化
+
+状態:
+
+- 有望・導入推奨
+
+優先度:
+
+- ★★★★★
+
+注意:
+
+- 利用統計にはGoogle Analyticsが使われるため、完全なoffline toolとして扱う場合はrepositoryからのlocal利用も検討する。
+- 元画像を保持し、圧縮後の可読性とartifactを目視確認する。
+
+⸻
+
+### Photopea
+
+URL:
+https://www.photopea.com/
+
+分類:
+
+- Creative
+- Browser Image Editor
+- PSD
+
+概要:
+
+- PSDを含む複数formatをbrowserで編集できる画像editor。
+- 公式privacy説明では、開いたfileはdevice上で処理され、serverへ送信されない。
+
+用途:
+
+- PSDの閲覧と軽微な編集
+- software installが難しい環境での画像編集
+- format変換と簡易asset作成
+
+状態:
+
+- 注意付き・条件付き採用
+
+優先度:
+
+- ★★★★☆
+
+注意:
+
+- account、広告、cookie、payment情報は画像fileのlocal処理とは別に扱われる。
+- AI機能や外部resourceを使う場合は通信先と利用条件を再確認し、機密画像はoffline editorを優先する。
+
+⸻
+
+### Hallmark
+
+URL:
+https://github.com/Nutlope/hallmark
+
+分類:
+
+- Creative
+- UI Design
+- AI Coding Operations
+- Agent Skills
+
+概要:
+
+- Claude Code、Cursor、Codex向けのUIデザインskill。新規UI生成、既存画面の監査、再設計、参考URLやスクリーンショットからのデザイン研究を扱う。
+- テーマ、構造、配色、タイポグラフィ、レイアウトの指針と自己監査を通じて、AI生成UIが同じ見た目へ収束する問題を避けることを目指す。
+
+用途:
+
+- PocketTableのゲーム画面・対戦導線のUI改善
+- Bellbullet WorkspaceのデスクトップUIの差別化
+- 既存実装のdesign auditと改善指示
+- Apple風UIを含む既存デザインskillとの比較
+
+関連:
+
+- DESIGN.md
+- Apple design skill
+- ChatGPT Sites
+- Bellbullet Workspace
+- PocketTable
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- MIT License。デザイン品質は自動保証されないため、生成結果を実機とブラウザで確認し、アクセシビリティと既存ブランド要件を優先する。
+- studyで私的画面、認証画面、非公開資料を扱う場合は、送信先と利用条件を確認する。参照デザインは模倣ではなく構造・余白・配色の研究に留める。
+
+⸻
 ### OpenCut
 
 URL:
@@ -4179,6 +4682,81 @@ License:
 
 ⸻
 
+### Semantic Scholar
+
+URL:
+https://www.semanticscholar.org/
+
+分類:
+
+- Research
+- Academic Search
+- Literature Discovery
+
+概要:
+
+- Allen Institute for AIが提供する、AIを用いた無料の学術検索・literature discovery service。
+- 関連論文、引用関係、著者、要約などを横断し、研究分野の入口を短時間で作れる。
+
+用途:
+
+- 先行研究の探索
+- citation graphと関連論文の確認
+- arXiv、publisher、著者情報への導線作成
+
+状態:
+
+- 有望・導入推奨
+
+優先度:
+
+- ★★★★★
+
+注意:
+
+- AI生成・抽出された要約だけで結論を出さず、原論文、版、撤回・訂正、licenseを確認する。
+- 検索結果の網羅性は分野や収録状況に依存するため、他のdatabaseやpublisher検索と併用する。
+
+⸻
+
+### Elicit
+
+URL:
+https://elicit.com/
+
+分類:
+
+- Research
+- AI Research Assistant
+- Literature Review
+
+概要:
+
+- 論文検索、screening、data extraction、systematic reviewを支援するAI research assistant。
+- sentence-level citationを手掛かりに、回答と根拠論文を行き来できる。
+
+用途:
+
+- literature reviewの初期探索
+- inclusion / exclusion候補のscreening
+- 論文からの比較項目抽出
+
+状態:
+
+- 注意付き・導入検討
+
+優先度:
+
+- ★★★★☆
+
+注意:
+
+- AIの要約・分類・抽出は誤る可能性があるため、必ず原論文と照合する。
+- 未公開原稿や機密資料のupload前にprivacy、data retention、学習利用条件を確認する。
+- 高度なworkflowには有料planが含まれるため、「完全無料」として扱わない。
+
+⸻
+
 ### Terrain Diffusion
 
 URL:
@@ -4261,6 +4839,81 @@ https://arxiv.org/abs/2512.08309
 
 ## Reference Sites
 
+### AlternativeTo
+
+URL:
+https://alternativeto.net/
+
+分類:
+
+- Reference Sites
+- Software Discovery
+- Crowdsourced Directory
+
+概要:
+
+- softwareやWeb serviceの代替候補を、platform、license、用途、利用者評価などから探すcrowdsourced directory。
+
+用途:
+
+- 既存toolの代替候補探索
+- self-hosted、open source、platform別候補の発見
+- 比較調査の候補list作成
+
+状態:
+
+- 注意付き・必要時利用
+
+優先度:
+
+- ★★★☆☆
+
+注意:
+
+- 掲載内容と評価は二次情報であり、正確性や安全性は保証されない。
+- download、購入、導入前に、公式site、source repository、license、保守状況、security情報を一次情報で確認する。
+
+⸻
+
+### awesome-llm-apps
+
+URL:
+https://github.com/Shubhamsaboo/awesome-llm-apps
+
+分類:
+
+- Reference Sites
+- AI Agents
+- RAG
+- Implementation Examples
+
+概要:
+
+- AI agent、agent skill、RAG appの実装例を100件以上集めたApache-2.0の参照カタログ。
+- 単体エージェント、複数エージェント、音声、Web、RAG、agent skillなどを、cloneして検証できるサンプルとして横断できる。
+
+用途:
+
+- 新規機能の実装パターン探索
+- agent skill、RAG、音声／動画、Web操作の最小構成の比較
+- 個別プロジェクト採用前の一次調査の入口
+- AIエージェントの設計例・依存関係・評価方法の参照
+
+状態:
+
+- 参考資料
+
+優先度:
+
+- ★★★☆☆
+
+メモ:
+
+- このリポジトリ自体を依存関係や導入候補として扱わず、必要な個別例だけを一次情報・ライセンス・外部送信・API key・保守状況で再評価する。
+- 100件以上やend-to-end testedは作者の説明であり、各サンプルの品質、安全性、商用利用可否を一律に保証しない。
+- 個別候補が実作業で有効だった場合のみ、重複を確認してAI_DRAWERS.mdまたはTRIALS.mdへ昇格する。
+
+⸻
 ### japanese-tech-writing / k16shikano gist
 
 URL:

@@ -34,6 +34,7 @@ GitHub型 AI Shared Memory / LLM Wiki / 軽量 Second Brain として運用し�
 - Git root / branch / commit / push / missing `.git` → `SKILLS/Git.md`
 - External article / OSS / paper / source verification → `SKILLS/Research.md`
 - Security review / release gate / risky code changes → `SKILLS/Security.md`
+- Agent workflow / cross-agent portability / session hygiene → `SKILLS/AgentOperations.md`
 
 Project-specific knowledge is kept in `PROJECTS/`.
 
@@ -242,7 +243,7 @@ Reason: 再利用できる理由、または新規実装が必要な理由
 
 ## SKILLS の扱い
 
-`SKILLS/` は PowerShell、Python、Git、Research、Security など、作業種別ごとの詳細ルールを置く場所。
+`SKILLS/` は PowerShell、Python、Git、Research、Security、Agent Operations など、作業種別ごとの詳細ルールを置く場所。
 
 `AGENTS.md` に詳細手順を増やしすぎず、必要なときだけ該当 skill を読む。
 
