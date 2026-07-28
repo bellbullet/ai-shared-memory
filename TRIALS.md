@@ -1,6 +1,6 @@
 # TRIALS
 
-最終更新: 2026-07-15
+最終更新: 2026-07-17
 
 登録済みの OSS、AI 技術、運用パターンを実際の作業で試し、採用判断へつなげるための記録です。
 
@@ -33,11 +33,13 @@
 | Candidate | First target | Purpose | State |
 | --- | --- | --- | --- |
 | reviewable-html-workbench | ai-shared-memory / `OUTPUTS/` | AI生成文書やHTML成果物への範囲指定レビュー | Planned |
+| agency-agents lightweight roles | ScreenshotStitcher | Security EngineerとReality Checkerの軽量役割を実開発の受入判定で評価 | Prepared |
 | agmsg | ScreenshotStitcher | Codexと別CLIエージェント間の小規模なレビュー引き継ぎ | Planned |
 
 開始条件:
 
 - reviewable-html-workbench: 次にレビュー対象となるHTML文書または設計成果物ができたとき。
+- agency-agents lightweight roles: 20枚制限の実装差分と検証結果がそろったとき。外部CLIやHooksは前提にしない。
 - agmsg: 公開可能な小規模リポジトリで、Git Bash、SQLite保存先、権限境界を確認できるとき。
 
 ## Specialist Tools
@@ -46,6 +48,59 @@
 - Oracle: 難しい設計判断、原因不明の不具合、release readinessのセカンドオピニオンが必要なときに検討する。
 
 ## Trial Records
+
+### 2026-07-16 agency-agents lightweight roles / ScreenshotStitcher 20-image limit
+
+対象:
+
+- `ScreenshotStitcher` の画像追加上限20枚
+- Trial用 `Security Engineer` と `Reality Checker`
+
+目的:
+
+- 専門役割が通常レビューより具体的で修正可能な指摘を生むか確認する。
+- 接続成功ではなく、レビュー、修正、再検証、人間の採否判断まで一つの開発フローとして評価する。
+
+結果:
+
+- 未評価
+
+準備済み:
+
+- 2役を正式な `AI_PROFILES.md` へ追加せず、`NOTES/AI_Behavior_Candidates.md` のTrial候補として分離した。
+- 現状コードではUIに20枚表示がある一方、`load` に上限処理がなく、超過画像もデコードとObject URL作成の対象になることを確認した。
+- 実装要件、Codex用プロンプト、Claudeレビュー用プロンプトを `NOTES/ScreenshotStitcher_20_Image_Limit_Trial.md` に準備した。
+- `agmsg`、Claude Code、SQLite、Hooksは導入していない。
+
+成功条件:
+
+- Security Engineerの指摘が、ファイル位置、失敗条件、重大度、最小修正案を持つ。
+- Codexが採用した指摘を修正し、対象テストとtest / build / lintを再実行できる。
+- Reality Checkerが要件ごとの証拠と未確認項目を分け、`Pass / Conditional / Fail` を返す。
+- 人間が役割間の履歴、差分、検証結果から採否を判断できる。
+
+中止条件:
+
+- Trial準備のために外部CLI、SQLite、Hooks、常駐処理の導入が必要になる。
+- 非公開画像、秘密情報、個人情報、ローカル固有ログを役割間で共有する必要が生じる。
+- 20枚制限から巨大画像対策、結合アルゴリズム、UI全面改修へ範囲が広がる。
+- 既存のtest / build / lintが変更前から失敗し、今回の差分を独立評価できない。
+- レビューが根拠のない一般論だけで、具体的な修正または採否判断につながらない。
+
+判断:
+
+- Trial継続
+
+正式採用条件:
+
+- 異なる2〜3件の実利用で、見落とし防止、修正品質、完了判断のいずれかに再現可能な改善がある。
+- 役割選択コストが低く、既存の通常レビューや `SECURITY_REVIEW.md` と責務を区別できる。
+
+反映先:
+
+- `NOTES/AI_Behavior_Candidates.md`
+- `NOTES/ScreenshotStitcher_20_Image_Limit_Trial.md`
+- `PROJECTS/ScreenshotStitcher.md`
 
 ### 2026-07-16 AI Hub Lite Phase 01
 
@@ -69,11 +124,14 @@
 - Google AI Studio、GitHub、Codex、公開Portalをつなぐ案内板として機能した。
 - `bellbullet.ai.studio`への再公開後、AI Hubの表示と`PROJECTS/AIHub.md`へのDocumentationリンクを確認できた。
 - 公開後チェックで、スマホ390px幅の横はみ出しなし、Projects / AI Tools / Current Work、Coming Soon 3件、外部リンク、公開安全性、キャッシュ回避表示、実行ログ0件を確認できた。
+- 2026-07-17 18:50:06 JSTの再公開で、1023px以下の従来Portalと1024px以上のBellbullet Workspace表示を公開URLへ反映できた。
+- 公開URLでWorkspace OS本体とConsole errorなしを確認し、MVPを「公開済み・観察中」へ移行した。
 
 問題:
 
 - Phase 01は静的データのため、Status、Last Updated、Next Actionは手動更新になる。
 - CodexからGoogle AI Studioへの反映は、GitHub pushだけでは完結せず、AI Studio側でコード反映とRepublishが必要だった。
+- 再公開後もAI Studio上に未公開差分が残っている。公開済み本体とは分けて扱い、差分内容を確認するまで追加のRepublishは行わない。
 
 判断:
 

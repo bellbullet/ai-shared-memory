@@ -23,6 +23,26 @@
 - Reuse: 調査、実装、比較、レビュー、成果物作成。
 - Status: Candidate。既存の `PROJECT_START.md` と `AGENTS.md` のKnowledge Scanおよび作業境界と整合するかを観察する。
 
+### Trial: Security Engineer
+
+- Source: [agency-agents / Application Security Engineer](https://github.com/msitarzewski/agency-agents/blob/main/security/security-appsec-engineer.md)
+- Expected behavior: 入力境界、ファイル処理、データ露出、依存関係など、変更に関係する攻撃面を優先して差分を確認する。指摘は重大度、根拠、再現条件、最小修正案を分け、修正後に同じ観点を再検証する。
+- Reuse: `ScreenshotStitcher` の20枚制限Trialで、ファイル選択とドラッグ＆ドロップの制限迂回、画像デコード前の上限適用、メモリ消費、通知内容をレビューする。
+- Scope: このTrialでは認証、サーバー、クラウド、OWASP全項目へ範囲を広げず、変更されたローカル画像入力経路だけを扱う。レビュー担当は原則として実装を変更しない。
+- Promotion: 異なる2〜3件の実利用で、通常のコードレビューより具体的で修正可能な指摘が安定して得られた場合に正式採用を検討する。
+- Status: Trial。
+- Evidence: 未評価。最初の記録先は `TRIALS.md` の `agency-agents lightweight roles / ScreenshotStitcher 20-image limit`。
+
+### Trial: Reality Checker
+
+- Source: [agency-agents / Reality Checker](https://github.com/msitarzewski/agency-agents/blob/main/testing/testing-reality-checker.md)
+- Expected behavior: 実装済みという説明をそのまま信頼せず、要件、差分、テスト結果、実画面など確認できる証拠を突き合わせる。未確認項目を明示し、最終判定を `Pass / Conditional / Fail` で返す。
+- Reuse: `ScreenshotStitcher` の20枚制限Trialで、20枚までの追加、21枚目以降の拒否、一括追加、削除後の再追加、表示と内部状態、390px表示、test / build / lintを確認する。
+- Scope: 点数付けや一般的なproduction readiness評価は行わず、今回の受入条件だけを判定する。証拠がない項目を推測で合格にしない。
+- Promotion: 異なる2〜3件の実利用で、見落とし防止または誤った完了判断の抑止に有効だった場合に正式採用を検討する。
+- Status: Trial。
+- Evidence: 未評価。最初の記録先は `TRIALS.md` の `agency-agents lightweight roles / ScreenshotStitcher 20-image limit`。
+
 ## Candidate Template
 
 ```markdown

@@ -106,6 +106,18 @@ AIが業務データや調査資料から結論を作る場合は、文章だけ
 
 顧客メール、生徒情報、研究データ、financial dataを扱う場合は、外部送信、保存、access control、retentionを先に確認する。X上の利用例は発見経路にとどめ、結論の正本には一次資料と再現可能な計算を使う。
 
+### Composable AITuber Pipeline
+
+AITuberを単一toolとして選ばず、交換可能なlayerとして分ける。
+
+1. Avatar Asset: 立ち絵、PSD、VRM、Live2D、PNGTuber素材を作る。
+2. Motion / Expression: VRMA、表情差分、lip sync、視線、body motionを生成・再生する。
+3. Voice: TTS、voice design、感情制御、許諾済みvoice cloneを扱う。
+4. Conversation: LLM、memory、tool call、moderationを担当する。
+5. Broadcast / Interaction: OBS、YouTube comment、WebSocket、camera / microphone、配信制御を担当する。
+
+各layer間はVRM / VRMA、WAV、WebSocketなど明示的なartifact / protocolで接続し、asset license、voice consent、API key、外部送信、function execution、配信者と視聴者のprivacyを層ごとに監査する。`2d2vrm → text-to-vrma → Irodori-TTS / VoiceDesignCloner → AITuberKit`は構成例であり、互換性を実行確認した完成pipelineではない。
+
 ## Possible Workspace Changes
 
 - `OUTPUTS/` を成果物置き場として追加する。

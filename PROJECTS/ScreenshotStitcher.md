@@ -26,6 +26,7 @@
 
 ## Next Tasks
 
+- `NOTES/ScreenshotStitcher_20_Image_Limit_Trial.md` に従い、画像追加20枚上限を実装・検証する。
 - 実機ブラウザで候補プレビューと手動補正UIの操作性を継続確認する。
 - 長尺Canvas上限時の分割出力または縮小出力を検討する。
 
@@ -36,5 +37,6 @@
 ## Reuse Candidates
 
 - Ponytail / Minimal Implementation Policy - OpenCV.jsなど大きな依存を増やす前にCanvas / TypedArrayを優先する。
+- agency-agents lightweight roles - 20枚制限で `Security Engineer` と `Reality Checker` をTrialし、2〜3件の有効性確認までは正式ルールへ昇格させない。
 - reviewable-html-workbench - 候補比較や設計成果物を範囲指定でレビューする場合。
 - agmsg - 公開可能な小規模レビューを別CLIエージェントへ引き継ぐ試験候補。

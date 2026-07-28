@@ -1,6 +1,6 @@
 # AI Hub
 
-最終更新: 2026-07-16
+最終更新: 2026-07-17
 
 ## Goal
 
@@ -10,7 +10,11 @@
 
 ## Status
 
-- AI Hub Lite Phase 01を`https://bellbullet.ai.studio/`へ公開済み。
+- Bellbullet Workspace MVPを`https://bellbullet.ai.studio/`へ公開済み・観察中。
+- Google AI StudioのLast publishedは`2026-07-17 18:50:06 JST`。公開URLでWorkspace OSの反映を確認済み。
+- 1023px以下は従来Portal、1024px以上は独自のBellbullet Workspace表示へ切り替わる。
+- 公開サイトのConsole errorは確認されていない。
+- AI Studio上には公開後の未公開差分が残っているため、内容を確認するまで追加のRepublishは行わない。
 - 静的データによるProjects、AI Tools、Current WorkをPortal内へ追加済み。
 - デスクトップ、スマホ、外部リンク、Coming Soon、公開安全性、キャッシュ回避表示の公開後チェックを完了。
 - 認証、APIキー、データベースを追加せず、更新負荷を観察する段階へ移行。
