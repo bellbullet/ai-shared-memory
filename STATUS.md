@@ -1,6 +1,6 @@
 # STATUS
 
-最終更新: 2026-07-29
+最終更新: 2026-07-31
 
 Workspace 全体の現在地を一覧するファイル。
 
@@ -56,7 +56,7 @@ Workspace 全体の現在地を一覧するファイル。
 | Obsidian access | Desktop 1.12.7でRepository root、Home、標準Markdown link、公式CLIを確認。Community pluginは0件 | Mobileは必要になった時点で表示と同期境界を確認 |
 | Entry points | Synced on 2026-07-13 | Recheck after structure, version, or read-order changes |
 | `INBOX.md` | Existing OSS batches remain grouped by role and risk; `image-3d` was promoted on 2026-07-29 as part of the animede 3D Character Pipeline | Promote only after the recorded license, permission, external transmission, and runtime gates are cleared |
-| `AI_DRAWERS.md` | 127 entries / 11 categories / 12 cross-groups; single-file layout retained | Trial code-review-graph on a public code-heavy project; review mattpocock/skills individually before adoption |
+| `AI_DRAWERS.md` | 129 entries / 11 categories / 12 cross-groups; single-file layout retained | Trial book-to-skill only with owned or open-license material; test Amicro components individually in a suitable React UI |
 | `PROJECTS/` | 9 metadata files | Refresh when project Goal / Status / Stack / Next Tasks change |
 | `NOTES/` | 8 files, including compatibility files | Review duplication and stale summaries during monthly review |
 | Pending decisions | 2 open items | Resolve or defer explicitly in `DECISIONS.md` when adopted |

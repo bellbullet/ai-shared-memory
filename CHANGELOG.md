@@ -2,6 +2,13 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-07-31
+
+- X投稿2件を発見経路として扱い、公式GitHub、README、repository metadata、licenseを確認した。
+- `book-to-skill`を、技術書や文書をon-demand参照可能なAgent Skillへ変換する試用候補として`AI_DRAWERS.md`へ追加した。converterと入力資料のlicenseを分離し、第三者著作物の非再配布、cloud modelへの送信境界、生成skillのreviewとsandbox検証を条件にした。
+- `Amicro`を、React / Motion / shadcn/ui向けmicro-interaction componentの試用候補として`AI_DRAWERS.md`へ追加した。remote sourceの監査、限定導入、accessibility、reduced-motion、実画面検証を条件にした。
+- `AI_INDEX.md`へdocument-to-skill、PDF / EPUB / DOCX to SKILL.md、React micro-interactions、shadcn/ui motion registryの検索導線を追加し、`STATUS.md`の技術レーダー件数を129件へ同期した。
+
 ## 2026-07-29
 
 - 2026-07-28に作成したX投稿16件の一次情報調査レポートから、`試す候補`と`研究`に分類した8件を`AI_DRAWERS.md`へ正式登録した。

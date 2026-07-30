@@ -64,6 +64,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ## AI_DRAWERS Keywords
 
+- book-to-skill / technical book to Agent Skill / document-to-skill → `AI_DRAWERS.md`
+- PDF / EPUB / DOCX to SKILL.md / on-demand chapter skill → `AI_DRAWERS.md`, `SKILLS/README.md`
+- Amicro / React micro-interactions / Motion transitions → `AI_DRAWERS.md`
+- shadcn/ui motion registry / interactive card components → `AI_DRAWERS.md`
 - code-review-graph / local-first code intelligence / Tree-sitter graph / MCP code review → `AI_DRAWERS.md`
 - impact analysis / review context reduction / risk-scored PR review → `AI_DRAWERS.md`
 - mattpocock/skills / engineering agent skills / grill-with-docs / diagnosing-bugs → `AI_DRAWERS.md`

@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-07-29
+最終更新: 2026-07-31
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫です。
 
@@ -12,7 +12,7 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 127
+- 登録項目: 129
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
@@ -2019,6 +2019,48 @@ https://github.com/anthropics/skills
 
 ⸻
 
+### book-to-skill
+
+URL:
+https://github.com/virgiliojr94/book-to-skill
+
+分類:
+
+- AI Coding Operations
+- Agent Skills
+- Knowledge Management
+- Document Processing
+
+概要:
+
+- 技術書、文書folder、複数sourceを、必要な章だけon-demandで参照できるAgent Skillへ変換するMIT Licenseのtool。
+- PDF、EPUB、DOCX、Markdown、HTMLなどを抽出し、`SKILL.md`、章別note、glossary、patterns、cheatsheetを生成する。
+- GitHub Copilot CLI、Amp、Claude Codeなど、Agent Skills形式を読むhostでの利用を想定する。
+
+用途:
+
+- 所有権または利用権のある技術資料を再利用可能なskillへ整理する
+- project docs、runbook、公開仕様、open-license資料のon-demand参照
+- 長い資料を毎sessionでcontextへ投入する運用との比較
+- `SKILLS/`、Knowledge Scan、Reuse Before Buildの強化候補
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- converter本体はMIT Licenseだが、入力する書籍や文書の著作権・利用条件は別である。第三者著作物から生成したskillは原則privateに保ち、再配布しない。
+- extractionはlocalでも、cloud modelを使うagentへ本文を渡す場合はproviderのdata termsが適用される。private資料や社内文書は送信境界を確認する。
+- 生成された`SKILL.md`と章別noteは、誤要約、命令文、prompt injection、危険なscriptを含み得るものとして人間がreviewし、sandboxで試す。
+- 最初のtrialは、自作資料、公開仕様、または明確なopen licenseを持つ資料に限定する。
+
+⸻
+
 ### Superpowers
 
 URL:
@@ -2959,6 +3001,51 @@ https://github.com/Nutlope/hallmark
 - studyで私的画面、認証画面、非公開資料を扱う場合は、送信先と利用条件を確認する。参照デザインは模倣ではなく構造・余白・配色の研究に留める。
 
 ⸻
+
+### Amicro
+
+URL:
+https://github.com/Subhan-code/Amicro--Micro-transitions-
+
+公式サイト:
+https://amicro.vercel.app
+
+分類:
+
+- Development
+- React UI
+- Micro-interactions
+- shadcn/ui Registry
+
+概要:
+
+- Motionを使ったReact向けmicro-interaction、transition component、card layoutのコレクション。
+- CLIまたはshadcn/ui registryから必要なcomponent、hook、spring presetを個別にsourceへ追加できる。
+- React 18 / 19、Tailwind CSS 3 / 4に対応し、Node.js 18以上を要件とする。
+
+用途:
+
+- button、loading、entrance transition、hover effect、card interactionの実装
+- Next.js / React / Vite projectのUI motion試作
+- shadcn/uiを使うprojectでのinteraction component候補
+- AI生成UIへ最小限のfeedbackとtransitionを追加する
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- MIT License。
+- CLIとregistryはremote sourceをprojectへ追加するため、実行前に対象component、依存関係、追加先、accessibility、reduced-motion対応を確認する。
+- componentを一括導入せず、必要なinteractionだけを選び、既存design systemと性能要件に合うか実画面で検証する。
+
+⸻
+
 ### OpenCut
 
 URL:
@@ -5330,6 +5417,7 @@ URL:
 - agency-agents
 - Hermes Agent
 - anthropics/skills
+- book-to-skill
 - Superpowers
 - Oracle
 - pxpipe
@@ -5383,6 +5471,7 @@ URL:
 - japanese-tech-writing / k16shikano gist
 - textlint-rule-preset-ai-writing
 - claude-real-video
+- book-to-skill
 
 用途:
 
@@ -5429,6 +5518,7 @@ URL:
 - Anki
 - Excalidraw
 - Buzz
+- book-to-skill
 
 用途:
 
@@ -5547,6 +5637,8 @@ URL:
 - Yorishiro
 - AKARI Video
 - VoiceDenoiser
+- Amicro
+- book-to-skill
 
 ### 将来導入
 
