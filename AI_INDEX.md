@@ -118,6 +118,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 - animede 3D Character Pipeline → `AI_DRAWERS.md`
 - diffusers-server / image-3d / rig-service → `AI_DRAWERS.md`
 - dotneet image-to-3d / TRELLIS.2 Apple Silicon → `AI_DRAWERS.md`
+- img2threejs / procedural Three.js model / image-to-3D code generation → `AI_DRAWERS.md`
+- reference image to Three.js / animation-ready 3D asset → `AI_DRAWERS.md`
+- Claude Code 3D skill / Codex image-to-3D / detail inventory → `AI_DRAWERS.md`
 - AKARI Video / agent-readable video editing / edit.json → `AI_DRAWERS.md`
 - VoiceDenoiser / TTS dataset denoising → `AI_DRAWERS.md`
 - Open Notebook → `AI_DRAWERS.md`

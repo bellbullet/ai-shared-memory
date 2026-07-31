@@ -12,7 +12,7 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 141
+- 登録項目: 142
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
@@ -4020,6 +4020,58 @@ License:
 
 ⸻
 
+### img2threejs
+
+Official Links:
+
+- Repository: https://github.com/img2threejs/img2threejs
+- Showcase: https://img2threejs.github.io/img2threejs-showcase/
+
+分類:
+
+- Creative
+- Image to 3D
+- Three.js
+- AI Coding Operations
+- Agent Skills
+
+概要:
+
+- 参照画像のオブジェクトを、プリミティブ、手続き型シェーダー、生成ジオメトリだけで構成したコード専用のThree.jsモデルへ再構成するAgent Skill。
+- TypeScriptの`THREE.Group` factoryを生成し、pivot、socket、colliderなどの階層を含むアニメーション対応のモデルとして扱う。
+- `blockout`から`optimization`までの段階的な工程と、Pythonによる決定的な検証・品質ゲートを組み合わせる。
+- Claude Code、Codex、OpenCodeで利用でき、特定のエージェントに依存しない構成を採る。
+
+用途:
+
+- 参照画像からの手続き型Three.jsモデル作成
+- AI生成画像・プロダクト画像のWebGL素材化
+- アニメーション可能な3Dアセットのコード生成
+- AI coding agentによる3D制作と品質確認の研究
+- `Creative Pipeline` と `OUTPUTS/` の中間成果物作成
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- Apache-2.0
+
+メモ:
+
+- 公式READMEでは、フォトグラメトリやメッシュ抽出ではなく、参照画像からのコードによる再構成として説明されている。
+- ハードサーフェスの物体に向き、人物は写実的な本人再現ではなくスタイル化された再構成として扱う。
+- 参照画像は自分が権利を持つもの、または利用許諾のあるものに限定する。生成されたTypeScript、実行スクリプト、依存関係を確認してから動かす。
+- 単一画像では見えない面や寸法の推定が必要になるため、ブラウザ描画、アニメーション階層、品質ゲートの結果を確認する。
+- `animede/image-3d`、`dotneet/image-to-3d`、`LingBot-Map`とは、コード専用のThree.js再構成、画像からの3D asset化、動画からの3D再構成という役割の違いで区別する。
+
+⸻
+
 ### animede 3D Character Pipeline
 
 Official Links:
@@ -5870,6 +5922,7 @@ URL:
 - The Hitchhiker's Guide to Agentic AI
 - Kura
 - AKARI Video
+- img2threejs
 
 用途:
 
@@ -5943,6 +5996,7 @@ URL:
 - AKARI Video
 - VoiceDenoiser
 - speech-to-speech
+- img2threejs
 
 用途:
 
@@ -6096,6 +6150,7 @@ URL:
 - VoiceDenoiser
 - Amicro
 - book-to-skill
+- img2threejs
 
 ### 将来導入
 

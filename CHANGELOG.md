@@ -4,6 +4,7 @@
 
 ## 2026-07-31
 
+- 公式README、GitHub metadata、Apache-2.0 licenseを確認し、`img2threejs`をCreative / Image to 3D / Three.js / AI Coding Operationsの`次に試す`項目として追加した。既存の`animede/image-3d`、`dotneet/image-to-3d`、`LingBot-Map`とは、コード専用のThree.js再構成、画像からの3D asset化、動画からの3D再構成という役割の違いを記録した。
 - `https://corp.takos.jp/`を公式コーポレートサイトとして`Reference Sites`へ追加し、分散通信基盤株式会社、TAKOSの「所有するインターネット」思想、`takos` / `takosumi` / `yurucommu` / `yurumeet`の関係を記録した。
 - 公式プロダクト一覧と`tako0614`の公開GitHub repositoryを照合し、`takos`、`takosumi`、`yurucommu`、`yurumeet`、`takos-office`、`takos-computer`、`takos-storage`、`takos-git`、`yurucommu-core`、`terraform-provider-takoform`を個別に`AI_DRAWERS.md`へ登録した。
 - 公式サイトのライセンス宣言とGitHub metadataの差異を分離して記録した。`yurucommu`、`yurumeet`、`takos-office`、`takos-storage`、`takos-git`、`yurucommu-core`は、公式サイトではライセンスが示される一方、GitHub metadataは`Other`またはSPDX未判定である。
