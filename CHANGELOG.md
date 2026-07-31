@@ -4,6 +4,7 @@
 
 ## 2026-07-31
 
+- X投稿 `2081962363398607271` を発見経路として本文中の10件を公式GitHubで照合し、既登録の `code-review-graph`、`mattpocock/skills`、`Orca`、`Hallmark`、`awesome-llm-apps` は重複追加せず、新規の `ai-agent-book`、`OmniRoute`、`pi`、`AstrBot`、`ktransformers` を用途・license・導入時の確認条件つきで `AI_DRAWERS.md` と `AI_INDEX.md`へ追加した。投稿のstar数やprovider数など変化しやすい数字は固定的な根拠として保存していない。
 - 公式README、GitHub metadata、Apache-2.0 licenseを確認し、`img2threejs`をCreative / Image to 3D / Three.js / AI Coding Operationsの`次に試す`項目として追加した。既存の`animede/image-3d`、`dotneet/image-to-3d`、`LingBot-Map`とは、コード専用のThree.js再構成、画像からの3D asset化、動画からの3D再構成という役割の違いを記録した。
 - `https://corp.takos.jp/`を公式コーポレートサイトとして`Reference Sites`へ追加し、分散通信基盤株式会社、TAKOSの「所有するインターネット」思想、`takos` / `takosumi` / `yurucommu` / `yurumeet`の関係を記録した。
 - 公式プロダクト一覧と`tako0614`の公開GitHub repositoryを照合し、`takos`、`takosumi`、`yurucommu`、`yurumeet`、`takos-office`、`takos-computer`、`takos-storage`、`takos-git`、`yurucommu-core`、`terraform-provider-takoform`を個別に`AI_DRAWERS.md`へ登録した。

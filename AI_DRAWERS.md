@@ -12,7 +12,7 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 142
+- 登録項目: 147
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
@@ -1190,6 +1190,131 @@ License:
 
 ⸻
 
+### OmniRoute
+
+URL:
+https://github.com/diegosouzapw/OmniRoute
+
+分類:
+
+- Agent / Orchestration
+- AI Coding Operations
+- LLM Gateway
+- Context Compression
+- MCP / A2A
+
+概要:
+
+- 複数のLLM providerとmodelを一つのendpointへ集約する、MIT LicenseのAI gateway。
+- quota-aware fallback、Claude Code / Codex等のcoding agent連携、MCP / A2A、token・context compressionを提供する。
+
+用途:
+
+- 複数providerの切り替えとfallbackの研究
+- Claude Code / Codexのprovider routing比較
+- token消費とcontext compressionの試用
+- MCP / A2Aを含むAI gateway設計の参照
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- providerのAPI key、prompt、ログ、外部送信先を導入前に確認する。
+- 公式READMEのprovider数、model数、削減率は更新され得るため、固定値として扱わない。
+- 無料枠やfallbackがあっても、利用規約、データ保持、課金境界をproviderごとに確認する。
+
+⸻
+
+### pi
+
+URL:
+https://github.com/earendil-works/pi
+
+分類:
+
+- Agent / Orchestration
+- AI Coding Operations
+- Multi-provider LLM
+- CLI / TUI
+
+概要:
+
+- unified LLM API、agent loop、tool calling、state management、TUI、coding agent CLIをまとめたMIT Licenseのagent toolkit。
+- `pi-ai`、`pi-agent-core`、`pi-coding-agent`などのパッケージに分かれ、複数providerを使うagent runtimeの構成を参照できる。
+
+用途:
+
+- Codex / Claude Codeと異なるagent runtimeの比較
+- multi-provider LLM APIとagent loopの研究
+- 自分用coding agent CLIを組み立てる場合の部品調査
+- TUIとtool callingを含むローカルagent設計の参照
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 既存のCodex運用を置き換える前に、agent loop、state、tool権限、provider設定を個別に比較する。
+- API key、会話履歴、source codeの外部送信条件は実行前に確認する。
+
+⸻
+
+### AstrBot
+
+URL:
+https://github.com/AstrBotDevs/AstrBot
+
+分類:
+
+- Agent / Orchestration
+- Self Host
+- AI Workspace / Integrations
+- Messaging / Chatbot
+- Knowledge Management
+
+概要:
+
+- 複数のIM platform、LLM、plugin、MCP、Skills、knowledge base、WebUIを統合するAI agent assistant / development framework。
+- agent sandbox、context compression、self-hosted model service連携を含む、会話入口とagent実行基盤の統合例。
+
+用途:
+
+- AI companion / chatbotのself-host構成研究
+- Telegram、Slack、Discordなどのメッセージ入口とagentの接続比較
+- plugin、MCP、knowledge base、sandboxの統合設計調査
+- AI Workspace PortalやAIRIの将来連携候補
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- AGPL-3.0
+
+メモ:
+
+- plugin、shell、sandbox、WebUI、各messaging platformのcredential境界を導入前に監査する。
+- private message、個人情報、API key、token、会話ログを公開メモリへ保存しない。
+- AGPL-3.0と外部plugin・model・platformのライセンスを分けて確認する。
+
+⸻
+
 ## LLM
 
 ### Susono Model
@@ -1299,6 +1424,47 @@ Inkling-Small:
 - 公開時点の仕様、ベンチマーク、提供形態を記録した参照項目。モデル、checkpoint、runtime、third-party availabilityは変更されるため、利用時は公式情報を再確認する。
 - 比較候補: DeepSeek、Qwen、Gemma、Llama、Nemotron。
 - 今後確認: Inkling-Smallのfull weights公開、GGUF、Ollama、LM Studio、MLXの対応状況、およびvLLMを含む各runtimeの対応バージョンと実行要件。
+
+⸻
+
+### ktransformers
+
+URL:
+https://github.com/kvcache-ai/ktransformers
+
+分類:
+
+- LLM
+- Local AI
+- GPU / HPC
+- CPU-GPU Heterogeneous Computing
+- Research
+
+概要:
+
+- CPUとGPUのheterogeneous computingを使い、大規模LLMのinferenceとfine-tuningを効率化する研究プロジェクト。
+- `kt-kernel`を基盤に、inferenceとSFTの利用経路を提供するApache-2.0 Licenseの実装。
+
+用途:
+
+- consumer hardwareでの大規模LLM実行研究
+- VRAMとsystem memoryを組み合わせたinference設計の比較
+- DeepSeek、Qwenなどの大規模model向けruntime調査
+- local LLM / edge AIの性能評価候補
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- 対応GPU、CUDA、driver、PyTorch、modelごとの要件を公式documentationで確認する。
+- AMD / ROCmや現在のWindows環境でそのまま動くとは仮定しない。
+- model weights、quantization、datasetのlicenseと、実行時に必要な外部downloadを分けて確認する。
 
 ⸻
 
@@ -5335,6 +5501,48 @@ https://arxiv.org/abs/2512.08309
 ⸻
 
 ## Reference Sites
+
+### ai-agent-book
+
+URL:
+https://github.com/bojieli/ai-agent-book
+
+分類:
+
+- Reference Sites
+- Agent / Orchestration
+- AI Coding Operations
+- Knowledge Management
+
+概要:
+
+- AI Agentの設計原理とengineering practiceを、本文、PDF / EPUB、章ごとのコード例とともに公開するオープンブック。
+- `Agent = LLM + context + tools`を軸に、context engineering、memory / RAG、MCP、coding agent、evaluation、multimodal、multi-agentを体系的に扱う。
+
+用途:
+
+- Agent Runtime、Skills、Memory、MCP、評価の全体像を学ぶ
+- ai-shared-memoryの概念地図と設計判断の参照
+- 実装例を読む前の用語・章構成の確認
+
+状態:
+
+- 参考資料
+
+優先度:
+
+- ★★★★★
+
+License:
+
+- Apache-2.0
+
+メモ:
+
+- 本文の例で外部API keyが必要な場合でも、実キーや利用ログは公開メモリへ保存しない。
+- 書籍本文、コード例、外部依存のlicenseを分けて確認し、教材の説明を実運用の保証とみなさない。
+
+⸻
 
 ### AlternativeTo
 

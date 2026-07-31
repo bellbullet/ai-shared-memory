@@ -100,6 +100,11 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Orca / parallel worktree / mobile agent supervision → `AI_DRAWERS.md`
 - OfficeCLI / headless Office automation / docx xlsx pptx render → `AI_DRAWERS.md`, `OUTPUTS/README.md`
 - awesome-llm-apps / AI agent examples / RAG app templates → `AI_DRAWERS.md`
+- ai-agent-book / Agent design / context engineering / MCP / multi-agent → `AI_DRAWERS.md`
+- OmniRoute / AI gateway / provider fallback / token compression → `AI_DRAWERS.md`
+- pi / agent loop / unified LLM API / coding agent CLI → `AI_DRAWERS.md`
+- AstrBot / self-hosted agent chatbot / messaging integrations → `AI_DRAWERS.md`
+- ktransformers / heterogeneous LLM inference / CPU-GPU offload → `AI_DRAWERS.md`
 - DESIGN.md → `AI_DRAWERS.md`
 - Firecrawl → `AI_DRAWERS.md`
 - PixelRAG → `AI_DRAWERS.md`
@@ -154,6 +159,10 @@ AI が関連ファイルを素早く見つけるための索引です。
 - OpenFugu → `AI_DRAWERS.md`
 - AI-Safeter / FUGU → `AI_DRAWERS.md`
 - Agent / Orchestration → `AI_DRAWERS.md`
+- ai-agent-book → `AI_DRAWERS.md`
+- OmniRoute / multi-provider AI gateway → `AI_DRAWERS.md`
+- pi / agent harness / multi-provider LLM → `AI_DRAWERS.md`
+- AstrBot / AI chatbot framework / plugin sandbox → `AI_DRAWERS.md`
 - Claude Code → `AI_DRAWERS.md`, `references/CLAUDE_CODE_MAP.md`
 - CLAUDE.md / `.claude/rules` → `references/CLAUDE_CODE_MAP.md`, `AI_DRAWERS.md`
 - Skills / Plugins / Hooks → `references/CLAUDE_CODE_MAP.md`, `AI_DRAWERS.md`
@@ -524,6 +533,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - ChatGPT Project Sources automation → `AI_DRAWERS.md`, `CHATGPT_PROJECT_SOURCE.md`
 - AI Workspace integrations / API Integration → `AI_DRAWERS.md`, `NOTES/AI_Workspace_Ideas.md`
 - free LLM API / OpenAI compatible API / model fallback → `AI_DRAWERS.md`
+- provider routing / token compression / OmniRoute → `AI_DRAWERS.md`
+- heterogeneous LLM inference / ktransformers → `AI_DRAWERS.md`
 - NotebookLM alternative / Open Notebook → `AI_DRAWERS.md`
 - Learning / Research Workflow / spaced repetition / reference management → `AI_DRAWERS.md`
 - reproducible research workflow / paper data code human audit → `NOTES/AI_Coding_Patterns.md`
