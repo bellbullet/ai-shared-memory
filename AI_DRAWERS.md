@@ -12,7 +12,7 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 130
+- 登録項目: 141
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
@@ -4658,6 +4658,364 @@ https://github.com/pewdiepie-archdaemon/odysseus
 
 ⸻
 
+### takos
+
+URL:
+https://github.com/tako0614/takos
+
+公式製品ページ:
+https://corp.takos.jp/products/takos/
+
+分類:
+
+- AI
+- AI Workspace / Integrations
+- Agent / Orchestration
+- Self Host
+
+概要:
+
+- チャット、AIエージェント、会話の記憶、追加アプリを同じ画面にまとめる、自分で置き場所を選べるAIワークスペース。
+- 会話・ファイルの保存先を利用者が選び、文書、表計算、ストレージ、Gitホスティングなどを必要なときに追加できる設計。
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★★
+
+License:
+
+- AGPL-3.0-only（公式製品ページ、GitHub metadata）
+
+メモ:
+
+- 開発中。実行前にagent権限、memoryの保存先、追加アプリの外部接続、モデルprovider、自己ホスト手順を確認する。
+
+⸻
+
+### takosumi
+
+URL:
+https://github.com/tako0614/takosumi
+
+公式製品ページ:
+https://corp.takos.jp/products/takosumi/
+
+分類:
+
+- Development
+- Infrastructure as Code
+- Self Host
+- AI Workspace / Integrations
+
+概要:
+
+- Gitに置いたOpenTofu / Terraform定義を実行し、変更内容、実行履歴、復元ポイントを管理するOpenTofuコントロールプレーン。
+- OSS版を自分のサーバーで運用でき、同じ仕組みのhosted版としてTakosumi Cloudも提供する。
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+License:
+
+- AGPL-3.0-only（公式製品ページ、GitHub metadata）
+
+メモ:
+
+- OpenTofu / Terraformの実行権限、cloud credential、state、変更履歴の保存先を確認してから試す。定義にsecretを直接書かない。
+
+⸻
+
+### yurucommu
+
+URL:
+https://github.com/tako0614/yurucommu
+
+公式製品ページ:
+https://corp.takos.jp/products/yurucommu/
+
+分類:
+
+- Self Host
+- Community SNS
+- ActivityPub
+- Knowledge Management
+
+概要:
+
+- コミュニティ単位で場所を持ち、投稿、リアクション、ダイレクトメッセージ、ストーリーを扱うActivityPub対応SNS。
+- 単体で自己ホストでき、`takos`へアプリとして追加できる。`yurumeet`と共通基盤を使う。
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- AGPL-3.0-only（公式製品ページ。GitHub metadataは`Other`）
+
+メモ:
+
+- federation、moderation、media storage、個人情報、メール・通知、管理者権限を導入前に確認する。repository metadataとLICENSE本文が一致するか再確認する。
+
+⸻
+
+### yurumeet
+
+URL:
+https://github.com/tako0614/yurumeet
+
+公式製品ページ:
+https://corp.takos.jp/products/yurumeet/
+
+分類:
+
+- Self Host
+- Messaging
+- Voice / Video
+- Community
+
+概要:
+
+- ダイレクトメッセージとコミュニティチャットを中心に、音声通話とビデオ通話を扱うメッセージングアプリ。
+- `yurucommu`と同じ基盤を使い、同じサーバーへ接続する構成ではアカウントを使い分けられる。
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- AGPL-3.0-only（公式製品ページ。GitHub metadataは`Other`）
+
+メモ:
+
+- 開発中。WebRTC、メディア・通知、アカウント、community federation、サーバー公開範囲を確認してから試す。
+
+⸻
+
+### takos-office
+
+URL:
+https://github.com/tako0614/takos-office
+
+分類:
+
+- Document Automation
+- Self Host
+- AI Workspace / Integrations
+- MCP
+
+概要:
+
+- 文書、スライド、表計算をひとつにまとめた、`takos`へ追加できるself-hostable Officeアプリ。
+- GitHub descriptionではagent-native via MCPのdocument / slide / sheet workerとして説明されている。
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- GPL-3.0-only（公式製品ページ。GitHub metadataは`Other`）
+
+メモ:
+
+- `OUTPUTS/`、OfficeCLI、PPT Masterとの比較候補。MCP tool、ファイル保存、agentが変更できる範囲を導入前に監査する。
+
+⸻
+
+### takos-computer
+
+URL:
+https://github.com/tako0614/takos-computer
+
+分類:
+
+- Self Host
+- Development
+- Browser Automation
+- AI Workspace / Integrations
+
+概要:
+
+- ブラウザの中で使える作業用のマシンとして、`takos`へ追加できるアプリ。
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- MIT（公式製品ページ、GitHub metadata）
+
+メモ:
+
+- browser、filesystem、clipboard、network、credentialの権限境界を確認する。agentへ接続する場合は実行可能な操作を限定する。
+
+⸻
+
+### takos-storage
+
+URL:
+https://github.com/tako0614/takos-storage
+
+分類:
+
+- Self Host
+- Storage
+- AI Workspace / Integrations
+
+概要:
+
+- `takos`へ追加できる、ファイルを置いておくためのstorageアプリ。
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- AGPL-3.0-only（公式製品ページ。GitHub metadataは`Other`）
+
+メモ:
+
+- 保存先、暗号化、共有範囲、バックアップ、削除、agentからの読み書き権限を確認する。実ファイルや個人情報は共有メモリへ入れない。
+
+⸻
+
+### takos-git
+
+URL:
+https://github.com/tako0614/takos-git
+
+分類:
+
+- Development
+- Git Hosting
+- Self Host
+- AI Workspace / Integrations
+
+概要:
+
+- `takos`へ追加できる、自分たちで持つGit hosting service。
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- AGPL-3.0-only（公式製品ページ。GitHub metadataは`Other`）
+
+メモ:
+
+- repository、account、webhook、SSH key、OAuth、backup、公開範囲を確認する。既存GitHub remoteの代替として即導入しない。
+
+⸻
+
+### yurucommu-core
+
+URL:
+https://github.com/tako0614/yurucommu-core
+
+分類:
+
+- Self Host
+- ActivityPub
+- API
+- Shared Library
+
+概要:
+
+- `yurucommu`と`yurumeet`が共有するActivityPub、API、databaseの基盤。
+- GitHub descriptionでは、yurucommu ActivityPub serverおよびAPI SDKとして説明されている。
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- AGPL-3.0-only（公式製品ページ。GitHub metadataは`Other`）
+
+メモ:
+
+- server、API、database、federation、アカウントデータの境界を確認する。上位clientと個別に導入可否を判断する。
+
+⸻
+
+### terraform-provider-takoform
+
+URL:
+https://github.com/tako0614/terraform-provider-takoform
+
+分類:
+
+- Development
+- Infrastructure as Code
+- OpenTofu / Terraform
+- Self Host
+
+概要:
+
+- サービスの形を書き表すService Form仕様と、それを扱うTerraform / OpenTofu provider。
+- 公式製品ページでは`takosumi`関連の独立した仕様・ツールとして紹介されている。
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- MIT（公式製品ページ、GitHub metadata）
+
+メモ:
+
+- providerが作成・変更するresource、state、API endpoint、credentialの扱いを確認する。実環境へapplyする前にplanとsandboxで検証する。
+
+⸻
+
 ## Research
 
 ### LingBot-Map
@@ -5365,6 +5723,46 @@ URL:
 
 ⸻
 
+### 分散通信基盤株式会社 / TAKOS
+
+URL:
+https://corp.takos.jp/
+
+分類:
+
+- Reference Sites
+- AI Workspace / Integrations
+- Self Host / Tools
+- Open Source Software
+
+概要:
+
+- 大阪市の分散通信基盤株式会社（TAKOS Inc.）の公式コーポレートサイト。
+- 「借りるインターネットから、所有するインターネットへ」を掲げ、自分のサーバーで動かせるソフトウェアと、同社運用のhosted editionを分けて提供している。
+- AIワークスペースの`takos`、OpenTofuコントロールプレーンの`takosumi`、コミュニティSNSの`yurucommu`、メッセージングの`yurumeet`と関連OSSを公開している。
+
+用途:
+
+- AI Workspace、self-host、OSSとhosted editionの設計比較
+- takosを中心としたAI、アプリ、保存先、インフラ運用の分離設計の参照
+- `takos`関連OSSを必要な単位で選択するための入口
+
+状態:
+
+- 参考資料
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- 会社サイト上の製品説明と、各GitHub repositoryのREADME・LICENSEは分けて確認する。
+- GitHub repositoryの一部はAPI metadata上`Other`またはSPDX未判定のため、利用前に対象repositoryのLICENSE本文を確認する。
+- 会社情報に含まれる個人情報や連絡先を、共有メモリへ転載しない。
+
+⸻
+
 ## Ideas
 
 ### Amazon セール検知システム
@@ -5567,6 +5965,12 @@ URL:
 
 ### AI Workspace / Integrations
 
+- takos
+- takosumi
+- takos-office
+- takos-computer
+- takos-storage
+- takos-git
 - LibreChat
 - Agentic Inbox
 - Nango
@@ -5583,6 +5987,16 @@ URL:
 
 ### Self Host / Tools
 
+- takos
+- takosumi
+- yurucommu
+- yurumeet
+- takos-office
+- takos-computer
+- takos-storage
+- takos-git
+- yurucommu-core
+- terraform-provider-takoform
 - Homepage
 - LibreChat
 - Immich
@@ -5665,6 +6079,8 @@ URL:
 
 ### 次に試す
 
+- takos
+- takosumi
 - Homepage
 - n8n
 - OpenCut
@@ -5709,6 +6125,7 @@ URL:
 
 ### 参考資料
 
+- 分散通信基盤株式会社 / TAKOS
 - japanese-tech-writing / k16shikano gist
 - VTuber体験場
 - Claude Code運用ミス7選
@@ -5723,6 +6140,14 @@ URL:
 
 ### 研究対象
 
+- yurucommu
+- yurumeet
+- takos-office
+- takos-computer
+- takos-storage
+- takos-git
+- yurucommu-core
+- terraform-provider-takoform
 - DESIGN.md
 - Google OKF
 - Greenlight

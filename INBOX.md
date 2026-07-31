@@ -1,6 +1,6 @@
 # INBOX
 
-最終更新: 2026-07-18
+最終更新: 2026-07-31
 
 整理前の GitHub リンク、OSS、論文、アイデア、調査候補を一時保管する場所です。
 
@@ -32,6 +32,35 @@ URL:
 ```
 
 ## 未整理
+
+### 2026-07-31: road-to-me
+
+URL:
+https://github.com/tako0614/road-to-me
+
+分類候補:
+
+- Self Host
+- TAKOS Ecosystem
+- Open Source Product
+
+概要:
+
+- `corp.takos.jp/products/` の関連オープンソース一覧では、単体で動作し他のアプリと同じ手順で追加できるAGPL-3.0-onlyのプロダクトとして掲載されている。
+
+状態:
+
+- 保留
+
+優先度候補:
+
+- ★★★☆☆
+
+メモ:
+
+- 2026-07-31の確認時点で、公式サイトからリンクされたGitHub repository URLはGitHub APIで404だった。repositoryが公開・移転・改名されたことを確認してから`AI_DRAWERS.md`へ昇格する。
+
+⸻
 
 ### 2026-07-19: local-ai-toolkit
 

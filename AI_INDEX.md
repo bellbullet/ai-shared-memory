@@ -66,6 +66,18 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 - ANIMA / 複数キャラ prompt / multi-character composition → `AI_DRAWERS.md`
 - natural language image prompting / character position prompt → `AI_DRAWERS.md`
+- 分散通信基盤株式会社 / TAKOS / owned internet → `AI_DRAWERS.md`
+- takos / AI workspace / self-hosted AI workspace → `AI_DRAWERS.md`
+- takosumi / OpenTofu control plane / Terraform deployment → `AI_DRAWERS.md`
+- yurucommu / ActivityPub community SNS → `AI_DRAWERS.md`
+- yurumeet / self-hosted messaging / voice video call → `AI_DRAWERS.md`
+- takos-office / self-hosted office / MCP document worker → `AI_DRAWERS.md`
+- takos-computer / browser work machine / browser automation → `AI_DRAWERS.md`
+- takos-storage / self-hosted file storage → `AI_DRAWERS.md`
+- takos-git / self-hosted Git hosting → `AI_DRAWERS.md`
+- yurucommu-core / ActivityPub server / API SDK → `AI_DRAWERS.md`
+- takoform / terraform-provider-takoform / Service Form → `AI_DRAWERS.md`
+- road-to-me / TAKOS related product → `INBOX.md`
 - book-to-skill / technical book to Agent Skill / document-to-skill → `AI_DRAWERS.md`
 - PDF / EPUB / DOCX to SKILL.md / on-demand chapter skill → `AI_DRAWERS.md`, `SKILLS/README.md`
 - Amicro / React micro-interactions / Motion transitions → `AI_DRAWERS.md`

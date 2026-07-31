@@ -4,6 +4,12 @@
 
 ## 2026-07-31
 
+- `https://corp.takos.jp/`を公式コーポレートサイトとして`Reference Sites`へ追加し、分散通信基盤株式会社、TAKOSの「所有するインターネット」思想、`takos` / `takosumi` / `yurucommu` / `yurumeet`の関係を記録した。
+- 公式プロダクト一覧と`tako0614`の公開GitHub repositoryを照合し、`takos`、`takosumi`、`yurucommu`、`yurumeet`、`takos-office`、`takos-computer`、`takos-storage`、`takos-git`、`yurucommu-core`、`terraform-provider-takoform`を個別に`AI_DRAWERS.md`へ登録した。
+- 公式サイトのライセンス宣言とGitHub metadataの差異を分離して記録した。`yurucommu`、`yurumeet`、`takos-office`、`takos-storage`、`takos-git`、`yurucommu-core`は、公式サイトではライセンスが示される一方、GitHub metadataは`Other`またはSPDX未判定である。
+- 公式サイトに掲載された`road-to-me`は、確認時点でリンク先repositoryが404だったため、`INBOX.md`へ保留した。未確認のrepositoryを技術レーダーへ昇格していない。
+- `AI_INDEX.md`へTAKOS ecosystem、AI workspace、OpenTofu control plane、ActivityPub、self-hosted Office / storage / Git hosting、Service Formの検索導線を追加し、`STATUS.md`の技術レーダー件数を141件へ同期した。
+
 - X投稿を発見経路として、作者本人によるANIMAの複数キャラ向け自然言語プロンプト実践記事を`Reference Sites`として追加した。公式仕様や再現性は保証せず、Creative Pipelineの構図設計参考に限定した。
 - X投稿2件を発見経路として扱い、公式GitHub、README、repository metadata、licenseを確認した。
 - `book-to-skill`を、技術書や文書をon-demand参照可能なAgent Skillへ変換する試用候補として`AI_DRAWERS.md`へ追加した。converterと入力資料のlicenseを分離し、第三者著作物の非再配布、cloud modelへの送信境界、生成skillのreviewとsandbox検証を条件にした。
