@@ -64,6 +64,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ## AI_DRAWERS Keywords
 
+- ANIMA / 複数キャラ prompt / multi-character composition → `AI_DRAWERS.md`
+- natural language image prompting / character position prompt → `AI_DRAWERS.md`
 - book-to-skill / technical book to Agent Skill / document-to-skill → `AI_DRAWERS.md`
 - PDF / EPUB / DOCX to SKILL.md / on-demand chapter skill → `AI_DRAWERS.md`, `SKILLS/README.md`
 - Amicro / React micro-interactions / Motion transitions → `AI_DRAWERS.md`

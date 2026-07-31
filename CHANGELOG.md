@@ -4,6 +4,7 @@
 
 ## 2026-07-31
 
+- X投稿を発見経路として、作者本人によるANIMAの複数キャラ向け自然言語プロンプト実践記事を`Reference Sites`として追加した。公式仕様や再現性は保証せず、Creative Pipelineの構図設計参考に限定した。
 - X投稿2件を発見経路として扱い、公式GitHub、README、repository metadata、licenseを確認した。
 - `book-to-skill`を、技術書や文書をon-demand参照可能なAgent Skillへ変換する試用候補として`AI_DRAWERS.md`へ追加した。converterと入力資料のlicenseを分離し、第三者著作物の非再配布、cloud modelへの送信境界、生成skillのreviewとsandbox検証を条件にした。
 - `Amicro`を、React / Motion / shadcn/ui向けmicro-interaction componentの試用候補として`AI_DRAWERS.md`へ追加した。remote sourceの監査、限定導入、accessibility、reduced-motion、実画面検証を条件にした。
