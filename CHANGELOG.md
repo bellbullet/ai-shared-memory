@@ -2,6 +2,10 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-08-01
+
+- X投稿 `1975312383674613851`で紹介された3つのgame feel demoを発見経路として扱い、公式の`Directing Game Mechanics Satisfaction Bootcamp`ページを確認した。OSSではなく、game feel、3Cs、balance、player skills、psychology、mechanics、VFX / SFX、Unity demoを扱う学習用Referenceとして`AI_DRAWERS.md`と`AI_INDEX.md`へ追加した。価格、日程、募集状況は変化し得るため固定情報として保存していない。
+
 ## 2026-07-31
 
 - X投稿 `2081962363398607271` を発見経路として本文中の10件を公式GitHubで照合し、既登録の `code-review-graph`、`mattpocock/skills`、`Orca`、`Hallmark`、`awesome-llm-apps` は重複追加せず、新規の `ai-agent-book`、`OmniRoute`、`pi`、`AstrBot`、`ktransformers` を用途・license・導入時の確認条件つきで `AI_DRAWERS.md` と `AI_INDEX.md`へ追加した。投稿のstar数やprovider数など変化しやすい数字は固定的な根拠として保存していない。

@@ -5544,6 +5544,55 @@ License:
 
 ⸻
 
+### Directing Game Mechanics Satisfaction Bootcamp
+
+URL:
+https://gamedesignskills.com/courses/polishing-game-feel-bootcamp/
+
+分類:
+
+- Reference Sites
+- Game Development
+- Game Design
+- Game Feel
+- Creative Pipeline
+- Unity
+
+概要:
+
+- Game Design Skillsが提供する、ゲームメカニクスの満足感とプロトタイプの感情的インパクトを体系的に高めるためのBootcamp。
+- 公式ページでは、旧称を「Polishing Game Feel」から「Directing Game Mechanics Satisfaction」へ更新したと説明しており、game feelだけでなくplayer skills、balance、3Cs、psychology、mechanics、VFX、SFX、interview practiceなどを扱う。
+- Unity上でmelee、FPS、rail shooterのゲームフィール技法を確認できるinteractive demoが案内されている。
+
+用途:
+
+- ゲームの操作感、カメラ、キャラクター、アニメーション、音、VFXの改善観点を学ぶ
+- Godot / Unity / Webゲームのプロトタイプを磨く際の設計チェックリスト作成
+- AIにゲームフィール改善案を出させるときの評価軸・用語の参照
+- GameFreezeSentinelなど既存のゲーム関連projectとは別に、ゲーム体験設計の知識源として利用する
+
+状態:
+
+- 参考資料
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- OSSや無料教材ではなく、コース提供ページとして扱う。価格、募集状況、日程、アクセス条件は利用前に公式ページで再確認する。
+- 公式ページの現行表示では次回cohortはTBA 2027で、12週間・24 live sessionsなどの構成が案内されているが、これらは更新され得る情報として扱う。
+- コースのUnity demoや教材を利用する際は、配布条件、ログイン範囲、外部サービス、第三者コンテンツの権利を確認する。
+
+関連:
+
+- X投稿: https://x.com/andre_mc/status/1975312383674613851
+- `NOTES/AI_Coding_Patterns.md`
+- Creative Pipeline
+
+⸻
+
 ### AlternativeTo
 
 URL:

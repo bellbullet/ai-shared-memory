@@ -101,6 +101,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - OfficeCLI / headless Office automation / docx xlsx pptx render → `AI_DRAWERS.md`, `OUTPUTS/README.md`
 - awesome-llm-apps / AI agent examples / RAG app templates → `AI_DRAWERS.md`
 - ai-agent-book / Agent design / context engineering / MCP / multi-agent → `AI_DRAWERS.md`
+- Directing Game Mechanics Satisfaction / Polishing Game Feel Bootcamp → `AI_DRAWERS.md`
+- game feel / gameplay polish / 3Cs / Unity game design → `AI_DRAWERS.md`
 - OmniRoute / AI gateway / provider fallback / token compression → `AI_DRAWERS.md`
 - pi / agent loop / unified LLM API / coding agent CLI → `AI_DRAWERS.md`
 - AstrBot / self-hosted agent chatbot / messaging integrations → `AI_DRAWERS.md`
@@ -537,6 +539,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - heterogeneous LLM inference / ktransformers → `AI_DRAWERS.md`
 - NotebookLM alternative / Open Notebook → `AI_DRAWERS.md`
 - Learning / Research Workflow / spaced repetition / reference management → `AI_DRAWERS.md`
+- game design / game feel / gameplay polish / player satisfaction → `AI_DRAWERS.md`
 - reproducible research workflow / paper data code human audit → `NOTES/AI_Coding_Patterns.md`
 - traceable decision artifact / assumptions challenge points → `NOTES/AI_Workspace_Ideas.md`
 - document archive / Paperless-ngx / ONLYOFFICE Docs → `AI_DRAWERS.md`
