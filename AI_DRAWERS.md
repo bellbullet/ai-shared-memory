@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-07-31
+最終更新: 2026-08-01
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫です。
 
@@ -17,7 +17,7 @@
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
 - 重点領域: Agent / Orchestration、AI Coding Operations、Knowledge Management、Creative Pipeline、Self Host / Tools。
-- 最近の追加: X投稿の候補を一次情報で再評価し、code-review-graph、mattpocock/skills、音声・配信・3D・動画系8件を用途と安全条件つきで統合した。star増加数、未検証の金融主張、高リスク用途は採用根拠にしなかった。
+- 最近の追加: X投稿の候補を一次情報で再評価し、code-review-graph、mattpocock/skills、音声・配信・3D・動画系8件を用途と安全条件つきで統合した。さらにxikharプロフィールのPersona、Atlas、Freestyle、Imagex、opdroid、Beyond Fable、CodexBarを上流・fork関係と利用条件つきで整理した。star増加数、未検証の金融主張、高リスク用途は採用根拠にしなかった。
 - 未整理項目と次回レビュー条件は `STATUS.md`、分類前リンクは `INBOX.md` を参照する。
 
 カテゴリ別ファイル分割は、検索性や保守性が単一ファイルでは不足した時点で検討し、v1.1 では行わない。
@@ -1312,6 +1312,52 @@ License:
 - plugin、shell、sandbox、WebUI、各messaging platformのcredential境界を導入前に監査する。
 - private message、個人情報、API key、token、会話ログを公開メモリへ保存しない。
 - AGPL-3.0と外部plugin・model・platformのライセンスを分けて確認する。
+
+⸻
+
+### opdroid
+
+URL:
+https://github.com/xikhar/opdroid
+
+分類:
+
+- Agent / Orchestration
+- Android Use
+- MCP
+- Mobile Automation
+- Computer Use
+
+概要:
+
+- ADB接続したAndroid端末を、画面取得、UI階層確認、タップ、スワイプ、文字入力、キー操作、アプリ起動のMCPツールとして公開するPython製ツール。
+- grid付きスクリーンショットと決定的なCLI操作を組み合わせ、Claude Code、CodexなどMCP対応agentからAndroidを操作できる。
+- agentskills.io互換のagent skillも提供する。
+
+用途:
+
+- Androidアプリのagent操作研究
+- MCP / Computer Use / Mobile Useの比較
+- AI HubやAIRI関連のスマホ連携候補
+- Android UIテスト・デモ操作の自動化検討
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- MIT
+
+メモ:
+
+- Python 3.10以降、ADB、USBデバッグまたはエミュレーターが必要。実行前に対象端末と操作範囲を確認する。
+- 端末画面、入力文字、アプリデータが外部へ渡らない構成か、MCP clientとskillの設定を確認する。
+- Android端末を常時操作するagentではなく、まずは限定した検証用端末で試す。
 
 ⸻
 
@@ -2952,6 +2998,131 @@ https://github.com/PINTO0309/onnx2tf
 
 ⸻
 
+### Atlas
+
+URL:
+https://github.com/xikhar/atlas
+
+分類:
+
+- AI Coding Operations
+- Agent Skills
+- Creative
+- Asset Creation
+- Three.js / 3D
+
+概要:
+
+- 画像生成、2Dゲーム素材、3Dモデル、PBRテクスチャ、Three.jsシーン制作向けのportable agent skills集。
+- `asset-core`、背景、sprite、animation、tileset、UI icon、character consistency、3D model、PBR texture、Three.js pipelineなどの作業別skillを含む。
+- `npx skills add xikhar/atlas`で導入する構成で、各種画像生成ツールやDCC scriptingを使うfallbackも想定する。
+
+用途:
+
+- Creative Pipelineの素材作成ルール参照
+- `img2threejs`、`image-to-3d`、AIRI向けアセット制作の再利用候補
+- sprite、tileset、character consistency、Three.js品質確認のskill比較
+- SKILLS / Agent Skills運用の実例確認
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+License:
+
+- MIT
+
+メモ:
+
+- skillが生成・編集・検証用のスクリプトを含むため、導入前に各skillの命令、依存、ファイルアクセスを監査する。
+- `codex-imagegen-backend`は認証や外部APIを扱い得るため、credentialを共有メモリへ保存しない。
+- 全skillを一括導入せず、必要なasset skillを個別に試す。
+
+⸻
+
+### CodexBar (upstream)
+
+URL:
+https://github.com/steipete/CodexBar
+
+分類:
+
+- AI Coding Operations
+- Usage Monitoring
+- Developer Tools
+- macOS
+
+概要:
+
+- OpenAI Codex、Claude Codeなど複数のAI coding providerの利用量、リセット時刻、状態を表示するmacOSメニューバーアプリ。
+- providerごとのsession、weekly、monthly windowや、利用可能な場合のcredits・cost・statusを確認できる。
+
+用途:
+
+- AI coding agentの利用状況確認
+- 長時間作業前のrate limit / reset確認
+- Codex・Claude Codeの運用監視の参考
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- MIT
+
+メモ:
+
+- macOS 14以降が主対象で、Windows環境の直接導入候補ではない。
+- OAuth、API key、browser cookie、local fileなどの認証情報を扱うproviderがあるため、設定値やusage logを公開メモリへ保存しない。
+- `xikhar/CodexBar`はこの上流のforkとして別記録する。
+
+⸻
+
+### xikhar/CodexBar (fork)
+
+URL:
+https://github.com/xikhar/CodexBar
+
+分類:
+
+- AI Coding Operations
+- Usage Monitoring
+- macOS
+- Fork / Upstream Comparison
+
+概要:
+
+- `steipete/CodexBar`をforkした、Codex・Claude Codeなどの利用状況表示アプリの派生リポジトリ。
+- 上流との差分、追加provider、設定や運用上の変更を確認する比較対象として扱う。
+
+状態:
+
+- 参考資料
+
+優先度:
+
+- ★★★☆☆
+
+License:
+
+- MIT（fork元の公開情報に基づく。差分とLICENSE本文を利用前に確認する。）
+
+メモ:
+
+- 主参照は`steipete/CodexBar`とし、このforkは差分確認用に扱う。
+- providerのcookie、token、API key、利用量の実値は記録しない。
+
+⸻
+
 ## GPU / HPC
 
 ### CuPy
@@ -4417,6 +4588,229 @@ https://github.com/oron1208/comfyui_qwen_edit_pixel_perfect
 
 - MIT License。後段補正はOpenCVが必要。事前クロップは依存なしだが端が切れる場合がある。
 - ComfyUI custom nodeはPythonコードを実行するため、依存とファイルアクセスを導入前に監査する。
+
+⸻
+
+### Persona
+
+URL:
+https://github.com/xikhar/persona
+
+分類:
+
+- Creative
+- Avatar / VRM
+- Local Voice Presence
+- MCP / Codex Integration
+
+概要:
+
+- voice conversationの横に常駐する、Electron製のcross-platform desktop character runtime。
+- Windows WASAPI process-loopback、Linux PipeWire、macOS Core Audio process tapで、選択した再生プロセスの出力レベルだけを監視してVRMを動かす。
+- local `.vrm` / `.vrma` のimport、Idle / Speaking / custom action、Codex向けlocal MCP（既定 `127.0.0.1:47831/mcp`）を持つ。
+- 音声合成、マイク録音、文字起こし、プロンプト処理、音声のnetwork送信は行わない。
+
+用途:
+
+- Momoの将来のVRM companion基盤
+- AivisSpeech、VOICEVOX、Irodori-TTSなどのlocal TTS出力と、character presenceの接続
+- Codexの作業状態、MCP action、音声再生を分離したdesktop avatar運用
+
+状態:
+
+- 次に試す
+- 公式リポジトリを作業用checkoutとして導入し、Momo向けvoice presetを追加済み
+
+優先度:
+
+- ★★★★★
+
+License:
+
+- Application source: MIT。VRM / VRMA / character assetは別ライセンスで、再配布条件を個別確認する。
+
+メモ:
+
+- Node.js 24以上。Windowsのprocess-loopbackはWindows 10 build 20348以上が必要。
+- Momoの現行Codex petは2D spriteでありPersonaのVRMとは形式が異なるため、直接importや自動変換はしない。VRM化はart、rigging、asset licenseを分けた後続作業とする。
+- 音声エンジンが未導入の間は、PersonaのMomo voice presetで`Voice off`（External）を選び、自動process captureを止める。
+
+公式リンク:
+
+- GitHub: https://github.com/xikhar/persona
+- X post: https://x.com/xikhar/status/2083264720837214477
+
+⸻
+
+### freestyle-voice/freestyle (upstream)
+
+URL:
+https://github.com/freestyle-voice/freestyle
+
+分類:
+
+- Creative
+- Voice / STT
+- AI Coding Operations
+- Local-first
+
+概要:
+
+- ホットキーで音声入力し、カーソル位置へ文字列を貼り付ける、開発者向けのオープンソース音声入力プラットフォーム。
+- ローカルモデルによる処理と、OpenAI、Groq、Anthropic、Google、Deepgram、ElevenLabsなどのprovider選択に対応する。
+- 辞書、文字起こし後処理、入力先に応じた文脈補正を備え、Windows、macOS、Linux向け配布を案内している。
+
+用途:
+
+- Codex / Claude Codeへの音声入力
+- AI coding workflowのlocal-first音声インターフェース
+- AIRI、音声エージェント、Whisper系ツールとの比較
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- MIT
+
+メモ:
+
+- cloud providerを選ぶ場合はAPI keyと音声・文字起こしデータの送信先を確認する。
+- 上流リポジトリを主参照とし、`xikhar/freestyle`は派生差分として別記録する。
+- private recording、音声データ、API key、辞書の個人情報を公開メモリへ保存しない。
+
+⸻
+
+### xikhar/freestyle (fork)
+
+URL:
+https://github.com/xikhar/freestyle
+
+分類:
+
+- Creative
+- Voice / STT
+- AI Coding Operations
+- Local-first
+- Fork / Upstream Comparison
+
+概要:
+
+- `freestyle-voice/freestyle`をforkした音声入力アプリの派生リポジトリ。
+- 上流版との機能差、開発者向けworkflow、provider設定の変更を確認する比較対象として扱う。
+
+状態:
+
+- 参考資料
+
+優先度:
+
+- ★★★☆☆
+
+License:
+
+- MIT（fork元の公開情報に基づく。差分とLICENSE本文を利用前に確認する。）
+
+メモ:
+
+- 主参照は`freestyle-voice/freestyle`とし、このforkは差分確認用に扱う。
+- API key、音声、文字起こし、入力先の個人情報は公開メモリへ保存しない。
+
+⸻
+
+### Imagex
+
+URL:
+https://github.com/xikhar/imagex
+
+分類:
+
+- Creative
+- Image Generation
+- Workflow Editor
+- Local-first
+- AI Coding Operations
+
+概要:
+
+- prompt、参照画像、編集、生成結果をノードで接続し、再利用可能な画像生成workflowとして管理するローカル優先のWebアプリ。
+- 選択した出力だけを実行でき、画像のcrop、rotate、flip、blur、color balanceなどのローカルpreview、実行状態の復元、asset libraryを備える。
+- Node.jsのlocal APIとVite/React UIで構成され、Codex OAuth / Responses image toolを生成経路として扱う。
+
+用途:
+
+- AI画像生成の試行を再利用可能なworkflowへ整理
+- AIRI、3D素材、ブランド・プロダクト画像のCreative Pipeline
+- ComfyUI、PPT Master、`img2threejs`との役割比較
+- 生成状態とassetをローカル保存するUI設計の参考
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- MIT
+
+メモ:
+
+- 初回起動でCodex / ChatGPT認証を扱うため、認証情報の保存先と外部送信範囲を確認する。
+- 生成素材、参照画像、prompt、run metadataはローカルデータであり、公開メモリへ保存しない。
+- Node.js 20以降。まずmock serviceまたは権利確認済み素材で検証する。
+
+⸻
+
+### Beyond Fable
+
+URL:
+https://github.com/xikhar/beyond-fable
+
+分類:
+
+- Creative
+- Game Development
+- Procedural Generation
+- Three.js
+- Infinite World Generation
+
+概要:
+
+- TypeScript、Vite、Three.jsで作られた一人称のプロシージャルな荒野探索デモ。
+- ページ読み込みごとにseed付きの地形、森林、水、天候、昼夜、chunk streaming、instancing、LODを含むワールドを生成する。
+- backendや外部asset packを使わず、ブラウザ実行とGitHub Pages公開を想定する。
+
+用途:
+
+- Three.jsゲーム・インタラクティブ環境の実装参考
+- Terrain Diffusion / InfiniteDiffusion / LingBot-Mapとの役割比較
+- `Creative Pipeline`向けのprocedural world / screenshot素材作成
+- WebGPU・描画最適化・chunk streamingの学習
+
+状態:
+
+- 参考資料
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- MIT
+
+メモ:
+
+- AIツールではなく、ゲーム・WebGL実装の参考リポジトリとして扱う。
+- 生成地形、描画負荷、モバイル対応、音声や保存機能の有無は実行時に確認する。
 
 ⸻
 
@@ -6138,6 +6532,7 @@ URL:
 - speech-to-speech
 - Yorishiro
 - 四葉公ラボ 配信ペット
+- freestyle-voice/freestyle
 
 用途:
 
@@ -6153,6 +6548,7 @@ URL:
 - Hermes Agent
 - The Hitchhiker's Guide to Agentic AI
 - Yorishiro
+- opdroid
 
 用途:
 
@@ -6180,6 +6576,11 @@ URL:
 - Kura
 - AKARI Video
 - img2threejs
+- Atlas
+- Imagex
+- freestyle-voice/freestyle
+- CodexBar (upstream)
+- xikhar/CodexBar (fork)
 
 用途:
 
@@ -6254,6 +6655,10 @@ URL:
 - VoiceDenoiser
 - speech-to-speech
 - img2threejs
+- Atlas
+- Imagex
+- freestyle-voice/freestyle
+- Beyond Fable
 
 用途:
 
@@ -6400,6 +6805,10 @@ URL:
 - claude-real-video
 - Recordly
 - textlint-rule-preset-ai-writing
+- Beyond Fable
+- CodexBar (upstream)
+- xikhar/CodexBar (fork)
+- xikhar/freestyle (fork)
 - Wakapippi Vocal Remover Extension
 - 四葉公ラボ 配信ペット
 - Yorishiro
@@ -6408,6 +6817,10 @@ URL:
 - Amicro
 - book-to-skill
 - img2threejs
+- Atlas
+- Imagex
+- freestyle-voice/freestyle
+- opdroid
 
 ### 将来導入
 

@@ -402,6 +402,14 @@ AI が関連ファイルを素早く見つけるための索引です。
 - AI bot call / AITuber Bot API → `AI_DRAWERS.md`
 - avatar talk video / podcast recording → `AI_DRAWERS.md`
 - Yorishiro / VRM coding terminal / Presence Harness → `AI_DRAWERS.md`
+- Persona / realtime desktop character / VRM / local voice listener / Codex MCP → `AI_DRAWERS.md`, `PROJECTS/Persona.md`
+- Atlas / asset creation skills / sprite / tileset / Three.js pipeline → `AI_DRAWERS.md`
+- Imagex / node-based image workflow / local-first image generation → `AI_DRAWERS.md`
+- freestyle / voice dictation / local-first STT / voice coding → `AI_DRAWERS.md`
+- opdroid / Android Use / Android MCP / mobile agent → `AI_DRAWERS.md`
+- Beyond Fable / procedural wilderness / Three.js world / chunk streaming → `AI_DRAWERS.md`
+- CodexBar / AI coding usage monitoring / provider reset → `AI_DRAWERS.md`
+- xikhar/freestyle / steipete/CodexBar / fork upstream comparison → `AI_DRAWERS.md`
 - speech-to-speech / local voice agent pipeline → `AI_DRAWERS.md`
 - Wakapippi Vocal Remover Extension / browser audio separation → `AI_DRAWERS.md`
 - 四葉公ラボ 配信ペット / streaming pet → `AI_DRAWERS.md`

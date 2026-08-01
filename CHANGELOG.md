@@ -4,6 +4,7 @@
 
 ## 2026-08-01
 
+- `xikhar`の公開プロフィールを一次情報として確認し、既存の`Persona`に加えて`Atlas`、`freestyle-voice/freestyle`と`xikhar/freestyle`、`Imagex`、`opdroid`、`Beyond Fable`、`steipete/CodexBar`と`xikhar/CodexBar`を`AI_DRAWERS.md`へ追加した。forkは上流と別項目にし、主参照・差分確認の役割と、認証情報・音声・端末データ・生成素材を公開メモリへ保存しない注意を記録した。
 - X投稿 `1975312383674613851`で紹介された3つのgame feel demoを発見経路として扱い、公式の`Directing Game Mechanics Satisfaction Bootcamp`ページを確認した。OSSではなく、game feel、3Cs、balance、player skills、psychology、mechanics、VFX / SFX、Unity demoを扱う学習用Referenceとして`AI_DRAWERS.md`と`AI_INDEX.md`へ追加した。価格、日程、募集状況は変化し得るため固定情報として保存していない。
 
 ## 2026-07-31
