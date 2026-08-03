@@ -230,6 +230,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Humation Swift → `AI_DRAWERS.md`
 - Anime2.5DRig → `AI_DRAWERS.md`
 - see-through → `AI_DRAWERS.md`
+- PNGAL → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
+- PsDaL → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - tomari-guruguru → `AI_DRAWERS.md`
 - single-image layer decomposition / anime layer decomposition → `AI_DRAWERS.md`
 - 2.5D avatar rig / PSD avatar rig → `AI_DRAWERS.md`
@@ -348,6 +350,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Humation Swift → `AI_DRAWERS.md`
 - Anime2.5DRig → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - see-through → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
+- PNGAL → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
+- PsDaL → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - tomari-guruguru → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - OpenFugu → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - FUGU / AI-Safeter → `AI_DRAWERS.md`
@@ -391,6 +395,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - 48 kHz bilingual sound effects / English Chinese audio prompts → `AI_DRAWERS.md`
 - Anime2.5DRig / 2.5D avatar rig → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - see-through / anime layer decomposition / PSD output → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
+- PNGAL / PNG-to-PSD / AI layer split / standee animation → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
+- PsDaL / PSD animation / layer motion / blink / lip-sync → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - tomari-guruguru / トマリトーク / 25方向アバター → `AI_DRAWERS.md`, `PROJECTS/AIRI.md`
 - PPT Master → `AI_DRAWERS.md`, `OUTPUTS/README.md`
 - yt-dlp → `AI_DRAWERS.md`
@@ -559,6 +565,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - AI agent examples / RAG app templates / awesome-llm-apps → `AI_DRAWERS.md`
 - Android webcam / virtual webcam / smartphone webcam → `AI_DRAWERS.md`
 - 2.5D avatar / anime layer decomposition / PSD avatar素材化 → `AI_DRAWERS.md`
+- PNGAL / PNG-to-PSD / AI layer split / standee animation → `AI_DRAWERS.md`
+- PsDaL / PSD animation / layer motion / blink / lip-sync → `AI_DRAWERS.md`
 - AI video / voice generation → `AI_DRAWERS.md`
 - local voice agent / VAD STT LLM TTS pipeline → `AI_DRAWERS.md`
 - image-to-3D / auto-rig / VRM generation → `AI_DRAWERS.md`
