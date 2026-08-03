@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-08-01
+最終更新: 2026-08-03
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫です。
 
@@ -12,12 +12,12 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 147
+- 登録項目: 149
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
 - 重点領域: Agent / Orchestration、AI Coding Operations、Knowledge Management、Creative Pipeline、Self Host / Tools。
-- 最近の追加: X投稿の候補を一次情報で再評価し、code-review-graph、mattpocock/skills、音声・配信・3D・動画系8件を用途と安全条件つきで統合した。さらにxikharプロフィールのPersona、Atlas、Freestyle、Imagex、opdroid、Beyond Fable、CodexBarを上流・fork関係と利用条件つきで整理した。star増加数、未検証の金融主張、高リスク用途は採用根拠にしなかった。
+- 最近の追加: X投稿の候補を一次情報で再評価し、code-review-graph、mattpocock/skills、音声・配信・3D・動画系8件を用途と安全条件つきで統合した。さらにxikharプロフィールのPersona、Atlas、Freestyle、Imagex、opdroid、Beyond Fable、CodexBarを上流・fork関係と利用条件つきで整理した。star増加数、未検証の金融主張、高リスク用途は採用根拠にしなかった。今回、X投稿 `2083836960683307153` と返信 `2083836962256134175` を発見経路として、公式READMEを確認した `PNGAL` と `PsDaL` を Creative / Avatar / PSD Animation の比較候補へ追加した。
 - 未整理項目と次回レビュー条件は `STATUS.md`、分類前リンクは `INBOX.md` を参照する。
 
 カテゴリ別ファイル分割は、検索性や保守性が単一ファイルでは不足した時点で検討し、v1.1 では行わない。
@@ -3610,6 +3610,105 @@ https://github.com/shitagaki-lab/see-through
 
 ⸻
 
+### PNGAL
+
+URL:
+https://github.com/1mm-module/PNGAL
+
+発見経路:
+https://x.com/1mm_module/status/2083836960683307153
+
+分類:
+
+- Creative
+- Avatar
+- 2.5D Animation
+- PSD / Layer Animation
+- AI Companion / AIRI
+
+概要:
+
+- 透明 PNG または Photoshop 互換 PSD を入力し、レイヤー分割、顔パーツ差分、アニメーション設定をまとめて扱う Windows ローカルツール。
+- PSD、WebM、MP4、GIF、スプライトシート + JSON を出力できる。
+- 1枚絵をアニメーション用 PSD・立ち絵素材へ変換する上流候補で、`see-through`、`Anime2.5DRig`、`PsDaL` と比較できる。
+
+用途:
+
+- 1枚絵から PSD 素材・立ち絵アニメーション素材を作る
+- AI companion / AIRI 向けのレイヤー分解・表情差分・動きの試作
+- `see-through` のレイヤー分解と、`PsDaL` / `Anime2.5DRig` の下流アニメーション工程を比較する
+- WebM / MP4 / GIF / スプライトシート出力を使うゲーム・配信素材作成
+
+状態:
+
+- 研究対象（AMD GPU 環境では保留）
+
+優先度:
+
+- ★★★☆☆
+
+License:
+
+- Apache-2.0（同梱ワークフロー、第三者ライブラリ、モデルは個別確認）
+
+メモ:
+
+- 公式README上の要件は Windows 10/11、RAM 32GB以上、CUDA対応NVIDIA GPU 12GB以上。クリーンセットアップでは90GiB超の空き容量が必要とされる。
+- 現行READMEは CUDA 12.8 の PyTorch 構成を前提にしており、AMD / ROCm は公式サポート範囲外。NVIDIA環境を用意できた時点で再評価する。
+- 生成・分解した画像、PSD、モデルの権利と個別ライセンスを確認する。実行はまだ行っていない。
+
+⸻
+
+### PsDaL
+
+URL:
+https://github.com/1mm-module/PsDaL
+
+発見経路:
+https://x.com/1mm_module/status/2083836962256134175
+
+分類:
+
+- Creative
+- Avatar
+- 2.5D Animation
+- PSD Layer Animation
+- AI Companion / AIRI
+
+概要:
+
+- 既存の Photoshop 互換 PSD を読み込み、レイヤー順・表示・リンク・ピボット、移動・回転・拡縮などを設定してアニメーションを作る Windows ローカルツール。
+- まばたき、口パク、髪・胸・布の揺れ、レイヤーの表示 / 非表示を扱い、WebM、MP4、GIF、スプライトシート + JSON を出力できる。
+- PNG分割や顔差分生成ではなく、レイヤー分け済み PSD の下流アニメーション工程を担当する。
+
+用途:
+
+- `see-through` や手作業で作った PSD のアニメーション化
+- AI companion / AIRI の表情・口パク・揺れの試作
+- `PNGAL` との工程分担・軽量比較
+- `Anime2.5DRig` / Live2D の前段・代替候補比較
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- Apache-2.0（`ag-psd` など第三者依存は個別確認）
+
+メモ:
+
+- Windows 10/11。公式READMEでは2GB以上の空き容量、NVIDIA NVENCは任意で、利用できない場合はCPUエンコーダへフォールバックするとされている。
+- 現行READMEと実装の入力は PSD 専用で、PNG / JPEG / WebP の読み込み、PSD分割、顔差分生成は対象外。発見時のX側説明にあるRIFE記載とは差異があるため、導入時に現行版の機能を再確認する。
+- NVIDIA GPU は公式必須要件に含まれないが、AMD GPU 環境では編集・書き出し速度を実機で確認してから採用判断する。
+- まず透明 PNG 等を手動または別の分割ツールで PSD 化し、PsDaL で動きを付ける流れが現実的。実行はまだ行っていない。
+
+⸻
+
 ### tomari-guruguru
 
 URL:
@@ -6523,6 +6622,8 @@ URL:
 - Humation Swift
 - Anime2.5DRig
 - see-through
+- PNGAL
+- PsDaL
 - tomari-guruguru
 - VoxCPM
 - VTuber体験場
@@ -6638,6 +6739,8 @@ URL:
 - Buzz
 - Anime2.5DRig
 - see-through
+- PNGAL
+- PsDaL
 - tomari-guruguru
 - HyperFrames
 - claude-real-video
