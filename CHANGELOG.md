@@ -2,6 +2,11 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-08-03
+
+- X投稿 `2083836960683307153` と返信 `2083836962256134175` を発見経路として、作者の公式GitHub / READMEを確認した `PNGAL` と `PsDaL` を `AI_DRAWERS.md` へ追加した。`PNGAL` は PNG / PSD からレイヤー分割・差分生成・アニメーション出力までを扱うが、CUDA対応NVIDIA GPU 12GB以上と大容量セットアップが必要なためAMD / ROCm環境では保留。`PsDaL` はレイヤー分け済みPSD専用の下流アニメーションツールで、NVIDIA NVENCは任意・CPUフォールバックがあるため次に試す候補とした。現行READMEとX側のRIFE説明に差異がある点も記録し、実行・採用判断はまだ行っていない。
+- `AI_INDEX.md`、`PROJECTS/AIRI.md`、`AI_DRAWERS.md` の横断グループと件数スナップショットを同期した。試用結果は未取得のため `TRIALS.md` は変更していない。
+
 ## 2026-08-01
 
 - `xikhar`の公開プロフィールを一次情報として確認し、既存の`Persona`に加えて`Atlas`、`freestyle-voice/freestyle`と`xikhar/freestyle`、`Imagex`、`opdroid`、`Beyond Fable`、`steipete/CodexBar`と`xikhar/CodexBar`を`AI_DRAWERS.md`へ追加した。forkは上流と別項目にし、主参照・差分確認の役割と、認証情報・音声・端末データ・生成素材を公開メモリへ保存しない注意を記録した。
