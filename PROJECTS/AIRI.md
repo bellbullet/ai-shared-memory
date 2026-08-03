@@ -54,4 +54,4 @@
 
 - Whisper / audio pipeline
 - Humation / avatar interaction research
-- Anime2.5DRig / see-through / OpenFugu avatar workflow
+- Anime2.5DRig / see-through / PNGAL / PsDaL / OpenFugu avatar workflow
