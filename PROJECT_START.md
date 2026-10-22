@@ -1,18 +1,19 @@
 # PROJECT_START
 
-最終更新: 2026-06-30
+最終更新: 2026-08-21
 
-新しい作業やプロジェクト作業を始める AI は、まずこのファイルを読む。
+新しい作業やプロジェクト作業を始める AI は、まず `ASM_ENTRY.md` とこのファイルを読む。
 
 ## Start Here
 
-1. `WORKSPACE.md` で workspace root とディレクトリ役割を確認する。
-2. `STATUS.md` で workspace 全体の現在地を確認する。
-3. `AGENTS.md` で AI の行動ルールを確認する。
-4. `CURRENT.md` で現在の焦点、待ち、次の行動を確認する。
-5. `AI_INDEX.md` で関連ファイルを探す。
-6. 必要なら `SKILLS/` から作業種別の詳細ルールを読む。
-7. 対象プロジェクトの README / docs / source を読む。
+1. `ASM_ENTRY.md` で共有メモリの入口と `ASM scan` 契約を確認する。
+2. `WORKSPACE.md` で workspace root とディレクトリ役割を確認する。
+3. `STATUS.md` で workspace 全体の現在地を確認する。
+4. `AGENTS.md` で AI の行動ルールを確認する。
+5. `CURRENT.md` で現在の焦点、待ち、次の行動を確認する。
+6. `AI_INDEX.md` で関連ファイルを探す。
+7. 必要なら `SKILLS/` から作業種別の詳細ルールを読む。
+8. 対象プロジェクトの README / docs / source を読む。
 
 ## Skill Routing
 
@@ -61,11 +62,12 @@ Reason: <why this is enough or why new implementation is needed>
 
 確認先:
 
-1. `AI_INDEX.md`
-2. `AI_DRAWERS.md`
-3. 関連する `PROJECTS/`
-4. 関連する `NOTES/`
-5. 対象プロジェクトの README / docs / source
+1. `ASM_ENTRY.md`
+2. `AI_INDEX.md`
+3. `AI_DRAWERS.md`
+4. 関連する `PROJECTS/`
+5. 関連する `NOTES/`
+6. 対象プロジェクトの README / docs / source
 
 1つの作業で積極利用する候補は原則3つまでにする。
 登録済み候補を試した場合は、結果を `TRIALS.md` に記録し、必要に応じて `AI_DRAWERS.md`、`LESSONS_LEARNED.md`、`DECISIONS.md` へ戻す。

@@ -1,14 +1,15 @@
 # CURRENT
 
-最終更新: 2026-07-16
+最終更新: 2026-08-21
 
-このファイルは `PROJECT_START.md`、`WORKSPACE.md`、`STATUS.md`、`AGENTS.md` の後に読む現在地です。
+このファイルは `ASM_ENTRY.md`、`PROJECT_START.md`、`WORKSPACE.md`、`STATUS.md`、`AGENTS.md` の後に読む現在地です。
 
 ## Current Focus
 
 - AI Hub Lite Phase 01は公開後チェックまで完了。静的Hubを実際に使い、Status、Last Updated、Next Actionの更新負荷を観察する。
 - Phase 02は利用実績を確認してから、AI Shared MemoryのMarkdownをビルド時に読む小さな生成スクリプトとして検討する。API統合は追加しない。
 - v1.1 Consolidated Memory Architecture として、収集済み知識を検索・比較・再利用しやすい状態に保つ。
+- 共有メモリの参照経路を `ASM_ENTRY.md` に固定し、workspace 親 `AGENTS.md` と読み取り専用チェッカーで実読了を追跡できるようにする。
 - README、ChatGPT Projects 用情報源、現在地、索引、レビュー条件を同じスナップショットへ同期する。
 - 新規リンクや未整理アイデアは `INBOX.md` または `AI_DRAWERS.md` に入れ、分類済み知識は `AI_INDEX.md` から辿れるようにする。
 - 公式情報を読むための概念地図や長期参照資料は `references/` に置く。
@@ -26,7 +27,8 @@
 
 - AI Hub Liteを数日使い、手動更新が負担になった項目と更新頻度を`TRIALS.md`へ戻す。
 - Phase 02へ進む場合は、Status、Last Updated、Next ActionだけをMarkdownから取得し、Portal専用の手入力JSONは増やさない。
-- 作業開始時は `PROJECT_START.md` → `WORKSPACE.md` → `STATUS.md` → `AGENTS.md` → `CURRENT.md` → `AI_INDEX.md` の順に確認する。
+- 作業開始時は `ASM_ENTRY.md` → `PROJECT_START.md` → `WORKSPACE.md` → `STATUS.md` → `AGENTS.md` → `CURRENT.md` → `AI_INDEX.md` の順に確認する。
+- workspace のプロジェクトでは `Shared/tools/asm/Verify-ASMContext.ps1` を読み取り専用で実行し、`ASM scan` に実際に読んだファイルを記録する。
 - 関連ファイルを探すときは `AI_INDEX.md` を参照する。
 - workspace の健康状態と次回 Memory Review 条件は `STATUS.md` と `REVIEW.md` で確認する。
 - 再利用候補を試したら `TRIALS.md` に結果・判断・再利用条件を記録する。

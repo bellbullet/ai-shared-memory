@@ -8,20 +8,25 @@
 
 GitHub型 AI Shared Memory / LLM Wiki / 軽量 Second Brain として運用します。Notion や Obsidian のような個人知識管理の考え方も参考にしていますが、Obsidian 専用の vault ではありません。
 
+外部ワークスペースからこの共有メモリを参照する場合は、まず
+`ASM_ENTRY.md` を読み、実際に読んだファイルを `ASM scan` として記録します。
+このリポジトリの内部作業では、下記のリポジトリ固有の読込順も続けて適用します。
+
 ## AI が読む順番
 
-1. `PROJECT_START.md`
-2. `WORKSPACE.md`
-3. `STATUS.md`
-4. `AGENTS.md`
-5. `CURRENT.md`
-6. `AI_INDEX.md`
-7. 必要に応じて `SKILLS/`
-8. 作業対象ファイル
-9. `INBOX.md`
-10. 必要に応じて `AI_DRAWERS.md` / `PROJECTS/` / `NOTES/`
+1. `ASM_ENTRY.md`
+2. `PROJECT_START.md`
+3. `WORKSPACE.md`
+4. `STATUS.md`
+5. `AGENTS.md`
+6. `CURRENT.md`
+7. `AI_INDEX.md`
+8. 必要に応じて `SKILLS/`
+9. 作業対象ファイル
+10. `INBOX.md`
+11. 必要に応じて `AI_DRAWERS.md` / `PROJECTS/` / `NOTES/`
 
-`PROJECT_START.md` を入口にし、`WORKSPACE.md` で作業場所とディレクトリ役割を確認し、`CURRENT.md` で現在の焦点、待ち、次の行動を把握してから編集する。
+`ASM_ENTRY.md` を共有メモリの入口にし、`PROJECT_START.md`、`WORKSPACE.md` で作業場所とディレクトリ役割を確認し、`CURRENT.md` で現在の焦点、待ち、次の行動を把握してから編集する。
 
 ## Skill Routing
 

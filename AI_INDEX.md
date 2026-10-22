@@ -4,6 +4,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ## Entry Points
 
+- Shared-memory routing and trace contract: `ASM_ENTRY.md`
 - Obsidian human entry point: `OBSIDIAN_HOME.md`
 - Obsidian MOCs: `MOC/PROJECTS.md`, `MOC/AI_AND_TOOLS.md`, `MOC/OPERATIONS.md`
 - Obsidian integration audit: `references/OBSIDIAN_INTEGRATION_AUDIT.md`
@@ -34,6 +35,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ## Projects
 
+
 - AIRI → `PROJECTS/AIRI.md`
 - AI Hub / AI Hub Lite → `PROJECTS/AIHub.md`
 - GameFreezeSentinel → `PROJECTS/GameFreezeSentinel.md`
@@ -45,6 +47,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - XImageBot → `PROJECTS/XImageBot.md`
 
 ## Notes
+
 
 - AI → `NOTES/AI.md`
 - AI Behavior Candidates → `NOTES/AI_Behavior_Candidates.md`
