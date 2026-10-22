@@ -1,6 +1,6 @@
 # TRIALS
 
-最終更新: 2026-07-29
+最終更新: 2026-08-08
 
 登録済みの OSS、AI 技術、運用パターンを実際の作業で試し、採用判断へつなげるための記録です。
 
@@ -32,6 +32,7 @@
 
 | Candidate | First target | Purpose | State |
 | --- | --- | --- | --- |
+| `@pierre/diffs` | ai-shared-memory / public-safe Markdown fixture | AI変更のdiff表示、行選択、注釈、hunk単位のAccept / Reject UIを評価 | Planned |
 | reviewable-html-workbench | ai-shared-memory / `OUTPUTS/` | AI生成文書やHTML成果物への範囲指定レビュー | Planned |
 | agency-agents lightweight roles | ScreenshotStitcher | Security EngineerとReality Checkerの軽量役割を実開発の受入判定で評価 | Prepared |
 | agmsg | ScreenshotStitcher | Codexと別CLIエージェント間の小規模なレビュー引き継ぎ | Planned |
@@ -39,6 +40,7 @@
 
 開始条件:
 
+- `@pierre/diffs`: rootのpackage.jsonを変更せず、公開可能なMarkdown二版を使う隔離fixtureで、split / stacked表示、行選択、注釈、Accept / Reject状態、keyboard / mobile表示、外部送信の有無を確認する。実施時はnpm package versionとlicenseを再確認する。
 - reviewable-html-workbench: 次にレビュー対象となるHTML文書または設計成果物ができたとき。
 - agency-agents lightweight roles: 20枚制限の実装差分と検証結果がそろったとき。外部CLIやHooksは前提にしない。
 - agmsg: 公開可能な小規模リポジトリで、Git Bash、SQLite保存先、権限境界を確認できるとき。

@@ -53,6 +53,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - AI → `NOTES/AI.md`
 - AI Behavior Candidates → `NOTES/AI_Behavior_Candidates.md`
 - AI Coding Patterns → `NOTES/AI_Coding_Patterns.md`
+- BFV Kernel-style task contract / scope control / completion gate → `NOTES/AGENTS_BFV_KERNEL_DRAFT.md`, `SKILLS/AgentOperations.md`
 - Agent Operations → `SKILLS/AgentOperations.md`
 - Simple Loop Before Graph → `NOTES/AI_Coding_Patterns.md`, `SKILLS/AgentOperations.md`
 - Portable Agent Configuration → `NOTES/AI_Coding_Patterns.md`, `SKILLS/AgentOperations.md`
@@ -88,6 +89,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - shadcn/ui motion registry / interactive card components → `AI_DRAWERS.md`
 - code-review-graph / local-first code intelligence / Tree-sitter graph / MCP code review → `AI_DRAWERS.md`
 - impact analysis / review context reduction / risk-scored PR review → `AI_DRAWERS.md`
+- Diffs / `@pierre/diffs` / code diff rendering / accept-reject hunk / review annotations → `AI_DRAWERS.md`, `TRIALS.md`
 - mattpocock/skills / engineering agent skills / grill-with-docs / diagnosing-bugs → `AI_DRAWERS.md`
 - composable agent skills / TDD skill / code review skill / domain modeling skill → `AI_DRAWERS.md`
 - Squoosh / browser image compression / local image optimization → `AI_DRAWERS.md`

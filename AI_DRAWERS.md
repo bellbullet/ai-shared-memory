@@ -12,7 +12,7 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 149
+- 登録項目: 160
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
@@ -1703,6 +1703,58 @@ https://github.com/tirth8205/code-review-graph
 
 - `TRIALS.md` — 実際に試した時点でtoken量、検索精度、false positive、index時間を記録する。
 - `PROJECTS/ScreenshotStitcher.md`
+- `SKILLS/Research.md`
+
+⸻
+
+### @pierre/diffs
+
+URL:
+
+- https://diffs.com/
+- https://github.com/pierrecomputer/pierre/tree/main/packages/diffs
+
+分類:
+
+- Development
+- Code Review
+- AI Coding Operations
+- Review Workflow
+
+概要:
+
+- `@pierre/diffs` は、Shikiを基盤にしたOSSのdiff / file rendering library。Vanilla JavaScriptとReactのcomponentを提供する。
+- file version、patch、任意のfileを比較でき、split / stacked layout、line selection、annotation、accept / reject UIを組み合わせられる。
+- React向けに`MultiFileDiff`、`PatchDiff`、`FileDiff`、`UnresolvedFile`などのentry pointがあり、SSRとworker向けexportもある。
+- Apache-2.0。採用する版は公式Releasesとnpm packageを確認して固定する。
+
+用途:
+
+- AIが変更した`CURRENT.md`、README、project noteの差分を人間がレビューするUI。
+- hunk単位のAccept / Reject、行コメント、注釈を使った変更監査。
+- `AGENTS_BFV_KERNEL_DRAFT.md`のAcceptanceと実際の差分・検証証拠を同じ画面で確認する補助層。
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+注意:
+
+- Diffsは表示・選択・注釈のUI層であり、ASMの正本、履歴、認証、承認者、永続化、commit / rollbackを提供しない。これらは別の監査境界として設計する。
+- `UnresolvedFile`、token hooks、worker pool、`diffAcceptRejectHunk`にはbeta / experimentalまたは後方互換性の注意がある。採用前に対象APIを固定して検証する。
+- 現在のASMはVitePress中心で、`@pierre/diffs`は依存していない。最初はpublic-safeなMarkdown二版を使う隔離fixtureで試し、rootの依存やサイト構成を変更しない。
+- 実際のDiff表示へ個人情報、秘密情報、private source、local pathを渡さない。公開サイトに組み込む前に、保存先・送信先・権限・keyboard / mobile accessibilityを確認する。
+
+関連:
+
+- `NOTES/AGENTS_BFV_KERNEL_DRAFT.md`
+- `NOTES/AI_Coding_Patterns.md`
+- `TRIALS.md`
+- `OUTPUTS/`
 - `SKILLS/Research.md`
 
 ⸻

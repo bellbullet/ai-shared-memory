@@ -7,6 +7,11 @@
 - `ASM_ENTRY.md`を共有メモリの安定した入口として追加し、`AI_INDEX.md`、`CURRENT.md`、`STATUS.md`、親 `AGENTS.md` の読込順と `ASM scan` の実読了記録を同期した。
 - workspace-level `Shared/tools/asm/Verify-ASMContext.ps1` を追加し、入口・共有ファイル・鮮度シグナル・プロジェクト / ASM のGit状態を読み取り専用で確認できるようにした。これはAIの実読了を自動証明するものではなく、実際に読んだパスの記録と併用する。
 
+## 2026-08-08
+
+- `@pierre/diffs`を公式サイト、公式GitHub、npm registryで確認し、AI変更の差分表示・行選択・注釈・Accept / Reject UIの候補として`AI_DRAWERS.md`へ追加した。npm確認時点のlatestは`1.3.5`、licenseはApache-2.0。ASM本体へ依存追加はせず、public-safeな隔離fixtureで評価するTrialを`TRIALS.md`へ登録した。
+- `AI_INDEX.md`へDiffs、`@pierre/diffs`、code diff rendering、review annotationsの検索導線を追加した。
+
 ## 2026-08-03
 
 - X投稿 `2083836960683307153` と返信 `2083836962256134175` を発見経路として、作者の公式GitHub / READMEを確認した `PNGAL` と `PsDaL` を `AI_DRAWERS.md` へ追加した。`PNGAL` は PNG / PSD からレイヤー分割・差分生成・アニメーション出力までを扱うが、CUDA対応NVIDIA GPU 12GB以上と大容量セットアップが必要なためAMD / ROCm環境では保留。`PsDaL` はレイヤー分け済みPSD専用の下流アニメーションツールで、NVIDIA NVENCは任意・CPUフォールバックがあるため次に試す候補とした。現行READMEとX側のRIFE説明に差異がある点も記録し、実行・採用判断はまだ行っていない。
