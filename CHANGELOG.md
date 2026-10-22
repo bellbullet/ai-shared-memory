@@ -2,6 +2,10 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-10-04
+
+- `yomiyasu`を日本語技術文書の推敲用Agent Skillとして`AI_DRAWERS.md`へ追加し、`AI_INDEX.md`と`NOTES/AI_Behavior_Candidates.md`へ導線を設けた。既存の文章規範・textlintと区別し、実試用前に共通ルール化しない方針を記録した。
+
 ## 2026-10-02
 
 - `AI_DRAWERS.md`の161登録項目と`INBOX.md`の参照先を棚卸しし、GitHub repositoryの存否・移転先・ライセンス、外部URL、索引内のMarkdown参照を確認した。検査範囲と未確認先を`references/AI_DRAWERS_AUDIT_2026-10-02.md`へ記録した。

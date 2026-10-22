@@ -273,6 +273,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Japanese technical writing / 日本語技術文書 → `AI_DRAWERS.md`
 - LLM writing skill / 文章規範 skill → `AI_DRAWERS.md`, `SKILLS/README.md`
 - textlint-rule-preset-ai-writing / AI writing lint / textlint MCP → `AI_DRAWERS.md`
+- yomiyasu / 日本語推敲 Agent Skill / AI生成文の推敲 → `AI_DRAWERS.md`, `NOTES/AI_Behavior_Candidates.md`
 - Amazon セール検知システム → `AI_DRAWERS.md`
 - Amazon Sale Monitoring → `AI_DRAWERS.md`
 - Creative Pipeline → `AI_DRAWERS.md`

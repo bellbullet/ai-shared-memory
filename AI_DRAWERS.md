@@ -12,7 +12,7 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 163
+- 登録項目: 164
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
@@ -6580,6 +6580,45 @@ https://github.com/textlint-ja/textlint-rule-preset-ai-writing
 
 ⸻
 
+### yomiyasu
+
+URL:
+https://github.com/nanaism/yomiyasu
+
+分類:
+
+- Reference Sites
+- AI Coding Operations
+- Writing Quality
+- Japanese Technical Writing
+- Agent Skills
+
+概要:
+
+- AI生成の日本語を、元の意味や主張の強さを保ちながら読みやすく推敲するAgent Skill。技術記事、設計書、仕様書、PR説明文、レポートを主な対象とする。
+- 動作主や対象の明確化、比喩的な表現の具体化、不要な装飾や空白の整理などを扱う。文章を書き直すSkillと、Python製の静的lintスクリプトを含む。
+
+用途:
+
+- README、NOTES、PROJECTS、調査結果などの日本語を公開前に推敲する
+- `japanese-tech-writing`の文章規範、`textlint-rule-preset-ai-writing`の機械的検査との使い分けを比較する
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- MIT License。開発者の個人プロジェクトであり、所属企業の公式プロダクトではない。
+- 同種の文章調整Skillと指示が競合し得る。導入前に`SKILL.md`と付属スクリプトを確認し、まず公開可能な短い文章で差分を評価する。ASMの共通ルールへは自動昇格しない。
+- 元文にない事実、主体、数値を補わない。lint警告は提案として扱い、警告を消すためだけの過剰な書き換えはしない。
+
+⸻
+
 ### OpenAI Prompting
 
 URL:
@@ -6963,6 +7002,7 @@ URL:
 - Memory Consolidation / Dream Review
 - japanese-tech-writing / k16shikano gist
 - textlint-rule-preset-ai-writing
+- yomiyasu
 - The Hitchhiker's Guide to Agentic AI
 - Kura
 - AKARI Video
@@ -7014,6 +7054,7 @@ URL:
 - PixelRAG
 - japanese-tech-writing / k16shikano gist
 - textlint-rule-preset-ai-writing
+- yomiyasu
 - claude-real-video
 - book-to-skill
 
@@ -7203,6 +7244,7 @@ URL:
 - claude-real-video
 - Recordly
 - textlint-rule-preset-ai-writing
+- yomiyasu
 - Beyond Fable
 - CodexBar (upstream)
 - xikhar/CodexBar (fork)

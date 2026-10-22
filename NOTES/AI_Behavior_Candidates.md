@@ -1,6 +1,6 @@
 # AI Behavior Candidates
 
-最終更新: 2026-07-16
+最終更新: 2026-10-04
 
 ## Purpose
 
@@ -15,6 +15,13 @@
 - Expected behavior: 論証の明確さ、読者負荷、冗長表現、根拠と推測の区別を意識して、日本語技術文書を整える。
 - Reuse: README、NOTES、PROJECTS、調査結果、設計メモの推敲。
 - Status: Candidate。必要になれば `SKILLS/` の作業別ルールとして検討する。
+
+### yomiyasu
+
+- Source: `AI_DRAWERS.md` の `yomiyasu`（公式`README.md`、`SKILL.md`）。
+- Expected behavior: 元文の意味、主張の強さ、事実を保ちつつ、動作主や対象を明確にして日本語の技術文書を推敲する。
+- Reuse: README、設計書、PR説明文、調査結果の公開前レビュー。既存のJapanese Technical Writing候補やtextlintとの違いを比較する。
+- Status: Candidate。実試用と差分評価を経るまで、共通指示や既定Skillにはしない。
 
 ### Goal, Context, Output, Boundaries
 
