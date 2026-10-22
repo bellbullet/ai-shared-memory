@@ -1,6 +1,6 @@
 # AI_DRAWERS.md
 
-最終更新: 2026-08-03
+最終更新: 2026-10-22
 
 このファイルは ChatGPT・Codex・Claude・Gemini 等へ共有する技術レーダー兼ナレッジ保管庫です。
 
@@ -12,12 +12,13 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 160
+- 登録項目: 163
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
 - 重点領域: Agent / Orchestration、AI Coding Operations、Knowledge Management、Creative Pipeline、Self Host / Tools。
-- 最近の追加: X投稿の候補を一次情報で再評価し、code-review-graph、mattpocock/skills、音声・配信・3D・動画系8件を用途と安全条件つきで統合した。さらにxikharプロフィールのPersona、Atlas、Freestyle、Imagex、opdroid、Beyond Fable、CodexBarを上流・fork関係と利用条件つきで整理した。star増加数、未検証の金融主張、高リスク用途は採用根拠にしなかった。今回、X投稿 `2083836960683307153` と返信 `2083836962256134175` を発見経路として、公式READMEを確認した `PNGAL` と `PsDaL` を Creative / Avatar / PSD Animation の比較候補へ追加した。
+- 最近の追加: X投稿の候補を一次情報で再評価し、code-review-graph、mattpocock/skills、`@pierre/diffs`、音声・配信・3D・動画系8件を用途と安全条件つきで統合した。さらにxikharプロフィールのPersona、Atlas、Freestyle、Imagex、opdroid、Beyond Fable、CodexBarを上流・fork関係と利用条件つきで整理した。star増加数、未検証の金融主張、高リスク用途は採用根拠にしなかった。公式READMEを確認した`PNGAL`と`PsDaL`もCreative / Avatar / PSD Animationの比較候補へ追加済み。
+- 最新点検: 2026-10-02の登録項目・参照URL・ライセンス点検は`references/AI_DRAWERS_AUDIT_2026-10-02.md`を参照する。
 - 未整理項目と次回レビュー条件は `STATUS.md`、分類前リンクは `INBOX.md` を参照する。
 
 カテゴリ別ファイル分割は、検索性や保守性が単一ファイルでは不足した時点で検討し、v1.1 では行わない。
@@ -274,7 +275,7 @@ https://zenn.dev/knowledgesense/articles/14a874a9f423bb
 
 - Google Cloud が提案した、AI が読みやすいナレッジ管理のための Open Knowledge Format。
 - Markdown ファイルに YAML frontmatter を付け、知識の type、title、description、resource、tags、timestamp などを機械的に扱いやすくする。
-- v0.1 段階のため、現時点では全体採用ではなく研究対象として監視する。
+- 2026-06公開のv0.1はMarkdownとYAML frontmatterが中心。現行のv0.2ではprovenance、trust、freshness、lifecycle、attestationに関する任意フィールドが追加された。
 
 用途:
 
@@ -304,6 +305,7 @@ https://zenn.dev/knowledgesense/articles/14a874a9f423bb
 
 - まだ採用決定ではない。`DECISIONS.md` には入れず、`OKF.md` で採用候補として監視する。
 - v1.1 以降で `CURRENT.md`、`PROJECT_START.md`、`STATUS.md` など数ファイルだけに YAML frontmatter を試験導入するか検討する。
+- 現行仕様: https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md
 
 ⸻
 
@@ -471,13 +473,13 @@ https://github.com/stablyai/orca
 概要:
 
 - Codex、Claude Codeなどターミナルで動くコーディングエージェントを、独立したGit worktreeで並列実行・比較・レビューするデスクトップ環境。
-- Windows、macOS、Linuxに対応し、モバイル companionから進捗確認、完了通知、追加指示を行える。
+- Windows、macOS、Linux向けデスクトップ版に加え、iOS / Androidのモバイル companionから進捗確認、完了通知、追加指示を行える。headless Linuxでは`orca serve`も案内されている。
 - worktree、Diff注釈、組み込みブラウザのDesign Mode、SSH worktreeを一つの作業面にまとめる。
 
 用途:
 
 - 同一タスクを複数エージェントへ分けた実装・レビュー比較
-- 長時間のコーディング作業をiPhoneから監督
+- 長時間のコーディング作業をスマートフォンから監督
 - worktreeを使った変更の隔離と採用案の選別
 - PocketTableなどGit管理済みプロジェクトの並列検証
 
@@ -501,6 +503,7 @@ https://github.com/stablyai/orca
 メモ:
 
 - ChatGPT内のCodex会話を引き継ぐものではなく、PC上で別途起動するCLIエージェントを管理する環境として扱う。
+- モバイル companionはデスクトップ側との連携が必要。remote runtimeやrelayを使う場合は接続先と送信範囲を確認する。
 - 最初は公開リポジトリのcloneで、worktree分離・モバイル通知・Diffレビューだけを確認する。private project、認証情報、外部接続権限は初回試用へ含めない。
 - MIT License。モバイル連携、利用量表示、Computer Useを使う場合は送信範囲とテレメトリ設定を確認する。
 
@@ -513,7 +516,7 @@ https://github.com/stablyai/orca
 ### Claude Code Architecture Map
 
 URL:
-https://docs.anthropic.com/en/docs/claude-code/overview
+https://code.claude.com/docs/en/overview
 
 分類:
 
@@ -617,6 +620,59 @@ https://github.com/fujibee/agmsg
 
 ⸻
 
+### Agent-Reach
+
+URL:
+https://github.com/Panniantong/Agent-Reach
+
+分類:
+
+- Agent / Orchestration
+- Web Research
+- AI Coding Operations
+- Integrations
+- X / Social Research
+
+概要:
+
+- AIエージェントへWeb、GitHub、YouTube、RSS、X、Reddit、Bilibiliなどの取得経路を接続するPython製のcapability layer。
+- 個別サービスのwrapperではなく、接続方式の選定、インストール、`doctor`による診断、複数backendのroutingをまとめる。
+- 公式READMEではPython 3.10+、MIT License、Claude Code、OpenClaw、CursorなどCLIエージェントへの対応を説明している。
+
+用途:
+
+- X Bookmark Shelfから渡したURLの再調査
+- X、GitHub、YouTube、RSSを使う一次情報調査の補助
+- Codex / Claude CodeのWeb research capability比較
+- providerやCLIが変わったときのfallback routing研究
+- Agent-Reachと`wigolo`、Oracle、Firecrawlの役割比較
+
+関連:
+
+- X Bookmark Shelf
+- Oracle
+- Firecrawl
+- agmsg
+- Claude Code
+- Codex
+
+状態:
+
+- 導入検討
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- X、Reddit、Instagramなどの経路はCookie、token、既存ブラウザsession、外部backendを伴う場合がある。ログイン状態と送信先をchannelごとに確認する。
+- `install`は既定の環境確認と、明示許可時の依存・設定変更を分けているが、scriptと書込み範囲を実行前に監査する。
+- 「無料」「安定」「Cookieは外部送信しない」という説明はproviderと経路ごとに再確認し、固定的な保証として保存しない。
+- API key、Cookie、token、個人アカウント情報、非公開投稿や取得ログを公開メモリへ記録しない。
+
+⸻
+
 ### Backlog.md
 
 URL:
@@ -685,7 +741,8 @@ https://github.com/Graphify-Labs/graphify
 
 メモ:
 
-- MIT License。取り込み対象、保存先、増分更新、埋め込み・モデル呼出しの外部送信有無を導入前に確認する。
+- 現行の`pyproject.toml`はApache-2.0を宣言し、repositoryには`LICENSE-MIT`もある。再利用する対象ファイルと配布条件を個別に確認する。
+- コードの構造解析はローカルで行う。文書やメディアのsemantic passでモデルを使う場合は、入力先と外部送信の有無を確認する。
 - Graphifyはコード中心の知識グラフ、Rowboatは個人作業情報のローカルMarkdownグラフ、ClaudianはObsidian vault内のエージェントUIという役割差がある。
 
 ⸻
@@ -846,7 +903,7 @@ https://github.com/XiaomiMiMo/MiMo-Code
 ### Headroom
 
 URL:
-https://github.com/chopratejas/headroom
+https://github.com/headroomlabs-ai/headroom
 
 概要:
 
@@ -974,8 +1031,9 @@ https://github.com/msitarzewski/agency-agents
 概要:
 
 - Claude Code、Codex、Cursor、Gemini CLI などに導入できる専門 AI エージェント人格・ワークフロー集。
-- README では 232 specialized agents、16 divisions、MIT License と説明されている。
+- 専門エージェントのMarkdown集で、MIT License。収録数と部門数は更新されるため、利用時に公式rosterで確認する。
 - 各エージェントは Identity、Mission、Workflow、Deliverables、Success Metrics などを持つ構造化された Markdown prompt として扱える。
+- macOS、Linux、Windows向けデスクトップアプリから、対応するAIツールへエージェントを選んで導入・更新する方法も提供されている。
 
 用途:
 
@@ -1004,6 +1062,7 @@ https://github.com/msitarzewski/agency-agents
 メモ:
 
 - 全エージェントを一括導入せず、Frontend Developer、Security Engineer、Reality Checker、Technical Writer など少数を選んで試す。
+- アプリやインストールscriptを使う場合は、書き込み先のエージェント設定と自動更新の範囲を確認する。
 - 役割が増えすぎると選択コストが上がるため、`AI_PROFILES.md` や `SKILLS/` に吸収できる型だけを採用候補にする。
 
 ⸻
@@ -1455,7 +1514,13 @@ effort:
 
 Inkling-Small:
 
-- 276B total / 12B active parametersのMoEモデルをpreviewとして同時公開。公式発表時点ではtesting中で、full weightsはtesting完了後に公開予定とされている。
+- 276B total / 12B active parametersのMoEモデル。2026-07-30にfull weightsが公開され、公式model cardでは最大1M context、text / image / audio入力、Apache-2.0を案内している。
+- BF16 checkpointは最低600GB、NVFP4 checkpointは最低180GBのaggregate VRAMが必要とされる。単一の24GB GPU向けの公式実行構成ではない。
+
+Inkling-Small公式情報:
+
+- https://thinkingmachines.ai/news/inkling-small/
+- https://thinkingmachines.ai/model-card/inkling-small/
 
 状態:
 
@@ -1469,7 +1534,7 @@ Inkling-Small:
 
 - 公開時点の仕様、ベンチマーク、提供形態を記録した参照項目。モデル、checkpoint、runtime、third-party availabilityは変更されるため、利用時は公式情報を再確認する。
 - 比較候補: DeepSeek、Qwen、Gemma、Llama、Nemotron。
-- 今後確認: Inkling-Smallのfull weights公開、GGUF、Ollama、LM Studio、MLXの対応状況、およびvLLMを含む各runtimeの対応バージョンと実行要件。
+- 今後確認: Inkling-SmallのGGUF、Ollama、LM Studio、MLXの対応状況、およびvLLMを含む各runtimeの対応バージョンと実行要件。
 
 ⸻
 
@@ -1704,6 +1769,58 @@ https://github.com/tirth8205/code-review-graph
 - `TRIALS.md` — 実際に試した時点でtoken量、検索精度、false positive、index時間を記録する。
 - `PROJECTS/ScreenshotStitcher.md`
 - `SKILLS/Research.md`
+
+⸻
+
+### codebase-memory-mcp
+
+URL:
+https://github.com/DeusData/codebase-memory-mcp
+
+分類:
+
+- Development
+- AI Coding Operations
+- MCP
+- Code Intelligence
+- Context Management
+
+概要:
+
+- ローカルのnative executableでコードベースを解析し、関数、クラス、呼び出し関係、HTTP route、依存関係をknowledge graphとして検索するMCP backend。
+- 構造検索、semantic search、call graph、dead code検出、Git diff impact mapping、cross-repo graph、ローカルgraph UIを提供する。
+- 公式READMEではWindows向けbinaryとPowerShell installer、複数のcoding agent向けMCP設定、Skills、Hooks、Instructionsの自動設定を説明している。組み込みLLMは持たず、接続先のMCP clientが推論を担う。
+
+用途:
+
+- 大規模repositoryのcodebase onboarding
+- AI code reviewへ渡すcontextの絞り込み
+- `code-review-graph`、`rinkaku`との影響分析・token効率比較
+- Codex / Claude Codeのlocal code intelligence補助
+- cross-projectの依存関係とarchitecture探索
+
+関連:
+
+- code-review-graph
+- rinkaku
+- `TRIALS.md`
+- `SKILLS/Research.md`
+- `references/CLAUDE_CODE_MAP.md`
+
+状態:
+
+- 次に試す
+
+優先度:
+
+- ★★★★★
+
+メモ:
+
+- 公式READMEの速度・token削減値は特定環境のbenchmark主張であり、固定的な性能保証として扱わない。対象repository、query、index条件をそろえて実測する。
+- installerはagent設定、Skills、Hooks、Instructions、binary、local cache、watcher / daemonの構成を変更し得る。実行前にscript、checksum、権限、生成ファイルを確認する。
+- Windowsではrelease checksumとSmartScreen警告を確認し、まず機密性のない公開repositoryで試す。
+- source processingがlocalでも、接続するMCP clientや外部LLM providerがsource contextを送信する可能性がある。公開メモリにprivate code、index、診断ログを保存しない。
 
 ⸻
 
@@ -2222,7 +2339,7 @@ https://github.com/NangoHQ/nango
 
 概要:
 
-- AI を使って product integrations を構築するためのオープンソース API integration platform。
+- AI を使って product integrations を構築するためのsource-available API integration platform。
 - SaaS / API 連携、OAuth、外部サービス統合を扱う基盤候補。
 
 用途:
@@ -2244,6 +2361,7 @@ https://github.com/NangoHQ/nango
 
 - 導入時は OAuth token、API key、webhook secret、接続先設定を公開メモリに記録しない。
 - AIRI や AI Workspace が複数外部サービスを扱う段階で再評価する。
+- 公式READMEはElastic Licenseを案内する。無料のself-host版とCloud / BYOCでは利用できる機能が異なるため、導入時に対象機能とライセンスを確認する。
 
 ⸻
 
@@ -2492,6 +2610,7 @@ https://github.com/Fincept-Corporation/FinceptTerminal
 
 メモ:
 
+- Repositoryの`LICENSE`はAGPL-3.0。コード再利用やネットワーク提供時の条件を確認する。
 - AI Workspace 本体からは距離があるため、金融分析や投資研究を本格化する場合に再評価する。
 
 ⸻
@@ -2706,6 +2825,11 @@ Official Links:
 
 - ChatGPTのWorkまたはCodexから、interactive websiteやlightweight appを作成、preview、version保存、deploy、共有できるpublic beta機能。
 - dashboard、project tracker、internal portal、reportなど、AI Hub Liteと近い小規模な業務サイトを会話から作る用途を想定する。
+
+用途:
+
+- 小規模な業務サイトや軽量アプリの作成・共有
+- AI Hub Liteとpreview、deploy、access controlの運用比較
 
 運用パターン:
 
@@ -3155,6 +3279,10 @@ https://github.com/xikhar/CodexBar
 
 - `steipete/CodexBar`をforkした、Codex・Claude Codeなどの利用状況表示アプリの派生リポジトリ。
 - 上流との差分、追加provider、設定や運用上の変更を確認する比較対象として扱う。
+
+用途:
+
+- `steipete/CodexBar`との機能・設定差分の確認
 
 状態:
 
@@ -3637,7 +3765,7 @@ https://github.com/shitagaki-lab/see-through
 
 - Single-image Layer Decomposition for Anime Characters。
 - 1枚のアニメキャラクター画像を、髪、顔、目、服、アクセサリなど最大23の意味的レイヤーへ分解し、PSDとして出力する研究プロジェクト。
-- SIGGRAPH 2026 Conference Proceedings に conditionally accepted と記載されている。
+- ACM SIGGRAPH 2026 Conference Papersに掲載済み。DOI: 10.1145/3799902.3811209。
 
 用途:
 
@@ -3956,6 +4084,58 @@ https://github.com/HUANGCHIHHUNGLeo/claude-real-video
 - `--cookies` は認証済み動画向けだが、cookie 実値や取得手順、private content は公開メモリに記録しない。
 - 著作権・利用規約上、権利のある動画や公開動画の範囲で使う。
 - crv Pro への導線があるため、無料版と有料版の機能境界は導入前に再確認する。
+
+⸻
+
+### OpenMontage
+
+URL:
+https://github.com/calesthio/OpenMontage
+
+分類:
+
+- Creative
+- Video Production
+- Agent / Orchestration
+- Creative Pipeline
+
+概要:
+
+- AI coding assistantを動画制作のagent-first pipelineとして使い、research、proposal、script、scene plan、assets、edit、composeまでを段階化するOSS。
+- Python、FFmpeg、Node.js、Remotion、HyperFramesなどを組み合わせ、AI生成素材、実写・アーカイブ映像、音声、字幕、レンダリングを扱う。
+- 各stageのskill、pipeline manifest、approval gate、cost snapshot、post-render validationをファイルベースで管理する。
+
+用途:
+
+- Creative Pipelineのend-to-end動画試作
+- `claude-real-video`で抽出した動画知識の制作側への接続
+- HyperFrames / OpenCut / MoneyPrinterTurboとの役割比較
+- AI agentによる動画制作のapproval gateと品質検証の研究
+- OUTPUTSへ渡す動画成果物の再現可能な生成
+
+関連:
+
+- HyperFrames
+- OpenCut
+- claude-real-video
+- MoneyPrinterTurbo
+- Recordly
+- `OUTPUTS/README.md`
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+メモ:
+
+- AGPLv3。ネットワーク提供、改変、再配布時のsource提供義務を含むため、用途ごとにライセンスを確認する。
+- API provider、ローカルmodel、stock footage、音声、音楽、生成画像の利用条件は別々に確認し、生成物の権利をOSSライセンスと混同しない。
+- `.env`には複数providerのcredentialを設定できるが、実値、生成素材、private footage、利用ログを公開メモリへ保存しない。
+- Python / FFmpeg / Node.jsと大きなasset処理を伴うため、まずコピーした公開素材だけで試し、課金・外部送信・GPU負荷を確認する。
 
 ⸻
 
@@ -4279,7 +4459,7 @@ https://github.com/harry0703/MoneyPrinterTurbo
 ### Reactive Resume
 
 URL:
-https://github.com/AmruthPillai/Reactive-Resume
+https://github.com/reactive-resume/reactive-resume
 
 概要:
 
@@ -4334,6 +4514,7 @@ https://github.com/webadderallorg/Recordly
 
 メモ:
 
+- Repositoryの`LICENSE.md`はAGPL-3.0。動画素材の権利とアプリのsource licenseを分けて確認する。
 - 録画に private window、個人情報、API key、terminal output、未公開コードが映り込まないよう確認する。
 
 ⸻
@@ -4616,8 +4797,8 @@ License:
 
 Official Links:
 
-- Website: https://akari-oss.app/
-- GitHub: https://github.com/akari-video
+- Website: https://akari.video/
+- GitHub: https://github.com/AkariLabs/akari-video
 
 分類:
 
@@ -4650,11 +4831,11 @@ Official Links:
 
 License:
 
-- Open source。利用するrepositoryごとのlicenseを導入前に確認する。
+- Source repositoryはMIT。動画素材、音声、model、外部providerの条件は別途確認する。
 
 メモ:
 
-- 現在はmacOS Apple Silicon向けで、Windows版はComing Soon。現在のWindows workspaceでは対応を待つ。
+- macOS Apple SiliconとWindows x64向けのdesktop appが公開されている。Windows版はcode signing準備中と案内されているため、導入前にreleaseのchecksumと配布元を確認する。
 - X投稿の「最大8割自動化」はpotentialの説明で、公式の再現可能なbenchmarkとしては扱わない。
 - media file、analysis result、外部agentへ渡すcontext、agentが実行するcommandの範囲を確認する。
 
@@ -4855,6 +5036,10 @@ https://github.com/xikhar/freestyle
 - `freestyle-voice/freestyle`をforkした音声入力アプリの派生リポジトリ。
 - 上流版との機能差、開発者向けworkflow、provider設定の変更を確認する比較対象として扱う。
 
+用途:
+
+- `freestyle-voice/freestyle`との音声入力workflow・設定差分の確認
+
 状態:
 
 - 参考資料
@@ -5038,6 +5223,10 @@ https://github.com/n8n-io/n8n
 
 - ★★★★☆
 
+メモ:
+
+- 通常のsourceはSustainable Use License v1.0。`.ee`系のfileはEnterprise License対象で、third-party componentにも個別条件がある。再配布や商用提供の前に公式`LICENSE.md`を確認する。
+
 ⸻
 
 ### LocalSend
@@ -5088,6 +5277,10 @@ https://github.com/Stirling-Tools/Stirling-PDF
 優先度:
 
 - ★★★★★
+
+メモ:
+
+- 基本のsourceはMIT。ただし`app/proprietary/`、`app/saas/`、`engine/`など一部のdirectoryには別ライセンスが適用されるため、組み込むfileの条件を確認する。
 
 ⸻
 
@@ -5147,7 +5340,7 @@ https://github.com/uzura89/kurashino-daicho
 ### LibreChat
 
 URL:
-https://github.com/danny-avila/LibreChat
+https://github.com/LibreChat-AI/LibreChat
 
 分類:
 
@@ -5273,6 +5466,7 @@ https://github.com/ankitects/anki
 
 メモ:
 
+- 本体はAGPL-3.0-or-later。ユーザー貢献部分や同梱物には別ライセンスもあるため、コードや素材の再利用時は公式`LICENSE`を確認する。
 - 個人学習履歴、カード内容、同期アカウント情報は公開メモリに記録しない。
 
 ⸻
@@ -5308,6 +5502,7 @@ https://github.com/zotero/zotero
 
 メモ:
 
+- Zoteroのsource codeはAGPLv3。third-party materialと名称の商標条件は公式`COPYING`で分けて確認する。
 - private library、個人メモ、未公開資料、同期アカウント情報は公開メモリに記録しない。
 
 ⸻
@@ -5387,7 +5582,7 @@ https://github.com/ONLYOFFICE/DocumentServer
 ### Odysseus
 
 URL:
-https://github.com/pewdiepie-archdaemon/odysseus
+https://github.com/odysseus-dev/odysseus
 
 分類:
 
@@ -5441,6 +5636,10 @@ https://corp.takos.jp/products/takos/
 - チャット、AIエージェント、会話の記憶、追加アプリを同じ画面にまとめる、自分で置き場所を選べるAIワークスペース。
 - 会話・ファイルの保存先を利用者が選び、文書、表計算、ストレージ、Gitホスティングなどを必要なときに追加できる設計。
 
+用途:
+
+- AI workspaceの保存先・追加アプリ構成の比較研究
+
 状態:
 
 - 研究対象
@@ -5478,6 +5677,10 @@ https://corp.takos.jp/products/takosumi/
 
 - Gitに置いたOpenTofu / Terraform定義を実行し、変更内容、実行履歴、復元ポイントを管理するOpenTofuコントロールプレーン。
 - OSS版を自分のサーバーで運用でき、同じ仕組みのhosted版としてTakosumi Cloudも提供する。
+
+用途:
+
+- OpenTofu / Terraformのplan、実行履歴、復元管理の研究
 
 状態:
 
@@ -5517,6 +5720,10 @@ https://corp.takos.jp/products/yurucommu/
 - コミュニティ単位で場所を持ち、投稿、リアクション、ダイレクトメッセージ、ストーリーを扱うActivityPub対応SNS。
 - 単体で自己ホストでき、`takos`へアプリとして追加できる。`yurumeet`と共通基盤を使う。
 
+用途:
+
+- ActivityPub対応コミュニティSNSの自己ホスト構成の研究
+
 状態:
 
 - 研究対象
@@ -5555,6 +5762,10 @@ https://corp.takos.jp/products/yurumeet/
 - ダイレクトメッセージとコミュニティチャットを中心に、音声通話とビデオ通話を扱うメッセージングアプリ。
 - `yurucommu`と同じ基盤を使い、同じサーバーへ接続する構成ではアカウントを使い分けられる。
 
+用途:
+
+- 自己ホスト型メッセージングと音声・ビデオ通話の構成研究
+
 状態:
 
 - 研究対象
@@ -5590,6 +5801,10 @@ https://github.com/tako0614/takos-office
 - 文書、スライド、表計算をひとつにまとめた、`takos`へ追加できるself-hostable Officeアプリ。
 - GitHub descriptionではagent-native via MCPのdocument / slide / sheet workerとして説明されている。
 
+用途:
+
+- 文書・スライド・表計算の自己ホストとMCP連携の研究
+
 状態:
 
 - 研究対象
@@ -5624,6 +5839,10 @@ https://github.com/tako0614/takos-computer
 
 - ブラウザの中で使える作業用のマシンとして、`takos`へ追加できるアプリ。
 
+用途:
+
+- browser作業環境とagent操作の権限設計の研究
+
 状態:
 
 - 研究対象
@@ -5656,6 +5875,10 @@ https://github.com/tako0614/takos-storage
 概要:
 
 - `takos`へ追加できる、ファイルを置いておくためのstorageアプリ。
+
+用途:
+
+- AI workspace向けファイル保存・共有範囲の設計比較
 
 状態:
 
@@ -5690,6 +5913,10 @@ https://github.com/tako0614/takos-git
 概要:
 
 - `takos`へ追加できる、自分たちで持つGit hosting service。
+
+用途:
+
+- 自己ホスト型Git運用と既存GitHub remoteの役割比較
 
 状態:
 
@@ -5726,6 +5953,10 @@ https://github.com/tako0614/yurucommu-core
 - `yurucommu`と`yurumeet`が共有するActivityPub、API、databaseの基盤。
 - GitHub descriptionでは、yurucommu ActivityPub serverおよびAPI SDKとして説明されている。
 
+用途:
+
+- `yurucommu` / `yurumeet`の共有server・API境界の研究
+
 状態:
 
 - 研究対象
@@ -5760,6 +5991,10 @@ https://github.com/tako0614/terraform-provider-takoform
 
 - サービスの形を書き表すService Form仕様と、それを扱うTerraform / OpenTofu provider。
 - 公式製品ページでは`takosumi`関連の独立した仕様・ツールとして紹介されている。
+
+用途:
+
+- Service FormとTerraform / OpenTofu providerの構成研究
 
 状態:
 
@@ -6702,6 +6937,9 @@ URL:
 - The Hitchhiker's Guide to Agentic AI
 - Yorishiro
 - opdroid
+- Agent-Reach
+- OpenMontage
+- codebase-memory-mcp
 
 用途:
 
@@ -6729,6 +6967,9 @@ URL:
 - Kura
 - AKARI Video
 - img2threejs
+- Agent-Reach
+- OpenMontage
+- codebase-memory-mcp
 - Atlas
 - Imagex
 - freestyle-voice/freestyle
@@ -6795,6 +7036,7 @@ URL:
 - PsDaL
 - tomari-guruguru
 - HyperFrames
+- OpenMontage
 - claude-real-video
 - MoneyPrinterTurbo
 - VoxCPM
@@ -6947,6 +7189,7 @@ URL:
 - Buzz
 - Paperless-ngx
 - Superpowers
+- Agent-Reach
 
 ### 次に試す
 
@@ -6976,6 +7219,7 @@ URL:
 - Imagex
 - freestyle-voice/freestyle
 - opdroid
+- codebase-memory-mcp
 
 ### 将来導入
 
@@ -7051,6 +7295,7 @@ URL:
 - speech-to-speech
 - animede 3D Character Pipeline
 - image-to-3d
+- OpenMontage
 
 ### 開発アイデア
 

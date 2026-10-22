@@ -1,6 +1,6 @@
 # OKF
 
-最終更新: 2026-06-30
+最終更新: 2026-10-02
 
 Open Knowledge Format の採用候補メモ。
 
@@ -9,6 +9,8 @@ Open Knowledge Format の採用候補メモ。
 ## Sources
 
 - Primary: https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing
+- Current specification: https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md
+- v0.2 announcement: https://cloud.google.com/blog/products/data-analytics/okf-v0-2-adds-trust-signals
 - Secondary: https://zenn.dev/knowledgesense/articles/14a874a9f423bb
 
 ## Summary
@@ -24,6 +26,8 @@ OKF は Google Cloud が提案した、AI と人間の両方が読めるナレ�
 - optional index / log files
 
 Google Cloud の説明では、OKF v0.1 は Markdown files with YAML frontmatter を中心にした軽量な仕様で、少数の構造化フィールドを検索可能にすることを狙う。
+
+v0.2ではprovenance、trust、freshness、lifecycle、attestationの任意フィールドが追加された。`type`以外を一律に必須化する変更ではない。
 
 ## Candidate Frontmatter
 
@@ -52,7 +56,7 @@ timestamp: 2026-06-30T00:00:00+09:00
 
 ## Risks
 
-- v0.1 段階で、仕様や慣習が変わる可能性がある。
+- v0.2段階でも仕様や慣習が変わる可能性がある。
 - 全ファイルへ一括導入すると、メンテナンス負荷と形式揺れが増える。
 - AI が OKF を特別扱いするとは限らない。
 - frontmatter の項目を増やしすぎると、本文よりメタデータ管理が目的化する。

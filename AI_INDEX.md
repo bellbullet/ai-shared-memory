@@ -32,6 +32,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - Technical radar: `AI_DRAWERS.md`
 - Claude Code concept map: `references/CLAUDE_CODE_MAP.md`
 - Long-lived reference maps: `references/`
+- Technical radar audit (2026-10-02): `references/AI_DRAWERS_AUDIT_2026-10-02.md`
 
 ## Projects
 
@@ -89,6 +90,8 @@ AI が関連ファイルを素早く見つけるための索引です。
 - shadcn/ui motion registry / interactive card components → `AI_DRAWERS.md`
 - code-review-graph / local-first code intelligence / Tree-sitter graph / MCP code review → `AI_DRAWERS.md`
 - impact analysis / review context reduction / risk-scored PR review → `AI_DRAWERS.md`
+- codebase-memory-mcp / code intelligence MCP / codebase graph / semantic code search → `AI_DRAWERS.md`
+- Agent-Reach / web research capability layer / X / GitHub / YouTube / RSS access → `AI_DRAWERS.md`
 - Diffs / `@pierre/diffs` / code diff rendering / accept-reject hunk / review annotations → `AI_DRAWERS.md`, `TRIALS.md`
 - mattpocock/skills / engineering agent skills / grill-with-docs / diagnosing-bugs → `AI_DRAWERS.md`
 - composable agent skills / TDD skill / code review skill / domain modeling skill → `AI_DRAWERS.md`
@@ -119,6 +122,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - visual RAG / pixel-native search → `AI_DRAWERS.md`
 - screenshot retrieval / screenshot-based browsing → `AI_DRAWERS.md`
 - Google OKF → `AI_DRAWERS.md`, `OKF.md`
+- OKF v0.2 / provenance / trust / freshness / attestation → `OKF.md`, `AI_DRAWERS.md`
 - Open Knowledge Format → `OKF.md`, `AI_DRAWERS.md`
 - awesome-free-llm-apis → `AI_DRAWERS.md`
 - free LLM API / LLM provider free tier → `AI_DRAWERS.md`
@@ -135,6 +139,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - reference image to Three.js / animation-ready 3D asset → `AI_DRAWERS.md`
 - Claude Code 3D skill / Codex image-to-3D / detail inventory → `AI_DRAWERS.md`
 - AKARI Video / agent-readable video editing / edit.json → `AI_DRAWERS.md`
+- OpenMontage / agentic video production / documentary montage / video pipeline → `AI_DRAWERS.md`
 - VoiceDenoiser / TTS dataset denoising → `AI_DRAWERS.md`
 - Open Notebook → `AI_DRAWERS.md`
 - NotebookLM alternative → `AI_DRAWERS.md`
@@ -206,6 +211,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 - agent skill ecosystem security → `AI_DRAWERS.md`, `SECURITY_REVIEW.md`
 - Susono Model → `AI_DRAWERS.md`
 - Inkling → `AI_DRAWERS.md`
+- Inkling-Small / open weights / local inference requirements → `AI_DRAWERS.md`
 - Thinking Machines Lab / Mira Murati → `AI_DRAWERS.md`
 - MoE / Open-weight LLM / multimodal → `AI_DRAWERS.md`
 - effort reasoning / ForecastBench / IFBench → `AI_DRAWERS.md`
@@ -315,7 +321,6 @@ AI が関連ファイルを素早く見つけるための索引です。
 - EdgeEver / Cloudflare notes / remote MCP / flyai travel skill → `INBOX.md`
 - pdf-brain / local PDF Markdown semantic search / Ollama libSQL → `INBOX.md`
 - EasyEDA API Skill / WebSocket bridge / circuit design agent → `INBOX.md`
-- Hallmark / anti-slop UI design skill / design audit → `INBOX.md`
 - Text-To-VRMA / text-to-motion / VRMA / ARDY waypoint / AIRI motion → `AI_DRAWERS.md`
 - 2d2vrm / single image to VRM / 立ち絵VRM化 → `INBOX.md`
 - AivisSpeech Engine / AIVM / AIVMX / local Style-Bert-VITS2 API → `AI_DRAWERS.md`
@@ -566,6 +571,9 @@ AI が関連ファイルを素早く見つけるための索引です。
 - diagramming / Excalidraw / demo recording / Recordly → `AI_DRAWERS.md`
 - video analysis / scene-aware keyframes / claude-real-video → `AI_DRAWERS.md`
 - UI design skill / design audit / Hallmark → `AI_DRAWERS.md`
+- OpenMontage / agent-first video production / Creative Pipeline → `AI_DRAWERS.md`
+- Agent-Reach / web reach / X research / multi-site agent access → `AI_DRAWERS.md`
+- codebase-memory-mcp / local code intelligence / MCP indexing / context graph → `AI_DRAWERS.md`
 - parallel worktree / mobile agent supervision / Orca → `AI_DRAWERS.md`
 - headless Office automation / OfficeCLI / docx xlsx pptx render → `AI_DRAWERS.md`, `OUTPUTS/README.md`
 - AI agent examples / RAG app templates / awesome-llm-apps → `AI_DRAWERS.md`

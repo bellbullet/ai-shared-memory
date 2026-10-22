@@ -1,6 +1,6 @@
 # STATUS
 
-最終更新: 2026-08-03
+最終更新: 2026-10-22
 
 Workspace 全体の現在地を一覧するファイル。
 
@@ -56,9 +56,9 @@ Workspace 全体の現在地を一覧するファイル。
 | Obsidian access | Desktop 1.12.7でRepository root、Home、標準Markdown link、公式CLIを確認。Community pluginは0件 | Mobileは必要になった時点で表示と同期境界を確認 |
 | Entry points | `ASM_ENTRY.md` と workspace 親 `AGENTS.md` の参照経路を 2026-08-21 に追加。チェッカーで確認可能 | 構造・バージョン・読込順を変更したら `Verify-ASMContext.ps1` を再実行 |
 | `INBOX.md` | Existing OSS batches remain grouped by role and risk; `image-3d` was promoted on 2026-07-29 as part of the animede 3D Character Pipeline | Promote only after the recorded license, permission, external transmission, and runtime gates are cleared |
-| `AI_DRAWERS.md` | 160 entries / 11 categories / 12 cross-groups; single-file layout retained | Trial img2threejs on an owned or public-safe reference image; inspect generated TypeScript, browser rendering, animation hierarchy, and quality gates |
-| `PROJECTS/` | 9 metadata files | Refresh when project Goal / Status / Stack / Next Tasks change |
-| `NOTES/` | 11 files, excluding index; includes a non-adopted task-contract draft | Review duplication and stale summaries during monthly review |
+| `AI_DRAWERS.md` | 163 entries / 11 categories / 12 cross-groups; 2026-10-02の棚卸しとPNGAL / PsDaL追加を統合 | 実試用の結果は`TRIALS.md`へ戻し、次回は未確認の外部リンクを再点検する |
+| `PROJECTS/` | 10 metadata files, excluding index | Refresh when project Goal / Status / Stack / Next Tasks change |
+| `NOTES/` | 11 files, excluding index; includes compatibility files and a non-adopted task-contract draft | Review duplication and stale summaries during monthly review |
 | Pending decisions | 2 open items | Resolve or defer explicitly in `DECISIONS.md` when adopted |
 
 ## Active Reuse Trials

@@ -2,6 +2,17 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-10-02
+
+- `AI_DRAWERS.md`の161登録項目と`INBOX.md`の参照先を棚卸しし、GitHub repositoryの存否・移転先・ライセンス、外部URL、索引内のMarkdown参照を確認した。検査範囲と未確認先を`references/AI_DRAWERS_AUDIT_2026-10-02.md`へ記録した。
+- Graphify、Nango、n8n、Stirling PDF、Anki、Zotero、Fincept Terminal、Recordlyのライセンス表記を公式資料に合わせて補正。Inkling-Small、OKF v0.2、AKARI Video、see-through、Claude Code公式Docs、`@pierre/diffs`の変動情報を更新し、移転したGitHub URLを修正した。
+- 技術レーダーの登録件数を161件へ同期し、用途欄がなかった13件を既存概要の範囲で補完した。`INBOX.md`の移転先6件を更新し、`Hallmark`の登録済み状態を明示した。
+
+## 2026-08-31
+
+- 公式READMEとLICENSEを確認し、`Agent-Reach`をAgent / Web Research / Integrationsの導入検討候補、`OpenMontage`をCreative / Video Productionの研究対象、`codebase-memory-mcp`をDevelopment / MCP / Code Intelligenceの次に試す候補として`AI_DRAWERS.md`へ追加した。Cookie、token、外部provider、AGPLv3、installerの設定変更、benchmark値などの確認条件を併記した。
+- `AI_INDEX.md`へAgent-Reach、OpenMontage、codebase-memory-mcpの用途別検索導線を追加した。既登録の`agency-agents`と`Orca`は重複追加していない。
+
 ## 2026-08-21
 
 - `ASM_ENTRY.md`を共有メモリの安定した入口として追加し、`AI_INDEX.md`、`CURRENT.md`、`STATUS.md`、親 `AGENTS.md` の読込順と `ASM scan` の実読了記録を同期した。

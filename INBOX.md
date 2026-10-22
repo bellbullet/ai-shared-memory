@@ -122,7 +122,7 @@ https://huggingface.co/m15dg/local-ai-toolkit
 - iFixAi: https://github.com/ifixai-ai/iFixAi
 - public-apis: https://github.com/public-apis/public-apis
 - build-your-own-x: https://github.com/codecrafters-io/build-your-own-x
-- developer-roadmap: https://github.com/kamranahmedse/developer-roadmap
+- developer-roadmap: https://github.com/nilbuild/developer-roadmap
 - free-programming-books: https://github.com/EbookFoundation/free-programming-books
 - system-design-primer: https://github.com/donnemartin/system-design-primer
 - coding-interview-university: https://github.com/jwasham/coding-interview-university
@@ -143,7 +143,7 @@ https://huggingface.co/m15dg/local-ai-toolkit
 
 - awesome-selfhosted: https://github.com/awesome-selfhosted/awesome-selfhosted
 - open-webui: https://github.com/open-webui/open-webui
-- Lobe Chat: https://github.com/lobehub/lobe-chat
+- Lobe Chat: https://github.com/lobehub/lobehub
 
 #### Agent / Orchestration / AI App Stack
 
@@ -155,7 +155,7 @@ https://huggingface.co/m15dg/local-ai-toolkit
 - mem0: https://github.com/mem0ai/mem0
 - browser-use: https://github.com/browser-use/browser-use
 - crewAI: https://github.com/crewAIInc/crewAI
-- MetaGPT: https://github.com/geekan/MetaGPT
+- MetaGPT: https://github.com/FoundationAgents/MetaGPT
 - AutoGen: https://github.com/microsoft/autogen
 - Stagehand: https://github.com/browserbase/stagehand
 - supermemory: https://github.com/supermemoryai/supermemory
@@ -180,7 +180,7 @@ https://huggingface.co/m15dg/local-ai-toolkit
 
 #### Creative
 
-- ComfyUI: https://github.com/comfyanonymous/ComfyUI
+- ComfyUI: https://github.com/Comfy-Org/ComfyUI
 
 #### Existing Items To Avoid Duplicating
 
@@ -220,7 +220,7 @@ X上で発見した候補を、GitHub / Hugging Face / 公式販売ページ / �
 
 - AnimeGen-T2V: https://huggingface.co/aidealab/AnimeGen-T2V — Wan 2.2 T2V A14Bベースのanime text-to-video model。Apache-2.0表記。RTX 4090以上推奨、学習データ詳細と既知の時間的一貫性制約を理由に研究候補のまま保留。
 - MotionGen: https://superhivemarket.com/products/motiongen — 動画・sketchからrig animationを作るBlender向け商用tool。addon codeはMIT表記だが、edition別動画長、Windows + NVIDIA、license確認通信を伴うため保留。
-- BlenderMCP: https://github.com/ahujasid/blender-mcp — LLMからBlenderのscene / object / materialを操作するMCP。MIT。Blender内で任意Pythonを実行できるため、sandboxと対象fileを限定するまで保留。
+- BlenderMCP: https://github.com/ahujasid/mcp-for-blender — LLMからBlenderのscene / object / materialを操作するMCP。MIT。Blender内で任意Pythonを実行できるため、sandboxと対象fileを限定するまで保留。
 - ChatCut agent-plugin: https://github.com/ChatCut-Inc/agent-plugin — ChatCutの素材取込、timeline編集、字幕、書出しをagentから操作するplugin。GitHub APIでlicense未確認。OAuthとhosted MCPへの外部接続が必要なため保留。
 - MengTo/Skills: https://github.com/MengTo/Skills — UI、frontend、reference capture、prompt化のagent skill集。MIT。各skillのbrowser操作、script、asset条件を個別レビューする。
 - emilkowalski/skills: https://github.com/emilkowalski/skills — UI / animation / Apple Design判断をskill化。MIT。適用範囲、引用元、asset条件をskill単位で確認する。
@@ -259,7 +259,7 @@ Xの「話題のポスト」で異なる投稿URLを100件確認した。過去�
 - Grok Build: https://github.com/xai-org/grok-build — Apache-2.0のcoding agent harness / TUI。shell、web検索、MCP、Hook、headless実行、browser認証を扱う。公開treeは内部monorepoからの同期で、外部PRを受け付けない。Windowsのsource buildはbest-effort。
 - RunCat Neo: https://github.com/runcat-dev/RunCatNeo — local JSON metricをmacOS menubarへ表示するApache-2.0 tool。macOS 26以上。`ccc-usage-dashboard`より軽量な汎用表示層だが、Windows運用には接続しない。
 - Cua: https://github.com/trycua/cua — MITのcomputer-use driver、sandbox、benchmark基盤。MCP、desktop操作、VM、shellを含むため、host / sandbox / credential境界の監査待ち。
-- herdr: https://github.com/ogulcancelik/herdr — terminal内agent multiplexer。AGPL-3.0-or-later / commercialのdual license。remote installer、Windows beta、複数agentのcommand実行範囲を確認する。
+- herdr: https://github.com/herdrdev/herdr — terminal内agent multiplexer。AGPL-3.0-or-later / commercialのdual license。remote installer、Windows beta、複数agentのcommand実行範囲を確認する。
 - wigolo: https://github.com/KnockOutEZ/wigolo — search、fetch、crawl、researchをlocal-first MCPへまとめるpublic beta。AGPL-3.0、Node 20以上、約1.5GB。browser engine / model download、agent設定書込み、外部Webアクセスを伴う。
 - CX Notifier: https://github.com/GotoLu/cx-notifier-marketplace — Codex / Claude Codeの完了・承認をdesktopまたはwebhookへ通知するMIT tool。Hook、webhook secret、Bearer token、質問内容の外部送信範囲を確認する。
 - EdgeEver: https://github.com/tianma-if/edgeever — Cloudflare D1 / R2 / Workers上のnote workspace、REST API、remote MCP。AGPL-3.0。Cloudflare token、session、初期credential、外部保存と課金条件の確認待ち。
@@ -269,7 +269,7 @@ Xの「話題のポスト」で異なる投稿URLを100件確認した。過去�
 
 - pdf-brain: https://github.com/joelhooks/pdf-brain — PDF / MarkdownをOllama embeddingsとlibSQL vectorでlocal検索し、MCPで公開するMIT tool。Ollama / model download、local DB、remote installerが必要。`Open Notebook`はnotebook workspace、`PixelRAG`はpixel-native visual retrieval、pdf-brainはlocal document CLI / MCPという役割差。
 - EasyEDA API Skill: https://github.com/easyeda/easyeda-api-skill — EasyEDA Pro APIとWebSocket bridgeをAI coding toolへ接続する。GitHub APIでlicense未確認。回路編集、extension、任意code execute endpointを含むため保留。
-- Hallmark: https://github.com/Nutlope/hallmark — UI生成、audit、redesign、design studyを扱うCodex対応design skill。MIT。`MengTo/Skills`は広いUI制作skill集、`emilkowalski/skills`はdesign / motion判断群、Hallmarkはanti-pattern gateとmacrostructure選択へ集中する。
+- Hallmark（`AI_DRAWERS.md`登録済み）: https://github.com/Nutlope/hallmark — UI生成、audit、redesign、design studyを扱うCodex対応design skill。MIT。`MengTo/Skills`は広いUI制作skill集、`emilkowalski/skills`はdesign / motion判断群、Hallmarkはanti-pattern gateとmacrostructure選択へ集中する。
 
 #### AIRI / Creative / Research
 

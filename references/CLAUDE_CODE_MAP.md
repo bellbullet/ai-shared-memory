@@ -157,7 +157,7 @@ Tool、Subagent、MCPなどで実行する
 
 ## 公式ドキュメント
 
-- [Claude Code overview](https://docs.anthropic.com/en/docs/claude-code/overview)
+- [Claude Code overview](https://code.claude.com/docs/en/overview)
 - [Getting started](https://docs.anthropic.com/en/docs/claude-code/getting-started)
 - [Common workflows](https://docs.anthropic.com/en/docs/claude-code/common-workflows)
 - [CLI reference](https://docs.anthropic.com/en/docs/claude-code/cli-usage)
