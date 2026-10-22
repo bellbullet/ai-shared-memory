@@ -48,6 +48,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ## Notes
 
+- Cloudflare platform selection / Workers Static Assets / Vercel comparison / D1 / R2 / Durable Objects → `DECISIONS.md`
 
 - AI → `NOTES/AI.md`
 - AI Behavior Candidates → `NOTES/AI_Behavior_Candidates.md`

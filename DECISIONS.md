@@ -33,6 +33,55 @@ Result:
 
 `Review Date` は、後で見直す前提の判断だけに設定する。恒久的な workspace rule には `Not scheduled` と書いてよい。
 
+## 2026-08-02
+
+### Decision: 新規プロジェクトではCloudflareを標準候補に含める
+
+Decision:
+
+- 新規開発のhosting / application platform選定では、Vercelなどに決め打ちせずCloudflareも標準候補として比較する。
+- 新しい静的site、Vite SPA、PWAをCloudflareへ配置する場合は、Cloudflare PagesよりWorkers Static Assetsを先に評価する。
+- Workers、D1、R2、KV、Durable Objects、Queues、Workflowsは、要件に合うものだけを選び、単一platformへまとめること自体を目的にしない。
+
+Reason:
+
+- Cloudflareは静的asset配信、edge compute、SQL、object storage、stateful coordination、queue / workflowを同じdeveloper platformで提供している。
+- Cloudflare公式は、新規の静的site、SPA、full-stack appにWorkers Static Assetsを推奨し、新機能と最適化をWorkersへ集中している。
+- 初期設計時に比較すれば、hosting、backend、storage、background processingの境界を後から移すcostを判断しやすい。
+- 一方で、単一のX投稿やfree tierだけでは、個別projectの運用性、互換性、lock-in、security、migration costを証明できない。
+
+Alternatives:
+
+- 新規projectを常にVercel中心で始める。
+- 新規projectを常にCloudflareへ統一する。
+- 安定稼働中の既存projectもplatform統一のために移行する。
+
+Chosen:
+
+- architecture、cost、運用負荷、deployment / rollback、lock-in、将来拡張をprojectごとに比較して選ぶ。
+- Next.js固有機能、既存のSupabase / PostgreSQL設計、認証、Realtime、transaction境界などを維持する価値が高い場合は、Vercelや既存backendを継続候補とする。
+- 安定稼働中の既存projectは、具体的な利益と分離した検証計画がない限り移行しない。
+- 判断が割れる場合は、productionを変更せず別originへ同じartifactをshadow deployし、PWA、cache更新、online flow、rollbackを比較する。
+
+Review Date:
+
+- 2026-11-02、またはCloudflare / Vercelのpricing、limits、recommended deployment pathが大きく変わった時点。
+
+Result:
+
+- 今後の新規projectではCloudflareを比較表へ含める。
+- Cloudflare採用時の新規静的frontendはWorkers Static Assetsから検討する。
+- 既存projectの移行は自動的には行わない。
+
+Sources:
+
+- https://x.com/yusukebe/status/2079825908547060206
+- https://x.com/yusukebe/status/2079821317071909188
+- https://x.com/catnose99/status/2079777959167340607
+- https://developers.cloudflare.com/workers/best-practices/workers-best-practices/
+- https://developers.cloudflare.com/workers/static-assets/
+- https://developers.cloudflare.com/workers/platform/pricing/
+
 ## 2026-07-25
 
 ### Decision: Obsidianを既存Markdownの任意UIとして追加する
