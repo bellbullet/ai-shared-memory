@@ -36,6 +36,7 @@ AI が関連ファイルを素早く見つけるための索引です。
 
 ## Projects
 
+- Link Bookmark Shelf / X Bookmark Shelf / D1 bookmark intake → `PROJECTS/XBookmarkShelf.md`
 
 - AIRI → `PROJECTS/AIRI.md`
 - AI Hub / AI Hub Lite → `PROJECTS/AIHub.md`

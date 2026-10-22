@@ -11,3 +11,4 @@
 - [ScreenshotStitcher](ScreenshotStitcher.md)
 - [WebcamFaceDemo](WebcamFaceDemo.md)
 - [XImageBot](XImageBot.md)
+- [Link Bookmark Shelf](XBookmarkShelf.md)

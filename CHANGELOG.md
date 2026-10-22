@@ -2,6 +2,11 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-10-22
+
+- GitHub側のPNGAL / PsDaL追加と手元の入口整備・技術レーダー更新を統合し、登録件数を165件へ同期した。BFV task contractは未採用の草案として保存した。
+- `PROJECTS/XBookmarkShelf.md`を現行READMEのLink Bookmark Shelf v0.5.0、Cloudflare D1正本、JSON Export、人間確認後のASM反映に合わせて更新した。実データ、D1、アプリ本体は変更していない。
+
 ## 2026-10-06
 
 - `image-blaster`を公式README、Skill、LICENSE、package manifestで確認し、画像から3D環境・メッシュ・効果音を生成するCreativeの研究対象として登録した。World Labs / FALの外部API利用条件、未検証の実行環境・生成品質を記載し、索引と登録件数を更新した。
