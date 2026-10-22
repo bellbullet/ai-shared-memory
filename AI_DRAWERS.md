@@ -12,7 +12,7 @@
 
 ## v1.1 Snapshot
 
-- 登録項目: 164
+- 登録項目: 165
 - 主カテゴリ: 11
 - 横断グループ: 12
 - 管理方式: 後方互換性を保つため、v1.1 では単一ファイルを維持する。
@@ -4741,6 +4741,55 @@ License:
 
 ⸻
 
+### image-blaster
+
+Official Links:
+
+- Repository: https://github.com/neilsonnn/image-blaster
+- License: https://github.com/neilsonnn/image-blaster/blob/main/LICENSE.md
+
+分類:
+
+- Creative
+- Image to World
+- Gaussian Splatting
+- 3D Assets
+- Sound Effects
+- Claude Code
+- Agent Skills
+
+概要:
+
+- 1枚の画像から3D環境、オブジェクトのメッシュ、環境音や効果音を生成するClaude向けSkill集。
+- World Labsによる静的環境のGaussian splat、FAL経由の3Dモデル・音声生成を組み合わせる。出力には`.spz`、`.glb`、`.obj`、`.mp3`を含む。
+- React / Three.jsのviewerを含み、生成物と進行状態を`worlds/<slug>/`で管理する。
+
+用途:
+
+- 画像を起点とするゲーム・WebGL向け環境とアセットの試作
+- 3D環境、オブジェクト、音をまとめて生成するCreative Pipelineの研究
+- `img2threejs`のコードによる再構成や`LingBot-Map`の動画再構成との比較
+
+状態:
+
+- 研究対象
+
+優先度:
+
+- ★★★★☆
+
+License:
+
+- MIT。外部APIと生成物の利用条件は各providerの規約を別途確認する。
+
+メモ:
+
+- World LabsとFALのAPI keyが必要。画像・promptの外部送信とAPI利用料金を伴うため、権利と送信許可のある素材で確認する。keyの実値や非公開素材はASMへ保存しない。
+- Skillと実行スクリプトを確認してから導入する。既定のCLI手順はClaude Code向けであり、Codex互換性やWindows実行は未検証。
+- 公式READMEの所要時間やX投稿の完成度に関する主張は実測していない。単一画像の見えない面、生成物の整合性、衝突形状、viewer表示を試用時に評価する。
+
+⸻
+
 ### animede 3D Character Pipeline
 
 Official Links:
@@ -7093,6 +7142,7 @@ URL:
 - VoiceDenoiser
 - speech-to-speech
 - img2threejs
+- image-blaster
 - Atlas
 - Imagex
 - freestyle-voice/freestyle
@@ -7338,6 +7388,7 @@ URL:
 - animede 3D Character Pipeline
 - image-to-3d
 - OpenMontage
+- image-blaster
 
 ### 開発アイデア
 

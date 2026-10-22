@@ -2,6 +2,10 @@
 
 公開リポジトリとしての構成変更・運用ルール変更を記録します。
 
+## 2026-10-06
+
+- `image-blaster`を公式README、Skill、LICENSE、package manifestで確認し、画像から3D環境・メッシュ・効果音を生成するCreativeの研究対象として登録した。World Labs / FALの外部API利用条件、未検証の実行環境・生成品質を記載し、索引と登録件数を更新した。
+
 ## 2026-10-04
 
 - `yomiyasu`を日本語技術文書の推敲用Agent Skillとして`AI_DRAWERS.md`へ追加し、`AI_INDEX.md`と`NOTES/AI_Behavior_Candidates.md`へ導線を設けた。既存の文章規範・textlintと区別し、実試用前に共通ルール化しない方針を記録した。
